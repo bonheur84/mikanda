@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKINDA —— Bibliotheque numerique de la litterature Congolsaise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="logo_e9e0d1.svg" />
+</head>
+
+<body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
+    <header
+        class="mx-auto mvax-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9]/95 px-5 py-4 lg:px-8">
+        <a href="index.html">
+            <div class="flex items-center justify-between gap-2">
+                <div>
+                    <img src="logo.svg" alt="logo" class="w-12 h-11">
+                </div>
+
+                <div class="leading-5">
+                    <h1 class="block font-serif text-xl leading-none tracking-wide uppercase font-bold">mikanda</h1>
+                    <p class="block mt-1 uppercase text-[10px] tracking-[0.18em] text-[#705f57]">la bibliotheque
+                        congolaise</p>
+                </div>
+            </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm lg:flex text-[#705f57]">
+            <a href="index.html" class="transition-colors hover:text-[#133a28]">Accueil</a>
+            <a href="biblio.html" class="transition-colors hover:text-[#133a28]">Bibilotheque</a>
+            <a href="" class="transition-colors hover:text-[#133a28]">Auteurs</a>
+            <a href="" class="transition-colors hover:text-[#133a28]">Collectives</a>
+            <a href="" class="transition-colors hover:text-[#133a28]">Archives</a>
+            <a href="" class="transition-colors hover:text-[#133a28]">A propos</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+            <a href="" aria-label="Rechercher"
+                class="rounded-sm p-2 text-[#705f57] hover:bg-[#eae0d1] hover:text-[#133a28]"><i data-lucide="search"
+                    class="w-4 h-4"></i></a>
+            <a href="" class="text-sm text-[#705f57] hover:text-[#133a28]">Connexion</a>
+            <a href=""
+                class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5">S'inscrire</a>
+        </div>
+
+        <button class="lg:hidden ">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+        <div class="flex flex-col gap-3 border-b border-[#d9d1c6] pb-5 md:flex-row md:items-end md:justify-between">
+            <div>
+                <p class="text-xs uppercase tracking-[0.2em] text-[#c17248]">Le catalogue MIKANDA</p>
+                <h1 class="mt-2 font-serif text-5xl">Bibliothèque des Œuvres Congolaises</h1>
+            </div>
+        </div>
+
+        <div>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 pt-5 items-start">
+                <div class="hidden lg:block lg:col-span-1 top-24">
+                    <div class="bg-white border border-[#E5DDCB] rounded-xl p-5 space-y-6 text-[#2D2319] shadow-xs">
+                        <div class="flex items-center justify-between pb-3 border-b border-[#F0E8DA]">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="funnel" class="w-4 h-4 text-[#c17248]"></i> 
+                                <h2 class="text-base font-bold font-editorial text-[#211E1B]">Filtrer les œuvres</h2>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label
+                                class="text-xs font-bold uppercase tracking-wider text-[#7A6E5E] font-mono block">Disponibilité</label>
+                            <div class="grid grid-cols-3 gap-1.5 p-1 bg-[#F5EFE4] rounded-lg text-xs font-semibold">
+                                <button
+                                    class="py-1.5 px-2 rounded-md transition-colors text-center bg-white text-[#211E1B] shadow-xs">Tous</button>
+                                <button
+                                    class="py-1.5 px-2 rounded-md transition-colors text-center text-[#6B5E4F] hover:text-[#1B4332]">Gratuit</button>
+                                <button
+                                    class="py-1.5 px-2 rounded-md transition-colors text-center text-[#6B5E4F] hover:text-[#8E461F]">Premium</button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <label
+                                    class="text-xs font-bold uppercase tracking-wider text-[#7A6E5E] font-mono">Catégories
+                                    littéraires</label>
+                            </div>
+
+                            <div class="space-y-1.5 max-h-60 overflow-y-auto pr-1">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Roman</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">6</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Poésie</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">1</span>
+
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Conte</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">1</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Nouvelle</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">1</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Théâtre</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">0</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Essai</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">1</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Biographie</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">0</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Littérature jeunesse</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">1</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Histoire</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">1</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Philosophie</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">0</span>
+                                </button>
+
+                                <button type="button"
+                                    class="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs transition-colors text-left text-[#4A3E31] hover:bg-[#FAF6EE]">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="w-4 h-4 rounded border-[#D0C4B0] bg-white text-[#8E461F] focus:ring-[#8E461F]">
+                                        <span>Archives & Revues</span>
+                                    </div>
+
+                                    <span class="text-[11px] text-[#918779] font-mono">0</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 pt-2 border-t border-[#F0E8DA]">
+                            <label
+                                class="text-xs font-bold uppercase tracking-wider text-[#7A6E5E] font-mono block">Auteurs
+                                phares</label>
+                            <select
+                                class="w-full bg-[#FAF6EE] border border-[#DDD1BE] text-xs text-[#2D2319] rounded-lg px-3 py-2 outline-none focus:border-[#8E461F]">
+                                <option value="all">Tous les auteurs de la RDC</option>
+                                <option value="author-mudimbe">Valentin-Yves Mudimbe</option>
+                                <option value="author-zamenga">Zamenga Batukezanga</option>
+                                <option value="author-bofane">In Koli Jean Bofane</option>
+                                <option value="author-mujira">Fiston Mwanza Mujila</option>
+                                <option value="author-faik">Clémentine Faïk-Nzuji</option>
+                                <option value="author-lomami">Paul Lomami-Tshibamba</option>
+                                <option value="author-lumumba">Patrice Émery Lumumba</option>
+                                <option value="author-bolya">Bolya Baenga</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2 py-2 border-t border-[#F0E8DA]">
+                            <label
+                                class="text-xs font-bold uppercase tracking-wider text-[#7A6E5E] font-mono block">Époque
+                                &amp; Contexte</label>
+                            <select
+                                class="w-full bg-[#FAF6EE] border border-[#DDD1BE] text-xs text-[#2D2319] rounded-lg px-3 py-2 outline-none focus:border-[#8E461F]">
+                                <option value="all">Toutes les époques</option>
+                                <option value="Tradition orale">Tradition orale</option>
+                                <option value="Époque coloniale (1900-1960)">Époque coloniale (1900-1960)</option>
+                                <option value="Post-indépendance (1960-1990)">Post-indépendance (1960-1990)</option>
+                                <option value="Période contemporaine (1990-présent)">Période contemporaine
+                                    (1990-présent)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-6">
+                    <div
+                        class="bg-white border border-[#E5DDCB] rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs">
+                        <div class="relative flex-1 max-w-sm">
+                            <input placeholder="Nom de l'oeuvre..."
+                                class="w-full bg-[#FAF6EE] border border-[#DDD1BE] focus:bg-white text-xs rounded-lg pl-8 pr-3 py-2 outline-none text-[#2D2319]"
+                                type="text" value="">
+                            <i data-lucide="search" class="w-3.5 h-3.5 text-[#8C8070] absolute left-2.5 top-1/2 -translate-y-1/2"><circle cx="11" cy="11" r="8"></circle></i>
+                        </div>
+
+                        <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto">
+                            <span class="text-xs text-[#7A6E5E] font-mono"><strong>12</strong> œuvre(s)</span>
+                            <div class="flex items-center gap-2">
+                                <select
+                                    class="bg-[#FAF6EE] border border-[#DDD1BE] text-xs text-[#2D2319] rounded-lg px-2.5 py-1.5 outline-none font-medium">
+                                    <option value="popularity">Trier par : Popularité</option>
+                                    <option value="rating">Meilleures notes</option>
+                                    <option value="newest">Nouveautés</option>
+                                    <option value="year">Année d'édition</option>
+                                    <option value="title">Titre A-Z</option>
+                                </select>
+
+                                <div
+                                    class="flex items-center border border-[#DDD1BE] rounded-lg overflow-hidden bg-[#FAF6EE]">
+                                    <button class="p-1.5 transition-colors bg-[#2D2319] text-white" title="Vue grille">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-grid3x3 lucide-grid-3x3 w-4 h-4" aria-hidden="true">
+                                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                            <path d="M3 9h18"></path>
+                                            <path d="M3 15h18"></path>
+                                            <path d="M9 3v18"></path>
+                                            <path d="M15 3v18"></path>
+                                        </svg>
+                                    </button>
+
+                                    <button class="p-1.5 transition-colors text-[#6B5E4F] hover:text-[#2D2319]"
+                                        title="Vue liste">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-list w-4 h-4" aria-hidden="true">
+                                            <path d="M3 5h.01"></path>
+                                            <path d="M3 12h.01"></path>
+                                            <path d="M3 19h.01"></path>
+                                            <path d="M8 5h13"></path>
+                                            <path d="M8 12h13"></path>
+                                            <path d="M8 19h13"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
+                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                                </div>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg>
+                                        <span>Lire maintenant</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1">
+                                        <span class="font-semibold text-[#8E461F]">Histoire</span>
+                                        <span>1961</span>
+                                    </div>
+
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs">Le
+                                        Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Patrice Émery Lumumba</p>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg>
+                                        <span>5.0</span>
+                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="L'Invention de l'Afrique : Gnose, philosophie et ordre de la connaissance"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
+                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-lock w-2.5 h-2.5" aria-hidden="true">
+                                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                        Premium
+                                    </span>
+                                </div>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg>
+                                        <span>Lire maintenant</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1">
+                                        <span class="font-semibold text-[#8E461F]">Essai</span>
+                                        <span>1988</span>
+                                    </div>
+
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="L'Invention de l'Afrique : Gnose, philosophie et ordre de la connaissance">
+                                        L'Invention de l'Afrique : Gnose, philosophie et ordre de la connaissance</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Valentin-Yves Mudimbe</p>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg>
+                                        <span>5.0</span>
+                                        <span class="text-[#9C8F7E] font-normal">(290)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Bandoki (Les Sorciers)"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
+                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                                </div>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg></button>
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg>
+                                        <span>Lire maintenant</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1">
+                                        <span class="font-semibold text-[#8E461F]">Roman</span>
+                                        <span>1973</span>
+                                    </div>
+
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Bandoki (Les Sorciers)">Bandoki (Les Sorciers)</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Zamenga Batukezanga</p>
+                                </div>
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg><span>5.0</span><span class="text-[#9C8F7E] font-normal">(310)</span>
+                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
+                                    alt="Carte postale : Récit d'un voyageur congolais"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                                </div><button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg></button>
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg><span>Lire maintenant</span></button></div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
+                                            class="font-semibold text-[#8E461F]">Nouvelle</span><span>1974</span></div>
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Carte postale : Récit d'un voyageur congolais">Carte postale : Récit d'un
+                                        voyageur congolais</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Zamenga Batukezanga</p>
+                                </div>
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg><span>4.8</span><span class="text-[#9C8F7E] font-normal">(120)</span>
+                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
+                                    alt="Tram 83"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-lock w-2.5 h-2.5" aria-hidden="true">
+                                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg> Premium</span></div><button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg></button>
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg><span>Lire maintenant</span></button></div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
+                                            class="font-semibold text-[#8E461F]">Roman</span><span>2014</span></div>
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Tram 83">Tram 83</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Fiston Mwanza Mujila</p>
+                                </div>
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg><span>4.8</span><span class="text-[#9C8F7E] font-normal">(188)</span>
+                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
+                                    alt="Pourquoi le lion n'est plus le roi des animaux"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1544716278-e513176f20b5?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span><span
+                                        class="bg-[#8E461F] text-white text-[10px] font-bold px-2 py-0.5 rounded font-mono">Nouveau</span>
+                                </div><button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg></button>
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg><span>Lire maintenant</span></button></div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
+                                            class="font-semibold text-[#8E461F]">Littérature
+                                            jeunesse</span><span>1996</span></div>
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Pourquoi le lion n'est plus le roi des animaux">Pourquoi le lion n'est
+                                        plus le roi des animaux</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">In Koli Jean Bofane</p>
+                                </div>
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg><span>4.8</span><span class="text-[#9C8F7E] font-normal">(130)</span>
+                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
+                                    alt="Mathématiques congolaises"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-lock w-2.5 h-2.5" aria-hidden="true">
+                                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg> Premium</span></div><button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg></button>
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg><span>Lire maintenant</span></button></div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
+                                            class="font-semibold text-[#8E461F]">Roman</span><span>2008</span></div>
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Mathématiques congolaises">Mathématiques congolaises</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">In Koli Jean Bofane</p>
+                                </div>
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg><span>4.9</span><span class="text-[#9C8F7E] font-normal">(165)</span>
+                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-[3/4] bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
+                                    alt="Entre les eaux : Dieu, un prêtre, la révolution"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                                </div><button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                        </path>
+                                    </svg></button>
+                                <div
+                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                                    <button
+                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path
+                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg><span>Lire maintenant</span></button></div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
+                                            class="font-semibold text-[#8E461F]">Roman</span><span>1973</span></div>
+                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
+                                        title="Entre les eaux : Dieu, un prêtre, la révolution">Entre les eaux : Dieu,
+                                        un prêtre, la révolution</h3>
+                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Valentin-Yves Mudimbe</p>
+                                </div>
+                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                            </path>
+                                        </svg><span>4.9</span><span class="text-[#9C8F7E] font-normal">(142)</span>
+                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
+                                        →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-6 border-t border-[#E5DDCB]"><span
+                            class="text-xs text-[#7A6E5E] font-mono">Page 1 sur 2 (12 œuvres)</span>
+                        <div class="flex items-center gap-1.5"><button disabled=""
+                                class="p-2 rounded-lg border border-[#DDD1BE] bg-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#FAF6EE] text-[#2D2319] transition-colors text-xs flex items-center gap-1"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-left w-4 h-4"
+                                    aria-hidden="true">
+                                    <path d="m15 18-6-6 6-6"></path>
+                                </svg><span class="hidden sm:inline">Précédent</span></button><button
+                                class="w-8 h-8 rounded-lg text-xs font-semibold transition-colors bg-[#8E461F] text-white shadow-xs">1</button><button
+                                class="w-8 h-8 rounded-lg text-xs font-semibold transition-colors bg-white border border-[#DDD1BE] text-[#2D2319] hover:bg-[#FAF6EE]">2</button><button
+                                class="p-2 rounded-lg border border-[#DDD1BE] bg-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#FAF6EE] text-[#2D2319] transition-colors text-xs flex items-center gap-1"><span
+                                    class="hidden sm:inline">Suivant</span><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-chevron-right w-4 h-4" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+		lucide.createIcons();
+	</script>
+</body>
+</html>
