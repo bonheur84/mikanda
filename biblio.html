@@ -17,7 +17,7 @@
 
 <body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
     <header
-        class="mx-auto mvax-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9]/95 px-5 py-4 lg:px-8">
+        class="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 lg:px-8">
         <a href="index.html">
             <div class="flex items-center justify-between gap-2">
                 <div>
@@ -55,7 +55,7 @@
         </button>
     </header>
 
-    <main class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+    <main class="mx-auto max-w-7xl px-5 pb-12 pt-30 lg:px-8">
         <div class="flex flex-col gap-3 border-b border-[#d9d1c6] pb-5 md:flex-row md:items-end md:justify-between">
             <div>
                 <p class="text-xs uppercase tracking-[0.2em] text-[#c17248]">Le catalogue MIKANDA</p>
@@ -278,32 +278,12 @@
 
                                 <div
                                     class="flex items-center border border-[#DDD1BE] rounded-lg overflow-hidden bg-[#FAF6EE]">
-                                    <button class="p-1.5 transition-colors bg-[#2D2319] text-white" title="Vue grille">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-grid3x3 lucide-grid-3x3 w-4 h-4" aria-hidden="true">
-                                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
-                                            <path d="M3 9h18"></path>
-                                            <path d="M3 15h18"></path>
-                                            <path d="M9 3v18"></path>
-                                            <path d="M15 3v18"></path>
-                                        </svg>
+                                    <button class="p-1.5 transition-colors bg-[#2D2319] text-white">
+                                        <i data-lucide="grid3x3" class="w-4 h-4"></i>
                                     </button>
 
-                                    <button class="p-1.5 transition-colors text-[#6B5E4F] hover:text-[#2D2319]"
-                                        title="Vue liste">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-list w-4 h-4" aria-hidden="true">
-                                            <path d="M3 5h.01"></path>
-                                            <path d="M3 12h.01"></path>
-                                            <path d="M3 19h.01"></path>
-                                            <path d="M8 5h13"></path>
-                                            <path d="M8 12h13"></path>
-                                            <path d="M8 19h13"></path>
-                                        </svg>
+                                    <button class="p-1.5 transition-colors text-[#6B5E4F] hover:text-[#2D2319]">
+                                        <i data-lucide="list" class="w-4 h-4"></i>
                                     </button>
                                 </div>
                             </div>
@@ -312,11 +292,11 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
                             <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
                                 <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                    src="terre-davenir.jfif">
                                 <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
                                     <span
                                         class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
@@ -325,157 +305,80 @@
                                 <button
                                     class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
                                     aria-label="Ajouter aux favoris">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg>
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
                                 </button>
-
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg>
-                                        <span>Lire maintenant</span>
-                                    </button>
-                                </div>
                             </div>
 
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
                                 <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1">
-                                        <span class="font-semibold text-[#8E461F]">Histoire</span>
-                                        <span>1961</span>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Le Congo, terre d'avenir</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Mamphela Ramphele</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Essai</span>
+                                        <span>2022</span>
                                     </div>
-
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs">Le
-                                        Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Patrice Émery Lumumba</p>
                                 </div>
 
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
                                     <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg>
-                                        <span>5.0</span>
-                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>4.8</span>
+                                        <span class="text-[#9C8F7E] font-normal">(128)</span>
                                     </div>
 
-                                    <button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
 
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
                             <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="L'Invention de l'Afrique : Gnose, philosophie et ordre de la connaissance"
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                    src="discours-fondateurs.jfif">
                                 <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
                                     <span
                                         class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-lock w-2.5 h-2.5" aria-hidden="true">
-                                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                        </svg>
-                                        Premium
+                                        <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
                                     </span>
                                 </div>
 
                                 <button
                                     class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
                                     aria-label="Ajouter aux favoris">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg>
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
                                 </button>
-
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg>
-                                        <span>Lire maintenant</span>
-                                    </button>
-                                </div>
                             </div>
 
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
                                 <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1">
-                                        <span class="font-semibold text-[#8E461F]">Essai</span>
-                                        <span>1988</span>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Discours fondateurs</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Patrice Lumumba</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Politique</span>
+                                        <span>1960</span>
                                     </div>
-
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="L'Invention de l'Afrique : Gnose, philosophie et ordre de la connaissance">
-                                        L'Invention de l'Afrique : Gnose, philosophie et ordre de la connaissance</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Valentin-Yves Mudimbe</p>
                                 </div>
 
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
                                     <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg>
-                                        <span>5.0</span>
-                                        <span class="text-[#9C8F7E] font-normal">(290)</span>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>4.9</span>
+                                        <span class="text-[#9C8F7E] font-normal">(312)</span>
                                     </div>
 
-                                    <button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
 
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
                             <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Bandoki (Les Sorciers)"
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                    src="la-vie-et-demi.jfif">
                                 <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
                                     <span
                                         class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
@@ -483,381 +386,259 @@
 
                                 <button
                                     class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg></button>
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg>
-                                        <span>Lire maintenant</span>
-                                    </button>
-                                </div>
+                                    aria-label="Ajouter aux favoris">
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
+                                </button>
                             </div>
 
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
                                 <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1">
-                                        <span class="font-semibold text-[#8E461F]">Roman</span>
-                                        <span>1973</span>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">La Vie et demie</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Roman</span>
+                                        <span>1979</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>4.7</span>
+                                        <span class="text-[#9C8F7E] font-normal">(204)</span>
                                     </div>
 
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Bandoki (Les Sorciers)">Bandoki (Les Sorciers)</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Zamenga Batukezanga</p>
-                                </div>
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg><span>5.0</span><span class="text-[#9C8F7E] font-normal">(310)</span>
-                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
+
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
-                                    alt="Carte postale : Récit d'un voyageur congolais"
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                    src="le-pleurer-rire.jfif">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
                                         class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
-                                </div><button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg></button>
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg><span>Lire maintenant</span></button></div>
-                            </div>
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
-                                            class="font-semibold text-[#8E461F]">Nouvelle</span><span>1974</span></div>
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Carte postale : Récit d'un voyageur congolais">Carte postale : Récit d'un
-                                        voyageur congolais</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Zamenga Batukezanga</p>
                                 </div>
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg><span>4.8</span><span class="text-[#9C8F7E] font-normal">(120)</span>
-                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Le Pleurer-rire</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Henri Lopes</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Roman</span>
+                                        <span>1979</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>4.6</span>
+                                        <span class="text-[#9C8F7E] font-normal">(176)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
-                                    alt="Tram 83"
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
-                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-lock w-2.5 h-2.5" aria-hidden="true">
-                                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                        </svg> Premium</span></div><button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg></button>
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg><span>Lire maintenant</span></button></div>
-                            </div>
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
-                                            class="font-semibold text-[#8E461F]">Roman</span><span>2014</span></div>
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Tram 83">Tram 83</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Fiston Mwanza Mujila</p>
+                                    src="télécharger (3).jfif">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
+                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
+                                        <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
+                                    </span>
                                 </div>
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg><span>4.8</span><span class="text-[#9C8F7E] font-normal">(188)</span>
-                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Mbote Kinshasa</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Roman</span>
+                                        <span>1979</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>5.0</span>
+                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
+
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
-                                    alt="Pourquoi le lion n'est plus le roi des animaux"
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1544716278-e513176f20b5?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+                                    src="télécharger (3).jfif">
                                 <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
                                         class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span><span
                                         class="bg-[#8E461F] text-white text-[10px] font-bold px-2 py-0.5 rounded font-mono">Nouveau</span>
-                                </div><button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg></button>
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg><span>Lire maintenant</span></button></div>
-                            </div>
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
-                                            class="font-semibold text-[#8E461F]">Littérature
-                                            jeunesse</span><span>1996</span></div>
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Pourquoi le lion n'est plus le roi des animaux">Pourquoi le lion n'est
-                                        plus le roi des animaux</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">In Koli Jean Bofane</p>
                                 </div>
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg><span>4.8</span><span class="text-[#9C8F7E] font-normal">(130)</span>
-                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Mbote Kinshasa</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Roman</span>
+                                        <span>1979</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>5.0</span>
+                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
+
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
-                                    alt="Mathématiques congolaises"
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
-                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-lock w-2.5 h-2.5" aria-hidden="true">
-                                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                        </svg> Premium</span></div><button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg></button>
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg><span>Lire maintenant</span></button></div>
-                            </div>
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
-                                            class="font-semibold text-[#8E461F]">Roman</span><span>2008</span></div>
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Mathématiques congolaises">Mathématiques congolaises</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">In Koli Jean Bofane</p>
+                                    src="télécharger (3).jfif">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
+                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
+                                        <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
+                                    </span>
                                 </div>
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg><span>4.9</span><span class="text-[#9C8F7E] font-normal">(165)</span>
-                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Mbote Kinshasa</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Roman</span>
+                                        <span>1979</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>5.0</span>
+                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div
-                            class="bg-white border border-[#E5DDCB] rounded-xl overflow-hidden hover:border-[#8E461F]/50 hover:shadow-md transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer"><img
-                                    alt="Entre les eaux : Dieu, un prêtre, la révolution"
+                            class="border border-[#E5DDCB] rounded-lg overflow-hidden  hover:shadow-md transition-all group flex flex-col h-full">
+                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
+                                    src="télécharger (3).jfif">
+                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                                    <span
                                         class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
-                                </div><button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-heart w-4 h-4" aria-hidden="true">
-                                        <path
-                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
-                                        </path>
-                                    </svg></button>
-                                <div
-                                    class="absolute inset-0 bg-[#2D2319]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <button
-                                        class="w-full bg-[#FAF7F2] hover:bg-white text-[#2D2319] py-2.5 px-4 rounded-lg font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform transform translate-y-2 group-hover:translate-y-0"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-book-open w-4 h-4 text-[#8E461F]" aria-hidden="true">
-                                            <path d="M12 7v14"></path>
-                                            <path
-                                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg><span>Lire maintenant</span></button></div>
-                            </div>
-                            <div class="p-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <div class="flex items-center justify-between text-xs text-[#8A7C6B] mb-1"><span
-                                            class="font-semibold text-[#8E461F]">Roman</span><span>1973</span></div>
-                                    <h3 class="font-editorial text-base font-bold text-[#211E1B] leading-snug line-clamp-2 hover:text-[#8E461F] cursor-pointer"
-                                        title="Entre les eaux : Dieu, un prêtre, la révolution">Entre les eaux : Dieu,
-                                        un prêtre, la révolution</h3>
-                                    <p class="text-xs text-[#6B5E4F] font-medium mt-1">Valentin-Yves Mudimbe</p>
                                 </div>
-                                <div class="pt-2.5 border-t border-[#F2ECE1] flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-star w-3.5 h-3.5 fill-amber-500 text-amber-500"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
-                                            </path>
-                                        </svg><span>4.9</span><span class="text-[#9C8F7E] font-normal">(142)</span>
-                                    </div><button class="text-xs font-semibold text-[#8E461F] hover:underline">Détails
-                                        →</button>
+
+                                <button
+                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-xs z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
+                                    aria-label="Ajouter aux favoris">
+                                    <i data-lucide="heart" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                                <div>
+                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248]">Mbote Kinshasa</p>
+                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
+                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                                        <span class="font-medium">Roman</span>
+                                        <span>1979</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                                        <span>5.0</span>
+                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
+                                    </div>
+
+                                    <button class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-[#E5DDCB]"><span
-                            class="text-xs text-[#7A6E5E] font-mono">Page 1 sur 2 (12 œuvres)</span>
-                        <div class="flex items-center gap-1.5"><button disabled=""
-                                class="p-2 rounded-lg border border-[#DDD1BE] bg-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#FAF6EE] text-[#2D2319] transition-colors text-xs flex items-center gap-1"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-chevron-left w-4 h-4"
-                                    aria-hidden="true">
-                                    <path d="m15 18-6-6 6-6"></path>
-                                </svg><span class="hidden sm:inline">Précédent</span></button><button
-                                class="w-8 h-8 rounded-lg text-xs font-semibold transition-colors bg-[#8E461F] text-white shadow-xs">1</button><button
-                                class="w-8 h-8 rounded-lg text-xs font-semibold transition-colors bg-white border border-[#DDD1BE] text-[#2D2319] hover:bg-[#FAF6EE]">2</button><button
-                                class="p-2 rounded-lg border border-[#DDD1BE] bg-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#FAF6EE] text-[#2D2319] transition-colors text-xs flex items-center gap-1"><span
-                                    class="hidden sm:inline">Suivant</span><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-chevron-right w-4 h-4" aria-hidden="true">
-                                    <path d="m9 18 6-6-6-6"></path>
-                                </svg></button></div>
+
+                    <div class="flex items-center justify-between pt-6 border-t border-[#E5DDCB]">
+                        <span class="text-xs text-[#7A6E5E] font-mono">Page 1 sur 2 (12 œuvres)</span>
+                        <div class="flex items-center gap-1.5">
+                            <button disabled="" class="p-2 rounded-lg border border-[#DDD1BE] bg-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#FAF6EE] text-[#2D2319] transition-colors text-xs flex items-center gap-1">
+                                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                <span class="hidden sm:inline">Précédent</span>
+                            </button>
+                            
+                            <button class="w-8 h-8 rounded-lg text-xs font-semibold transition-colors bg-[#8E461F] text-white shadow-xs">1</button>
+                                <button class="w-8 h-8 rounded-lg text-xs font-semibold transition-colors bg-white border border-[#DDD1BE] text-[#2D2319] hover:bg-[#FAF6EE]">2</button>
+                                <button class="p-2 rounded-lg border border-[#DDD1BE] bg-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#FAF6EE] text-[#2D2319] transition-colors text-xs flex items-center gap-1">
+                                <span class="hidden sm:inline">Suivant</span>
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    
     <script>
 		lucide.createIcons();
 	</script>
