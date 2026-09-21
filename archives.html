@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKINDA —— Bibliotheque numerique de la litterature Congolsaise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="logo_e9e0d1.svg" />
+</head>
+
+<body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
+    <header
+        class="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 lg:px-8">
+        <a href="index.html">
+            <div class="flex items-center justify-between gap-2">
+                <div>
+                    <img src="logo.svg" alt="logo" class="w-12 h-11">
+                </div>
+
+                <div class="leading-5">
+                    <h1 class="block font-serif text-xl leading-none tracking-wide uppercase font-bold">mikanda</h1>
+                    <p class="block mt-1 uppercase text-[10px] tracking-[0.18em] text-[#705f57]">la bibliotheque
+                        congolaise</p>
+                </div>
+            </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm lg:flex text-[#705f57]">
+            <a href="index.html" class="transition-colors hover:text-[#133a28]">Accueil</a>
+            <a href="biblio.html" class="transition-colors hover:text-[#133a28]">Bibilotheque</a>
+            <a href="auteur.html" class="transition-colors hover:text-[#133a28]">Auteurs</a>
+            <a href="collectives.html" class="transition-colors hover:text-[#133a28]">Collectives</a>
+            <a href="archives.html" class="transition-colors hover:text-[#133a28]">Archives</a>
+            <a href="apropos.html" class="transition-colors hover:text-[#133a28]">A propos</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+            <a href="" aria-label="Rechercher"
+                class="rounded-sm p-2 text-[#705f57] hover:bg-[#eae0d1] hover:text-[#133a28]"><i data-lucide="search"
+                    class="w-4 h-4"></i></a>
+            <a href="" class="text-sm text-[#705f57] hover:text-[#133a28]">Connexion</a>
+            <a href=""
+                class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5">S'inscrire</a>
+        </div>
+
+        <button class="lg:hidden ">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-5 pb-12 pt-30 lg:px-8">
+        <div class="max-w-2xl">
+            <p class="text-xs uppercase tracking-[0.2em] text-[#c17248]">
+                Patrimoine documentaire
+            </p>
+            <h1 class="mt-2 font-serif text-5xl">Archives littéraires</h1>
+            <p class="mt-5 text-lg leading-8 text-[#705f57]">
+                Une archive nationale numérique pour retrouver les traces, les documents et les voix qui ont construit
+                la littérature congolaise.
+            </p>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <button style="background-color: #315a46; background-image: linear-gradient(rgba(19,58,40,.18), rgba(19,58,40,.82)), url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=80');" class="group flex min-h-48 flex-col items-start justify-between border border-[#d9d1c6] bg-cover bg-center p-6 text-left text-[#fdfaf3] transition hover:-translate-y-1 hover:border-[#133a28] hover:shadow-md">
+                <span class="flex h-11 w-11 items-center justify-center bg-[#eae0d1] text-[#133a28]">
+                    <i data-lucide="file-text" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="block font-serif text-2xl group-hover:text-[#c17248]">Anciennes éditions</span>
+                    <span class="mt-2 block text-sm leading-6 text-[#fdfaf3]">
+                        Premières éditions, ouvrages rares et fonds patrimoniaux.
+                    </span>
+                </span>
+            </button>
+
+            <button style="background-color: #315a46; background-image: linear-gradient(rgba(19,58,40,.18), rgba(19,58,40,.82)), url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80');" class="group flex min-h-48 flex-col items-start justify-between border border-[#d9d1c6] bg-cover bg-center p-6 text-left text-[#fdfaf3] transition hover:-translate-y-1 hover:border-[#133a28] hover:shadow-md">
+                <span class="flex h-11 w-11 items-center justify-center bg-[#eae0d1] text-[#133a28]">
+                    <i data-lucide="scroll-text" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="block font-serif text-2xl group-hover:text-[#c17248]">Manuscrits</span>
+                    <span class="mt-2 block text-sm leading-6 text-[#fdfaf3]">
+                        Notes, brouillons et documents de travail d’écrivains.
+                    </span>
+                </span>
+            </button>
+
+            <button style="background-color: #315a46; background-image: linear-gradient(rgba(19,58,40,.18), rgba(19,58,40,.82)), url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80');" class="group flex min-h-48 flex-col items-start justify-between border border-[#d9d1c6] bg-cover bg-center p-6 text-left text-[#fdfaf3] transition hover:-translate-y-1 hover:border-[#133a28] hover:shadow-md">
+                <span class="flex h-11 w-11 items-center justify-center bg-[#eae0d1] text-[#133a28]">
+                    <i data-lucide="newspaper" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="block font-serif text-2xl group-hover:text-[#c17248]">Revues &amp; journaux</span>
+                    <span class="mt-2 block text-sm leading-6 text-[#fdfaf3]">
+                        La vie littéraire congolaise dans la presse.
+                    </span>
+                </span>
+            </button>
+
+            <button style="background-color: #315a46; background-image: linear-gradient(rgba(19,58,40,.18), rgba(19,58,40,.82)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80');" class="group flex min-h-48 flex-col items-start justify-between border border-[#d9d1c6] bg-cover bg-center p-6 text-left text-[#fdfaf3] transition hover:-translate-y-1 hover:border-[#133a28] hover:shadow-md">
+                <span class="flex h-11 w-11 items-center justify-center bg-[#eae0d1] text-[#133a28]">
+                    <i data-lucide="image" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="block font-serif text-2xl group-hover:text-[#c17248]">Photographies</span>
+                    <span class="mt-2 block text-sm leading-6 text-[#fdfaf3]">
+                        Portraits, rencontres et scènes de la vie culturelle.
+                    </span>
+                </span>
+            </button>
+
+            <button style="background-color: #315a46; background-image: linear-gradient(rgba(19,58,40,.18), rgba(19,58,40,.82)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80');" class="group flex min-h-48 flex-col items-start justify-between border border-[#d9d1c6] bg-cover bg-center p-6 text-left text-[#fdfaf3] transition hover:-translate-y-1 hover:border-[#133a28] hover:shadow-md">
+                <span class="flex h-11 w-11 items-center justify-center bg-[#eae0d1] text-[#133a28]">
+                    <i data-lucide="video" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="block font-serif text-2xl group-hover:text-[#c17248]">Entretiens</span>
+                    <span class="mt-2 block text-sm leading-6 text-[#fdfaf3]">
+                        Paroles d’auteurs, éditeurs et passeurs.
+                    </span>
+                </span>
+            </button>
+
+            <button style="background-color: #315a46; background-image: linear-gradient(rgba(19,58,40,.18), rgba(19,58,40,.82)), url('https://images.unsplash.com/photo-1504260576885-8491f15ca4c5?auto=format&fit=crop&w=900&q=80');" class="group flex min-h-48 flex-col items-start justify-between border border-[#d9d1c6] bg-cover bg-center p-6 text-left text-[#fdfaf3] transition hover:-translate-y-1 hover:border-[#133a28] hover:shadow-md">
+                <span class="flex h-11 w-11 items-center justify-center bg-[#eae0d1] text-[#133a28]">
+                    <i data-lucide="archive" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="block font-serif text-2xl group-hover:text-[#c17248]">Document historique</span>
+                    <span class="mt-2 block text-sm leading-6 text-[#fdfaf3]">
+                        Une mémoire documentaire à consulter et préserver.
+                    </span>
+                </span>
+            </button>
+        </div>
+    </main>
+
+    <footer class="border-t border-border bg-[#292c27] px-5 py-12 text-[#e9e0d1] lg:px-8">
+            <div class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+                <div>
+                    <a aria-label="MIKANDA accueil" class="flex items-center gap-3 active" href="index.html">
+                        <div>
+                            <img src="logo_e9e0d1.svg" alt="logo" class="w-12 h-11">
+                        </div>
+                        <span>
+                            <span class="block font-serif text-xl font-bold leading-none tracking-wide">MIKANDA</span>
+                            <span class="mt-1 block text-[9px] uppercase tracking-[0.18em] text-muted-foreground">La Bibliothèque congolaise</span>
+                        </span>
+                    </a>
+                    
+                    <p class="mt-5 max-w-xs text-sm leading-6 text-[#e9e0d1]/65">La bibliothèque numérique de la littérature congolaise.</p>
+                </div>
+                
+                <div>
+                    <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">Bibliothèque</p>
+                    
+                    <div class="flex flex-col gap-3 text-sm text-[#e9e0d1]/70">
+                        <a href="" class="hover:text-[#e9e0d1]">Catalogue</a>
+                        <a href="" class="hover:text-[#e9e0d1]">Auteurs</a>
+                        <a href="" class="hover:text-[#e9e0d1]">Collections</a>
+                        <a href="" class="hover:text-[#e9e0d1]">Archives</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">Informations</p>
+                    
+                    <div class="flex flex-col gap-3 text-sm text-[#e9e0d1]/70">
+                        <a href="" class="hover:text-[#e9e0d1]">À propos</a>
+                        <a href="" class="hover:text-[#e9e0d1]">Contact</a>
+                        <a href="" class="hover:text-[#e9e0d1]">Abonnement</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">La communauté</p>
+                    <p class="text-sm leading-6 text-[#e9e0d1]/70"><i data-lucide="arrow"></i></p>
+                    <p class="mt-5 text-xs text-[#e9e0d1]/45">Lubumbashi, République démocratique du Congo</p>
+                </div>
+            </div>
+            
+            <div class="mx-auto mt-10 max-w-7xl border-t border-[#e9e0d1]/15 pt-5 text-xs text-[#e9e0d1]/45">&copy; 2026 — Bibliothèque numérique de la littérature congolaise</div>
+        </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
