@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MIKANDA - Inscription à la bibliothèque numérique</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/output.css" />
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
+</head>
+
+<body class="min-h-dvh bg-[#f8f6f2] text-[#281e19]">
+	<main class="grid min-h-dvh lg:grid-cols-2">
+		<section class="relative flex min-h-115 flex-col justify-between overflow-hidden bg-[#173f30] bg-cover bg-center px-8 py-10 text-[#f7f1e8] sm:px-12 lg:min-h-dvh lg:px-16 lg:py-14" style="background-image: linear-gradient(rgba(23, 63, 48, 0.72), rgba(23, 63, 48, 0.88)), url('assets/images/image%20(1).png');">
+			<div class="absolute -bottom-36 -right-28 h-80 w-80 rounded-full border border-[#c7904a]/20"></div>
+			<div class="absolute -bottom-24 -right-16 h-56 w-56 rounded-full border border-[#c7904a]/15"></div>
+
+			<a href="index.html" class="relative z-10 inline-flex w-fit items-center gap-3" aria-label="Retour à l'accueil de Mikanda">
+				<img src="assets/branding/logo_e9e0d1.svg" alt="" class="h-12 w-12 object-contain">
+				<span class="leading-none">
+					<span class="block font-serif text-[21px] uppercase tracking-wide">Mikanda</span>
+					<span class="mt-1 block text-[10px] font-semibold uppercase tracking-[0.22em] text-[#c7904a]">Bibliothèque numérique</span>
+				</span>
+			</a>
+
+			<div class="relative z-10 max-w-xl py-16 lg:py-0">
+				<p class="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#c7904a]">Mikanda</p>
+				<blockquote class="font-serif text-3xl italic leading-[1.35] text-[#f8f1e7] sm:text-4xl">
+					« Un peuple sans littérature est un peuple sans mémoire. »
+				</blockquote>
+				<cite class="mt-6 block text-sm font-medium not-italic text-[#c9bcae]">V. Y. Mudimbe</cite>
+			</div>
+
+			<p class="relative z-10 text-xs text-[#b6b7a7]">© 2026 · Bibliothèque numérique de la littérature congolaise</p>
+		</section>
+
+		<section class="flex items-center justify-center px-7 py-12 sm:px-12 lg:px-20 xl:px-28">
+			<div class="w-full max-w-130">
+				<div class="mb-10">
+					<p class="text-xs font-semibold uppercase tracking-[0.24em] text-[#8f7770]">Inscription</p>
+					<h1 class="mt-4 max-w-xl font-serif text-4xl leading-[1.08] text-[#221b18] sm:text-5xl">Rejoignez la bibliothèque</h1>
+					<p class="mt-4 text-base text-[#725f57]">Créez votre compte pour lire, annoter et sauvegarder vos œuvres.</p>
+				</div>
+
+				<form action="#" method="post" class="space-y-6">
+					<div class="grid gap-6 sm:grid-cols-2">
+						<div>
+							<label for="first-name" class="mb-2 block text-xs font-semibold uppercase tracking-[0.23em] text-[#8f7770]">Prénom</label>
+							<input id="first-name" name="first_name" type="text" autocomplete="given-name" required class="h-13 w-full border border-[#ded5c8] bg-white px-4 text-sm text-[#281e19] outline-none transition-colors placeholder:text-[#a6adbc] focus:border-[#173f30] focus:ring-1 focus:ring-[#173f30]">
+						</div>
+						<div>
+							<label for="last-name" class="mb-2 block text-xs font-semibold uppercase tracking-[0.23em] text-[#8f7770]">Nom</label>
+							<input id="last-name" name="last_name" type="text" autocomplete="family-name" required class="h-13 w-full border border-[#ded5c8] bg-white px-4 text-sm text-[#281e19] outline-none transition-colors placeholder:text-[#a6adbc] focus:border-[#173f30] focus:ring-1 focus:ring-[#173f30]">
+						</div>
+					</div>
+
+					<div>
+						<label for="email" class="mb-2 block text-xs font-semibold uppercase tracking-[0.23em] text-[#8f7770]">Email</label>
+						<input id="email" name="email" type="email" autocomplete="email" required class="h-13 w-full border border-[#ded5c8] bg-white px-4 text-sm text-[#281e19] outline-none transition-colors placeholder:text-[#a6adbc] focus:border-[#173f30] focus:ring-1 focus:ring-[#173f30]">
+					</div>
+
+					<div>
+						<label for="password" class="mb-2 block text-xs font-semibold uppercase tracking-[0.23em] text-[#8f7770]">Mot de passe</label>
+						<input id="password" name="password" type="password" autocomplete="new-password" required class="h-13 w-full border border-[#ded5c8] bg-white px-4 text-sm text-[#281e19] outline-none transition-colors placeholder:text-[#a6adbc] focus:border-[#173f30] focus:ring-1 focus:ring-[#173f30]">
+					</div>
+
+					<div>
+						<label for="password-confirmation" class="mb-2 block text-xs font-semibold uppercase tracking-[0.23em] text-[#8f7770]">Confirmer</label>
+						<input id="password-confirmation" name="password_confirmation" type="password" autocomplete="new-password" required class="h-13 w-full border border-[#ded5c8] bg-white px-4 text-sm text-[#281e19] outline-none transition-colors placeholder:text-[#a6adbc] focus:border-[#173f30] focus:ring-1 focus:ring-[#173f30]">
+					</div>
+
+					<label class="flex cursor-pointer items-start gap-3 text-sm leading-6 text-[#725f57]">
+						<input type="checkbox" name="terms" required class="mt-1 h-4 w-4 shrink-0 accent-[#173f30]">
+						<span>J'accepte les <a href="apropos.html" class="text-[#bd553d] hover:text-[#173f30]">conditions</a> et la politique de confidentialité.</span>
+					</label>
+
+					<button type="submit" class="h-14 w-full bg-[#bd5034] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#a9422b] focus:outline-none focus:ring-2 focus:ring-[#c7904a] focus:ring-offset-2">Créer mon compte</button>
+				</form>
+
+				<p class="mt-9 text-center text-sm text-[#725f57]">Déjà inscrit&nbsp;? <a href="login.html" class="font-medium text-[#bd553d] hover:text-[#173f30]">Se connecter</a></p>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		lucide.createIcons();
+	</script>
+</body>
+
+</html>
