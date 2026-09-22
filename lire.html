@@ -13,93 +13,245 @@
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
 </head>
 
-<body class="min-h-dvh bg-[#f4ecdc] text-[#332c28]" data-theme="paper">
-    <header class="fixed inset-x-0 top-0 z-40 h-18 border-b border-[#ded3c1] bg-[#f7f1e6]/95 backdrop-blur-sm">
-        <div class="flex h-full items-center justify-between gap-5 px-5 lg:px-8">
-            <div class="flex min-w-0 items-center gap-5">
-                <a href="vu_libre.html" aria-label="Quitter la lecture" class="shrink-0 text-3xl leading-none text-[#403732] transition-colors hover:text-[#315d4b]">‹</a>
-                <button type="button" aria-label="Ouvrir la table des matières" class="shrink-0 text-xl leading-none text-[#403732] hover:text-[#315d4b]">☷</button>
-                <div class="min-w-0">
-                    <h1 class="truncate font-serif text-base text-[#281e19] sm:text-lg">La vie et demie</h1>
-                    <p class="truncate text-xs uppercase tracking-[0.14em] text-[#8f7770]">Sony Labou Tansi</p>
+<body class="min-h-dvh bg-[#f4ecdc] text-[#332c28] font-serif">
+    <!-- Main Reader Container -->
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 h-16 bg-[#f7f1e6]/95 backdrop-blur-sm border-b border-[#ded3c1]">
+            <div class="max-w-[1400px] mx-auto px-6 h-full flex items-center justify-between gap-4">
+                <div class="flex items-center gap-4 flex-1 min-w-0">
+                    <a href="vu_libre.html" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Quitter la lecture">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </a>
+                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Table des matières">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                    <div class="min-w-0">
+                        <h1 class="font-['Playfair_Display'] text-base font-medium text-[#281e19] truncate">La vie et demie</h1>
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-[#8f7770] truncate">Sony Labou Tansi</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-medium text-[#705f57]">47 %</span>
+                        <div class="w-30 h-1 bg-[#ded3c1] rounded-full overflow-hidden">
+                            <div class="h-full bg-[#315d4b] rounded-full" style="width: 47%"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Rechercher">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Réglages">
+                        <i data-lucide="settings" class="w-5 h-5"></i>
+                    </button>
+                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Mode plein écran">
+                        <i data-lucide="maximize" class="w-5 h-5"></i>
+                    </button>
                 </div>
             </div>
+        </header>
 
-            <div class="hidden items-center gap-5 text-sm text-[#705f57] md:flex">
-                <span id="progress-label">47 % terminé</span>
-                <div class="h-1.5 w-32 overflow-hidden bg-[#ded3c1]"><span class="block h-full w-[47%] bg-[#315d4b]" id="progress-bar"></span></div>
-                <button type="button" aria-label="Rechercher" class="text-xl leading-none transition-colors hover:text-[#315d4b]">⌕</button>
-                <button type="button" aria-label="Réglages" class="text-xl leading-none transition-colors hover:text-[#315d4b]">⚙</button>
-                <button type="button" aria-label="Mode plein écran" class="text-xl leading-none transition-colors hover:text-[#315d4b]">⛶</button>
+        <!-- Search Panel -->
+        <div id="search-panel" class="hidden fixed top-16 left-0 right-0 z-40 bg-[#f7f1e6] border-b border-[#ded3c1] px-6 py-4">
+            <div class="max-w-xl mx-auto flex items-center gap-3 bg-white border border-[#d9d1c6] rounded-lg px-4 py-3">
+                <i data-lucide="search" class="w-5 h-5 text-[#8f7770]"></i>
+                <input type="search" placeholder="Rechercher dans le livre..." class="flex-1 border-none bg-transparent text-sm outline-none text-[#332c28] placeholder:text-[#8f7770]">
             </div>
-
-            <span aria-label="Outils de lecture" class="text-xl leading-none text-[#332c28] md:hidden">☷</span>
         </div>
-        <div id="search-panel" class="hidden border-t border-[#ded3c1] bg-[#f7f1e6] px-5 py-3 lg:px-8">
-            <div class="mx-auto flex max-w-xl items-center gap-3 border border-[#d9d1c6] bg-white px-3"><span class="text-xl text-[#8f7770]">⌕</span><input type="search" placeholder="Rechercher dans le livre..." class="h-10 flex-1 bg-transparent text-sm outline-none"></div>
-        </div>
-    </header>
 
-    <aside id="toc" class="fixed bottom-0 left-0 top-18 z-30 w-72 -translate-x-full border-r border-[#ded3c1] bg-[#f4ecdc] px-6 py-8 transition-transform duration-300 lg:translate-x-0">
-        <div class="flex items-center justify-between">
-            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#8f8171]">☷ &nbsp; Table des matières</p>
-            <span aria-label="Fermer la table des matières" class="text-xl lg:hidden">×</span>
-        </div>
-        <div class="mt-6 space-y-1 text-[15px]">
-            <button type="button" class="toc-item flex w-full items-center gap-3 border-l-2 border-[#315d4b] px-3 py-3 text-left text-[#315d4b]" data-chapter="1"><span>Chapitre I · La mort</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#8f8171] transition-colors hover:bg-[#eee4d2] hover:text-[#315d4b]" data-chapter="2"><span>Chapitre II · La ville</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#8f8171] transition-colors hover:bg-[#eee4d2] hover:text-[#315d4b]" data-chapter="3"><span>Chapitre III · La mémoire</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#8f8171] transition-colors hover:bg-[#eee4d2] hover:text-[#315d4b]" data-chapter="4"><span>Chapitre IV · L'héritage</span></button>
-        </div>
-    </aside>
+        <!-- Main Content Area -->
+        <div class="flex mt-16 mb-12 min-h-[calc(100vh-7rem)]">
+            <!-- Table of Contents Sidebar -->
+            <aside id="toc" class="w-72 bg-[#f4ecdc] border-r border-[#ded3c1] p-6 sticky top-16 h-[calc(100vh-7rem)] overflow-y-auto hidden lg:block">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-[11px] uppercase tracking-[0.22em] text-[#8f8171] font-semibold">Table des matières</h3>
+                    <button type="button" class="hidden lg:flex items-center justify-center w-8 h-8 rounded text-[#8f8171] hover:bg-[#eee4d2]" aria-label="Fermer">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#315d4b] text-white text-left font-serif text-[15px] transition-colors" data-chapter="1">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">I</span>
+                        <span>La mort</span>
+                    </button>
+                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-chapter="2">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">II</span>
+                        <span>La ville</span>
+                    </button>
+                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-chapter="3">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">III</span>
+                        <span>La mémoire</span>
+                    </button>
+                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-chapter="4">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">IV</span>
+                        <span>L'héritage</span>
+                    </button>
+                </nav>
+            </aside>
 
-    <div id="toc-backdrop" class="fixed inset-0 z-20 hidden bg-[#332c28]/30 lg:hidden"></div>
+            <!-- Book Page -->
+            <main class="flex-1 max-w-4xl mx-auto px-12 py-12">
+                <article class="bg-white rounded-xl p-12 shadow-sm">
+                    <!-- Chapter Header -->
+                    <div class="mb-8 text-center">
+                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre I</span>
+                        <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">La mort</h2>
+                    </div>
 
-    <main class="min-h-dvh pt-18 lg:pl-72 lg:pr-18">
-        <article class="mx-auto max-w-240 px-7 py-16 pb-40 sm:px-12 lg:px-16 lg:py-28 lg:pb-40" id="reader-content">
-            <div class="mb-16">
-                <p class="font-mono text-xs uppercase tracking-[0.24em] text-[#bd684c]">Chapitre I</p>
-                <h2 class="mt-8 font-serif text-5xl leading-tight text-[#332c28] sm:text-6xl">La mort</h2>
+                    <!-- Book Text -->
+                    <div class="font-serif text-lg leading-[1.9] text-[#403732]">
+                        <p class="mb-6">Il était une fois un pays qui n'existait nulle part. Dans ce pays, les morts n'avaient pas fini de mourir et les vivants avaient appris à parler avec leur ombre.</p>
+                        <p class="mb-6">Le Guide Providentiel avançait dans les rues comme on avance dans un rêve trop ancien. Les murs portaient les noms de ceux qui avaient disparu, et la ville gardait dans ses pierres la mémoire des voix.</p>
+                        <p class="mb-6">Chaque matin, le peuple se réveillait avec la même question au bord des lèvres : combien de temps peut-on vivre dans un pays où la mort refuse de partir ?</p>
+                        <blockquote class="my-8 pl-6 border-l-4 border-[#bd684c] italic text-[#8f8171] text-xl leading-8">
+                            La mémoire ne se lit pas seulement dans les livres : elle se transmet dans les silences.
+                        </blockquote>
+                    </div>
+                </article>
+            </main>
+
+            <!-- Right Sidebar - Bookmarks & Notes -->
+            <aside class="w-80 bg-[#f4ecdc] border-l border-[#ded3c1] p-6 sticky top-16 h-[calc(100vh-7rem)] overflow-y-auto hidden xl:block">
+                <div class="mb-6">
+                    <h3 class="text-[11px] uppercase tracking-[0.22em] text-[#8f8171] font-semibold">Signets & Notes</h3>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col items-center justify-center py-12 text-center text-[#8f7770]">
+                        <i data-lucide="bookmark" class="w-8 h-8 mb-4 opacity-50"></i>
+                        <p class="text-sm">Aucun signet pour le moment</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Reading Stats Bar -->
+        <div class="bg-[#f7f1e6] border-t border-[#ded3c1] py-3 px-6">
+            <div class="max-w-[1400px] mx-auto flex justify-center gap-8">
+                <div class="flex items-center gap-2 text-sm text-[#705f57]">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                    <span>12 min de lecture</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-[#705f57]">
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                    <span>847 mots</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-[#705f57]">
+                    <i data-lucide="book" class="w-4 h-4"></i>
+                    <span>Page 1/45</span>
+                </div>
             </div>
-
-            <div class="reader-text max-w-220 font-serif text-[20px] leading-[1.9] text-[#403732] sm:text-[22px]">
-                <p>Il était une fois un pays qui n'existait nulle part. Dans ce pays, les morts n'avaient pas fini de mourir et les vivants avaient appris à parler avec leur ombre.</p>
-                <p class="mt-10">Le Guide Providentiel avançait dans les rues comme on avance dans un rêve trop ancien. Les murs portaient les noms de ceux qui avaient disparu, et la ville gardait dans ses pierres la mémoire des voix.</p>
-                <p class="mt-10">Chaque matin, le peuple se réveillait avec la même question au bord des lèvres : combien de temps peut-on vivre dans un pays où la mort refuse de partir&nbsp;?</p>
-                <blockquote class="mt-24 border-l-2 border-[#bd684c] pl-7 font-serif text-lg italic leading-8 text-[#8f8171] sm:text-xl">La mémoire ne se lit pas seulement dans les livres&nbsp;: elle se transmet dans les silences.</blockquote>
-            </div>
-        </article>
-    </main>
-
-    <footer class="fixed inset-x-0 bottom-0 z-40 flex h-16 items-center justify-between border-t border-[#ded3c1] bg-[#f7f1e6]/95 px-5 backdrop-blur-sm sm:px-10 lg:pl-7 lg:pr-14">
-        <button type="button" class="inline-flex items-center gap-2 text-sm text-[#8f8171] transition-colors hover:text-[#315d4b]"><span class="text-xl leading-none">‹</span> Précédent</button>
-        <div class="flex items-center gap-4 text-[#403732]">
-            <button type="button" id="font-decrease" aria-label="Diminuer la taille du texte" class="text-xl leading-none hover:text-[#315d4b]">−</button>
-            <span class="text-xs">94</span>
-            <button type="button" id="font-increase" aria-label="Augmenter la taille du texte" class="text-xl leading-none hover:text-[#315d4b]">＋</button>
-            <span class="mx-1 h-5 w-px bg-[#ded3c1]"></span>
-            <button type="button" aria-label="Ajouter un signet" class="text-xl leading-none hover:text-[#315d4b]">♧</button>
-            <button type="button" aria-label="Traduire le texte" title="Traduire" class="hover:text-[#315d4b]"><i data-lucide="languages" class="h-4 w-4"></i></button>
-            <button type="button" aria-label="Changer de thème" class="text-xl leading-none hover:text-[#315d4b]">☼</button>
         </div>
-        <button type="button" class="inline-flex items-center gap-2 text-sm text-[#315d4b] transition-colors hover:text-[#bd684c]">Suivant <span class="text-xl leading-none">›</span></button>
-    </footer>
 
-    <div id="mobile-tools-panel" class="fixed bottom-4 left-4 right-4 z-50 hidden border border-[#d9d1c6] bg-[#fbfaf7] p-4 shadow-lg md:hidden">
-        <div class="flex items-center justify-between text-sm"><span>Outils de lecture</span><span aria-label="Fermer" class="text-xl">×</span></div>
-        <div class="mt-4 flex items-center justify-around text-[#403732]"><span class="text-xl">T<sup>+</sup></span><span class="text-xl">T<sup>-</sup></span><span class="text-xl">☼</span></div>
+        <!-- Footer Navigation -->
+        <footer class="fixed bottom-0 left-0 right-0 z-50 h-16 bg-[#f7f1e6]/95 backdrop-blur-sm border-t border-[#ded3c1]">
+            <div class="max-w-[1400px] mx-auto px-6 h-full flex items-center justify-between gap-4">
+                <button type="button" class="flex items-center gap-2 px-5 py-2.5 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#8f8171] hover:border-[#315d4b] hover:text-[#315d4b] transition-colors">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    <span>Précédent</span>
+                </button>
+
+                <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Diminuer la taille du texte" title="A-">
+                            <i data-lucide="minus" class="w-4 h-4"></i>
+                        </button>
+                        <span class="text-xs text-[#705f57] w-6 text-center">94</span>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Augmenter la taille du texte" title="A+">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <div class="w-px h-6 bg-[#ded3c1] mx-2"></div>
+
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Ajouter un signet" title="Signet">
+                            <i data-lucide="bookmark" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Surligner" title="Surligner">
+                            <i data-lucide="highlighter" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Ajouter une note" title="Note">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <div class="w-px h-6 bg-[#ded3c1] mx-2"></div>
+
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Traduire" title="Traduire">
+                            <i data-lucide="languages" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode lecture" title="Mode lecture">
+                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode audio" title="Audio">
+                            <i data-lucide="volume-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <div class="w-px h-6 bg-[#ded3c1] mx-2"></div>
+
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode concentration" title="Mode concentration">
+                            <i data-lucide="focus" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode sombre" title="Mode sombre">
+                            <i data-lucide="moon" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Double page" title="Double page">
+                            <i data-lucide="columns" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="flex items-center gap-2 px-5 py-2.5 border border-[#315d4b] bg-[#315d4b] rounded-lg text-sm text-white hover:bg-[#26503d] transition-colors">
+                    <span>Suivant</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </footer>
+
+        <!-- Settings Panel -->
+        <div id="settings-panel" class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white rounded-xl shadow-lg w-[90%] max-w-md max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between p-5 border-b border-[#ded3c1]">
+                <h3 class="font-['Playfair_Display'] text-lg font-medium text-[#332c28]">Réglages de lecture</h3>
+                <button type="button" class="flex items-center justify-center w-8 h-8 rounded text-[#8f8171] hover:bg-[#eee4d2]" aria-label="Fermer">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-[#332c28] uppercase tracking-wider mb-3">Police</label>
+                    <div class="flex gap-2">
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors bg-[#315d4b] text-white border-[#315d4b]">Lora</button>
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors">Merriweather</button>
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors">Georgia</button>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-[#332c28] uppercase tracking-wider mb-3">Taille du texte</label>
+                    <input type="range" min="12" max="32" value="18" class="w-full h-1.5 bg-[#ded3c1] rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4.5 [&::-webkit-slider-thumb]:h-4.5 [&::-webkit-slider-thumb]:bg-[#315d4b] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-[#332c28] uppercase tracking-wider mb-3">Interligne</label>
+                    <div class="flex gap-2">
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors">Serré</button>
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors bg-[#315d4b] text-white border-[#315d4b]">Normal</button>
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors">Large</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-[#332c28] uppercase tracking-wider mb-3">Marges</label>
+                    <div class="flex gap-2">
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors">Étroites</button>
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors bg-[#315d4b] text-white border-[#315d4b]">Normales</button>
+                        <button type="button" class="flex-1 px-4 py-2 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#403732] hover:border-[#315d4b] transition-colors">Large</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <style>
-        .focus-mode aside#toc,
-        .focus-mode > aside:last-of-type,
-        .focus-mode header { opacity: 0.12; transition: opacity 200ms ease; }
-        .focus-mode main { padding-left: 0; padding-right: 0; }
-        .focus-mode article { max-width: 900px; }
-        .reader-dark .reader-text { color: #e9e0d1; }
-        .reader-dark h2 { color: #f5efe5; }
-        @media (max-width: 1023px) { #toc { top: 72px; } }
-    </style>
+      
     <script>lucide.createIcons();</script>
 </body>
 
