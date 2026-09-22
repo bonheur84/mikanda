@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKINDA —— Femmes Écrivaines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/output.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="../assets/branding/logo_e9e0d1.svg" />
+</head>
+
+<body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
+    <header
+        class="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9]/95 backdrop-blur-sm px-5 py-4 lg:px-8">
+        <a href="../index.html">
+            <div class="flex items-center justify-between gap-2">
+                <div>
+                    <img src="../assets/branding/logo.svg" alt="logo" class="w-12 h-11">
+                </div>
+
+                <div class="leading-5">
+                    <h1 class="block font-serif text-xl leading-none tracking-wide uppercase font-bold">mikanda</h1>
+                    <p class="block mt-1 uppercase text-[10px] tracking-[0.18em] text-[#705f57]">la bibliotheque
+                        congolaise</p>
+                </div>
+            </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm lg:flex text-[#705f57]">
+            <a href="../index.html" class="transition-colors hover:text-[#133a28]">Accueil</a>
+            <a href="../biblio.html" class="transition-colors hover:text-[#133a28]">Bibilotheque</a>
+            <a href="../auteur.html" class="transition-colors hover:text-[#133a28]">Auteurs</a>
+            <a href="../collectives.html" class="transition-colors hover:text-[#133a28] font-medium text-[#133a28]">Collectives</a>
+            <a href="../archives.html" class="transition-colors hover:text-[#133a28]">Archives</a>
+            <a href="../apropos.html" class="transition-colors hover:text-[#133a28]">A propos</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+            <a href="../biblio.html" aria-label="Rechercher"
+                class="rounded-lg p-2 text-[#705f57] hover:bg-[#eae0d1] hover:text-[#133a28] transition-colors"><i data-lucide="search"
+                    class="w-4 h-4"></i></a>
+            <a href="../login.html" class="text-sm text-[#705f57] hover:text-[#133a28] transition-colors">Connexion</a>
+            <a href="../signup.html"
+                class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-white rounded-lg transition-colors hover:bg-[#245743]">S'inscrire</a>
+        </div>
+
+        <button class="lg:hidden rounded-lg p-2 text-[#705f57] hover:bg-[#eae0d1] transition-colors">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-5 pb-12 pt-30 lg:px-8">
+        <div class="mb-8">
+            <p class="text-xs uppercase tracking-[0.2em] text-[#c17248]">Collection</p>
+            <h1 class="mt-2 font-serif text-5xl">Femmes Écrivaines</h1>
+            <p class="mt-4 max-w-xl text-[#705f57]">
+                Une sélection de voix singulières, d'hier et d'aujourd'hui. Découvrez les écritures féminines qui ont façonné et continuent d'enrichir la littérature congolaise.
+            </p>
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-[#133a28] px-6 py-3 text-sm font-medium text-[#fff8fa] rounded-lg transition-colors hover:bg-[#245743]">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    Commencer la collection
+                </a>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border border-[#133a28] px-6 py-3 text-sm font-medium text-[#133a28] rounded-lg transition-colors hover:bg-[#f8f3e9]">
+                    <i data-lucide="plus" class="w-4 h-4"></i>
+                    Tout ajouter à ma bibliothèque
+                </a>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="font-serif text-2xl">Œuvres incluses dans la collection (26)</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+                <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                    <img alt="Chants d'Ombre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../assets/images/livre (14).jfif">
+                    <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                        <span class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                    </div>
+                    <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </button>
+                    <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-medium text-sm">Voir détails</span>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                    <div>
+                        <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Chants d'Ombre</p>
+                        <p class="mt-1 truncate text-xs text-[#705f57]">Clémentine Faïk-Nzuji</p>
+                        <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                            <span class="font-medium">Poésie</span>
+                            <span>1987</span>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3 h-3"></i>
+                                <span>~2h de lecture</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="book-open" class="w-3 h-3"></i>
+                                <span>Format numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                            <span>4.8</span>
+                            <span class="text-[#9C8F7E] font-normal">(167)</span>
+                        </div>
+                        <a href="../vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+                <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                    <img alt="La Femme du Marché" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../assets/images/livre (12).jfif">
+                    <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                        <span class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
+                            <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
+                        </span>
+                    </div>
+                    <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </button>
+                    <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-medium text-sm">Voir détails</span>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                    <div>
+                        <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">La Femme du Marché</p>
+                        <p class="mt-1 truncate text-xs text-[#705f57]">Léonie Abo</p>
+                        <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                            <span class="font-medium">Roman</span>
+                            <span>2000</span>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3 h-3"></i>
+                                <span>~3h de lecture</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="book-open" class="w-3 h-3"></i>
+                                <span>Format numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                            <span>4.6</span>
+                            <span class="text-[#9C8F7E] font-normal">(134)</span>
+                        </div>
+                        <a href="../vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+                <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                    <img alt="Contes de Brousse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../assets/images/livre (13).jfif">
+                    <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                        <span class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                    </div>
+                    <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </button>
+                    <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-medium text-sm">Voir détails</span>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                    <div>
+                        <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Contes de Brousse</p>
+                        <p class="mt-1 truncate text-xs text-[#705f57]">Sylvie Bâ</p>
+                        <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                            <span class="font-medium">Conte</span>
+                            <span>1995</span>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3 h-3"></i>
+                                <span>~2h de lecture</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="book-open" class="w-3 h-3"></i>
+                                <span>Format numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                            <span>4.7</span>
+                            <span class="text-[#9C8F7E] font-normal">(145)</span>
+                        </div>
+                        <a href="../vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+                <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                    <img alt="Les Voix du Silence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../assets/images/livre (16).jfif">
+                    <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                        <span class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
+                            <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
+                        </span>
+                    </div>
+                    <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </button>
+                    <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-medium text-sm">Voir détails</span>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                    <div>
+                        <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Les Voix du Silence</p>
+                        <p class="mt-1 truncate text-xs text-[#705f57]">Marie-Louise M'Bikolo</p>
+                        <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                            <span class="font-medium">Roman</span>
+                            <span>2010</span>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3 h-3"></i>
+                                <span>~4h de lecture</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="book-open" class="w-3 h-3"></i>
+                                <span>Format numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                            <span>4.9</span>
+                            <span class="text-[#9C8F7E] font-normal">(189)</span>
+                        </div>
+                        <a href="../vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+                <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                    <img alt="Récits de Femmes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../assets/images/livre (17).jfif">
+                    <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                        <span class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
+                    </div>
+                    <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </button>
+                    <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-medium text-sm">Voir détails</span>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                    <div>
+                        <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Récits de Femmes</p>
+                        <p class="mt-1 truncate text-xs text-[#705f57]">Anne-Marie N'Senga</p>
+                        <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                            <span class="font-medium">Nouvelle</span>
+                            <span>2005</span>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3 h-3"></i>
+                                <span>~1.5h de lecture</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="book-open" class="w-3 h-3"></i>
+                                <span>Format numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                            <span>4.5</span>
+                            <span class="text-[#9C8F7E] font-normal">(112)</span>
+                        </div>
+                        <a href="../vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+                <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
+                    <img alt="L'Ombre de la Mère" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../assets/images/livre (18).jfif">
+                    <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
+                        <span class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
+                            <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
+                        </span>
+                    </div>
+                    <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </button>
+                    <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-medium text-sm">Voir détails</span>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
+                    <div>
+                        <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">L'Ombre de la Mère</p>
+                        <p class="mt-1 truncate text-xs text-[#705f57]">Gabrielle Malonga</p>
+                        <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
+                            <span class="font-medium">Roman</span>
+                            <span>2018</span>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3 h-3"></i>
+                                <span>~3h de lecture</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-lucide="book-open" class="w-3 h-3"></i>
+                                <span>Format numérique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-1 text-amber-700 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+                            <span>4.8</span>
+                            <span class="text-[#9C8F7E] font-normal">(178)</span>
+                        </div>
+                        <a href="../vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-border bg-[#292c27] px-5 py-12 text-[#e9e0d1] lg:px-8">
+            <div class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+                <div>
+                    <a aria-label="MIKANDA accueil" class="flex items-center gap-3 active" href="../index.html">
+                        <div>
+                            <img src="../assets/branding/logo_e9e0d1.svg" alt="logo" class="w-12 h-11">
+                        </div>
+                        <span>
+                            <span class="block font-serif text-xl font-bold leading-none tracking-wide">MIKANDA</span>
+                            <span class="mt-1 block text-[9px] uppercase tracking-[0.18em] text-muted-foreground">La Bibliothèque congolaise</span>
+                        </span>
+                    </a>
+                    
+                    <p class="mt-5 max-w-xs text-sm leading-6 text-[#e9e0d1]/65">La bibliothèque numérique de la littérature congolaise.</p>
+                </div>
+                
+                <div>
+                    <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">Bibliothèque</p>
+                    
+                    <div class="flex flex-col gap-3 text-sm text-[#e9e0d1]/70">
+                        <a href="../biblio.html" class="hover:text-[#e9e0d1]">Catalogue</a>
+                        <a href="../auteur.html" class="hover:text-[#e9e0d1]">Auteurs</a>
+                        <a href="../collectives.html" class="hover:text-[#e9e0d1]">Collections</a>
+                        <a href="../archives.html" class="hover:text-[#e9e0d1]">Archives</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">Informations</p>
+                    
+                    <div class="flex flex-col gap-3 text-sm text-[#e9e0d1]/70">
+                        <a href="../apropos.html" class="hover:text-[#e9e0d1]">À propos</a>
+                        <a href="mailto:contact@mikanda.cd" class="hover:text-[#e9e0d1]">Contact</a>
+                        <a href="../signup.html" class="hover:text-[#e9e0d1]">Abonnement</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">La communauté</p>
+                    <p class="text-sm leading-6 text-[#e9e0d1]/70"><i data-lucide="arrow"></i></p>
+                    <p class="mt-5 text-xs text-[#e9e0d1]/45">Lubumbashi, République démocratique du Congo</p>
+                </div>
+            </div>
+            
+            <div class="mx-auto mt-10 max-w-7xl border-t border-[#e9e0d1]/15 pt-5 text-xs text-[#e9e0d1]/45">&copy; 2026 — Bibliothèque numérique de la littérature congolaise</div>
+        </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

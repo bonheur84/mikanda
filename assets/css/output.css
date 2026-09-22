@@ -1310,6 +1310,9 @@
   .bg-center {
     background-position: center;
   }
+  .fill-\[\#b7924b\] {
+    fill: #b7924b;
+  }
   .fill-amber-500 {
     fill: var(--color-amber-500);
   }
@@ -2072,6 +2075,9 @@
     .hover\:border-\[\#c17248\]:hover {
       border-color: #c17248;
     }
+    .hover\:bg-\[\#133a28\]:hover {
+      background-color: #133a28;
+    }
     .hover\:bg-\[\#133a28\]\/85:hover {
       background-color: color-mix(in oklab, #133a28 85%, transparent);
     }
@@ -2095,6 +2101,9 @@
     }
     .hover\:bg-\[\#eee4d2\]:hover {
       background-color: #eee4d2;
+    }
+    .hover\:bg-\[\#f8f3e9\]:hover {
+      background-color: #f8f3e9;
     }
     .hover\:bg-\[\#f8f3e9\]\/50:hover {
       background-color: color-mix(in oklab, #f8f3e9 50%, transparent);
@@ -2139,6 +2148,9 @@
     }
     .hover\:text-\[\#e9e0d1\]:hover {
       color: #e9e0d1;
+    }
+    .hover\:text-\[\#fff8fa\]:hover {
+      color: #fff8fa;
     }
     .hover\:text-rose-500:hover {
       color: var(--color-rose-500);
@@ -2501,6 +2513,9 @@
     }
     .xl\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .xl\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .xl\:px-28 {
       padding-inline: calc(var(--spacing) * 28);
