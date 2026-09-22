@@ -4,96 +4,86 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lire - Congo Inc. - MIKANDA</title>
+    <title>Lire - La vie et demie - MIKANDA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/output.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
 </head>
 
-<body class="min-h-dvh bg-[#fbfaf7] text-[#332c28]" data-theme="paper">
-    <header class="fixed inset-x-0 top-0 z-40 h-18 border-b border-[#e5ddd0] bg-[#fbfaf7]/95 backdrop-blur-sm">
+<body class="min-h-dvh bg-[#f4ecdc] text-[#332c28]" data-theme="paper">
+    <header class="fixed inset-x-0 top-0 z-40 h-18 border-b border-[#ded3c1] bg-[#f7f1e6]/95 backdrop-blur-sm">
         <div class="flex h-full items-center justify-between gap-5 px-5 lg:px-8">
             <div class="flex min-w-0 items-center gap-5">
-                <a href="vu_libre.html" aria-label="Quitter la lecture" class="shrink-0 text-xl leading-none text-[#332c28] transition-colors hover:text-[#bd5034]">←</a>
-                <span aria-label="Table des matières" class="shrink-0 text-xl leading-none text-[#332c28]">☰</span>
+                <a href="vu_libre.html" aria-label="Quitter la lecture" class="shrink-0 text-3xl leading-none text-[#403732] transition-colors hover:text-[#315d4b]">‹</a>
+                <button type="button" aria-label="Ouvrir la table des matières" class="shrink-0 text-xl leading-none text-[#403732] hover:text-[#315d4b]">☷</button>
                 <div class="min-w-0">
-                    <h1 class="truncate font-serif text-base text-[#281e19] sm:text-lg">Congo Inc. — Le testament de Bismarck</h1>
-                    <p class="truncate text-xs text-[#8f7770]">In Koli Jean Bofane · Chapitre 1 · La forêt d'Isookanga</p>
+                    <h1 class="truncate font-serif text-base text-[#281e19] sm:text-lg">La vie et demie</h1>
+                    <p class="truncate text-xs uppercase tracking-[0.14em] text-[#8f7770]">Sony Labou Tansi</p>
                 </div>
             </div>
 
             <div class="hidden items-center gap-5 text-sm text-[#705f57] md:flex">
-                <span id="progress-label">47% lu</span>
-                <div class="h-1.5 w-32 overflow-hidden rounded-full bg-[#e5ddd0]"><span class="block h-full w-[47%] bg-[#bd5034]" id="progress-bar"></span></div>
-                <span aria-label="Signet" class="text-lg leading-none transition-colors hover:text-[#bd5034]">☆</span>
-                <span aria-label="Recherche" class="text-xl leading-none transition-colors hover:text-[#bd5034]">⌕</span>
+                <span id="progress-label">47 % terminé</span>
+                <div class="h-1.5 w-32 overflow-hidden bg-[#ded3c1]"><span class="block h-full w-[47%] bg-[#315d4b]" id="progress-bar"></span></div>
+                <button type="button" aria-label="Rechercher" class="text-xl leading-none transition-colors hover:text-[#315d4b]">⌕</button>
+                <button type="button" aria-label="Réglages" class="text-xl leading-none transition-colors hover:text-[#315d4b]">⚙</button>
+                <button type="button" aria-label="Mode plein écran" class="text-xl leading-none transition-colors hover:text-[#315d4b]">⛶</button>
             </div>
 
             <span aria-label="Outils de lecture" class="text-xl leading-none text-[#332c28] md:hidden">☷</span>
         </div>
-        <div id="search-panel" class="hidden border-t border-[#e5ddd0] bg-[#fbfaf7] px-5 py-3 lg:px-8">
+        <div id="search-panel" class="hidden border-t border-[#ded3c1] bg-[#f7f1e6] px-5 py-3 lg:px-8">
             <div class="mx-auto flex max-w-xl items-center gap-3 border border-[#d9d1c6] bg-white px-3"><span class="text-xl text-[#8f7770]">⌕</span><input type="search" placeholder="Rechercher dans le livre..." class="h-10 flex-1 bg-transparent text-sm outline-none"></div>
         </div>
     </header>
 
-    <aside id="toc" class="fixed bottom-0 left-0 top-18 z-30 w-87 -translate-x-full border-r border-[#e5ddd0] bg-[#fbfaf7] px-7 py-8 transition-transform duration-300 lg:translate-x-0">
+    <aside id="toc" class="fixed bottom-0 left-0 top-18 z-30 w-72 -translate-x-full border-r border-[#ded3c1] bg-[#f4ecdc] px-6 py-8 transition-transform duration-300 lg:translate-x-0">
         <div class="flex items-center justify-between">
-            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#a89b92]">Table des matières</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#8f8171]">☷ &nbsp; Table des matières</p>
             <span aria-label="Fermer la table des matières" class="text-xl lg:hidden">×</span>
         </div>
         <div class="mt-6 space-y-1 text-[15px]">
-            <button type="button" class="toc-item flex w-full items-center gap-3 bg-[#bd5034] px-3 py-3 text-left text-white" data-chapter="1"><span class="text-sm text-white/70">01</span><span>La forêt d'Isookanga</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#705f57] transition-colors hover:bg-[#f0e8da] hover:text-[#332c28]" data-chapter="2"><span class="text-sm text-[#a89b92]">02</span><span>Kinshasa, la mondialisation</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#705f57] transition-colors hover:bg-[#f0e8da] hover:text-[#332c28]" data-chapter="3"><span class="text-sm text-[#a89b92]">03</span><span>Marchandises</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#705f57] transition-colors hover:bg-[#f0e8da] hover:text-[#332c28]" data-chapter="4"><span class="text-sm text-[#a89b92]">04</span><span>Nations</span></button>
-            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#705f57] transition-colors hover:bg-[#f0e8da] hover:text-[#332c28]" data-chapter="5"><span class="text-sm text-[#a89b92]">05</span><span>Le testament de Bismarck</span></button>
-        </div>
-        <div class="absolute bottom-8 left-7 right-7 border-t border-[#e5ddd0] pt-5 text-xs text-[#8f7770]">
-            <div class="flex items-center justify-between"><span>Votre progression</span><span>47%</span></div>
-            <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-[#e5ddd0]"><span class="block h-full w-[47%] bg-[#bd5034]"></span></div>
-            <p class="mt-3">Dernière lecture : aujourd'hui</p>
+            <button type="button" class="toc-item flex w-full items-center gap-3 border-l-2 border-[#315d4b] px-3 py-3 text-left text-[#315d4b]" data-chapter="1"><span>Chapitre I · La mort</span></button>
+            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#8f8171] transition-colors hover:bg-[#eee4d2] hover:text-[#315d4b]" data-chapter="2"><span>Chapitre II · La ville</span></button>
+            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#8f8171] transition-colors hover:bg-[#eee4d2] hover:text-[#315d4b]" data-chapter="3"><span>Chapitre III · La mémoire</span></button>
+            <button type="button" class="toc-item flex w-full items-center gap-3 px-3 py-3 text-left text-[#8f8171] transition-colors hover:bg-[#eee4d2] hover:text-[#315d4b]" data-chapter="4"><span>Chapitre IV · L'héritage</span></button>
         </div>
     </aside>
 
     <div id="toc-backdrop" class="fixed inset-0 z-20 hidden bg-[#332c28]/30 lg:hidden"></div>
 
-    <main class="min-h-dvh pt-18 lg:pl-87 lg:pr-18">
-        <article class="mx-auto max-w-215 px-7 py-16 sm:px-12 lg:px-16 lg:py-20" id="reader-content">
-            <div class="mb-9 text-center">
-                <p class="text-xs font-semibold uppercase tracking-[0.24em] text-[#a89b92]">Chapitre 1</p>
-                <h2 class="mt-4 font-serif text-4xl leading-tight text-[#332c28] sm:text-5xl">La forêt d'Isookanga</h2>
-                <div class="mx-auto mt-7 flex max-w-xl items-center gap-4 text-[#b8a79a]"><span class="h-px flex-1 bg-[#e5ddd0]"></span><span class="text-lg">◆</span><span class="h-px flex-1 bg-[#e5ddd0]"></span></div>
+    <main class="min-h-dvh pt-18 lg:pl-72 lg:pr-18">
+        <article class="mx-auto max-w-240 px-7 py-16 pb-40 sm:px-12 lg:px-16 lg:py-28 lg:pb-40" id="reader-content">
+            <div class="mb-16">
+                <p class="font-mono text-xs uppercase tracking-[0.24em] text-[#bd684c]">Chapitre I</p>
+                <h2 class="mt-8 font-serif text-5xl leading-tight text-[#332c28] sm:text-6xl">La mort</h2>
             </div>
 
-            <div class="reader-text font-serif text-[18px] leading-[1.9] text-[#403732] sm:text-[20px]">
-                <p class="first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-7xl first-letter:leading-[0.75] first-letter:text-[#bd5034]">Kinshasa s'éveille lentement, comme une bête sacrée que le fleuve aurait bercée toute la nuit. Les vendeuses du grand marché déballent leurs tissus, les gamins des ruelles chantent des refrains venus de Matonge, et les bibliothèques du centre-ville rouvrent leurs portes sur des livres qui attendent, patients, comme les ancêtres.</p>
-                <p class="mt-7">Dans ce roman, la ville n'est pas un décor : elle est un personnage à part entière, avec ses fièvres, ses silences et ses éclats de rire qui percent la nuit. La littérature congolaise, quand elle raconte Kinshasa, cesse d'être une simple description : elle devient un rituel, une manière de tenir debout face au vertige de l'histoire.</p>
-                <p class="mt-7">Ceux qui écrivent le Congo ne racontent jamais tout à fait la même chose que ceux qui l'ont vécu, et pourtant, quelque part entre les deux, se dessine un fil solide, une ligne de vérité que les pages du présent ouvrage cherchent à suivre pas à pas.</p>
-                <p class="mt-7">Kinshasa s'éveille lentement, comme une bête sacrée que le fleuve aurait bercée toute la nuit. Les vendeuses du grand marché déballent leurs tissus, les gamins des ruelles chantent des refrains venus de Matonge, et les bibliothèques du centre-ville rouvrent leurs portes sur des livres qui attendent, patients, comme les ancêtres.</p>
-                <p class="mt-7">Dans ce roman, la ville n'est pas un décor : elle est un personnage à part entière, avec ses fièvres, ses silences et ses éclats de rire qui percent la nuit. La littérature congolaise devient ici une manière de tenir debout, de faire dialoguer la mémoire et le présent.</p>
-            </div>
-
-            <div class="mt-20 border-t border-[#e5ddd0] pt-9">
-                <div class="flex items-center justify-between text-sm text-[#8f7770]">
-                    <span class="inline-flex items-center gap-2 opacity-40">‹ Précédent</span>
-                    <span>Page 1 / 5</span>
-                    <span class="inline-flex items-center gap-2 text-[#332c28]">Suivant ›</span>
-                </div>
+            <div class="reader-text max-w-220 font-serif text-[20px] leading-[1.9] text-[#403732] sm:text-[22px]">
+                <p>Il était une fois un pays qui n'existait nulle part. Dans ce pays, les morts n'avaient pas fini de mourir et les vivants avaient appris à parler avec leur ombre.</p>
+                <p class="mt-10">Le Guide Providentiel avançait dans les rues comme on avance dans un rêve trop ancien. Les murs portaient les noms de ceux qui avaient disparu, et la ville gardait dans ses pierres la mémoire des voix.</p>
+                <p class="mt-10">Chaque matin, le peuple se réveillait avec la même question au bord des lèvres : combien de temps peut-on vivre dans un pays où la mort refuse de partir&nbsp;?</p>
+                <blockquote class="mt-24 border-l-2 border-[#bd684c] pl-7 font-serif text-lg italic leading-8 text-[#8f8171] sm:text-xl">La mémoire ne se lit pas seulement dans les livres&nbsp;: elle se transmet dans les silences.</blockquote>
             </div>
         </article>
     </main>
 
-    <aside class="fixed bottom-0 right-0 top-18 hidden w-18 border-l border-[#e5ddd0] bg-[#fbfaf7] md:block">
-        <div class="flex flex-col items-center gap-7 py-6 text-[#403732]">
-            <button type="button" id="font-increase" aria-label="Augmenter la taille du texte" class="hover:text-[#bd5034]"><span class="font-serif text-xl">T</span><sup>+</sup></button>
-            <button type="button" id="font-decrease" aria-label="Diminuer la taille du texte" class="hover:text-[#bd5034]"><span class="font-serif text-xl">T</span><sup>-</sup></button>
-            <span class="h-px w-10 bg-[#e5ddd0]"></span>
-            <span aria-label="Thème" class="text-xl hover:text-[#bd5034]">☼</span>
-            <span aria-label="Mode lecture concentrée" class="text-xl hover:text-[#bd5034]">⛶</span>
+    <footer class="fixed inset-x-0 bottom-0 z-40 flex h-16 items-center justify-between border-t border-[#ded3c1] bg-[#f7f1e6]/95 px-5 backdrop-blur-sm sm:px-10 lg:pl-7 lg:pr-14">
+        <button type="button" class="inline-flex items-center gap-2 text-sm text-[#8f8171] transition-colors hover:text-[#315d4b]"><span class="text-xl leading-none">‹</span> Précédent</button>
+        <div class="flex items-center gap-4 text-[#403732]">
+            <button type="button" id="font-decrease" aria-label="Diminuer la taille du texte" class="text-xl leading-none hover:text-[#315d4b]">−</button>
+            <span class="text-xs">94</span>
+            <button type="button" id="font-increase" aria-label="Augmenter la taille du texte" class="text-xl leading-none hover:text-[#315d4b]">＋</button>
+            <span class="mx-1 h-5 w-px bg-[#ded3c1]"></span>
+            <button type="button" aria-label="Ajouter un signet" class="text-xl leading-none hover:text-[#315d4b]">♧</button>
+            <button type="button" aria-label="Traduire le texte" title="Traduire" class="hover:text-[#315d4b]"><i data-lucide="languages" class="h-4 w-4"></i></button>
+            <button type="button" aria-label="Changer de thème" class="text-xl leading-none hover:text-[#315d4b]">☼</button>
         </div>
-    </aside>
+        <button type="button" class="inline-flex items-center gap-2 text-sm text-[#315d4b] transition-colors hover:text-[#bd684c]">Suivant <span class="text-xl leading-none">›</span></button>
+    </footer>
 
     <div id="mobile-tools-panel" class="fixed bottom-4 left-4 right-4 z-50 hidden border border-[#d9d1c6] bg-[#fbfaf7] p-4 shadow-lg md:hidden">
         <div class="flex items-center justify-between text-sm"><span>Outils de lecture</span><span aria-label="Fermer" class="text-xl">×</span></div>
@@ -110,6 +100,7 @@
         .reader-dark h2 { color: #f5efe5; }
         @media (max-width: 1023px) { #toc { top: 72px; } }
     </style>
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>
