@@ -14,65 +14,61 @@
 </head>
 
 <body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
-    <header class="hidden border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 lg:px-8">
-        <div class="mx-auto flex max-w-7xl items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="assets/branding/logo.png" alt="Mikanda" class="h-11 w-12 object-contain">
-                <span class="leading-5">
-                    <span class="block font-serif text-xl font-bold uppercase tracking-wide">Mikanda</span>
-                    <span class="mt-1 block text-[10px] uppercase tracking-[0.18em] text-[#705f57]">La bibliothèque congolaise</span>
-                </span>
-            </a>
-
-            <nav class="hidden items-center gap-7 text-sm text-[#705f57] lg:flex">
-                <a href="index.html" class="hover:text-[#133a28]">Accueil</a>
-                <a href="biblio.html" class="hover:text-[#133a28]">Bibliothèque</a>
-                <a href="auteur.html" class="hover:text-[#133a28]">Auteurs</a>
-                <a href="collectives.html" class="hover:text-[#133a28]">Collections</a>
-                <a href="archives.html" class="hover:text-[#133a28]">Archives</a>
-                <a href="apropos.html" class="hover:text-[#133a28]">À propos</a>
-            </nav>
-
-            <div class="hidden items-center gap-3 lg:flex">
-                <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28]">Connexion</a>
-                <a href="signup.html" class="bg-[#133a28] px-4 py-2 text-sm text-white hover:bg-[#245743]">S'inscrire</a>
-            </div>
-            <button class="lg:hidden" aria-label="Ouvrir le menu"><i data-lucide="menu" class="h-6 w-6"></i></button>
-        </div>
-    </header>
-
     <main class="mx-auto max-w-7xl px-4 py-8 lg:px-8 lg:py-10">
         <div class="mb-8 text-xs text-[#8f7770]">
             <a href="biblio.html" class="inline-flex items-center gap-1 hover:text-[#133a28]"><i data-lucide="arrow-left" class="h-3 w-3"></i> Retour à la bibliothèque</a>
         </div>
 
-        <section class="grid gap-7 border-b border-[#d9d1c6] pb-10 lg:grid-cols-[200px_1fr] lg:gap-7">
+        <section class="grid gap-7 border-b border-[#d9d1c6] pb-10 lg:grid-cols-[280px_1fr] lg:gap-10">
             <div>
-                <div class="relative aspect-[0.7] overflow-hidden bg-[#314c3d] shadow-[0_16px_30px_rgba(40,30,25,0.12)]">
+                <div class="relative aspect-[0.7] overflow-hidden bg-[#314c3d] shadow-[0_20px_40px_rgba(40,30,25,0.15)] rounded-lg">
                     <img src="assets/images/livre (1).jfif" alt="Couverture de La vie et demie" class="h-full w-full object-cover">
                 </div>
                 <p class="mt-3 text-center font-mono text-[9px] uppercase tracking-[0.15em] text-[#8f7770]">Édition numérique Mikanda</p>
             </div>
 
             <div class="flex flex-col justify-center">
-                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#c17248]">Roman · 1979</p>
-                <h1 class="mt-2 font-serif text-4xl leading-tight text-[#281e19] sm:text-5xl">La vie et demie</h1>
-                <a href="auteur.html" class="mt-1 font-serif text-lg text-[#133a28] hover:underline">Sony Labou Tansi</a>
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#c17248]">Roman · 1979</span>
+                    <span class="flex items-center gap-1 text-xs text-[#b7924b]">
+                        <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                        <span class="font-medium">4.7</span>
+                        <span class="text-[#8f7770]">(214 avis)</span>
+                    </span>
+                </div>
+                <h1 class="font-serif text-4xl leading-tight text-[#281e19] sm:text-5xl">La vie et demie</h1>
+                <a href="auteur.html" class="mt-1 font-serif text-lg text-[#133a28] hover:underline transition-colors">Sony Labou Tansi</a>
                 <p class="mt-5 max-w-2xl text-sm leading-6 text-[#705f57]">Dans une écriture baroque et incisive, Sony Labou Tansi compose une fable politique sur la violence, la mémoire et la résistance.</p>
 
                 <div class="mt-6 flex flex-wrap gap-2">
-                    <a href="lire.html" class="inline-flex items-center gap-2 bg-[#133a28] px-4 py-2.5 text-xs font-semibold text-white hover:bg-[#245743]"><i data-lucide="play" class="h-3.5 w-3.5"></i> Lire maintenant</a>
-                    <button type="button" class="inline-flex items-center gap-2 border border-[#d9d1c6] px-4 py-2.5 text-xs text-[#705f57] hover:border-[#133a28] hover:text-[#133a28]"><i data-lucide="download" class="h-3.5 w-3.5"></i> Télécharger</button>
-                    <button type="button" aria-label="Ajouter aux favoris" class="inline-flex items-center justify-center border border-[#d9d1c6] p-2.5 text-[#705f57] hover:border-[#c17248] hover:text-[#c17248]"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button>
-                    <button type="button" aria-label="Partager" class="inline-flex items-center justify-center border border-[#d9d1c6] p-2.5 text-[#705f57] hover:border-[#133a28] hover:text-[#133a28]"><i data-lucide="share-2" class="h-3.5 w-3.5"></i></button>
+                    <a href="lire.html" class="inline-flex items-center gap-2 bg-[#133a28] px-4 py-2.5 text-xs font-semibold text-white hover:bg-[#245743] transition-colors rounded-lg"><i data-lucide="play" class="h-3.5 w-3.5"></i> Lire maintenant</a>
+                    <button type="button" class="inline-flex items-center gap-2 border border-[#d9d1c6] px-4 py-2.5 text-xs text-[#705f57] hover:border-[#133a28] hover:text-[#133a28] transition-colors rounded-lg"><i data-lucide="download" class="h-3.5 w-3.5"></i> Télécharger</button>
+                    <button type="button" aria-label="Ajouter aux favoris" class="inline-flex items-center justify-center border border-[#d9d1c6] p-2.5 text-[#705f57] hover:border-[#c17248] hover:text-[#c17248] transition-colors rounded-lg"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button>
+                    <button type="button" aria-label="Partager" class="inline-flex items-center justify-center border border-[#d9d1c6] p-2.5 text-[#705f57] hover:border-[#133a28] hover:text-[#133a28] transition-colors rounded-lg"><i data-lucide="share-2" class="h-3.5 w-3.5"></i></button>
+                    <button type="button" aria-label="Aperçu" class="inline-flex items-center justify-center border border-[#d9d1c6] p-2.5 text-[#705f57] hover:border-[#133a28] hover:text-[#133a28] transition-colors rounded-lg"><i data-lucide="eye" class="h-3.5 w-3.5"></i></button>
                 </div>
 
                 <dl class="mt-7 grid max-w-2xl grid-cols-2 gap-x-8 border-y border-[#d9d1c6] py-4 text-xs sm:grid-cols-4">
                     <div><dt class="font-mono text-[9px] uppercase tracking-wider text-[#8f7770]">Langue</dt><dd class="mt-1 font-medium">Français</dd></div>
                     <div><dt class="font-mono text-[9px] uppercase tracking-wider text-[#8f7770]">Pages</dt><dd class="mt-1 font-medium">198</dd></div>
-                    <div><dt class="font-mono text-[9px] uppercase tracking-wider text-[#8f7770]">Statut</dt><dd class="mt-1 font-medium">Gratuit</dd></div>
+                    <div><dt class="font-mono text-[9px] uppercase tracking-wider text-[#8f7770]">Statut</dt><dd class="mt-1 font-medium text-[#133a28]">Gratuit</dd></div>
                     <div><dt class="font-mono text-[9px] uppercase tracking-wider text-[#8f7770]">Éditeur</dt><dd class="mt-1 font-medium">Seuil</dd></div>
                 </dl>
+
+                <div class="mt-4 flex items-center gap-4 text-xs text-[#8f7770]">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="clock" class="h-3.5 w-3.5"></i>
+                        <span>~3h de lecture</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="book-open" class="h-3.5 w-3.5"></i>
+                        <span>Format numérique</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="users" class="h-3.5 w-3.5"></i>
+                        <span>2.5K lecteurs</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -81,21 +77,45 @@
                 <h2 class="font-serif text-3xl sm:text-4xl">À propos de cette œuvre</h2>
                 <p class="mt-6 max-w-4xl text-base leading-8 text-[#705f57]">Œuvre majeure de la littérature africaine francophone, La vie et demie déploie une langue inventive et une imagination politique singulière. Cette fiche est proposée dans le cadre du catalogue éditorial de démonstration de MIKANDA.</p>
 
+                <div class="mt-8 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center px-3 py-1 bg-[#f2ede3] text-xs text-[#281e19] rounded-full">Politique</span>
+                    <span class="inline-flex items-center px-3 py-1 bg-[#f2ede3] text-xs text-[#281e19] rounded-full">Mémoire</span>
+                    <span class="inline-flex items-center px-3 py-1 bg-[#f2ede3] text-xs text-[#281e19] rounded-full">Résistance</span>
+                    <span class="inline-flex items-center px-3 py-1 bg-[#f2ede3] text-xs text-[#281e19] rounded-full">Postcolonialisme</span>
+                </div>
+
                 <h2 class="mt-12 font-serif text-3xl sm:text-4xl">Informations bibliographiques</h2>
                 <dl class="mt-6 grid max-w-3xl grid-cols-1 gap-x-16 gap-y-7 text-sm sm:grid-cols-2">
                     <div><dt class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8f7770]">Titre original</dt><dd class="mt-2 font-medium">La vie et demie</dd></div>
                     <div><dt class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8f7770]">Genre</dt><dd class="mt-2 font-medium">Roman</dd></div>
                     <div><dt class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8f7770]">Année</dt><dd class="mt-2 font-medium">1979</dd></div>
                     <div><dt class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8f7770]">ISBN</dt><dd class="mt-2 font-medium">978-2-02-005246-4</dd></div>
+                    <div><dt class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8f7770]">Collection</dt><dd class="mt-2 font-medium">Fiction & Cie</dd></div>
+                    <div><dt class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#8f7770]">Pays</dt><dd class="mt-2 font-medium">Congo</dd></div>
                 </dl>
             </div>
 
-            <aside class="border border-[#d9d1c6] bg-[#f2ede3] p-7 lg:min-h-87.5">
+            <aside class="border border-[#d9d1c6] bg-[#f2ede3] p-7 lg:min-h-87.5 rounded-lg">
                 <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#c17248]">L'auteur</p>
-                <a href="auteur.html" class="mt-5 block font-serif text-2xl hover:text-[#133a28]">Sony Labou Tansi</a>
+                <a href="auteur.html" class="mt-5 block font-serif text-2xl hover:text-[#133a28] transition-colors">Sony Labou Tansi</a>
                 <p class="mt-2 text-xs text-[#705f57]">1947–1995&nbsp; · &nbsp;Congo</p>
                 <p class="mt-8 text-sm leading-6 text-[#705f57]">Romancier, dramaturge et poète congolais, l’un des grands écrivains francophones du XXe siècle.</p>
-                <a href="auteur.html" class="mt-8 inline-block text-sm text-[#133a28] underline underline-offset-4 hover:text-[#c17248]">Voir le profil auteur</a>
+                <div class="mt-6 grid grid-cols-3 gap-4 border-t border-[#d9d1c6] pt-6">
+                    <div class="text-center">
+                        <span class="block font-serif text-xl font-medium text-[#133a28]">12</span>
+                        <span class="text-[10px] uppercase tracking-wider text-[#8f7770]">Œuvres</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block font-serif text-xl font-medium text-[#133a28]">4.8</span>
+                        <span class="text-[10px] uppercase tracking-wider text-[#8f7770]">Note</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block font-serif text-xl font-medium text-[#133a28]">2.5K</span>
+                        <span class="text-[10px] uppercase tracking-wider text-[#8f7770]">Lecteurs</span>
+                    </div>
+                </div>
+
+                <a href="auteur.html" class="mt-6 inline-block text-sm text-[#133a28] underline underline-offset-4 hover:text-[#c17248] transition-colors">Voir le profil auteur</a>
             </aside>
         </section>
 

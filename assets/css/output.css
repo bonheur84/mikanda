@@ -1234,6 +1234,9 @@
   .bg-\[\#f8f3e9\] {
     background-color: #f8f3e9;
   }
+  .bg-\[\#f8f3e9\]\/95 {
+    background-color: color-mix(in oklab, #f8f3e9 95%, transparent);
+  }
   .bg-\[\#f8f6f2\] {
     background-color: #f8f6f2;
   }
@@ -1856,6 +1859,10 @@
     --tw-shadow: 0 16px 30px var(--tw-shadow-color, rgba(40,30,25,0.12));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-\[0_20px_40px_rgba\(40\,30\,25\,0\.15\)\] {
+    --tw-shadow: 0 20px 40px var(--tw-shadow-color, rgba(40,30,25,0.15));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2320,6 +2327,9 @@
     .lg\:grid-cols-\[240px_1fr\] {
       grid-template-columns: 240px 1fr;
     }
+    .lg\:grid-cols-\[280px_1fr\] {
+      grid-template-columns: 280px 1fr;
+    }
     .lg\:items-center {
       align-items: center;
     }
@@ -2331,6 +2341,9 @@
     }
     .lg\:gap-7 {
       gap: calc(var(--spacing) * 7);
+    }
+    .lg\:gap-10 {
+      gap: calc(var(--spacing) * 10);
     }
     .lg\:gap-14 {
       gap: calc(var(--spacing) * 14);
