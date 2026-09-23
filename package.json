@@ -1,10 +1,17 @@
 {
+  "type": "module",
   "scripts": {
     "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
-    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "dev": "vite",
+    "build:js": "vite build",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "@types/node": "^26.6.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
   }
 }
