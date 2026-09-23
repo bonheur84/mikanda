@@ -608,6 +608,9 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -742,6 +745,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .resize-none {
+    resize: none;
+  }
   .resize-y {
     resize: vertical;
   }
@@ -850,6 +856,11 @@
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
   }
   :where(.space-y-5 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
@@ -1206,6 +1217,9 @@
   .bg-\[\#fdfaf3\] {
     background-color: #fdfaf3;
   }
+  .bg-\[\#fff8fa\] {
+    background-color: #fff8fa;
+  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -1513,6 +1527,10 @@
   .text-\[21px\] {
     font-size: 21px;
   }
+  .leading-4 {
+    --tw-leading: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 4);
+  }
   .leading-5 {
     --tw-leading: calc(var(--spacing) * 5);
     line-height: calc(var(--spacing) * 5);
@@ -1814,6 +1832,9 @@
   }
   .underline-offset-4 {
     text-underline-offset: 4px;
+  }
+  .placeholder-\[\#705f57\]\/50::placeholder {
+    color: color-mix(in oklab, #705f57 50%, transparent);
   }
   .accent-\[\#173f30\] {
     accent-color: #173f30;
@@ -2227,6 +2248,9 @@
     .md\:w-auto {
       width: auto;
     }
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     .md\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -2303,6 +2327,12 @@
     }
     .lg\:grid-cols-\[1\.15fr_0\.85fr\] {
       grid-template-columns: 1.15fr 0.85fr;
+    }
+    .lg\:grid-cols-\[1fr_1\.2fr\] {
+      grid-template-columns: 1fr 1.2fr;
+    }
+    .lg\:grid-cols-\[1fr_1fr\] {
+      grid-template-columns: 1fr 1fr;
     }
     .lg\:grid-cols-\[1fr_300px\] {
       grid-template-columns: 1fr 300px;

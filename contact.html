@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKINDA —— Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
+</head>
+
+<body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
+    <main class="py-16">
+        <section class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+                <div>
+                    <p class="text-xs uppercase tracking-[0.22em] text-[#c17248]">Contactez-nous</p>
+                    <h1 class="mt-4 font-serif text-5xl leading-[1.04] sm:text-6xl"
+                        >Restons en <em class="text-[#133a28]">contact</em>
+                    </h1>
+                    <p class="mt-7 max-w-xl text-lg leading-8 text-[#705f57]">
+                        Une question, une suggestion ou envie de collaborer ? N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.
+                    </p>
+                    
+                    <div class="mt-10 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center bg-[#133a28]/10 rounded-lg">
+                                <i data-lucide="mail" class="h-6 w-6 text-[#133a28]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-lg text-[#281e19]">Email</h3>
+                                <p class="mt-1 text-sm text-[#705f57]">contact@mikanda.cd</p>
+                                <p class="mt-1 text-sm text-[#705f57]">recrutement@mikanda.cd</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center bg-[#133a28]/10 rounded-lg">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-[#133a28]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-lg text-[#281e19]">Adresse</h3>
+                                <p class="mt-1 text-sm text-[#705f57]">Kinshasa, République démocratique du Congo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center bg-[#133a28]/10 rounded-lg">
+                                <i data-lucide="clock" class="h-6 w-6 text-[#133a28]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-lg text-[#281e19]">Horaires</h3>
+                                <p class="mt-1 text-sm text-[#705f57]">Lundi - Vendredi : 8h00 - 17h00</p>
+                                <p class="mt-1 text-sm text-[#705f57]">Samedi : 9h00 - 12h00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-[#d9d1c6] p-8 rounded-xl shadow-sm">
+                    <h2 class="font-serif text-2xl text-[#281e19] mb-6">Formulaire de contact</h2>
+                    
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="nom" class="block text-sm font-medium text-[#281e19] mb-2">Nom *</label>
+                                <input type="text" id="nom" name="nom" required
+                                    class="w-full border border-[#d9d1c6] bg-[#f8f3e9] px-4 py-3 text-sm text-[#281e19] placeholder-[#705f57]/50 focus:border-[#133a28] focus:outline-none focus:ring-1 focus:ring-[#133a28] rounded-lg"
+                                    placeholder="Votre nom">
+                            </div>
+                            
+                            <div>
+                                <label for="prenom" class="block text-sm font-medium text-[#281e19] mb-2">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required
+                                    class="w-full border border-[#d9d1c6] bg-[#f8f3e9] px-4 py-3 text-sm text-[#281e19] placeholder-[#705f57]/50 focus:border-[#133a28] focus:outline-none focus:ring-1 focus:ring-[#133a28] rounded-lg"
+                                    placeholder="Votre prénom">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-[#281e19] mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full border border-[#d9d1c6] bg-[#f8f3e9] px-4 py-3 text-sm text-[#281e19] placeholder-[#705f57]/50 focus:border-[#133a28] focus:outline-none focus:ring-1 focus:ring-[#133a28] rounded-lg"
+                                placeholder="votre@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="sujet" class="block text-sm font-medium text-[#281e19] mb-2">Sujet *</label>
+                            <select id="sujet" name="sujet" required
+                                class="w-full border border-[#d9d1c6] bg-[#f8f3e9] px-4 py-3 text-sm text-[#281e19] focus:border-[#133a28] focus:outline-none focus:ring-1 focus:ring-[#133a28] rounded-lg">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="general">Question générale</option>
+                                <option value="candidature">Candidature / Rejoindre l'équipe</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="soumission">Soumission d'œuvre</option>
+                                <option value="technique">Problème technique</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-[#281e19] mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full border border-[#d9d1c6] bg-[#f8f3e9] px-4 py-3 text-sm text-[#281e19] placeholder-[#705f57]/50 focus:border-[#133a28] focus:outline-none focus:ring-1 focus:ring-[#133a28] rounded-lg resize-none"
+                                placeholder="Votre message..."></textarea>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="consentement" name="consentement" required
+                                class="mt-1 h-4 w-4 border border-[#d9d1c6] bg-[#f8f3e9] text-[#133a28] focus:border-[#133a28] focus:ring-[#133a28] rounded">
+                            <label for="consentement" class="text-sm text-[#705f57]">
+                                J'accepte que mes données soient traitées conformément à la politique de confidentialité de MIKANDA. *
+                            </label>
+                        </div>
+                        
+                        <button type="submit"
+                            class="w-full bg-[#133a28] px-6 py-3.5 text-sm font-medium text-[#fff8fa] transition-transform hover:-translate-y-0.5 rounded-lg">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+            <div class="bg-[#eae0d1]/45 border border-[#d9d1c6] p-8 rounded-xl">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div class="text-center">
+                        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center bg-[#133a28]/10 rounded-full">
+                            <i data-lucide="book-open" class="h-8 w-8 text-[#133a28]"></i>
+                        </div>
+                        <h3 class="font-serif text-xl text-[#281e19]">Pour les lecteurs</h3>
+                        <p class="mt-2 text-sm text-[#705f57]">Questions sur l'accès aux œuvres, la recherche ou les fonctionnalités de la bibliothèque.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center bg-[#133a28]/10 rounded-full">
+                            <i data-lucide="pen-tool" class="h-8 w-8 text-[#133a28]"></i>
+                        </div>
+                        <h3 class="font-serif text-xl text-[#281e19]">Pour les auteurs</h3>
+                        <p class="mt-2 text-sm text-[#705f57]">Soumission de manuscrits, questions sur les droits d'auteur et les conditions de publication.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center bg-[#133a28]/10 rounded-full">
+                            <i data-lucide="building-2" class="h-8 w-8 text-[#133a28]"></i>
+                        </div>
+                        <h3 class="font-serif text-xl text-[#281e19]">Pour les institutions</h3>
+                        <p class="mt-2 text-sm text-[#705f57]">Partenariats, collaborations culturelles et projets de numérisation conjoints.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
