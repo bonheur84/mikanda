@@ -3,7 +3,7 @@ function showNotification(options) {
     message,
     type = 'info',
     duration = 3000,
-    position = 'top-right'
+    position = 'top'
   } = options
   
   const container = getOrCreateNotificationContainer(position)
@@ -40,12 +40,13 @@ function getOrCreateNotificationContainer(position) {
 
 function getPositionClasses(position) {
   const positions = {
+    'top': 'top-4 left-1/2 -translate-x-1/2',
     'top-right': 'top-4 right-4',
     'top-left': 'top-4 left-4',
     'bottom-right': 'bottom-4 right-4',
     'bottom-left': 'bottom-4 left-4'
   }
-  return positions[position] || positions['top-right']
+  return positions[position] || positions['top']
 }
 
 function createNotificationElement(message, type) {
