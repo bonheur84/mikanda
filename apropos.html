@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -418,9 +418,8 @@
 
     <script type="module" src="/src/main.js"></script>
     <script>
-        // Counter animation
         const counters = document.querySelectorAll('.counter');
-        const speed = 200; // The lower the slower
+        const speed = 200;
 
         const animateCounter = (counter) => {
             const target = +counter.getAttribute('data-target');
@@ -435,7 +434,6 @@
             }
         };
 
-        // Start animation when section is in view
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

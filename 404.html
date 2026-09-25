@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKANDA —— Page introuvable</title>
+    <meta name="description" content="La page que vous recherchez n'existe pas ou a peut-être été déplacée. Retournez à l'accueil pour découvrir les belles histoires de MIKANDA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/favorites.js"></script>
+</head>
+
+<body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
+    <header
+        class="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 lg:px-8">
+        <a href="index.html">
+            <div class="flex items-center justify-between gap-2">
+                <div>
+                    <img src="assets/branding/logo.svg" alt="logo" class="w-12 h-11">
+                </div>
+
+                <div class="leading-5">
+                    <h1 class="block font-serif text-xl leading-none tracking-wide uppercase font-bold">mikanda</h1>
+                    <p class="block mt-1 uppercase text-[10px] tracking-[0.18em] text-[#705f57]">la bibliotheque
+                        congolaise</p>
+                </div>
+            </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm lg:flex text-[#705f57]">
+            <a href="index.html" class="transition-colors hover:text-[#133a28] nav-link">Accueil</a>
+            <a href="biblio.html" class="transition-colors hover:text-[#133a28] nav-link">Bibliothèque</a>
+            <a href="auteur.html" class="transition-colors hover:text-[#133a28] nav-link">Auteurs</a>
+            <a href="collectives.html" class="transition-colors hover:text-[#133a28] nav-link">Collections</a>
+            <a href="apropos.html" class="transition-colors hover:text-[#133a28] nav-link">À propos</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+            <div class="relative">
+                <input 
+                    type="search" 
+                    placeholder="Rechercher..." 
+                    class="w-48 px-3 py-1.5 text-sm border border-[#d9d1c6] rounded-sm focus:outline-none focus:border-[#133a28] focus:ring-1 focus:ring-[#133a28] transition-all"
+                />
+                <i data-lucide="search" class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-[#705f57]"></i>
+            </div>
+            <a href="favori_livre.html" class="relative text-[#705f57] hover:text-[#133a28] transition-colors">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+                <span class="favorites-count absolute -top-2 -right-2 bg-[#c17248] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+            </a>
+            <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:underline transition-all">Connexion</a>
+            <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5 hover:shadow-lg shimmer-effect glow-effect">S'inscrire</a>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 z-40 bg-[#f8f3e9] border-b border-[#d9d1c6] px-5 py-4 lg:hidden shadow-lg">
+            <nav class="flex flex-col gap-4 text-sm text-[#705f57]">
+                <a href="index.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Accueil</a>
+                <a href="biblio.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Bibliothèque</a>
+                <a href="auteur.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Auteurs</a>
+                <a href="collectives.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Collections</a>
+                <a href="apropos.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">À propos</a>
+            </nav>
+            <div class="mt-4 flex flex-col gap-3">
+                <a href="biblio.html" class="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">
+                    <i data-lucide="search" class="w-4 h-4"></i> Rechercher
+                </a>
+                <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">Connexion</a>
+                <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] text-center hover:bg-[#133a28]/80 transition-all shimmer-effect">S'inscrire</a>
+            </div>
+        </div>
+
+        <button id="menu-button" class="lg:hidden p-2 hover:bg-[#eae0d1] rounded-sm transition-all hover:scale-110" aria-label="Menu">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+    </header>
+
+    <main class="pt-12 min-h-[calc(100vh-12rem)] flex items-center">
+        <section class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+            <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+                <div class="order-2 lg:order-1 animate-fade-in-left">
+                    <img src="assets/images/Image Codex 25 sept. 2026, 14_38_32.png" alt="Illustration femme africaine avec livres" class="w-full h-auto rounded-2xl shadow-2xl">
+                </div>
+
+                <div class="order-1 lg:order-2 animate-fade-in-right">
+                    <div class="mb-8">
+                        <h1 class="font-serif text-[10rem] sm:text-[16rem] lg:text-[20rem] text-[#133a28] mb-4 leading-none">404</h1>
+                        <h2 class="font-serif text-4xl sm:text-5xl text-[#281e19] mb-6">Page introuvable</h2>
+                        <p class="text-lg text-[#705f57] mb-8 max-w-xl">
+                            Oops ! La page que vous recherchez n'existe pas ou a peut-être été déplacée. Mais pas de panique, il y a plein d'autres belles histoires à découvrir sur MIKANDA.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 sm:flex-row">
+                        <a href="index.html" class="inline-flex items-center justify-center gap-2 bg-[#133a28] px-6 py-3 text-sm font-medium text-[#fff8fa] rounded-lg transition-colors hover:bg-[#245743] hover:shadow-lg">
+                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            Retour à l'accueil
+                        </a>
+                        <a href="biblio.html" class="inline-flex items-center justify-center gap-2 border border-[#133a28] px-6 py-3 text-sm font-medium text-[#133a28] rounded-lg transition-colors hover:bg-[#f8f3e9] hover:shadow-md">
+                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                            Explorer la bibliothèque
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <blockquote class="max-w-2xl mx-auto">
+                    <p class="font-serif text-2xl italic text-[#705f57] mb-4">« Un livre est un voyage, même quand on reste sur place. »</p>
+                    <cite class="text-sm text-[#c17248] not-italic">— MIKANDA</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-border bg-[#292c27] px-5 py-12 text-[#e9e0d1] lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+            <div>
+                <a aria-label="MIKANDA accueil" class="flex items-center gap-3 active" href="index.html">
+                    <div>
+                        <img src="assets/branding/logo_e9e0d1.svg" alt="logo" class="w-12 h-11">
+                    </div>
+                    <span>
+                        <span class="block font-serif text-xl font-bold leading-none tracking-wide">MIKANDA</span>
+                        <span class="mt-1 block text-[9px] uppercase tracking-[0.18em] text-muted-foreground">La Bibliothèque congolaise</span>
+                    </span>
+                </a>
+
+                <p class="mt-5 max-w-xs text-sm leading-6 text-[#e9e0d1]/65">La bibliothèque numérique de la littérature congolaise.</p>
+            </div>
+
+            <div>
+                <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">Bibliothèque</p>
+
+                <div class="flex flex-col gap-3 text-sm text-[#e9e0d1]/70">
+                    <a href="biblio.html" class="hover:text-[#e9e0d1]">Catalogue</a>
+                    <a href="auteur.html" class="hover:text-[#e9e0d1]">Auteurs</a>
+                    <a href="collectives.html" class="hover:text-[#e9e0d1]">Collections</a>
+                </div>
+            </div>
+
+            <div>
+                <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">Informations</p>
+
+                <div class="flex flex-col gap-3 text-sm text-[#e9e0d1]/70">
+                    <a href="apropos.html" class="hover:text-[#e9e0d1]">À propos</a>
+                    <a href="mailto:contact@mikanda.cd" class="hover:text-[#e9e0d1]">Contact</a>
+                    <a href="signup.html" class="hover:text-[#e9e0d1]">Abonnement</a>
+                </div>
+            </div>
+
+            <div>
+                <p class="mb-4 text-xs uppercase tracking-widest text-[#d4af72]">La communauté</p>
+                <p class="text-sm leading-6 text-[#e9e0d1]/70"><i data-lucide="arrow"></i></p>
+                <p class="mt-5 text-xs text-[#e9e0d1]/45">Lubumbashi, République démocratique du Congo</p>
+            </div>
+        </div>
+
+        <div class="mx-auto mt-10 max-w-7xl border-t border-[#e9e0d1]/15 pt-5 text-xs text-[#e9e0d1]/45">&copy; 2026 — Bibliothèque numérique de la littérature congolaise</div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
