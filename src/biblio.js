@@ -16,7 +16,7 @@ const authors = [
 
 const books = [
   {
-    id: 1,
+    id: 'book-1',
     title: 'La Vie et demie',
     author: 'Sony Labou Tansi',
     category: 'Roman',
@@ -28,7 +28,7 @@ const books = [
     image: 'assets/images/livre (1).jfif'
   },
   {
-    id: 2,
+    id: 'book-2',
     title: 'Le Pleurer-rire',
     author: 'Henri Lopes',
     category: 'Roman',
@@ -40,7 +40,7 @@ const books = [
     image: 'assets/images/livre (5).jfif'
   },
   {
-    id: 3,
+    id: 'book-3',
     title: 'Tram 83',
     author: 'Fiston Mwanza Mujila',
     category: 'Roman',
@@ -52,7 +52,7 @@ const books = [
     image: 'assets/images/livre (7).jfif'
   },
   {
-    id: 4,
+    id: 'book-4',
     title: 'Le Sang des lions',
     author: 'In Koli Jean Bofane',
     category: 'Roman',
@@ -64,7 +64,7 @@ const books = [
     image: 'assets/images/livre (8).jfif'
   },
   {
-    id: 5,
+    id: 'book-5',
     title: 'La Chambre des maries',
     author: 'Henri Lopes',
     category: 'Nouvelle',
@@ -76,7 +76,7 @@ const books = [
     image: 'assets/images/livre (9).jfif'
   },
   {
-    id: 6,
+    id: 'book-6',
     title: 'Anthologie de la poésie congolaise',
     author: 'Clémentine Faïk-Nzuji',
     category: 'Poésie',
@@ -88,7 +88,7 @@ const books = [
     image: 'assets/images/livre (12).jfif'
   },
   {
-    id: 7,
+    id: 'book-7',
     title: 'L\'Invention du parallèle',
     author: 'V. Y. Mudimbe',
     category: 'Essai',
@@ -100,7 +100,7 @@ const books = [
     image: 'assets/images/livre (13).jfif'
   },
   {
-    id: 8,
+    id: 'book-8',
     title: 'Mémoires de la terre',
     author: 'Kama Sywor Kamanda',
     category: 'Conte',
@@ -112,7 +112,7 @@ const books = [
     image: 'assets/images/livre (14).jfif'
   },
   {
-    id: 9,
+    id: 'book-9',
     title: 'Le Prince de l\'antique',
     author: 'Alain Mabanckou',
     category: 'Roman',
@@ -124,7 +124,7 @@ const books = [
     image: 'assets/images/livre (15).jfif'
   },
   {
-    id: 10,
+    id: 'book-10',
     title: 'L\'Homme qui pleure',
     author: 'Emmanuel Dongala',
     category: 'Roman',
@@ -136,7 +136,7 @@ const books = [
     image: 'assets/images/livre (16).jfif'
   },
   {
-    id: 11,
+    id: 'book-11',
     title: 'La Nuit des griots',
     author: 'Marie-Léontine Tsibinda',
     category: 'Poésie',
@@ -148,7 +148,7 @@ const books = [
     image: 'assets/images/livre (17).jfif'
   },
   {
-    id: 12,
+    id: 'book-12',
     title: 'Le Feu sacré',
     author: 'Tchicaya U Tam\'si',
     category: 'Poésie',
@@ -355,7 +355,7 @@ function renderBooks() {
 
     if (isListView) {
       return `
-        <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex items-center gap-4 p-4">
+        <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex items-center gap-4 p-4" data-book-id="${book.id}">
           <div class="relative w-24 h-32 flex-shrink-0 bg-[#EFE9DC] overflow-hidden cursor-pointer rounded-lg">
             <img alt="${book.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="${book.image}">
             <div class="absolute top-1 left-1 flex flex-col gap-1 z-10">
@@ -382,7 +382,7 @@ function renderBooks() {
               <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] hover:text-[#133a28] transition-colors">Détails →</a>
             </div>
           </div>
-          <button class="w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500 flex-shrink-0" aria-label="Ajouter aux favoris">
+          <button id="fav-${book.id}" class="favorite-button w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500 flex-shrink-0" aria-label="Ajouter aux favoris">
             <i data-lucide="heart" class="w-4 h-4"></i>
           </button>
         </div>
@@ -390,13 +390,13 @@ function renderBooks() {
     }
 
     return `
-      <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
+      <div class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full" data-book-id="${book.id}">
         <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
           <img alt="${book.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="${book.image}">
           <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
             ${availabilityBadge}
           </div>
-          <button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
+          <button id="fav-${book.id}" class="favorite-button absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500" aria-label="Ajouter aux favoris">
             <i data-lucide="heart" class="w-4 h-4"></i>
           </button>
           <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -436,7 +436,6 @@ function renderBooks() {
   }).join('')
 
   lucide.createIcons()
-  setupFavoriteButtons()
 }
 
 function updatePagination() {
@@ -511,22 +510,6 @@ function setupPagination() {
   })
 }
 
-function setupFavoriteButtons() {
-  const heartButtons = document.querySelectorAll('button[aria-label="Ajouter aux favoris"]')
-  
-  heartButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const icon = button.querySelector('i')
-      if (icon.classList.contains('text-rose-500')) {
-        icon.classList.remove('text-rose-500', 'fill-rose-500')
-        icon.classList.add('text-[#5C5245]')
-      } else {
-        icon.classList.add('text-rose-500', 'fill-rose-500')
-        icon.classList.remove('text-[#5C5245]')
-      }
-    })
-  })
-}
 
 function setupGridLayout() {
   const gridButton = document.getElementById('grid-view')

@@ -16,6 +16,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
     <script type="module" src="./src/main.js"></script>
     <script type="module" src="./src/biblio.js"></script>
+    <script type="module" src="./src/favorites.js"></script>
 </head>
 
 <body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
@@ -52,6 +53,10 @@
                 />
                 <i data-lucide="search" class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-[#705f57]"></i>
             </div>
+            <a href="favori_livre.html" class="relative text-[#705f57] hover:text-[#133a28] transition-colors">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+                <span class="favorites-count absolute -top-2 -right-2 bg-[#c17248] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+            </a>
             <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:underline transition-all">Connexion</a>
             <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-white rounded-lg transition-colors hover:bg-[#245743] hover:shadow-lg shimmer-effect glow-effect">S'inscrire</a>
         </div>
@@ -68,6 +73,9 @@
             <div class="mt-4 flex flex-col gap-3">
                 <a href="biblio.html" class="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">
                     <i data-lucide="search" class="w-4 h-4"></i> Bibliothèque
+                </a>
+                <a href="favori_livre.html" class="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">
+                    <i data-lucide="heart" class="w-4 h-4"></i> Mes favoris
                 </a>
                 <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">Connexion</a>
                 <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-white text-center rounded-lg hover:bg-[#245743] transition-all shimmer-effect">S'inscrire</a>
@@ -312,329 +320,6 @@
                     </div>
 
                     <div id="books-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-                        <div
-                            class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="assets/images/livre (3).jfif">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-                                    <span
-                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
-                                </div>
-
-                                <button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris">
-                                    <i data-lucide="heart" class="w-4 h-4"></i>
-                                </button>
-
-                                <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <span class="text-white font-medium text-sm">Voir détails</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Le Congo, terre d'avenir</p>
-                                    <p class="mt-1 truncate text-xs text-[#705f57]">Mamphela Ramphele</p>
-                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
-                                        <span class="font-medium">Essai</span>
-                                        <span>2022</span>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="clock" class="w-3 h-3"></i>
-                                            <span>~2h de lecture</span>
-                                        </div>
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="book-open" class="w-3 h-3"></i>
-                                            <span>Format numérique</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-                                        <span>4.8</span>
-                                        <span class="text-[#9C8F7E] font-normal">(128)</span>
-                                    </div>
-
-                                    <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="assets/images/livre (4).jfif">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-                                    <span
-                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
-                                        <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
-                                    </span>
-                                </div>
-
-                                <button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris">
-                                    <i data-lucide="heart" class="w-4 h-4"></i>
-                                </button>
-
-                                <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <span class="text-white font-medium text-sm">Voir détails</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Discours fondateurs</p>
-                                    <p class="mt-1 truncate text-xs text-[#705f57]">Patrice Lumumba</p>
-                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
-                                        <span class="font-medium">Politique</span>
-                                        <span>1960</span>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="clock" class="w-3 h-3"></i>
-                                            <span>~1h de lecture</span>
-                                        </div>
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="book-open" class="w-3 h-3"></i>
-                                            <span>Format numérique</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-                                        <span>4.9</span>
-                                        <span class="text-[#9C8F7E] font-normal">(312)</span>
-                                    </div>
-
-                                    <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="assets/images/livre (1).jfif">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-                                    <span
-                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
-                                </div>
-
-                                <button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris">
-                                    <i data-lucide="heart" class="w-4 h-4"></i>
-                                </button>
-
-                                <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <span class="text-white font-medium text-sm">Voir détails</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">La Vie et demie</p>
-                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
-                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
-                                        <span class="font-medium">Roman</span>
-                                        <span>1979</span>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="clock" class="w-3 h-3"></i>
-                                            <span>~3h de lecture</span>
-                                        </div>
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="book-open" class="w-3 h-3"></i>
-                                            <span>Format numérique</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-                                        <span>4.7</span>
-                                        <span class="text-[#9C8F7E] font-normal">(204)</span>
-                                    </div>
-
-                                    <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="assets/images/livre (5).jfif">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-                                    <span
-                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span>
-                                </div>
-
-                                <button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris">
-                                    <i data-lucide="heart" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-
-                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Le Pleurer-rire</p>
-                                    <p class="mt-1 truncate text-xs text-[#705f57]">Henri Lopes</p>
-                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
-                                        <span class="font-medium">Roman</span>
-                                        <span>1979</span>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="clock" class="w-3 h-3"></i>
-                                            <span>~2h de lecture</span>
-                                        </div>
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="book-open" class="w-3 h-3"></i>
-                                            <span>Format numérique</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-                                        <span>4.6</span>
-                                        <span class="text-[#9C8F7E] font-normal">(176)</span>
-                                    </div>
-
-                                    <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div
-                            class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="assets/images/livre (6).jfif">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-                                    <span
-                                        class="bg-[#2D2319]/90 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1 shadow-xs font-mono">
-                                        <i data-lucide="lock" class="w-2.5 h-2.5"></i>Premium
-                                    </span>
-                                </div>
-
-                                <button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris">
-                                    <i data-lucide="heart" class="w-4 h-4"></i>
-                                </button>
-
-                                <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <span class="text-white font-medium text-sm">Voir détails</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Mbote Kinshasa</p>
-                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
-                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
-                                        <span class="font-medium">Roman</span>
-                                        <span>1979</span>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="clock" class="w-3 h-3"></i>
-                                            <span>~2h de lecture</span>
-                                        </div>
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="book-open" class="w-3 h-3"></i>
-                                            <span>Format numérique</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-                                        <span>5.0</span>
-                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
-                                    </div>
-
-                                    <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:text-[#133a28] transition-colors">Détails →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="border border-[#E5DDCB] rounded-xl overflow-hidden hover:shadow-lg transition-all group flex flex-col h-full">
-                            <div class="relative aspect-3/4 bg-[#EFE9DC] overflow-hidden cursor-pointer">
-                                <img alt="Le Congo, terre d'avenir, est-il menacé ? &amp; Discours Fondateurs"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    src="assets/images/livre (7).jfif">
-                                <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10"><span
-                                        class="bg-[#1B4332]/90 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs shadow-xs font-mono">Gratuit</span><span
-                                        class="bg-[#8E461F] text-white text-[10px] font-bold px-2 py-0.5 rounded font-mono">Nouveau</span>
-                                </div>
-
-                                <button
-                                    class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition-colors shadow-sm z-10 bg-white/80 text-[#5C5245] hover:bg-white hover:text-rose-500"
-                                    aria-label="Ajouter aux favoris">
-                                    <i data-lucide="heart" class="w-4 h-4"></i>
-                                </button>
-
-                                <div class="absolute inset-0 bg-[#133a28]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <span class="text-white font-medium text-sm">Voir détails</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 pb-4 flex flex-col flex-1 justify-between gap-3">
-                                <div>
-                                    <p class="mt-3 truncate font-serif text-xl text-[#281e19] group-hover:text-[#c17248] transition-colors">Mbote Kinshasa</p>
-                                    <p class="mt-1 truncate text-xs text-[#705f57]">Sony Labou Tansi</p>
-                                    <div class="mt-2 flex items-center justify-between font-mono text-xs text-[#705f57]">
-                                        <span class="font-medium">Roman</span>
-                                        <span>1979</span>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2 text-xs text-[#8f7770]">
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="clock" class="w-3 h-3"></i>
-                                            <span>~2h de lecture</span>
-                                        </div>
-                                        <div class="flex items-center gap-1">
-                                            <i data-lucide="book-open" class="w-3 h-3"></i>
-                                            <span>Format numérique</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pt-2.5 border-t border-[#8E461F]/50 flex items-center justify-between text-xs">
-                                    <div class="flex items-center gap-1 text-amber-700 font-semibold">
-                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-                                        <span>5.0</span>
-                                        <span class="text-[#9C8F7E] font-normal">(450)</span>
-                                    </div>
-
-                                    <a href="vu_libre.html" class="text-xs font-semibold text-[#8E461F] flex items-center justify-between hover:underline">Détails →</a>
-                                </div>
-                            </div>
-                        </div>                   
                     </div>
 
                     <div class="flex items-center justify-between pt-6 border-t border-[#E5DDCB]">

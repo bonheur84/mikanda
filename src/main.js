@@ -177,7 +177,14 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFormInteractions()
   setupFavoriteButtons()
   
-  setTimeout(() => {
-    notification.success('Bienvenue sur MIKANDA !', 4000)
-  }, 1500)
+  const currentPage = window.location.pathname.split('/').pop()
+  const allowedPages = ['index.html', 'login.html', 'signup.html']
+  const hasSeenWelcome = localStorage.getItem('mikanda-welcome-seen')
+  
+  if (allowedPages.includes(currentPage) && !hasSeenWelcome) {
+    setTimeout(() => {
+      notification.success('Bienvenue sur MIKANDA !', 4000)
+      localStorage.setItem('mikanda-welcome-seen', 'true')
+    }, 1500)
+  }
 })

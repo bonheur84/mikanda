@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg"/>
     <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/favorites.js"></script>
 </head>
 <body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
     <header class="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 lg:px-8">
@@ -45,6 +46,10 @@
                 />
                 <i data-lucide="search" class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-[#705f57]"></i>
             </div>
+            <a href="favori_livre.html" class="relative text-[#705f57] hover:text-[#133a28] transition-colors">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+                <span class="favorites-count absolute -top-2 -right-2 bg-[#c17248] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+            </a>
             <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:underline transition-all">Connexion</a>
             <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5 hover:shadow-lg shimmer-effect glow-effect">S'inscrire</a>
         </div>
