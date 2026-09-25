@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "./animations.css";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Lora", serif;
+}
+
+:root {
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Lora", serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+#reading-content ::selection {
+  background: #fde68a;
+}
