@@ -138,7 +138,8 @@
                     <div class="mt-10 grid gap-6 border-t border-[#d9d1c6] pt-8 sm:grid-cols-3">
                         <div class="group">
                             <div class="flex items-baseline gap-2">
-                                <p class="font-serif text-4xl sm:text-5xl text-[#133a28]">480+</p>
+                                <p class="font-serif text-4xl sm:text-5xl text-[#133a28] counter" data-target="480">0</p>
+                                <span class="text-2xl sm:text-3xl text-[#133a28]">+</span>
                             </div>
                             <p class="mt-2 text-sm text-[#705f57]">œuvres cataloguées</p>
                             <div class="mt-3 h-1 w-12 bg-[#c17248]/20 rounded-full overflow-hidden">
@@ -147,7 +148,7 @@
                         </div>
                         <div class="group">
                             <div class="flex items-baseline gap-2">
-                                <p class="font-serif text-4xl sm:text-5xl text-[#133a28]">126</p>
+                                <p class="font-serif text-4xl sm:text-5xl text-[#133a28] counter" data-target="126">0</p>
                             </div>
                             <p class="mt-2 text-sm text-[#705f57]">auteurs référencés</p>
                             <div class="mt-3 h-1 w-12 bg-[#c17248]/20 rounded-full overflow-hidden">
@@ -156,7 +157,7 @@
                         </div>
                         <div class="group">
                             <div class="flex items-baseline gap-2">
-                                <p class="font-serif text-4xl sm:text-5xl text-[#133a28]">1</p>
+                                <p class="font-serif text-4xl sm:text-5xl text-[#133a28] counter" data-target="1">0</p>
                             </div>
                             <p class="mt-2 text-sm text-[#705f57]">patrimoine à transmettre</p>
                             <div class="mt-3 h-1 w-12 bg-[#c17248]/20 rounded-full overflow-hidden">
@@ -416,6 +417,39 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script>
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(() => animateCounter(counter), 10);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        // Start animation when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(counter => animateCounter(counter));
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const missionSection = document.querySelector('.counter')?.closest('section');
+        if (missionSection) {
+            observer.observe(missionSection);
+        }
+    </script>
 </body>
 
 </html>
