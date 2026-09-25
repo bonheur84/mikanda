@@ -84,9 +84,9 @@
         <p class="text-xs uppercase tracking-[0.2em] text-[#c17248]">Voix et trajectoires</p>
         <h1 class="mt-2 font-serif text-5xl">Auteurs congolais</h1>
 
-        <div class="mt-8 flex max-w-xl items-center border border-[#d9d1c6] bg-[#fdfaf3] px-3">
+        <div class="mt-8 flex max-w-xl items-center border border-[#d9d1c6] bg-[#fdfaf3] px-3 focus-within:border-[#133a28] focus-within:ring-1 focus-within:ring-[#133a28] transition-all">
             <i data-lucide="search" class="h-4 w-4 text-[#705f57]"></i>
-            <input class="h-12 flex-1 bg-transparent px-3 text-sm outline-none" placeholder="Rechercher un auteur...">
+            <input id="search-input" class="h-12 flex-1 bg-transparent px-3 text-sm outline-none" placeholder="Rechercher un auteur...">
         </div>
 
         <div class="mt-8 flex items-center justify-between gap-4 overflow-x-auto border-y border-[#d9d1c6] py-4 text-sm text-[#705f57]">
@@ -118,13 +118,13 @@
             <button class="min-w-4 hover:text-[#133a28] cursor-pointer">Z</button>
         </div>  
 
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+        <div id="authors-grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img alt="Portrait de Sony Labou Tansi" title="Photo : RFI" class="h-24 w-24 rounded-full object-cover grayscale transition group-hover:grayscale-0"
+                    <img alt="Portrait de Sony Labou Tansi" title="Photo : RFI" class="h-24 w-24 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg"
                         src="assets/images/auteur-sony.webp">
                     <div>
-                        <h2 class="font-serif text-2xl group-hover:text-[#133a28]">Sony Labou Tansi</h2>
+                        <h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Sony Labou Tansi</h2>
                         <p class="mt-1 font-mono text-[10px] text-[#705f57]">1947—1995</p>
                         <p class="mt-2 text-sm text-[#c17248]">Roman · Théâtre</p>
                         <p class="mt-1 text-xs text-[#705f57]">18 œuvres</p>
@@ -134,12 +134,12 @@
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain congolais, dont l’œuvre contribue à la mémoire littéraire et aux imaginaires du continent.</p>
             </a>
             
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img alt="V. Y. Mudimbe" class="h-24 w-24 rounded-full object-cover grayscale transition group-hover:grayscale-0"
+                    <img alt="V. Y. Mudimbe" class="h-24 w-24 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg"
                         src="assets/images/auteur-mudimbe.jpg">
                     <div>
-                        <h2 class="font-serif text-2xl group-hover:text-[#133a28]">V. Y. Mudimbe</h2>
+                        <h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">V. Y. Mudimbe</h2>
                         <p class="mt-1 font-mono text-[10px] text-[#705f57]">1941—</p>
                         <p class="mt-2 text-sm text-[#c17248]">Essai · Philosophie</p>
                         <p class="mt-1 text-xs text-[#705f57]">24 œuvres</p>
@@ -149,12 +149,12 @@
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain congolais, dont l’œuvre contribue à la mémoire littéraire et aux imaginaires du continent.</p>
             </a>
             
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img alt="Fiston Mwanza Mujila" class="h-24 w-24 rounded-full object-cover grayscale transition group-hover:grayscale-0"
+                    <img alt="Fiston Mwanza Mujila" class="h-24 w-24 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg"
                         src="assets/images/auteur-mujila.jpg">
                     <div>
-                        <h2 class="font-serif text-2xl group-hover:text-[#133a28]">Fiston Mwanza Mujila</h2>
+                        <h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Fiston Mwanza Mujila</h2>
                         <p class="mt-1 font-mono text-[10px] text-[#705f57]">1981—</p>
                         <p class="mt-2 text-sm text-[#c17248]">Poésie · Roman</p>
                         <p class="mt-1 text-xs text-[#705f57]">9 œuvres</p>
@@ -164,12 +164,12 @@
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain congolais, dont l’œuvre contribue à la mémoire littéraire et aux imaginaires du continent.</p>
             </a>
             
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img alt="Clémentine Faïk-Nzuji" class="h-24 w-24 rounded-full object-cover grayscale transition group-hover:grayscale-0"
+                    <img alt="Clémentine Faïk-Nzuji" class="h-24 w-24 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg"
                         src="assets/images/auteur-bofane.jpg">
                     <div>
-                        <h2 class="font-serif text-2xl group-hover:text-[#133a28]">Clémentine Faïk-Nzuji</h2>
+                        <h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Clémentine Faïk-Nzuji</h2>
                         <p class="mt-1 font-mono text-[10px] text-[#705f57]">1944—</p>
                         <p class="mt-2 text-sm text-[#c17248]">Poésie · Linguistique</p>
                         <p class="mt-1 text-xs text-[#705f57]">14 œuvres</p>
@@ -179,12 +179,12 @@
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain congolais, dont l’œuvre contribue à la mémoire littéraire et aux imaginaires du continent.</p>
             </a>
             
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img alt="Portrait d'In Koli Jean Bofane" class="h-24 w-24 rounded-full object-cover grayscale transition group-hover:grayscale-0"
+                    <img alt="Portrait d'In Koli Jean Bofane" class="h-24 w-24 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg"
                         src="assets/images/auteur-bofane.jpg">
                     <div>
-                        <h2 class="font-serif text-2xl group-hover:text-[#133a28]">In Koli Jean Bofane</h2>
+                        <h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">In Koli Jean Bofane</h2>
                         <p class="mt-1 font-mono text-[10px] text-[#705f57]">1954—</p>
                         <p class="mt-2 text-sm text-[#c17248]">Roman · Satire</p>
                         <p class="mt-1 text-xs text-[#705f57]">7 œuvres</p>
@@ -194,12 +194,12 @@
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain congolais, dont l’œuvre contribue à la mémoire littéraire et aux imaginaires du continent.</p>
             </a>
             
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img alt="Henri Lopes" class="h-24 w-24 rounded-full object-cover grayscale transition group-hover:grayscale-0"
+                    <img alt="Henri Lopes" class="h-24 w-24 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg"
                         src="assets/images/auteur-lopes.jpg">
                     <div>
-                        <h2 class="font-serif text-2xl group-hover:text-[#133a28]">Henri Lopes</h2>
+                        <h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Henri Lopes</h2>
                         <p class="mt-1 font-mono text-[10px] text-[#705f57]">1937—2023</p>
                         <p class="mt-2 text-sm text-[#c17248]">Roman · Nouvelle</p>
                         <p class="mt-1 text-xs text-[#705f57]">21 œuvres</p>
@@ -209,82 +209,82 @@
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain congolais, dont l’œuvre contribue à la mémoire littéraire et aux imaginaires du continent.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img src="assets/images/auteur-mabanckou.jpg" alt="Portrait d'Alain Mabanckou" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition group-hover:grayscale-0">
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Alain Mabanckou</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1966—</p><p class="mt-2 text-sm text-[#c17248]">Roman · Poésie</p><p class="mt-1 text-xs text-[#705f57]">32 œuvres</p></div>
+                    <img src="assets/images/auteur-mabanckou.jpg" alt="Portrait d'Alain Mabanckou" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg">
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Alain Mabanckou</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1966—</p><p class="mt-2 text-sm text-[#c17248]">Roman · Poésie</p><p class="mt-1 text-xs text-[#705f57]">32 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Romancier et poète franco-congolais, une voix majeure de la littérature africaine contemporaine.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img src="assets/images/auteur-dongala.jpg" alt="Portrait d'Emmanuel Dongala" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition group-hover:grayscale-0">
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Emmanuel Dongala</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1941—</p><p class="mt-2 text-sm text-[#c17248]">Roman · Théâtre</p><p class="mt-1 text-xs text-[#705f57]">16 œuvres</p></div>
+                    <img src="assets/images/auteur-dongala.jpg" alt="Portrait d'Emmanuel Dongala" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg">
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Emmanuel Dongala</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1941—</p><p class="mt-2 text-sm text-[#c17248]">Roman · Théâtre</p><p class="mt-1 text-xs text-[#705f57]">16 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain et dramaturge congolais, dont les récits interrogent l’histoire et les bouleversements politiques.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#b7924b] font-serif text-2xl text-[#281e19]">TU</div>
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Tchicaya U Tam'si</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1931—1988</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Roman</p><p class="mt-1 text-xs text-[#705f57]">19 œuvres</p></div>
+                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#b7924b] font-serif text-2xl text-[#281e19] transition-all duration-300 group-hover:shadow-lg">TU</div>
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Tchicaya U Tam'si</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1931—1988</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Roman</p><p class="mt-1 text-xs text-[#705f57]">19 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Poète et écrivain congolais, figure fondatrice de la poésie africaine francophone moderne.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img src="assets/images/auteur-tsibinda.jpg" alt="Portrait de Marie-Léontine Tsibinda" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition group-hover:grayscale-0">
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Marie-Léontine Tsibinda</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1958—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Théâtre</p><p class="mt-1 text-xs text-[#705f57]">11 œuvres</p></div>
+                    <img src="assets/images/auteur-tsibinda.jpg" alt="Portrait de Marie-Léontine Tsibinda" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg">
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Marie-Léontine Tsibinda</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1958—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Théâtre</p><p class="mt-1 text-xs text-[#705f57]">11 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Poétesse et dramaturge congolaise, elle explore la mémoire, l’exil et la condition féminine.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <img src="assets/images/auteur-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition group-hover:grayscale-0">
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Kama Sywor Kamanda</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1950—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Conte</p><p class="mt-1 text-xs text-[#705f57]">27 œuvres</p></div>
+                    <img src="assets/images/auteur-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:shadow-lg">
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Kama Sywor Kamanda</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1950—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Conte</p><p class="mt-1 text-xs text-[#705f57]">27 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain et conteur congolais, reconnu pour une œuvre poétique nourrie de mythes et de récits africains.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#315d4b] font-serif text-2xl text-[#f7f1e6]">PN</div>
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Pius Ngandu Nkashama</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1946—</p><p class="mt-2 text-sm text-[#c17248]">Roman · Essai</p><p class="mt-1 text-xs text-[#705f57]">22 œuvres</p></div>
+                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#315d4b] font-serif text-2xl text-[#f7f1e6] transition-all duration-300 group-hover:shadow-lg">PN</div>
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Pius Ngandu Nkashama</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1946—</p><p class="mt-2 text-sm text-[#c17248]">Roman · Essai</p><p class="mt-1 text-xs text-[#705f57]">22 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Écrivain, linguiste et universitaire congolais, il associe recherche et création littéraire.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#c7904a] font-serif text-2xl text-[#281e19]">MN</div>
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Mukala Kadima-Nzuji</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1947—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Critique</p><p class="mt-1 text-xs text-[#705f57]">13 œuvres</p></div>
+                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#c7904a] font-serif text-2xl text-[#281e19] transition-all duration-300 group-hover:shadow-lg">MN</div>
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Mukala Kadima-Nzuji</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1947—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Critique</p><p class="mt-1 text-xs text-[#705f57]">13 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Poète et critique littéraire congolais, acteur important de la transmission des écritures africaines.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#bd684c] font-serif text-2xl text-[#fdfaf3]">BN</div>
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Ndaywel è Nziem</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1944—</p><p class="mt-2 text-sm text-[#c17248]">Histoire · Essai</p><p class="mt-1 text-xs text-[#705f57]">18 œuvres</p></div>
+                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#bd684c] font-serif text-2xl text-[#fdfaf3] transition-all duration-300 group-hover:shadow-lg">BN</div>
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Ndaywel è Nziem</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1944—</p><p class="mt-2 text-sm text-[#c17248]">Histoire · Essai</p><p class="mt-1 text-xs text-[#705f57]">18 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Historien et intellectuel congolais, spécialiste de la mémoire et de l’histoire de la RDC.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
                     <img src="assets/images/auteur-baruti.jpg" alt="Portrait de Barly Baruti" class="h-24 w-24 shrink-0 rounded-full object-cover grayscale transition group-hover:grayscale-0">
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">Barly Baruti</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1959—</p><p class="mt-2 text-sm text-[#c17248]">Bande dessinée · Illustration</p><p class="mt-1 text-xs text-[#705f57]">15 œuvres</p></div>
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">Barly Baruti</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1959—</p><p class="mt-2 text-sm text-[#c17248]">Bande dessinée · Illustration</p><p class="mt-1 text-xs text-[#705f57]">15 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Auteur et dessinateur congolais, il fait rayonner la bande dessinée d’Afrique centrale.</p>
             </a>
 
-            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5">
+            <a href="details_auteur.html" class="group border-t border-[#d9d1c6] pt-5 hover:bg-[#fdfaf3] hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#8f7770] font-serif text-2xl text-[#fdfaf3]">JT</div>
-                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28]">José Tshisungu Wa Tshisungu</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1954—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Roman</p><p class="mt-1 text-xs text-[#705f57]">10 œuvres</p></div>
+                    <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#8f7770] font-serif text-2xl text-[#fdfaf3] transition-all duration-300 group-hover:shadow-lg">JT</div>
+                    <div><h2 class="font-serif text-2xl group-hover:text-[#133a28] transition-colors duration-300">José Tshisungu Wa Tshisungu</h2><p class="mt-1 font-mono text-[10px] text-[#705f57]">1954—</p><p class="mt-2 text-sm text-[#c17248]">Poésie · Roman</p><p class="mt-1 text-xs text-[#705f57]">10 œuvres</p></div>
                 </div>
                 <p class="mt-5 text-sm leading-6 text-[#705f57]">Poète et romancier congolais, son écriture relie l’expérience de l’exil aux paysages de la mémoire.</p>
             </a>
@@ -338,6 +338,50 @@
             <div class="mx-auto mt-10 max-w-7xl border-t border-[#e9e0d1]/15 pt-5 text-xs text-[#e9e0d1]/45">&copy; 2026 — Bibliothèque numérique de la littérature congolaise</div>
         </footer>
 
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.js"></script>
+    
+    <script>
+        // Fonctionnalité de recherche d'auteurs
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-input');
+            const authorsGrid = document.getElementById('authors-grid');
+            const authorCards = authorsGrid.querySelectorAll('a');
+            
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                
+                authorCards.forEach(card => {
+                    const authorName = card.querySelector('h2').textContent.toLowerCase();
+                    const authorDescription = card.querySelector('p:last-of-type').textContent.toLowerCase();
+                    
+                    if (authorName.includes(searchTerm) || authorDescription.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Fonctionnalité de filtrage par lettre alphabétique
+            const letterButtons = document.querySelectorAll('.border-y button');
+            letterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const letter = this.textContent.toLowerCase();
+                    
+                    authorCards.forEach(card => {
+                        const authorName = card.querySelector('h2').textContent;
+                        if (authorName.toLowerCase().startsWith(letter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // Réinitialiser la recherche
+                    searchInput.value = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
