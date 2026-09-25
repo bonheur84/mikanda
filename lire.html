@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="assets/css/animations.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
-    <script type="module" src="./src/main.js"></script>
+    <script>
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+            window.lucide.createIcons()
+        }
+    </script>
     <script type="module" src="./src/favorites.js"></script>
+    <script type="module" src="./src/lire.js"></script>
 </head>
 
 <body class="min-h-dvh bg-[#f4ecdc] text-[#332c28] font-serif">
@@ -23,7 +28,7 @@
         <header class="fixed top-0 left-0 right-0 z-50 h-16 bg-[#f7f1e6]/95 backdrop-blur-sm border-b border-[#ded3c1]">
             <div class="max-w-[1400px] mx-auto px-6 h-full flex items-center justify-between gap-4">
                 <div class="flex items-center gap-4 flex-1 min-w-0">
-                    <a href="vu_libre.html" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Quitter la lecture">
+                    <a id="back-button" href="vu_libre.html" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Quitter la lecture">
                         <i data-lucide="arrow-left" class="w-5 h-5"></i>
                     </a>
                     <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Table des matières">
@@ -36,18 +41,18 @@
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-sm font-medium text-[#705f57]">47 %</span>
+                        <span id="progress-text" class="text-sm font-medium text-[#705f57]">47 %</span>
                         <div class="w-30 h-1 bg-[#ded3c1] rounded-full overflow-hidden">
-                            <div class="h-full bg-[#315d4b] rounded-full" style="width: 47%"></div>
+                            <div id="progress-bar-fill" class="h-full bg-[#315d4b] rounded-full" style="width: 47%"></div>
                         </div>
                     </div>
-                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Rechercher">
+                    <button id="search-button" type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Rechercher">
                         <i data-lucide="search" class="w-5 h-5"></i>
                     </button>
-                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Réglages">
+                    <button id="settings-button" type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Réglages">
                         <i data-lucide="settings" class="w-5 h-5"></i>
                     </button>
-                    <button type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Mode plein écran">
+                    <button id="immersive-button" type="button" class="flex items-center justify-center w-10 h-10 rounded-lg text-[#403732] hover:bg-[#eee4d2] hover:text-[#315d4b] transition-colors" aria-label="Mode plein écran">
                         <i data-lucide="maximize" class="w-5 h-5"></i>
                     </button>
                 </div>
@@ -73,42 +78,321 @@
                     </button>
                 </div>
                 <nav class="flex flex-col gap-1">
-                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#315d4b] text-white text-left font-serif text-[15px] transition-colors" data-chapter="1">
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg bg-[#315d4b] text-white text-left font-serif text-[15px] transition-colors" data-section="cover-page">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">0</span>
+                        <span>Couverture</span>
+                    </button>
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="introduction">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">Intro</span>
+                        <span>Introduction</span>
+                    </button>
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="chapter-content">
                         <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">I</span>
                         <span>La mort</span>
                     </button>
-                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-chapter="2">
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="chapter-2">
                         <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">II</span>
                         <span>La ville</span>
                     </button>
-                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-chapter="3">
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="chapter-3">
                         <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">III</span>
                         <span>La mémoire</span>
                     </button>
-                    <button type="button" class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-chapter="4">
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="chapter-4">
                         <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">IV</span>
                         <span>L'héritage</span>
+                    </button>
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="chapter-5">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">V</span>
+                        <span>Le futur</span>
+                    </button>
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="poetry-section">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">-</span>
+                        <span>Poésie</span>
+                    </button>
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="code-section">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">-</span>
+                        <span>Code</span>
+                    </button>
+                    <button type="button" class="toc-btn flex items-center gap-3 px-4 py-3 rounded-lg text-[#8f8171] hover:bg-[#eee4d2] hover:text-[#315d4b] text-left font-serif text-[15px] transition-colors" data-section="table-section">
+                        <span class="font-['DM_Sans'] text-[12px] font-semibold opacity-70">-</span>
+                        <span>Table</span>
                     </button>
                 </nav>
             </aside>
 
             <!-- Book Page -->
             <main class="flex-1 max-w-4xl mx-auto px-12 py-12">
-                <article class="bg-white rounded-xl p-12 shadow-sm">
-                    <!-- Chapter Header -->
-                    <div class="mb-8 text-center">
-                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre I</span>
-                        <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">La mort</h2>
+                <article id="book-content" class="bg-white rounded-xl p-12 shadow-sm">
+                    <!-- Cover Page -->
+                    <div id="cover-page" class="text-center py-16">
+                        <div class="w-48 h-64 mx-auto mb-8 bg-[#e8e0d8] rounded-lg shadow-md flex items-center justify-center">
+                            <span class="text-[#8f7770] text-sm">Couverture</span>
+                        </div>
+                        <h1 class="font-['Playfair_Display'] text-4xl font-bold text-[#281e19] mb-4">La vie et demie</h1>
+                        <p class="text-lg text-[#705f57] mb-2">Sony Labou Tansi</p>
+                        <p class="text-sm text-[#8f7770]">1979 · Roman</p>
                     </div>
 
-                    <!-- Book Text -->
-                    <div class="font-serif text-lg leading-[1.9] text-[#403732]">
-                        <p class="mb-6">Il était une fois un pays qui n'existait nulle part. Dans ce pays, les morts n'avaient pas fini de mourir et les vivants avaient appris à parler avec leur ombre.</p>
-                        <p class="mb-6">Le Guide Providentiel avançait dans les rues comme on avance dans un rêve trop ancien. Les murs portaient les noms de ceux qui avaient disparu, et la ville gardait dans ses pierres la mémoire des voix.</p>
-                        <p class="mb-6">Chaque matin, le peuple se réveillait avec la même question au bord des lèvres : combien de temps peut-on vivre dans un pays où la mort refuse de partir ?</p>
-                        <blockquote class="my-8 pl-6 border-l-4 border-[#bd684c] italic text-[#8f8171] text-xl leading-8">
-                            La mémoire ne se lit pas seulement dans les livres : elle se transmet dans les silences.
-                        </blockquote>
+                    <!-- Introduction -->
+                    <div id="introduction" class="hidden py-8 border-t border-[#ded3c1]">
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#281e19] mb-6">Introduction</h2>
+                        <div id="introduction-content" class="font-serif text-lg leading-[1.9] text-[#403732]">
+                            <p class="mb-6">Ce roman nous plonge dans l'univers complexe d'un pays imaginaire où la mort refuse de partir. Sony Labou Tansi nous offre une vision poétique et politique de l'existence africaine.</p>
+                            <p class="mb-6">À travers une écriture riche et symbolique, l'auteur explore les thèmes de la mémoire, de l'héritage et de la survie dans un monde en perpétuelle transformation.</p>
+                            <p class="mb-6">L'œuvre se situe à la croisée de plusieurs traditions littéraires : le réalisme magique sud-américain, la négritude, et le postcolonialisme africain. Elle questionne les frontières entre le vivant et le mort, entre le réel et l'imaginaire.</p>
+                            <p class="mb-6">Le Guide Providentiel, figure centrale du récit, incarne cette dualité. Il est à la fois mort et vivant, présent et absent, mémoire et oubli. Sa traversée de la ville devient une métaphore de la condition humaine face à l'histoire.</p>
+                            <p class="mb-6">Les murs de la ville portent les noms des disparus, créant une architecture de la mémoire. Chaque rue, chaque bâtiment raconte une histoire, chaque pierre conserve une voix. La ville elle-même devient un livre ouvert, un palimpseste des vies passées.</p>
+                            <p class="mb-6">Les vivants, quant à eux, ont appris à coexister avec leurs ombres. Ils dialoguent avec les morts, négocient avec la mémoire, construisent leur présent sur les fondations d'un passé qui refuse de s'effacer.</p>
+                            <p class="mb-6">Cette coexistence crée une société unique, où les frontières temporelles sont poreuses, où le passé et le présent s'entremêlent de manière inextricable. C'est dans cet entre-deux que se situe l'essentiel du récit.</p>
+                            <p class="mb-6">La mort, dans ce monde, n'est pas une fin mais une continuation. Elle est un état, une condition, une manière d'être. Les morts continuent d'agir, de parler, d'influencer le cours des choses. Ils sont présents dans chaque décision, chaque parole, chaque silence.</p>
+                            <p class="mb-6">Cette vision de la mort comme persistance, comme permanence, nous force à reconsidérer notre propre rapport à la finitude. Elle nous invite à penser la mort non comme rupture mais comme transition, comme transformation plutôt que comme annihilation.</p>
+                            <p class="mb-6">Le roman nous propose ainsi une poétique de la survie, une réflexion sur ce qui reste quand tout semble avoir disparu. Il explore les manières dont les humains s'inventent des continuations, des prolongements, des survivances.</p>
+                            <p class="mb-6">À travers le personnage du Guide Providentiel et son périple dans la ville des morts-vivants, Sony Labou Tansi nous donne à voir une humanité qui refuse de se laisser définir par la mort, qui construit son existence dans et contre la finitude.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 1 -->
+                    <div id="chapter-content" class="hidden">
+                        <div class="mb-8 text-center">
+                            <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre I</span>
+                            <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">La mort</h2>
+                        </div>
+
+                        <div id="reading-content" class="font-serif text-lg leading-[1.9] text-[#403732]">
+                            <p class="mb-6">Il était une fois un pays qui n'existait nulle part. Dans ce pays, les morts n'avaient pas fini de mourir et les vivants avaient appris à parler avec leur ombre.</p>
+                            <p class="mb-6">Le Guide Providentiel avançait dans les rues comme on avance dans un rêve trop ancien. Les murs portaient les noms de ceux qui avaient disparu, et la ville gardait dans ses pierres la mémoire des voix.</p>
+                            <p class="mb-6">Chaque matin, le peuple se réveillait avec la même question au bord des lèvres : combien de temps peut-on vivre dans un pays où la mort refuse de partir ?</p>
+                            <blockquote class="my-8 pl-6 border-l-4 border-[#bd684c] italic text-[#8f8171] text-xl leading-8">
+                                La mémoire ne se lit pas seulement dans les livres : elle se transmet dans les silences.
+                            </blockquote>
+                            <p class="mb-6">Ils avaient appris à vivre entre deux mondes, celui des vivants et celui des morts, sans jamais appartenir complètement à aucun des deux. Cette condition d'entre-deux définissait leur identité, leur langue, leur manière d'habiter le monde.</p>
+                            <p class="mb-6">Le Guide Providentiel se souvenait de tout. Il se souvenait du jour où la mort avait refusé de partir, du moment où les frontières s'étaient effondrées, de l'instant où le temps s'était arrêté pour reprendre ailleurs.</p>
+                            <p class="mb-6">La ville s'étendait à l'infini, ses rues se multipliant comme les ramifications d'une mémoire obstinée. Chaque quartier portait le nom d'un disparu, chaque place commémorait une absence, chaque monument honorait une ombre.</p>
+                            <p class="mb-6">Les vivants circulaient parmi ces traces, ces empreintes, ces fantômes. Ils apprenaient à reconnaître les signes, à interpréter les présences, à dialoguer avec ce qui n'était plus tout à fait là mais pas tout à fait absent.</p>
+                            <p class="mb-6">Le marché était le lieu où les deux mondes se rencontraient le plus fréquemment. Les morts venaient y acheter ce qu'ils avaient oublié, les vivants y vendaient ce qu'ils voulaient oublier. Les échanges se faisaient en silence, en gestes, en regards.</p>
+                            <p class="mb-6">Le Guide Providentiel s'arrêta devant une échoppe de souvenirs. Le marchand, un homme qui semblait avoir vécu plusieurs vies, lui tendit un objet informe. C'était, dit-il, le dernier souvenir de quelqu'un qui avait cessé d'être.</p>
+                            <p class="mb-6">Le Guide prit l'objet. Il était léger, presque insaisissable. En le tenant, il ressentit une présence, une chaleur, comme si quelqu'un lui prenait la main.</p>
+                            <p class="mb-6">C'est ainsi que commença la traversée, celle qui allait le mener à travers les quartiers de la ville, à travers les strates de la mémoire, à travers les couches de l'oubli.</p>
+                            <p class="mb-6">Il marcha pendant des jours, peut-être des années. Le temps, dans ce pays, n'avait plus la même consistance. Il s'étirait, se contractait, se repliait sur lui-même comme un serpent qui se mord la queue.</p>
+                            <p class="mb-6">Les rues se ressemblaient toutes et pourtant étaient toutes différentes. Chaque pavement racontait une histoire, chaque fenêtre révélait un souvenir, chaque porte dissimulait un secret.</p>
+                            <p class="mb-6">Le Guide rencontra des gens qui avaient perdu leur nom, d'autres qui avaient oublié leur visage, d'autres encore qui continuaient de chercher quelqu'un qui n'existait plus.</p>
+                            <p class="mb-6">Il y avait ceux qui refusaient d'accepter la nouvelle condition, ceux qui s'y étaient résignés, ceux qui y avaient trouvé une étrange liberté, ceux qui y voyaient une punition, ceux qui y découvraient une grâce.</p>
+                            <p class="mb-6">Le Guide les écoutait tous. Il écoutait leurs histoires, leurs plaintes, leurs espoirs, leurs désespoirs. Il accumulait ces récits comme on accumule des souvenirs, sans juger, sans choisir, sans retenir.</p>
+                            <p class="mb-6">Plus il avançait, plus il comprenait que la ville n'était pas seulement un lieu mais un temps, non seulement un espace mais une durée. Elle était le lieu où tous les temps coexistaient, où chaque moment restait présent.</p>
+                            <p class="mb-6">Les morts n'étaient pas partis. Ils avaient simplement changé de manière d'être. Ils continuaient d'habiter, de parler, d'agir, mais autrement. Leur présence était plus subtile, plus diffuse, plus insistante.</p>
+                            <p class="mb-6">Le Guide finit par comprendre que sa propre traversée était aussi une traversée du temps. Il marchait non seulement à travers la ville mais à travers sa propre histoire, à travers l'histoire de tous ceux qui avaient marché avant lui.</p>
+                            <p class="mb-6">Cette révélation lui vint un soir, au coucher du soleil qui, lui aussi, semblait avoir oublié de se coucher. Le ciel restait orange, les ombres s'étiraient sans fin, le jour refusait de céder la place à la nuit.</p>
+                            <p class="mb-6">Dans cet éternel crépuscule, le Guide comprit que la mort n'était pas la fin mais le commencement d'une autre manière d'exister. Elle n'était pas l'annihilation mais la transformation, non la disparition mais la métamorphose.</p>
+                            <p class="mb-6">Il s'assit sur un banc qui portait le nom de quelqu'un qu'il avait connu. Le bois était chaud, comme si le corps de l'autre était encore là, assis à côté de lui.</p>
+                            <p class="mb-6">Ils restèrent ainsi, le Guide et l'ombre, partagés entre ce qui avait été et ce qui était, entre ce qui n'était plus et ce qui serait. Et dans cet entre-deux, dans cette suspension, il y avait une paix, une sorte d'acceptation.</p>
+                            <p class="mb-6">Le Guide continua sa marche. Il traversa le quartier des musiciens, où les morts jouaient des mélodies que seuls les vivants pouvaient entendre. Il passa par le secteur des poètes, où les vers s'écrivaient tout seuls sur les murs.</p>
+                            <p class="mb-6">Il rencontra un vieil homme qui lui dit : Tu cherches quelque chose, mais tu ne sais pas quoi. Le Guide répondit : Je cherche ce qui reste quand tout a disparu. Le vieil homme sourit : Ce qui reste, c'est ce qui n'a jamais été.</p>
+                            <p class="mb-6">Ces mots accompagnèrent le Guide pendant le reste de sa traversée. Ils résonnaient en lui comme une vérité secrète, comme une clé qu'il avait toujours eue sans le savoir.</p>
+                            <p class="mb-6">La ville s'ouvrit à lui différemment après cette rencontre. Il commença à voir non seulement ce qui était mais ce qui n'avait jamais été, non seulement les traces mais les absences, non seulement les présences mais les manques.</p>
+                            <p class="mb-6">Il découvrit que chaque disparition créait un espace, chaque absence laissait une place, chaque fin ouvrait un commencement. La mort n'était pas privation mais possibilité, non perte mais gain.</p>
+                            <p class="mb-6">Cette compréhension transforma sa marche. Il ne marchait plus pour arriver quelque part mais pour être en chemin, non pour trouver mais pour chercher, non pour découvrir mais pour explorer.</p>
+                            <p class="mb-6">Et dans cette nouvelle manière de marcher, il trouva une liberté qu'il n'avait jamais connue. La liberté de l'entre-deux, la liberté de l'incertitude, la liberté de ne pas savoir.</p>
+                            <p class="mb-6">Le Guide Providentiel continua ainsi, jour après jour, année après année, traversant la ville sans fin, habitant le temps sans limites, vivant entre les mondes sans appartenir à aucun.</p>
+                            <p class="mb-6">C'est dans cette condition qu'il devint lui-même un guide, un passeur, un médiateur entre les vivants et les morts, entre ce qui est et ce qui n'est plus, entre le présent et le passé.</p>
+                            <p class="mb-6">Et c'est ainsi que s'acheva le premier chapitre de son histoire, mais non la traversée. Car la traversée, comme il l'avait compris, n'a ni commencement ni fin. Elle est ce qui reste quand tout a été raconté.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2 -->
+                    <div id="chapter-2" class="hidden">
+                        <div class="mb-8 text-center">
+                            <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre II</span>
+                            <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">La ville</h2>
+                        </div>
+
+                        <div class="font-serif text-lg leading-[1.9] text-[#403732]">
+                            <p class="mb-6">La ville n'avait pas toujours été ainsi. Avant, avant le jour où la mort refusa de partir, la ville était comme les autres villes : organisée, ordonnée, prévisible.</p>
+                            <p class="mb-6">Les rues allaient du nord au sud, d'est en ouest. Les maisons s'alignaient le long des avenues. Les gens vivaient selon des horaires réguliers, travaillaient, mangeaient, dormaient, se réveillaient.</p>
+                            <p class="mb-6">Puis vint le changement. Ce ne fut pas un événement spectaculaire, pas une catastrophe visible, pas une transformation brutale. Ce fut un glissement, un déplacement imperceptible, comme quand le jour cède la place à la nuit sans qu'on s'en aperçoive.</p>
+                            <p class="mb-6">Les morts commencèrent à rester. D'abord quelques-uns, puis de plus en plus. Ils ne repartaient pas le matin, ne s'évaporaient pas à l'aube. Ils continuaient d'habiter, de circuler, d'interagir.</p>
+                            <p class="mb-6">Les vivants, d'abord effrayés, finirent par s'habituer. Ils apprirent à coexister, à partager l'espace, à négocier les territoires. Ils développèrent de nouvelles manières de vivre, de nouvelles manières de parler, de nouvelles manières d'être ensemble.</p>
+                            <p class="mb-6">La ville se transforma avec eux. Les bâtiments s'adaptèrent pour accueillir les deux populations. Les espaces publics furent réorganisés pour permettre les rencontres entre vivants et morts.</p>
+                            <p class="mb-6">De nouveaux quartiers apparurent, d'autres disparurent. La carte de la ville se redessina sans cesse, reflétant les mouvements incessants de ses habitants, qu'ils soient vivants ou morts.</p>
+                            <p class="mb-6">Le Guide Providentiel se souvenait de l'ancienne ville, celle d'avant. Il se souvenait de ses rues rectilignes, de ses places géométriques, de son ordre rassurant.</p>
+                            <p class="mb-6">Il se souvenait aussi du moment où cet ordre s'était effondré, non dans un chaos mais dans une reconfiguration. La ville n'était pas devenue désordonnée, elle était devenue autrement ordonnée.</p>
+                            <p class="mb-6">Les rues ne suivaient plus les directions cardinales mais les mémoires. Les places ne portaient plus les noms des héros mais ceux des oubliés. Les bâtiments ne reflétaient plus les fonctions mais les histoires.</p>
+                            <p class="mb-6">Cette nouvelle organisation déroutait les visiteurs, désorientait les nouveaux arrivants. Mais pour ceux qui avaient appris à la lire, la ville était plus lisible que jamais.</p>
+                            <p class="mb-6">Chaque rue racontait une histoire, chaque quartier gardait une mémoire, chaque place préservait une trace. La ville était devenue un livre géant, un récit architectural, une poésie urbaine.</p>
+                            <p class="mb-6">Le Guide parcourait ces rues comme on parcourt les pages d'un livre. Il lisait dans les pierres, dans les vitres, dans les ombres. Il comprenait le langage de la ville, sa grammaire, sa syntaxe.</p>
+                            <p class="mb-6">Il y avait le quartier des artisans, où les morts continuaient de travailler à leurs métiers. On y entendait le bruit des marteaux, le cliquetis des outils, le murmure des conversations.</p>
+                            <p class="mb-6">Il y avait le secteur des commerçants, où les échanges se faisaient en monnaie de souvenirs. On y achetait des rêves, vendait des regrets, troquait des espoirs.</p>
+                            <p class="mb-6">Il y avait la zone des artistes, où les créations des morts côtoyaient celles des vivants. Les peintures, les sculptures, les musiques se mêlaient dans une symphonie visuelle et sonore.</p>
+                            <p class="mb-6">Il y avait le quartier des savants, où les connaissances du passé dialoguaient avec celles du présent. Les livres s'écrivaient tout seuls, les formules se résolvaient d'elles-mêmes, les théories se prouvaient spontanément.</p>
+                            <p class="mb-6">Chaque quartier avait son rythme, son atmosphère, sa logique. Le Guide les connaissait tous, les traversait tous, appréciait leurs différences.</p>
+                            <p class="mb-6">Ce qui frappait le plus, c'était la manière dont les deux populations s'entremêlaient. Les morts et les vivants ne formaient pas deux communautés séparées mais une seule société composite.</p>
+                            <p class="mb-6">Ils se rencontraient dans les cafés, travaillaient ensemble dans les ateliers, célébraient les fêtes ensemble dans les places. Les frontières entre les deux mondes étaient poreuses, perméables, ouverts.</p>
+                            <p class="mb-6">Bien sûr, il y avait des tensions, des incompréhensions, des conflits. Les vivants parfois regrettaient l'ancien ordre, les morts parfois regrettaient leur ancienne condition.</p>
+                            <p class="mb-6">Mais ces tensions étaient source de créativité, d'innovation, de transformation. Elles poussaient la ville à se réinventer sans cesse, à trouver de nouveaux équilibres, à inventer de nouvelles manières de vivre ensemble.</p>
+                            <p class="mb-6">Le Guide observait cette dynamique avec fascination. Il voyait comment les conflits engendraient des solutions, comment les problèmes produisaient des opportunités, comment les difficultés créaient des possibilités.</p>
+                            <p class="mb-6">Il comprenait que la ville était un organisme vivant, qui évoluait, s'adaptait, se transformait en réponse à son environnement interne et externe.</p>
+                            <p class="mb-6">Cette compréhension lui donnait une certaine sérénité. Il savait que rien n'était définitif, que tout était susceptible de changer, que la ville d'aujourd'hui ne serait pas celle de demain.</p>
+                            <p class="mb-6">Et cette impermanence n'était pas une source d'angoisse mais de liberté. La liberté de ne pas s'attacher, de ne pas s'attarder, de ne pas s'enfermer.</p>
+                            <p class="mb-6">Le Guide continua sa traversée de la ville, chaque jour découvrant de nouveaux quartiers, chaque jour apprenant de nouvelles histoires, chaque jour comprenant un peu mieux la logique de cet étrange urbanisme.</p>
+                            <p class="mb-6">Il finit par devenir lui-même un élément de cette logique, un acteur de cette transformation, un contributeur à cette perpétuelle réinvention.</p>
+                            <p class="mb-6">Et c'est ainsi que la ville devint non seulement le lieu de sa traversée mais le sujet de son étude, l'objet de sa contemplation, la source de sa sagesse.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3 -->
+                    <div id="chapter-3" class="hidden">
+                        <div class="mb-8 text-center">
+                            <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre III</span>
+                            <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">La mémoire</h2>
+                        </div>
+
+                        <div class="font-serif text-lg leading-[1.9] text-[#403732]">
+                            <p class="mb-6">La mémoire était la véritable monnaie de la ville. On ne payait pas en pièces ou en billets mais en souvenirs, en récits, en traces.</p>
+                            <p class="mb-6">Les riches étaient ceux qui avaient accumulé le plus de souvenirs, les pauvres ceux qui en avaient le moins. Mais la richesse mémoire n'était pas comme la richesse matérielle : elle ne se stockait pas, elle se partageait.</p>
+                            <p class="mb-6">Quand on donnait un souvenir, on ne le perdait pas. Au contraire, il s'enrichissait de la réception, gagnait en profondeur, en complexité, en signification.</p>
+                            <p class="mb-6">Les morts, ayant vécu plus longtemps, avaient généralement plus de souvenirs. Mais les vivants avaient leurs propres mémoires, plus fraîches, plus immédiates, plus actuelles.</p>
+                            <p class="mb-6">Ces deux types de mémoire se complétaient, s'enrichissaient mutuellement. Les souvenirs des morts donnaient de la profondeur à ceux des vivants, ceux des vivants donnaient de la pertinence à ceux des morts.</p>
+                            <p class="mb-6">Le Guide Providentiel était un collectionneur de mémoires. Il écoutait les histoires des uns et des autres, les gardait en lui, les faisait circuler.</p>
+                            <p class="mb-6">Il avait appris que la mémoire n'était pas seulement individuelle mais collective. Chaque souvenir personnel s'inscrivait dans une mémoire plus large, celle de la ville, celle de la communauté, celle de l'humanité.</p>
+                            <p class="mb-6">Cette mémoire collective se manifestait de mille manières : dans les noms des rues, dans les traditions, dans les coutumes, dans les récits, dans les chansons, dans les silences.</p>
+                            <p class="mb-6">Le Guide apprit à lire ces manifestations, à les interpréter, à les comprendre. Il devint un lecteur de la mémoire urbaine, un hermeneute des traces, un exégète des signes.</p>
+                            <p class="mb-6">Il y avait la mémoire des lieux, celle qui s'attachait aux espaces physiques. Chaque bâtiment, chaque place, chaque rue portait en lui des strates de mémoire, des couches d'histoire.</p>
+                            <p class="mb-6">Il y avait la mémoire des mots, celle qui circulait dans les conversations, les écrits, les lectures. Les langues elles-mêmes étaient des mémoires, des réservoirs de sens accumulés.</p>
+                            <p class="mb-6">Il y avait la mémoire des gestes, celle qui se transmettait dans les corps, dans les mouvements, dans les pratiques. Les manières de faire, de dire, d'être étaient des formes de mémoire incarnée.</p>
+                            <p class="mb-6">Le Guide explorait toutes ces mémoires, les croisait, les mettait en dialogue. Il cherchait à comprendre comment elles s'articulaient, comment elles se complétaient, comment elles se contredisaient parfois.</p>
+                            <p class="mb-6">Il découvrit que la mémoire n'était pas un stockage passif mais une activité créatrice. On ne se souvenait pas de ce qui s'était passé, on créait ce qui s'était passé à travers l'acte de se souvenir.</p>
+                            <p class="mb-6">Cette création était collective. Chaque souvenir était le produit d'une négociation entre individus, entre générations, entre communautés.</p>
+                            <p class="mb-6">Le Guide observa comment les mémoires se transformaient au fil du temps. Certains souvenirs s'effaçaient, d'autres se renforçaient, certains changeaient de signification.</p>
+                            <p class="mb-6">Il comprit que l'oubli était aussi important que la mémoire. C'était à travers l'oubli que la mémoire se renouvelait, que l'essentiel émergeait, que le superflu disparaissait.</p>
+                            <p class="mb-6">Dans la ville, l'oubli était pratiqué comme un art. On apprenait à oublier pour pouvoir se souvenir, à laisser partir pour pouvoir retenir, à lâcher pour pouvoir saisir.</p>
+                            <p class="mb-6">Les morts, ayant plus d'expérience de l'oubli, étaient souvent les maîtres de cet art. Ils enseignaient aux vivants comment oublier sans trahir, comment laisser partir sans perdre.</p>
+                            <p class="mb-6">Le Guide apprit auprès d'eux ces techniques subtiles de l'oubli. Il apprit à distinguer ce qui devait être gardé de ce qui pouvait être lâché.</p>
+                            <p class="mb-6">Cette distinction n'était pas facile. Elle demandait une sagesse, une expérience, une sensibilité que seul le temps pouvait développer.</p>
+                            <p class="mb-6">Le Guide avait ce temps. Il avait le temps d'observer, d'écouter, d'apprendre. Il pouvait suivre les mémoires dans leurs transformations, les oublier dans leurs effacements.</p>
+                            <p class="mb-6">Il finit par devenir lui-même une mémoire vivante, un réservoir de récits, un gardien d'histoires. Les gens venaient à lui pour se souvenir, pour oublier, pour mettre de l'ordre dans leurs propres mémoires.</p>
+                            <p class="mb-6">Il les aidait avec patience, avec bienveillance, sans jugement. Il savait que chaque mémoire était précieuse, chaque oubli nécessaire, chaque récit important.</p>
+                            <p class="mb-6">Et dans cette pratique de la mémoire et de l'oubli, il trouva sa place dans la ville, sa fonction dans la communauté, sa raison d'être dans ce monde entre-deux.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 4 -->
+                    <div id="chapter-4" class="hidden">
+                        <div class="mb-8 text-center">
+                            <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre IV</span>
+                            <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">L'héritage</h2>
+                        </div>
+
+                        <div class="font-serif text-lg leading-[1.9] text-[#403732]">
+                            <p class="mb-6">La question de l'héritage était centrale dans la ville. Comment transmettre ce qui avait été reçu ? Comment laisser quelque chose à ceux qui viendraient après ?</p>
+                            <p class="mb-6">Les morts avaient beaucoup reçu de leurs ancêtres, des vivants qui les avaient précédés. Ils avaient reçu des histoires, des savoirs, des objets, des lieux, des noms.</p>
+                            <p class="mb-6">Mais comment transmettre cet héritage aux vivants, qui étaient en quelque sorte leurs descendants, leurs continuateurs, leurs héritiers ?</p>
+                            <p class="mb-6">La transmission ne pouvait pas se faire de manière traditionnelle, par filiation directe, par succession linéaire. Les rapports entre morts et vivants étaient trop complexes pour cela.</p>
+                            <p class="mb-6">Les morts avaient dû inventer de nouvelles formes de transmission. Ils avaient créé des institutions, des rituels, des pratiques qui permettaient le passage de l'un à l'autre.</p>
+                            <p class="mb-6">Il y avait les maisons de mémoire, où les récits des morts étaient conservés et accessibles aux vivants. Chaque vivant pouvait y venir écouter, apprendre, s'imprégner.</p>
+                            <p class="mb-6">Il y avait les ateliers de savoir, où les compétences des morts étaient enseignées aux vivants. Les morts y formaient les vivants à leurs métiers, leurs arts, leurs techniques.</p>
+                            <p class="mb-6">Il y avait les jardins de l'héritage, où les objets, les lieux, les traces des morts étaient préservés et présentés. Les vivants pouvaient y voir, toucher, ressentir ce qui avait été.</p>
+                            <p class="mb-6">Le Guide Providentiel fréquentait tous ces lieux. Il observait comment la transmission s'opérait, comment elle réussissait parfois, échouait d'autres fois.</p>
+                            <p class="mb-6">Il comprit que l'héritage n'était pas une donnée mais une construction, quelque chose qui se faisait et se refaisait sans cesse à travers des pratiques spécifiques.</p>
+                            <p class="mb-6">Il comprit aussi que l'héritage n'était pas seulement ce que l'on recevait mais ce que l'on faisait de ce que l'on reçoit. Chaque génération, chaque individu, réinterprétait, transformait, réinventait ce qui lui était transmis.</p>
+                            <p class="mb-6">Cette réinterprétation était nécessaire. Elle permettait à l'héritage de rester vivant, pertinent, signifiant. Sans elle, l'héritage devenait un musée, une relique, un fossile.</p>
+                            <p class="mb-6">Le Guide vit comment les vivants s'appropriaient l'héritage des morts, comment ils le faisaient leur, comment ils l'adaptaient à leur contexte, à leurs besoins, à leurs désirs.</p>
+                            <p class="mb-6">Il vit aussi comment les morts s'adaptaient à cette appropriation, comment ils acceptaient parfois les transformations, comment ils résistaient d'autres fois.</p>
+                            <p class="mb-6">Cette négociation permanente entre héritage et réappropriation créait une dynamique complexe, parfois conflictuelle, toujours créatrice.</p>
+                            <p class="mb-6">Le Guide observa comment les conflits autour de l'héritage se résolvaient, comment les compromis se trouvaient, comment les équilibres s'établissaient.</p>
+                            <p class="mb-6">Il comprit que l'héritage n'était pas une possession mais une responsabilité, non un droit mais un devoir, non un don mais une tâche.</p>
+                            <p class="mb-6">Ceux qui recevaient un héritage avaient la responsabilité de le faire vivre, de le transmettre, de le transformer en le respectant.</p>
+                            <p class="mb-6">C'était une responsabilité lourde, parfois écrasante. Mais c'était aussi une responsabilité qui donnait du sens, qui structurait l'existence, qui connectait à quelque chose de plus grand que soi.</p>
+                            <p class="mb-6">Le Guide vit comment certains vivants refusaient cet héritage, le rejetaient, cherchaient à s'en affranchir. Il vit comment d'autres l'embrassaient, le célébraient, en faisaient le centre de leur vie.</p>
+                            <p class="mb-6">Il y avait toutes les positions intermédiaires, toutes les nuances, toutes les ambiguïtés. L'héritage était un terrain complexe, où les identités se construisaient et se défaisaient.</p>
+                            <p class="mb-6">Le Guide lui-même avait reçu un héritage, de ceux qui l'avaient précédé dans son rôle de guide. Il avait reçu des méthodes, des savoirs, des attitudes.</p>
+                            <p class="mb-6">Il cherchait à son tour à transmettre cet héritage, à le faire vivre, à le transformer en le respectant. C'était son quotidien, sa pratique, sa vocation.</p>
+                            <p class="mb-6">Et dans cette transmission, il trouvait un sens, une profondeur, une connexion à quelque chose qui le dépassait, qui le précédait, qui le survivrait.</p>
+                            <p class="mb-6">C'était peut-être là, finalement, le plus précieux héritage : la conscience d'appartenir à une chaîne, d'être un maillon dans une histoire, de contribuer à quelque chose qui continue après soi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 5 -->
+                    <div id="chapter-5" class="hidden">
+                        <div class="mb-8 text-center">
+                            <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.24em] text-[#bd684c]">Chapitre V</span>
+                            <h2 class="mt-4 font-['Playfair_Display'] text-5xl font-medium text-[#332c28] leading-tight">Le futur</h2>
+                        </div>
+
+                        <div class="font-serif text-lg leading-[1.9] text-[#403732]">
+                            <p class="mb-6">Dans une ville où le passé était si présent, où le présent était si saturé de mémoire, comment penser le futur ? Comment envisager ce qui n'était pas encore ?</p>
+                            <p class="mb-6">Les morts, par définition, n'avaient plus de futur. Leur temps s'était arrêté, ou plutôt s'était étiré dans une éternité de présent.</p>
+                            <p class="mb-6">Les vivants, eux, avaient encore un futur à construire, à imaginer, à habiter. Mais comment construire un futur quand le passé était si omniprésent ?</p>
+                            <p class="mb-6">C'était la question que se posaient beaucoup de vivants, particulièrement les plus jeunes. Comment se projeter quand tout autour portait la marque de ce qui avait été ?</p>
+                            <p class="mb-6">Certains choisissaient de s'ancrer dans le présent, de vivre l'instant sans se soucier de ce qui viendrait après. D'autres cherchaient à rompre avec le passé, à inventer quelque chose de radicalement nouveau.</p>
+                            <p class="mb-6">D'autres encore tentaient de construire un futur en dialogue avec le passé, en tirant parti de l'héritage tout en s'en affranchissant.</p>
+                            <p class="mb-6">Le Guide Providentiel observait ces différentes stratégies, ces diverses manières d'habiter le temps. Il les comprenait toutes, chacune ayant sa logique, ses mérites, ses limites.</p>
+                            <p class="mb-6">Il comprit que le futur n'était pas quelque chose qui arrivait mais quelque chose que l'on faisait. On ne subissait pas le futur, on le créait à travers nos choix, nos actions, nos imaginaires.</p>
+                            <p class="mb-6">Les morts, bien que n'ayant plus de futur personnel, participaient à la création du futur collectif. Leurs traces, leurs récits, leurs savoirs influençaient ce que les vivants allaient devenir.</p>
+                            <p class="mb-6">Cette influence pouvait être libératrice ou contraignante. Elle pouvait ouvrir des possibilités ou en fermer, inspirer ou entraver.</p>
+                            <p class="mb-6">Le Guide vit comment certains vivants se sentaient écrasés par le poids du passé, comment d'autres s'en sentaient portés, comment la même mémoire pouvait être ressentie différemment.</p>
+                            <p class="mb-6">Il comprit que la relation au passé était une affaire de disposition, d'attitude, de perspective. Le même héritage pouvait être un fardeau ou une ressource selon la manière dont on l'abordait.</p>
+                            <p class="mb-6">Il y avait ceux qui voyaient dans le passé un modèle à reproduire, ceux qui y voyaient un avertissement, ceux qui y voyaient une ressource, ceux qui y voyaient une prison.</p>
+                            <p class="mb-6">Chaque perspective donnait lieu à une différente manière de construire le futur, à un différent projet, à une différente vision.</p>
+                            <p class="mb-6">Le Guide, dans son rôle de médiateur, aidait les vivants à naviguer entre ces perspectives, à trouver leur propre chemin, à construire leur propre rapport au passé et au futur.</p>
+                            <p class="mb-6">Il leur montrait que le passé n'était pas une prison mais un fond, non une contrainte mais une ressource, non une limite mais un point de départ.</p>
+                            <p class="mb-6">Il leur montrait aussi que le futur n'était pas une promesse mais une responsabilité, non une assurance mais un projet, non un destin mais une construction.</p>
+                            <p class="mb-6">Cette compréhension, quand elle s'installait, transformait la manière d'habiter le présent. On devenait plus conscient de ses choix, plus attentif à ses actions, plus responsable de sa contribution au futur.</p>
+                            <p class="mb-6">Le Guide vit cette transformation opérer chez beaucoup de ceux qu'il accompagnait. Il vit comment ils passaient d'une attitude passive à une attitude active, d'une réception à une création.</p>
+                            <p class="mb-6">Et dans cette transformation, il voyait la promesse d'un futur où vivants et morts continueraient à dialoguer, à s'enrichir mutuellement, à construire ensemble quelque chose de nouveau.</p>
+                            <p class="mb-6">Ce futur n'était pas garanti, ni assuré, ni prévisible. Mais il était possible, il était désirable, il était mérité. Et c'était peut-être là ce qui comptait le plus.</p>
+                        </div>
+                    </div>
+
+                    <!-- Poetry Section -->
+                    <div id="poetry-section" class="hidden py-8 border-t border-[#ded3c1]">
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#281e19] mb-6">Poésie</h2>
+                        <div class="font-serif text-lg leading-loose text-[#403732] italic">
+                            <p class="mb-4">Dans l'ombre des ruelles oubliées,</p>
+                            <p class="mb-4">Les murmures des ancêtres s'élèvent,</p>
+                            <p class="mb-4">Comme des échos d'un temps révolu,</p>
+                            <p class="mb-4">Où chaque mot est une prière.</p>
+                        </div>
+                    </div>
+
+                    <!-- Code Section -->
+                    <div id="code-section" class="hidden py-8 border-t border-[#ded3c1]">
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#281e19] mb-6">Extrait de code</h2>
+                        <pre class="bg-[#f4ecdc] p-4 rounded-lg text-sm font-mono overflow-x-auto">
+<span class="text-purple-600">function</span> <span class="text-blue-600">memories</span>() {
+  <span class="text-purple-600">return</span> <span class="text-green-600">"Les souvenirs"</span>;
+}
+                        </pre>
+                    </div>
+
+                    <!-- Table Section -->
+                    <div id="table-section" class="hidden py-8 border-t border-[#ded3c1]">
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#281e19] mb-6">Table des matières</h2>
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b border-[#ded3c1]">
+                                    <th class="text-left py-3 text-[#8f7770]">Chapitre</th>
+                                    <th class="text-left py-3 text-[#8f7770]">Titre</th>
+                                    <th class="text-right py-3 text-[#8f7770]">Page</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-[#f0e8dc]">
+                                    <td class="py-3">I</td>
+                                    <td class="py-3">La mort</td>
+                                    <td class="py-3 text-right">12</td>
+                                </tr>
+                                <tr class="border-b border-[#f0e8dc]">
+                                    <td class="py-3">II</td>
+                                    <td class="py-3">La ville</td>
+                                    <td class="py-3 text-right">45</td>
+                                </tr>
+                                <tr class="border-b border-[#f0e8dc]">
+                                    <td class="py-3">III</td>
+                                    <td class="py-3">La mémoire</td>
+                                    <td class="py-3 text-right">78</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </article>
             </main>
@@ -148,18 +432,18 @@
         <!-- Footer Navigation -->
         <footer class="fixed bottom-0 left-0 right-0 z-50 h-16 bg-[#f7f1e6]/95 backdrop-blur-sm border-t border-[#ded3c1]">
             <div class="max-w-[1400px] mx-auto px-6 h-full flex items-center justify-between gap-4">
-                <button type="button" class="flex items-center gap-2 px-5 py-2.5 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#8f8171] hover:border-[#315d4b] hover:text-[#315d4b] transition-colors">
+                <button id="prev-chapter" type="button" class="flex items-center gap-2 px-5 py-2.5 border border-[#ded3c1] bg-white rounded-lg text-sm text-[#8f8171] hover:border-[#315d4b] hover:text-[#315d4b] transition-colors">
                     <i data-lucide="chevron-left" class="w-5 h-5"></i>
                     <span>Précédent</span>
                 </button>
 
                 <div class="flex items-center gap-2">
                     <div class="flex items-center gap-1">
-                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Diminuer la taille du texte" title="A-">
+                        <button id="decrease-font" type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Diminuer la taille du texte" title="A-">
                             <i data-lucide="minus" class="w-4 h-4"></i>
                         </button>
-                        <span class="text-xs text-[#705f57] w-6 text-center">94</span>
-                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Augmenter la taille du texte" title="A+">
+                        <span id="font-size-display" class="text-xs text-[#705f57] w-6 text-center">94</span>
+                        <button id="increase-font" type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Augmenter la taille du texte" title="A+">
                             <i data-lucide="plus" class="w-4 h-4"></i>
                         </button>
                     </div>
@@ -198,7 +482,7 @@
                         <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode concentration" title="Mode concentration">
                             <i data-lucide="focus" class="w-4 h-4"></i>
                         </button>
-                        <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode sombre" title="Mode sombre">
+                        <button id="dark-mode-button" type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Mode sombre" title="Mode sombre">
                             <i data-lucide="moon" class="w-4 h-4"></i>
                         </button>
                         <button type="button" class="flex items-center justify-center w-9 h-9 border border-[#ded3c1] bg-white rounded-lg text-[#403732] hover:border-[#315d4b] hover:bg-[#315d4b] hover:text-white transition-colors" aria-label="Double page" title="Double page">
@@ -207,7 +491,7 @@
                     </div>
                 </div>
 
-                <button type="button" class="flex items-center gap-2 px-5 py-2.5 border border-[#315d4b] bg-[#315d4b] rounded-lg text-sm text-white hover:bg-[#26503d] transition-colors">
+                <button id="next-chapter" type="button" class="flex items-center gap-2 px-5 py-2.5 border border-[#315d4b] bg-[#315d4b] rounded-lg text-sm text-white hover:bg-[#26503d] transition-colors">
                     <span>Suivant</span>
                     <i data-lucide="chevron-right" class="w-5 h-5"></i>
                 </button>
@@ -218,7 +502,7 @@
         <div id="settings-panel" class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white rounded-xl shadow-lg w-[90%] max-w-md max-h-[80vh] overflow-y-auto">
             <div class="flex items-center justify-between p-5 border-b border-[#ded3c1]">
                 <h3 class="font-['Playfair_Display'] text-lg font-medium text-[#332c28]">Réglages de lecture</h3>
-                <button type="button" class="flex items-center justify-center w-8 h-8 rounded text-[#8f8171] hover:bg-[#eee4d2]" aria-label="Fermer">
+                <button id="settings-close-button" type="button" class="flex items-center justify-center w-8 h-8 rounded text-[#8f8171] hover:bg-[#eee4d2]" aria-label="Fermer">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
