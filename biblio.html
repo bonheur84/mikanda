@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIKINDA —— Bibliotheque numerique de la litterature Congolsaise</title>
+    <title>MIKANDA —— Bibliothèque numérique de la littérature congolaise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg" />
+    <script type="module" src="./src/main.js"></script>
 </head>
 
 <body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
@@ -33,24 +35,46 @@
         </a>
 
         <nav class="hidden items-center gap-7 text-sm lg:flex text-[#705f57]">
-            <a href="index.html" class="transition-colors hover:text-[#133a28]">Accueil</a>
-            <a href="biblio.html" class="transition-colors hover:text-[#133a28] font-medium text-[#133a28]">Bibilotheque</a>
-            <a href="auteur.html" class="transition-colors hover:text-[#133a28]">Auteurs</a>
-            <a href="collectives.html" class="transition-colors hover:text-[#133a28]">Collectives</a>
-
-            <a href="apropos.html" class="transition-colors hover:text-[#133a28]">A propos</a>
+            <a href="index.html" class="transition-colors hover:text-[#133a28] nav-link">Accueil</a>
+            <a href="biblio.html" class="transition-colors hover:text-[#133a28] font-medium text-[#133a28] nav-link">Bibliothèque</a>
+            <a href="auteur.html" class="transition-colors hover:text-[#133a28] nav-link">Auteurs</a>
+            <a href="collectives.html" class="transition-colors hover:text-[#133a28] nav-link">Collections</a>
+            <a href="apropos.html" class="transition-colors hover:text-[#133a28] nav-link">À propos</a>
         </nav>
 
         <div class="hidden items-center gap-3 lg:flex">
-            <a href="biblio.html" aria-label="Rechercher"
-                class="rounded-lg p-2 text-[#705f57] hover:bg-[#eae0d1] hover:text-[#133a28] transition-colors"><i data-lucide="search"
-                    class="w-4 h-4"></i></a>
-            <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] transition-colors">Connexion</a>
-            <a href="signup.html"
-                class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-white rounded-lg transition-colors hover:bg-[#245743]">S'inscrire</a>
+            <div class="relative">
+                <input 
+                    type="search" 
+                    placeholder="Rechercher..." 
+                    class="w-48 px-3 py-1.5 text-sm border border-[#d9d1c6] rounded-sm focus:outline-none focus:border-[#133a28] focus:ring-1 focus:ring-[#133a28] transition-all"
+                />
+                <i data-lucide="search" class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-[#705f57]"></i>
+            </div>
+            <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:underline transition-all">Connexion</a>
+            <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-white rounded-lg transition-colors hover:bg-[#245743] hover:shadow-lg shimmer-effect glow-effect">S'inscrire</a>
         </div>
 
-        <button class="lg:hidden rounded-lg p-2 text-[#705f57] hover:bg-[#eae0d1] transition-colors">
+        <!-- Menu Mobile (caché par défaut) -->
+        <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 z-40 bg-[#f8f3e9] border-b border-[#d9d1c6] px-5 py-4 lg:hidden shadow-lg">
+            <nav class="flex flex-col gap-4 text-sm text-[#705f57]">
+                <a href="index.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Accueil</a>
+                <a href="biblio.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Bibliothèque</a>
+                <a href="auteur.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Auteurs</a>
+                <a href="collectives.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Collections</a>
+                <a href="apropos.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">À propos</a>
+            </nav>
+            <div class="mt-4 flex flex-col gap-3">
+                <a href="biblio.html" class="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">
+                    <i data-lucide="search" class="w-4 h-4"></i> Bibliothèque
+                </a>
+                <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">Connexion</a>
+                <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-white text-center rounded-lg hover:bg-[#245743] transition-all shimmer-effect">S'inscrire</a>
+            </div>
+        </div>
+
+        <!-- Bouton Hamburger -->
+        <button id="menu-button" class="lg:hidden rounded-lg p-2 text-[#705f57] hover:bg-[#eae0d1] transition-colors hover:scale-110">
             <i data-lucide="menu" class="h-6 w-6"></i>
         </button>
     </header>
@@ -685,6 +709,6 @@
             <div class="mx-auto mt-10 max-w-7xl border-t border-[#e9e0d1]/15 pt-5 text-xs text-[#e9e0d1]/45">&copy; 2026 — Bibliothèque numérique de la littérature congolaise</div>
         </footer>
     
-    <script>lucide.createIcons();</script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

@@ -3,13 +3,15 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>MIKINDA —— Bibliotheque numerique de la litterature Congolsaise</title>
+	<title>MIKANDA —— Bibliothèque numérique de la littérature congolaise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/svg+xml" href="assets/branding/logo_e9e0d1.svg"/>
+    <script type="module" src="./src/main.js"></script>
 </head>
 <body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
     <header class="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl flex items-center justify-between border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 lg:px-8">
@@ -27,20 +29,46 @@
         </a>
 
         <nav class="hidden items-center gap-7 text-sm lg:flex text-[#705f57]">
-            <a href="index.html" class="transition-colors hover:text-[#133a28]">Accueil</a>
-            <a href="biblio.html" class="transition-colors hover:text-[#133a28]">Bibilotheque</a>
-            <a href="auteur.html" class="transition-colors hover:text-[#133a28]">Auteurs</a>
-            <a href="collectives.html" class="transition-colors hover:text-[#133a28]">Collectives</a>
-            <a href="apropos.html" class="transition-colors hover:text-[#133a28]">A propos</a>
+            <a href="index.html" class="transition-colors hover:text-[#133a28] nav-link">Accueil</a>
+            <a href="biblio.html" class="transition-colors hover:text-[#133a28] nav-link">Bibliothèque</a>
+            <a href="auteur.html" class="transition-colors hover:text-[#133a28] nav-link">Auteurs</a>
+            <a href="collectives.html" class="transition-colors hover:text-[#133a28] nav-link">Collections</a>
+            <a href="apropos.html" class="transition-colors hover:text-[#133a28] nav-link">À propos</a>
         </nav>
 
         <div class="hidden items-center gap-3 lg:flex">
-            <a href="biblio.html" aria-label="Rechercher" class="rounded-sm p-2 text-[#705f57] hover:bg-[#eae0d1] hover:text-[#133a28]"><i data-lucide="search" class="w-4 h-4"></i></a>
-            <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28]">Connexion</a>
-            <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5">S'inscrire</a>
+            <div class="relative">
+                <input 
+                    type="search" 
+                    placeholder="Rechercher..." 
+                    class="w-48 px-3 py-1.5 text-sm border border-[#d9d1c6] rounded-sm focus:outline-none focus:border-[#133a28] focus:ring-1 focus:ring-[#133a28] transition-all"
+                />
+                <i data-lucide="search" class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-[#705f57]"></i>
+            </div>
+            <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:underline transition-all">Connexion</a>
+            <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5 hover:shadow-lg shimmer-effect glow-effect">S'inscrire</a>
         </div>
 
-        <button class="lg:hidden ">
+        <!-- Menu Mobile (caché par défaut) -->
+        <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 z-40 bg-[#f8f3e9] border-b border-[#d9d1c6] px-5 py-4 lg:hidden shadow-lg">
+            <nav class="flex flex-col gap-4 text-sm text-[#705f57]">
+                <a href="index.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Accueil</a>
+                <a href="biblio.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Bibliothèque</a>
+                <a href="auteur.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Auteurs</a>
+                <a href="collectives.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">Collections</a>
+                <a href="apropos.html" class="transition-colors hover:text-[#133a28] hover:pl-2 transition-all nav-link">À propos</a>
+            </nav>
+            <div class="mt-4 flex flex-col gap-3">
+                <a href="biblio.html" class="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">
+                    <i data-lucide="search" class="w-4 h-4"></i> Rechercher
+                </a>
+                <a href="login.html" class="text-sm text-[#705f57] hover:text-[#133a28] hover:pl-2 transition-all">Connexion</a>
+                <a href="signup.html" class="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] text-center hover:bg-[#133a28]/80 transition-all shimmer-effect">S'inscrire</a>
+            </div>
+        </div>
+
+        <!-- Bouton Hamburger -->
+        <button id="menu-button" class="lg:hidden p-2 hover:bg-[#eae0d1] rounded-sm transition-all hover:scale-110" aria-label="Menu">
             <i data-lucide="menu" class="h-6 w-6"></i>
         </button>
     </header>
@@ -48,20 +76,20 @@
     <main>
         <section class="relative overflow-hidden border-b border-[#d9d1c6] bg-[#e9e0d1] px-5 pt-35 pb-16 lg:px-8">
             <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-                <div class="relative z-10 max-w-2xl">
+                <div class="relative z-10 max-w-2xl animate-fade-in-left">
                     <p class="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#133a28]">Une mémoire vivante · Depuis la RDC</p>
                     <h1 class="font-serif text-5xl leading-[1.02] tracking-tight text-[#2e2923] sm:text-6xl lg:text-[84px]">Découvrez la richesse de la <em class="text-[#133a28]">littérature congolaise.</em></h1>
                     <p class="mt-7 max-w-xl text-lg leading-8 text-[#655b50]">Une bibliothèque numérique dédiée aux œuvres, aux voix et aux archives qui racontent le Congo — accessible à toutes les générations.</p>
                     <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                        <a href="biblio.html" class="inline-flex items-center justify-between gap-3 bg-[#133a28] px-6 py-3.5 text-sm font-medium text-[#fff8fa] transition-transform hover:-translate-y-0.5">Explorer la bibliothèque <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
-                        <a href="auteur.html" class="inline-flex items-center justify-between gap-2 border border-[#133a28]/40 px-6 py-3.5 text-sm font-medium text-[#133a28] hover:bg-[#f8f3e9]/50">Découvrir les auteurs</a>
+                        <a href="biblio.html" class="inline-flex items-center justify-between gap-3 bg-[#133a28] px-6 py-3.5 text-sm font-medium text-[#fff8fa] transition-transform hover:-translate-y-0.5 shimmer-effect glow-effect">Explorer la bibliothèque <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+                        <a href="auteur.html" class="inline-flex items-center justify-between gap-2 border border-[#133a28]/40 px-6 py-3.5 text-sm font-medium text-[#133a28] hover:bg-[#f8f3e9]/50 hover:shadow-md transition-all">Découvrir les auteurs</a>
                     </div>
                 </div>
 
-                <div class="relative mx-auto w-full max-w-lg lg:justify-self-end">
-                    <div class="absolute -left-10 top-12 h-52 w-52 border border-[#133a28]/30"></div>
+                <div class="relative mx-auto w-full max-w-lg lg:justify-self-end animate-fade-in-right">
+                    <div class="absolute -left-10 top-12 h-52 w-52 border border-[#133a28]/30 animate-float"></div>
 
-                    <div class="relative aspect-[0.86] overflow-hidden border-8 border-[#f5efe5] shadow-lg">
+                    <div class="relative aspect-[0.86] overflow-hidden border-8 border-[#f5efe5] shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
                         <img src="assets/images/livre (1).png" alt="Lectrice africaine dans une bibliothèque" class="h-full w-full object-cover">
                         <div class="absolute inset-x-0 bottom-0 bg-[#2e2923]/85 p-5 text-[#f5efe5]">
                             <p class="font-serif text-xl">« La littérature est une manière de rendre le monde habitable. »</p>
@@ -69,7 +97,7 @@
                         </div>
                     </div>
 
-                    <div class="absolute -bottom-6 -right-5 flex items-center gap-3 bg-[#133a28] px-5 py-4 text-[#fff8fa]">
+                    <div class="absolute -bottom-6 -right-5 flex items-center gap-3 bg-[#133a28] px-5 py-4 text-[#fff8fa] animate-pulse-slow">
                         <i data-lucide="book-open" class="h-5 w-5"></i>
                         <span class="text-xs uppercase tracking-widest">+ 480 œuvres</span>
                     </div>
