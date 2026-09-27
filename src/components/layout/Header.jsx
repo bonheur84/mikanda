@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Heart, Menu, X } from 'lucide-react'
+import { Heart, Menu, X, User } from 'lucide-react'
 import { SearchBar } from '../search/SearchBar.jsx'
 import { useFavorites } from '../../hooks/useFavorites.jsx'
-import { getCurrentUser } from '../../services/auth.js'
+import { useAuth } from '../../context/AuthContext.jsx'
 
 const navItems = [
   { to: '/', label: 'Accueil' },
@@ -19,7 +19,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { count } = useFavorites()
   const location = useLocation()
-  const user = getCurrentUser()
+  const { user, isAuthenticated } = useAuth()
 
   useEffect(() => {
     setMenuOpen(false)
@@ -62,25 +62,42 @@ export function Header() {
 
       <div className="hidden items-center gap-3 lg:flex">
         <SearchBar />
-        <Link to="/favoris" className="relative text-[#705f57] hover:text-[#133a28]" aria-label="Favoris">
-          <Heart className="h-5 w-5" />
-          <span className="absolute -top-2 -right-2 rounded-full bg-[#c17248] px-1.5 py-0.5 text-[10px] font-bold text-white">
-            {count}
-          </span>
-        </Link>
-        {user ? (
-          <span className="text-sm text-[#133a28]">{user.name}</span>
+        
+        {isAuthenticated ? (
+          <>
+            <Link to="/favoris" className="relative p-1 text-[#705f57] hover:text-[#133a28]" title="Favoris">
+              <Heart className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 rounded-full bg-[#c17248] px-1.5 py-0.5 text-[10px] font-bold text-white">
+                {count}
+              </span>
+            </Link>
+            <Link
+              to="/profil"
+              className="flex items-center gap-2 rounded-full border border-[#d9d1c6] bg-white py-1.5 pl-2 pr-3 hover:border-[#133a28]"
+            >
+              {user.avatar ? (
+                <img src={user.avatar} alt="" className="h-6 w-6 rounded-full object-cover" />
+              ) : (
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#133a28] text-xs font-bold text-white">
+                  {(user.firstName || '?').charAt(0)}
+                </div>
+              )}
+              <span className="text-sm font-medium text-[#1a1410]">{user.firstName}</span>
+            </Link>
+          </>
         ) : (
-          <Link to="/connexion" className="text-sm text-[#705f57] underline-offset-2 hover:text-[#133a28] hover:underline">
-            Connexion
-          </Link>
+          <>
+            <Link to="/connexion" className="text-sm text-[#705f57] underline-offset-2 hover:text-[#133a28] hover:underline">
+              Connexion
+            </Link>
+            <Link
+              to="/inscription"
+              className="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5 hover:shadow-lg shimmer-effect glow-effect"
+            >
+              S'inscrire
+            </Link>
+          </>
         )}
-        <Link
-          to="/inscription"
-          className="border border-[#133a28] bg-[#133a28] px-4 py-2 text-sm text-[#fff8fa] transition-transform hover:-translate-y-0.5 hover:shadow-lg shimmer-effect glow-effect"
-        >
-          S'inscrire
-        </Link>
       </div>
 
       <button
@@ -104,15 +121,26 @@ export function Header() {
           </nav>
           <div className="mt-4 flex flex-col gap-3">
             <SearchBar variant="mobile" />
-            <Link to="/favoris" className="text-sm text-[#705f57] hover:text-[#133a28]">
-              Favoris ({count})
-            </Link>
-            <Link to="/connexion" className="text-sm text-[#705f57] hover:text-[#133a28]">
-              Connexion
-            </Link>
-            <Link to="/inscription" className="border border-[#133a28] bg-[#133a28] px-4 py-2 text-center text-sm text-[#fff8fa] shimmer-effect">
-              S'inscrire
-            </Link>
+            
+            {isAuthenticated ? (
+              <>
+                <Link to="/favoris" className="text-sm text-[#705f57] hover:text-[#133a28]">
+                  Favoris ({count})
+                </Link>
+                <Link to="/profil" className="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28]">
+                  <User className="h-4 w-4" /> Mon profil
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/connexion" className="text-sm text-[#705f57] hover:text-[#133a28]">
+                  Connexion
+                </Link>
+                <Link to="/inscription" className="border border-[#133a28] bg-[#133a28] px-4 py-2 text-center text-sm text-[#fff8fa] shimmer-effect">
+                  S'inscrire
+                </Link>
+              </>
+            )}
           </div>
         </div>
       ) : null}

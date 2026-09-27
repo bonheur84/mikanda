@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auteurs - MIKANDA Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/output.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="../assets/branding/logo_e9e0d1.svg" />
+</head>
+<body class="min-h-dvh bg-[#f8f3e9] text-[#281e19]">
+    <div class="flex min-h-screen">
+        <aside id="sidebar" class="fixed inset-y-0 left-0 z-30 w-64 bg-[#281e19] text-white transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+            <div class="flex items-center gap-3 p-6 border-b border-white/10">
+                <img src="../assets/branding/logo.svg" alt="logo" class="w-10 h-9">
+                <div class="leading-4">
+                    <h1 class="font-serif text-lg leading-none tracking-wide uppercase font-bold">mikanda</h1>
+                    <p class="mt-1 uppercase text-[9px] tracking-[0.18em] text-white/70">administration</p>
+                </div>
+            </div>
+
+            <nav class="p-4 space-y-1 overflow-y-auto h-[calc(100vh-200px)]">
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    Dashboard
+                </a>
+
+                <div class="pt-4 pb-2">
+                    <p class="px-4 text-xs font-semibold uppercase tracking-wider text-white/50">Contenu</p>
+                </div>
+
+                <a href="livres.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="book" class="w-5 h-5"></i>
+                    Livres
+                </a>
+                <a href="auteurs.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-white/10 text-white font-medium">
+                    <i data-lucide="pen-tool" class="w-5 h-5"></i>
+                    Auteurs
+                </a>
+                <a href="collections.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="folder" class="w-5 h-5"></i>
+                    Collections
+                </a>
+
+                <div class="pt-4 pb-2">
+                    <p class="px-4 text-xs font-semibold uppercase tracking-wider text-white/50">Communauté</p>
+                </div>
+
+                <a href="utilisateurs.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    Utilisateurs
+                </a>
+                <a href="commentaires.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                    Commentaires
+                </a>
+                <a href="favoris.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="heart" class="w-5 h-5"></i>
+                    Favoris
+                </a>
+
+                <div class="pt-4 pb-2">
+                    <p class="px-4 text-xs font-semibold uppercase tracking-wider text-white/50">Communication</p>
+                </div>
+
+                <a href="messages.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    Messages
+                </a>
+                <a href="contacts.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="inbox" class="w-5 h-5"></i>
+                    Contacts
+                </a>
+                <a href="notifications.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="bell" class="w-5 h-5"></i>
+                    Notifications
+                </a>
+
+                <div class="pt-4 pb-2">
+                    <p class="px-4 text-xs font-semibold uppercase tracking-wider text-white/50">Équipe</p>
+                </div>
+
+                <a href="equipe.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    Équipe
+                </a>
+
+                <div class="pt-4 pb-2">
+                    <p class="px-4 text-xs font-semibold uppercase tracking-wider text-white/50">Analyse</p>
+                </div>
+
+                <a href="statistiques.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                    Statistiques
+                </a>
+                <a href="activite.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                    Activité
+                </a>
+
+                <div class="pt-4 pb-2">
+                    <p class="px-4 text-xs font-semibold uppercase tracking-wider text-white/50">Système</p>
+                </div>
+
+                <a href="parametres.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="settings" class="w-5 h-5"></i>
+                    Paramètres
+                </a>
+            </nav>
+
+            <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-white/10">
+                <a href="../index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+                    <i data-lucide="log-out" class="w-5 h-5"></i>
+                    Déconnexion
+                </a>
+            </div>
+        </aside>
+
+        <div class="flex-1 lg:ml-64">
+            <header class="sticky top-0 z-20 bg-[#f8f3e9] border-b border-[#d9d1c6] px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button id="menu-toggle" class="lg:hidden p-2 hover:bg-[#eae0d1] rounded-lg transition-colors">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                        <h1 class="font-serif text-2xl text-[#281e19]">Auteurs</h1>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden sm:block">
+                            <input type="search" id="search-input" placeholder="Rechercher un auteur..." class="w-64 px-4 py-2 text-sm border border-[#d9d1c6] rounded-lg focus:outline-none focus:border-[#133a28] focus:ring-1 focus:ring-[#133a28] transition-all" />
+                            <i data-lucide="search" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#705f57]"></i>
+                        </div>
+
+                        <button class="relative p-2 hover:bg-[#eae0d1] rounded-lg transition-colors">
+                            <i data-lucide="bell" class="w-5 h-5 text-[#705f57]"></i>
+                        </button>
+
+                        <div class="flex items-center gap-3 pl-4 border-l border-[#d9d1c6]">
+                            <div class="w-10 h-10 bg-[#133a28] rounded-full flex items-center justify-center text-white font-semibold">A</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <select class="px-4 py-2 text-sm border border-[#d9d1c6] rounded-lg focus:outline-none focus:border-[#133a28]">
+                            <option value="">Tous les pays</option>
+                            <option value="congo">Congo</option>
+                            <option value="rdc">RDC</option>
+                        </select>
+                    </div>
+                    <a href="ajouter-auteur.html" class="inline-flex items-center gap-2 bg-[#133a28] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#245743] transition-colors">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                        Ajouter un auteur
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl border border-[#d9d1c6] overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-[#f8f3e9] border-b border-[#d9d1c6]">
+                                <tr>
+                                    <th class="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#705f57]">Photo</th>
+                                    <th class="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#705f57]">Nom</th>
+                                    <th class="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#705f57]">Pays</th>
+                                    <th class="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#705f57]">Livres</th>
+                                    <th class="text-right px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#705f57]">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="authors-table-body" class="divide-y divide-[#d9d1c6]">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="notification-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+    <script>
+        const session = localStorage.getItem('mikanda-admin-session')
+        if (!session) {
+            window.location.href = 'login.html'
+        }
+
+        const authors = [
+            { id: 1, name: 'Sony Labou Tansi', country: 'Congo', books: 12 },
+            { id: 2, name: 'Henri Lopes', country: 'Congo', books: 8 },
+            { id: 3, name: 'Fiston Mwanza Mujila', country: 'RDC', books: 5 },
+            { id: 4, name: 'In Koli Jean Bofane', country: 'RDC', books: 3 }
+        ]
+
+        function renderAuthors(authorsToRender = authors) {
+            const tbody = document.getElementById('authors-table-body')
+            tbody.innerHTML = authorsToRender.map(author => `
+                <tr class="hover:bg-[#f8f3e9] hover:shadow-md transition-all duration-200 group">
+                    <td class="px-6 py-4">
+                        <div class="w-12 h-12 bg-[#e9e0d1] rounded-full group-hover:scale-110 transition-transform duration-200"></div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="font-medium text-[#281e19] group-hover:text-[#133a28] transition-colors">${author.name}</span>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#705f57]">${author.country}</td>
+                    <td class="px-6 py-4 text-sm text-[#705f57]">${author.books} livres</td>
+                    <td class="px-6 py-4 text-right">
+                        <div class="flex items-center justify-end gap-2">
+                            <button class="p-2 hover:bg-[#eae0d1] hover:scale-110 rounded-lg transition-all duration-200">
+                                <i data-lucide="eye" class="w-4 h-4 text-[#705f57]"></i>
+                            </button>
+                            <button class="p-2 hover:bg-[#eae0d1] hover:scale-110 rounded-lg transition-all duration-200">
+                                <i data-lucide="edit" class="w-4 h-4 text-[#705f57]"></i>
+                            </button>
+                            <button class="p-2 hover:bg-red-100 hover:scale-110 rounded-lg transition-all duration-200">
+                                <i data-lucide="trash-2" class="w-4 h-4 text-red-600"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('')
+            lucide.createIcons()
+        }
+
+        function showNotification(message, type = 'success') {
+            const container = document.getElementById('notification-container')
+            const notification = document.createElement('div')
+            const colors = { success: 'bg-green-600', error: 'bg-red-600', warning: 'bg-yellow-600', info: 'bg-blue-600' }
+            notification.className = `${colors[type]} text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 transform translate-x-full transition-transform duration-300`
+            notification.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i><span class="text-sm">${message}</span>`
+            container.appendChild(notification)
+            lucide.createIcons()
+            requestAnimationFrame(() => notification.classList.remove('translate-x-full'))
+            setTimeout(() => { notification.classList.add('translate-x-full'); setTimeout(() => notification.remove(), 300) }, 3000)
+        }
+
+        const menuToggle = document.getElementById('menu-toggle')
+        const sidebar = document.getElementById('sidebar')
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('-translate-x-full'))
+        document.addEventListener('click', (e) => { if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && !sidebar.classList.contains('-translate-x-full')) sidebar.classList.add('-translate-x-full') })
+
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase()
+            const filtered = authors.filter(author => 
+                author.name.toLowerCase().includes(query)
+            )
+            renderAuthors(filtered)
+        })
+
+        renderAuthors()
+        lucide.createIcons()
+    </script>
+</body>
+</html>

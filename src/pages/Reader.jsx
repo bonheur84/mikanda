@@ -20,6 +20,8 @@ import { TableOfContents } from '../components/reader/TableOfContents.jsx'
 import { ReaderContent } from '../components/reader/ReaderContent.jsx'
 import { ChapterNavigation } from '../components/reader/ChapterNavigation.jsx'
 import { FavoriteButton } from '../components/books/FavoriteButton.jsx'
+import { AudioPlayer } from '../components/reader/AudioPlayer.jsx'
+import { TranslationPanel } from '../components/reader/TranslationPanel.jsx'
 import { useNotification } from '../hooks/useNotification.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { NotFound } from './NotFound.jsx'
@@ -42,6 +44,7 @@ export function Reader() {
   const book = getBookById(id)
   const navigate = useNavigate()
   const notify = useNotification()
+  
   const [sectionIndex, setSectionIndex] = useState(0)
   const [progress, setProgress] = useState(() => (book ? getReadingProgress(book.id) : 0))
   const [theme, setTheme] = useState(() => readString(STORAGE_KEYS.theme, 'light') || 'light')
@@ -49,6 +52,7 @@ export function Reader() {
   const [width, setWidth] = useState(() => readString(STORAGE_KEYS.width, 'normal') || 'normal')
   const [spacing, setSpacing] = useState(() => readString(STORAGE_KEYS.spacing, 'normal') || 'normal')
   const [immersive, setImmersive] = useState(() => readString(STORAGE_KEYS.immersive, 'false') === 'true')
+  
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [tocHidden, setTocHidden] = useState(false)
@@ -56,6 +60,11 @@ export function Reader() {
   const [doublePage, setDoublePage] = useState(false)
   const [completed, setCompleted] = useState(false)
   const [query, setQuery] = useState('')
+  
+  // Audio & Traduction
+  const [audioOpen, setAudioOpen] = useState(false)
+  const [translationText, setTranslationText] = useState('')
+
   useDocumentTitle(book ? `Lire — ${book.title}` : 'Lecteur')
 
   const section = readerSections[sectionIndex]
@@ -66,11 +75,11 @@ export function Reader() {
       const percent = height <= 0 ? 0 : Math.min(100, Math.round((window.scrollY / height) * 100))
       setProgress(percent)
       if (book) saveReadingProgress(book.id, percent)
-      if (percent === 100 && section.id === 'chapter-5') setCompleted(true)
+      if (percent === 100 && sectionIndex === readerSections.length - 1) setCompleted(true)
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [book, section])
+  }, [book, sectionIndex])
 
   useEffect(() => {
     const onKey = (event) => {
@@ -79,6 +88,7 @@ export function Reader() {
         setImmersive(false)
         writeString(STORAGE_KEYS.immersive, 'false')
         setSettingsOpen(false)
+        setTranslationText('')
       }
       if (event.key === '+' || event.key === '=') changeFont(2)
       if (event.key === '-' || event.key === '_') changeFont(-2)
@@ -118,7 +128,7 @@ export function Reader() {
   const selectText = () => window.getSelection()?.toString().trim() || ''
 
   return (
-    <div className={`min-h-dvh ${THEME_STYLES[theme]}`}>
+    <div className={`min-h-dvh ${THEME_STYLES[theme]} pb-24`}>
       {!immersive && !focusMode ? (
         <ReaderToolbar
           progress={progress}
@@ -137,26 +147,32 @@ export function Reader() {
             notify.info('Signet ajouté')
           }}
           onHighlight={() => {
-            if (!selectText()) return notify.warning('Sélectionnez du texte à surligner')
+            const text = selectText()
+            if (!text) return notify.warning('Sélectionnez du texte à surligner')
             const highlights = getHighlights(book.id)
-            highlights.push({ text: selectText(), section: section.id })
+            highlights.push({ text, section: section.id })
             saveHighlights(book.id, highlights)
             notify.info('Texte surligné')
           }}
           onNote={() => {
-            if (!selectText()) return notify.warning('Sélectionnez du texte pour ajouter une note')
+            const text = selectText()
+            if (!text) return notify.warning('Sélectionnez du texte pour ajouter une note')
             const noteText = window.prompt('Entrez votre note :')
             if (!noteText) return
             const notes = getNotes(book.id)
-            notes.push({ text: noteText, selection: selectText(), section: section.id })
+            notes.push({ text: noteText, selection: text, section: section.id })
             saveNotes(book.id, notes)
             notify.info('Note ajoutée')
           }}
           onTranslate={() => {
-            if (!selectText()) return notify.warning('Sélectionnez du texte à traduire')
-            notify.info('Traduction non disponible (nécessite une API)')
+            const text = selectText()
+            if (!text) return notify.warning('Sélectionnez du texte à traduire')
+            setTranslationText(text)
           }}
-          onAudio={() => notify.info('Mode audio non disponible (nécessite une API)')}
+          onAudio={() => {
+            setAudioOpen(true)
+            notify.info('Lecteur audio activé')
+          }}
           onDoublePage={() => {
             setDoublePage((value) => !value)
             notify.info(doublePage ? 'Mode simple page activé' : 'Mode double page activé')
@@ -193,13 +209,17 @@ export function Reader() {
             }}
           />
         ) : null}
+        
         <main className={`flex-1 ${WIDTHS[width]} mx-auto px-6 py-12 ${immersive ? 'min-h-screen' : ''}`}>
           <article className={`${ARTICLE_STYLES[theme]} rounded-xl p-8 shadow-sm sm:p-12 ${doublePage ? 'grid grid-cols-2 gap-8' : ''}`}>
             <div className="mb-6 flex items-center justify-between">
-              <p className="text-sm text-[#8f7770]">{book.title}</p>
+              <p className="text-sm text-[#8f7770]">{book.title} — {section.title}</p>
               <FavoriteButton book={book} variant="button" className="relative top-auto right-auto" />
             </div>
+            
+            {/* Le contenu du chapitre est géré par ReaderContent, qui va chercher les textes dans readerSections */}
             <ReaderContent sectionId={section.id} book={book} fontSize={fontSize} spacing={spacing} />
+            
             <ChapterNavigation
               disablePrev={sectionIndex === 0}
               disableNext={sectionIndex === readerSections.length - 1}
@@ -224,6 +244,30 @@ export function Reader() {
         onWidth={(value) => { setWidth(value); writeString(STORAGE_KEYS.width, value); notify.info(`Largeur : ${value}`) }}
         onSpacing={(value) => { setSpacing(value); writeString(STORAGE_KEYS.spacing, value); notify.info(`Espacement : ${value}`) }}
       />
+
+      {/* Lecteur Audio */}
+      {audioOpen && (
+        <AudioPlayer
+          text={section.content.map(p => p.text).join(' ')} // Concatène le texte du chapitre pour la lecture
+          bookTitle={book.title}
+          onClose={() => setAudioOpen(false)}
+          hasNext={sectionIndex < readerSections.length - 1}
+          onNext={() => {
+            if (sectionIndex < readerSections.length - 1) {
+              setSectionIndex(index => index + 1)
+              window.scrollTo(0, 0)
+            }
+          }}
+        />
+      )}
+
+      {/* Panneau de traduction */}
+      {translationText && (
+        <TranslationPanel
+          text={translationText}
+          onClose={() => setTranslationText('')}
+        />
+      )}
 
       {completed ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
