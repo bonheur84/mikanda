@@ -22,6 +22,7 @@ import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useFavorites } from '../hooks/useFavorites.jsx'
 import { readJson, STORAGE_KEYS } from '../services/storage.js'
 import { books } from '../data/books.js'
+import { ConfirmDialog } from '../components/common/ConfirmDialog.jsx'
 
 function formatDate(dateStr) {
   if (!dateStr) return '—'
@@ -52,6 +53,7 @@ export function Profile() {
   const [bio, setBio] = useState('')
   const [saving, setSaving] = useState(false)
   const [activeTab, setActiveTab] = useState('stats')
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false)
   const fileInputRef = useRef(null)
 
   useEffect(() => {
@@ -67,7 +69,7 @@ export function Profile() {
   // Statistiques de lecture
   const progressData = readJson(STORAGE_KEYS.progress, {})
   const ratingsData = readJson(STORAGE_KEYS.ratings, {})
-  const commentsData = readJson(STORAGE_KEYS.comments, [])
+  const rawComments = readJson(STORAGE_KEYS.comments, {})
 
   const booksInProgress = Object.entries(progressData)
     .filter(([, p]) => p > 0 && p < 100)
@@ -80,8 +82,9 @@ export function Profile() {
     .filter(Boolean)
 
   const userRatings = Object.entries(ratingsData)
-  const userComments = commentsData.filter((c) => c.userId === user?.id || c.userName === `${user?.firstName} ${user?.lastName}`)
-  const favBooks = favorites.map((id) => books.find((b) => b.id === id)).filter(Boolean)
+  const allComments = Array.isArray(rawComments) ? rawComments : Object.values(rawComments).flat()
+  const userComments = allComments.filter((c) => c.userId === user?.id || c.userName === `${user?.firstName} ${user?.lastName}`)
+  const favBooks = Array.isArray(favorites) ? favorites.map((id) => books.find((b) => b.id === id)).filter(Boolean) : []
 
   async function handleSaveProfile() {
     setSaving(true)
@@ -126,11 +129,14 @@ export function Profile() {
     reader.readAsDataURL(file)
   }
 
+  function confirmLogout() {
+    setShowLogoutConfirm(true)
+  }
+
   function handleLogout() {
-    if (window.confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
-      logout()
-      notify.info('À bientôt sur MIKANDA !')
-    }
+    setShowLogoutConfirm(false)
+    logout()
+    notify.info('À bientôt sur MIKANDA !')
   }
 
   const tabs = [
@@ -146,7 +152,7 @@ export function Profile() {
         {/* En-tête profil */}
         <div className="mb-8 overflow-hidden rounded-2xl bg-white shadow-sm">
           {/* Bannière */}
-          <div className="h-32 bg-gradient-to-r from-[#133a28] via-[#1d5a3e] to-[#c17248]" />
+          <div className="h-32 bg-[linear-gradient(to_right,#133a28,#1d5a3e,#c17248)]" />
 
           <div className="px-6 pb-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -221,7 +227,7 @@ export function Profile() {
                 {isAdmin && (
                   <Link
                     to="/admin/dashboard"
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#133a28] px-3 py-2 text-xs font-semibold text-[#133a28] hover:bg-[#133a28] hover:text-white"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#133a28] px-3 py-2 text-xs font-semibold text-[#133a28] hover:bg-[#133a28] hover:text-white transition-colors"
                   >
                     <Shield className="h-3.5 w-3.5" />
                     Dashboard Admin
@@ -231,14 +237,14 @@ export function Profile() {
                   <>
                     <button
                       onClick={handleCancelEdit}
-                      className="flex items-center gap-1.5 rounded-lg border border-[#d9d1c6] px-3 py-2 text-xs text-[#705f57] hover:bg-[#f4ece2]"
+                      className="flex items-center gap-1.5 rounded-lg border border-[#d9d1c6] px-3 py-2 text-xs text-[#705f57] hover:bg-[#f4ece2] transition-colors"
                     >
                       <X className="h-3.5 w-3.5" /> Annuler
                     </button>
                     <button
                       onClick={handleSaveProfile}
                       disabled={saving}
-                      className="flex items-center gap-1.5 rounded-lg bg-[#133a28] px-3 py-2 text-xs font-semibold text-white disabled:opacity-60"
+                      className="flex items-center gap-1.5 rounded-lg bg-[#133a28] px-3 py-2 text-xs font-semibold text-white transition-colors disabled:opacity-60"
                     >
                       <Check className="h-3.5 w-3.5" /> {saving ? 'Sauvegarde...' : 'Sauvegarder'}
                     </button>
@@ -246,14 +252,14 @@ export function Profile() {
                 ) : (
                   <button
                     onClick={() => setEditing(true)}
-                    className="flex items-center gap-1.5 rounded-lg border border-[#d9d1c6] px-3 py-2 text-xs text-[#705f57] hover:bg-[#f4ece2]"
+                    className="flex items-center gap-1.5 rounded-lg border border-[#d9d1c6] px-3 py-2 text-xs text-[#705f57] hover:bg-[#f4ece2] transition-colors"
                   >
                     <Edit3 className="h-3.5 w-3.5" /> Modifier
                   </button>
                 )}
                 <button
-                  onClick={handleLogout}
-                  className="flex items-center gap-1.5 rounded-lg border border-red-200 px-3 py-2 text-xs text-red-600 hover:bg-red-50"
+                  onClick={confirmLogout}
+                  className="flex items-center gap-1.5 rounded-lg border border-red-200 px-3 py-2 text-xs text-red-600 hover:bg-red-50 transition-colors"
                 >
                   <LogOut className="h-3.5 w-3.5" /> Déconnexion
                 </button>
@@ -333,7 +339,7 @@ export function Profile() {
                   <Link
                     key={b.id}
                     to={`/livres/${b.id}/lire`}
-                    className="flex items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white p-4 hover:border-[#133a28]"
+                    className="flex items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white p-4 transition-colors hover:border-[#133a28] hover:shadow-sm"
                   >
                     <img src={b.image} alt={b.title} className="h-16 w-12 rounded object-cover" />
                     <div className="flex-1">
@@ -345,7 +351,7 @@ export function Profile() {
                           style={{ width: `${b.progress}%` }}
                         />
                       </div>
-                      <p className="mt-1 text-xs text-[#8f7770]">{b.progress}% lu</p>
+                      <p className="mt-1 text-xs text-[#8f7770]">{Math.round(b.progress)}% lu</p>
                     </div>
                   </Link>
                 ))}
@@ -361,7 +367,7 @@ export function Profile() {
                   <Link
                     key={b.id}
                     to={`/livres/${b.id}`}
-                    className="flex items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white p-4 hover:border-[#133a28]"
+                    className="flex items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white p-4 transition-colors hover:border-[#133a28] hover:shadow-sm"
                   >
                     <img src={b.image} alt={b.title} className="h-14 w-10 rounded object-cover" />
                     <div>
@@ -389,7 +395,7 @@ export function Profile() {
                   <Link
                     key={b.id}
                     to={`/livres/${b.id}`}
-                    className="flex items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white p-4 hover:border-[#133a28]"
+                    className="flex items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white p-4 transition-colors hover:border-[#133a28] hover:shadow-sm"
                   >
                     <img src={b.image} alt={b.title} className="h-16 w-12 rounded object-cover" />
                     <div>
@@ -431,8 +437,8 @@ export function Profile() {
               <div className="border-t border-[#ede5d8] pt-4">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-red-600">Zone dangereuse</p>
                 <button
-                  onClick={handleLogout}
-                  className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2 text-sm text-red-600 hover:bg-red-100"
+                  onClick={confirmLogout}
+                  className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2 text-sm text-red-600 transition-colors hover:bg-red-100"
                 >
                   <LogOut className="h-4 w-4" /> Se déconnecter
                 </button>
@@ -445,13 +451,24 @@ export function Profile() {
           </div>
         )}
       </div>
+
+      <ConfirmDialog
+        open={showLogoutConfirm}
+        title="Déconnexion"
+        message="Êtes-vous sûr de vouloir vous déconnecter de votre compte MIKANDA ?"
+        confirmLabel="Se déconnecter"
+        cancelLabel="Annuler"
+        variant="danger"
+        onConfirm={handleLogout}
+        onCancel={() => setShowLogoutConfirm(false)}
+      />
     </div>
   )
 }
 
 function StatCard({ icon, value, label }) {
   return (
-    <div className="flex items-center gap-4 rounded-xl border border-[#d9d1c6] bg-white p-5">
+    <div className="flex items-center gap-4 rounded-xl border border-[#d9d1c6] bg-white p-5 transition-transform hover:-translate-y-1 hover:shadow-sm">
       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f4ece2]">
         {icon}
       </div>
@@ -468,7 +485,7 @@ function EmptyState({ message, link, linkLabel }) {
     <div className="rounded-xl border border-dashed border-[#d9d1c6] bg-white py-12 text-center">
       <p className="text-sm text-[#8f7770]">{message}</p>
       {link && (
-        <Link to={link} className="mt-3 inline-block text-sm font-medium text-[#c17248] hover:underline">
+        <Link to={link} className="mt-3 inline-block text-sm font-medium text-[#c17248] transition-colors hover:text-[#133a28] hover:underline">
           {linkLabel}
         </Link>
       )}

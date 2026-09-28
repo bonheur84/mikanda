@@ -283,6 +283,15 @@
   }
 }
 
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1.5rem)); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
 .animate-fade-in {
   animation: fadeIn 0.5s ease forwards;
 }

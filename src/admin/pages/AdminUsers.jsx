@@ -54,7 +54,7 @@ export function AdminUsers() {
       </div>
 
       <div className="overflow-hidden rounded-xl border border-[#e2ddd6] bg-white">
-        <table className="w-full min-w-[640px] text-sm">
+        <table className="w-full min-w-160 text-sm">
           <thead className="border-b border-[#e2ddd6] bg-[#f8f5f0]">
             <tr>
               <th className="px-5 py-3 text-left font-semibold text-[#705f57]">Utilisateur</th>

@@ -42,6 +42,10 @@ export const STORAGE_KEYS = {
 
   // Activité récente
   recentActivity: 'mikanda-recent-activity',
+
+  // Lectures réelles (par livre, par utilisateur/session)
+  readCounts: 'mikanda-read-counts',
+  readSessions: 'mikanda-read-sessions',
 }
 
 /** Lit une valeur JSON depuis le localStorage */

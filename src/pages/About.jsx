@@ -1,9 +1,66 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BookOpen, Building, Handshake, History, Info, Mail, MapPin, Send, ShieldCheck, University, Unlock } from 'lucide-react'
 import { team } from '../data/team.js'
 import { useNotification } from '../hooks/useNotification.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
+
+// Partenaires avec logos symboliques (icônes + noms depuis les données du projet)
+const PARTNERS = [
+  { name: 'Bibliothèque nationale de la RDC', icon: BookOpen, color: '#133a28' },
+  { name: 'Université de Kinshasa', icon: University, color: '#c17248' },
+  { name: 'Institut Français du Congo', icon: Building, color: '#1877f2' },
+  { name: 'Archives nationales', icon: Handshake, color: '#8e461f' },
+  { name: 'Présence Africaine', icon: BookOpen, color: '#133a28' },
+  { name: 'Centre Wallonie-Bruxelles', icon: Building, color: '#e31836' },
+  { name: 'Université de Lubumbashi', icon: University, color: '#c17248' },
+  { name: 'Alliance Française Kinshasa', icon: Building, color: '#002395' },
+]
+
+function PartnerBanner() {
+  const trackRef = useRef(null)
+
+  return (
+    <div
+      className="relative overflow-hidden border-y border-[#d9d1c6] bg-[#faf6ef] py-8"
+      aria-label="Partenaires de MIKANDA"
+    >
+      {/* Dégradés sur les bords */}
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-[#faf6ef] to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-[#faf6ef] to-transparent" />
+
+      <p className="mb-6 text-center text-xs uppercase tracking-[0.2em] text-[#8f7770]">
+        Nos partenaires institutionnels
+      </p>
+
+      {/* Bande défilante */}
+      <div className="flex overflow-hidden">
+        <div
+          ref={trackRef}
+          className="flex animate-scroll gap-12 whitespace-nowrap"
+          style={{ animationDuration: '30s' }}
+        >
+          {/* Double le contenu pour un défilement infini fluide */}
+          {[...PARTNERS, ...PARTNERS].map((partner, index) => (
+            <div
+              // eslint-disable-next-line react/no-array-index-key
+              key={`${partner.name}-${index}`}
+              className="flex shrink-0 items-center gap-3 rounded-xl border border-[#d9d1c6] bg-white px-5 py-3 shadow-sm"
+            >
+              <div
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
+                style={{ backgroundColor: `${partner.color}15` }}
+              >
+                <partner.icon className="h-4 w-4" style={{ color: partner.color }} />
+              </div>
+              <span className="font-serif text-sm text-[#1a1410]">{partner.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export function About() {
   useDocumentTitle('À propos')
@@ -27,6 +84,7 @@ export function About() {
 
   return (
     <main>
+      {/* Héro */}
       <section className="border-b border-[#d9d1c6] bg-[#eae0d1]/45 px-5 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
@@ -43,11 +101,12 @@ export function About() {
               <div className="rounded-lg bg-[#c17248]/10 p-3"><BookOpen className="h-6 w-6 text-[#c17248]" /></div>
               <span className="font-mono text-xs uppercase tracking-widest text-[#c17248]">Notre vision</span>
             </div>
-            <p className="font-serif text-2xl leading-9">Préserver les voix d’hier, accompagner celles d’aujourd’hui et transmettre celles de demain.</p>
+            <p className="font-serif text-2xl leading-9">Préserver les voix d'hier, accompagner celles d'aujourd'hui et transmettre celles de demain.</p>
           </div>
         </div>
       </section>
 
+      {/* Photo + texte */}
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <figure>
@@ -64,10 +123,11 @@ export function About() {
         </div>
       </section>
 
+      {/* Mission */}
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#c17248]">Notre raison d’être</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-[#c17248]">Notre raison d'être</p>
             <h2 className="mt-3 font-serif text-4xl">Notre mission</h2>
           </div>
           <div>
@@ -81,6 +141,7 @@ export function About() {
         </div>
       </section>
 
+      {/* Charte */}
       <section className="border-y border-[#d9d1c6] px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs uppercase tracking-[0.2em] text-[#c17248]">Nos engagements</p>
@@ -93,19 +154,26 @@ export function About() {
         </div>
       </section>
 
+      {/* Partenaires — cartes statiques */}
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <p className="text-xs uppercase tracking-[0.2em] text-[#c17248]">Construire ensemble</p>
         <h2 className="mt-3 font-serif text-4xl">Nos partenaires</h2>
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
-          {[{ icon: Handshake, label: 'Bibliothèques et archives' }, { icon: Building, label: 'Institutions culturelles' }, { icon: University, label: 'Universités et centres de recherche' }, { icon: BookOpen, label: 'Éditeurs indépendants' }].map((item) => (
-            <div key={item.label} className="flex items-center gap-4 rounded-lg border border-[#d9d1c6] bg-white p-5">
-              <span className="flex h-10 w-10 items-center justify-center bg-[#eae0d1] text-[#133a28]"><item.icon className="h-5 w-5" /></span>
-              <span className="font-serif text-lg">{item.label}</span>
+          {PARTNERS.slice(0, 4).map((item) => (
+            <div key={item.name} className="flex items-center gap-4 rounded-lg border border-[#d9d1c6] bg-white p-5 transition-colors hover:border-[#133a28]/30">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: `${item.color}15` }}>
+                <item.icon className="h-5 w-5" style={{ color: item.color }} />
+              </span>
+              <span className="font-serif text-lg">{item.name}</span>
             </div>
           ))}
         </div>
       </section>
 
+      {/* Bandeau défilant des partenaires */}
+      <PartnerBanner />
+
+      {/* L'équipe */}
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="mb-12 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-[#c17248]">L'équipe derrière MIKANDA</p>
@@ -113,8 +181,10 @@ export function About() {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.slice(0, 4).map((member) => (
-            <div key={member.name} className="rounded-xl border border-[#d9d1c6] bg-white p-6 text-center">
-              <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#133a28] to-[#245743] font-serif text-2xl text-white">{member.initials}</div>
+            <div key={member.name} className="rounded-xl border border-[#d9d1c6] bg-white p-6 text-center transition-all hover:shadow-md">
+              <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#133a28] to-[#245743] font-serif text-2xl text-white">
+                {member.initials}
+              </div>
               <h3 className="font-serif text-lg">{member.name}</h3>
               <p className="mt-1 text-xs uppercase tracking-wider text-[#c17248]">{member.role}</p>
               <p className="mt-3 text-sm text-[#705f57]">{member.bio}</p>
@@ -122,37 +192,62 @@ export function About() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link to="/rejoindre-equipe" className="text-sm font-medium text-[#133a28]">Rejoindre l'équipe →</Link>
+          <Link to="/rejoindre-equipe" className="text-sm font-medium text-[#133a28] hover:underline">Rejoindre l'équipe →</Link>
         </div>
       </section>
 
-      <section className="border-y border-[#d9d1c6] px-5 py-12 lg:px-8">
+      {/* Formulaire de soumission de manuscrits — avec ancre #soumission */}
+      <section id="soumission" className="border-y border-[#d9d1c6] px-5 py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="font-serif text-4xl">Contact et soumission de manuscrits</h2>
           <div className="mt-8 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="text-[#705f57]">
-              <p className="max-w-xl leading-7">Vous êtes auteur, chercheur, famille d'écrivain disparu ou détenteur d'un manuscrit rare ? Contactez l'équipe de conservation de MIKANDA.</p>
+              <p className="max-w-xl leading-7">
+                Vous êtes auteur, chercheur, famille d'écrivain disparu ou détenteur d'un manuscrit rare ? Contactez l'équipe de conservation de MIKANDA.
+              </p>
               <div className="mt-8 space-y-5 text-sm">
-                <p className="flex items-start gap-3"><Mail className="mt-0.5 h-5 w-5 text-[#133a28]" /><span><strong className="block text-[#281e19]">Service de conservation</strong>conservation@mikanda.cd</span></p>
-                <p className="flex items-start gap-3"><MapPin className="mt-0.5 h-5 w-5 text-[#133a28]" /><span><strong className="block text-[#281e19]">Siège</strong>Avenue de la Justice, Gombe — Kinshasa</span></p>
+                <p className="flex items-start gap-3">
+                  <Mail className="mt-0.5 h-5 w-5 text-[#133a28]" />
+                  <span>
+                    <strong className="block text-[#281e19]">Service de conservation</strong>
+                    conservation@mikanda.cd
+                  </span>
+                </p>
+                <p className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-5 w-5 text-[#133a28]" />
+                  <span>
+                    <strong className="block text-[#281e19]">Siège</strong>
+                    Avenue de la Justice, Gombe — Kinshasa
+                  </span>
+                </p>
               </div>
             </div>
             <form
               className="rounded-xl border border-[#d9d1c6] bg-white p-6 shadow-lg"
               onSubmit={(event) => {
                 event.preventDefault()
-                notify.success('Formulaire envoyé avec succès !')
+                notify.success('Votre soumission a été envoyée avec succès ! L\'équipe MIKANDA vous contactera sous 5 à 10 jours ouvrables.')
                 event.target.reset()
               }}
             >
-              <label className="text-sm font-medium">Nom complet<input required name="nom" className="mt-2 mb-4 w-full rounded-lg border border-[#d9d1c6] bg-[#fdfaf3] px-4 py-3" /></label>
-              <label className="text-sm font-medium">Adresse e-mail<input required type="email" name="email" className="mt-2 mb-4 w-full rounded-lg border border-[#d9d1c6] bg-[#fdfaf3] px-4 py-3" /></label>
-              <label className="text-sm font-medium sm:col-span-2">Message<textarea required name="message" rows="5" className="mt-2 w-full rounded-lg border border-[#d9d1c6] bg-[#fdfaf3] px-4 py-3" /></label>
+              <h3 className="mb-4 font-serif text-xl text-[#1a1410]">Proposer une œuvre</h3>
+              <label className="text-sm font-medium">
+                Nom complet *
+                <input required name="nom" className="mt-2 mb-4 w-full rounded-lg border border-[#d9d1c6] bg-[#fdfaf3] px-4 py-3 text-sm outline-none focus:border-[#133a28] transition-colors" />
+              </label>
+              <label className="text-sm font-medium">
+                Adresse e-mail *
+                <input required type="email" name="email" className="mt-2 mb-4 w-full rounded-lg border border-[#d9d1c6] bg-[#fdfaf3] px-4 py-3 text-sm outline-none focus:border-[#133a28] transition-colors" />
+              </label>
+              <label className="text-sm font-medium">
+                Titre et description de l'œuvre *
+                <textarea required name="message" rows="5" placeholder="Titre de l'œuvre, auteur, type de document (manuscrit, édition ancienne, archives...)..." className="mt-2 w-full rounded-lg border border-[#d9d1c6] bg-[#fdfaf3] px-4 py-3 text-sm outline-none focus:border-[#133a28] transition-colors" />
+              </label>
               <div className="mt-6 flex items-start gap-3 rounded-lg bg-[#f3eee4] p-4">
                 <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#c17248]" />
-                <p className="text-xs leading-5 text-[#705f57]">Les documents originaux restent la propriété de leurs détenteurs.</p>
+                <p className="text-xs leading-5 text-[#705f57]">Les documents originaux restent la propriété de leurs détenteurs. MIKANDA procède uniquement à la numérisation dans le cadre d'un accord officiel.</p>
               </div>
-              <button type="submit" className="mt-6 flex w-full items-center justify-center gap-3 rounded-lg bg-[#133a28] px-5 py-3 text-sm text-white">
+              <button type="submit" className="mt-6 flex w-full items-center justify-center gap-3 rounded-lg bg-[#133a28] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1d5a3e] active:scale-95">
                 Envoyer au comité de conservation <Send className="h-4 w-4" />
               </button>
             </form>
@@ -174,7 +269,7 @@ function Stat({ value, label }) {
 
 function Charter({ icon: Icon, n, title, text }) {
   return (
-    <article className="rounded-xl border border-[#d9d1c6] bg-white p-8">
+    <article className="rounded-xl border border-[#d9d1c6] bg-white p-8 transition-all hover:shadow-md">
       <div className="mb-6 flex items-center gap-4">
         <div className="rounded-lg bg-[#133a28]/10 p-3"><Icon className="h-6 w-6 text-[#133a28]" /></div>
         <span className="font-mono text-xs text-[#c17248]">{n}</span>

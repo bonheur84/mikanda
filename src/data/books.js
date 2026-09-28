@@ -1,3 +1,5 @@
+import { getAllBooksMeta } from '../services/adminBooks.js'
+
 export const books = [
   {
     id: 'book-1',
@@ -627,27 +629,49 @@ export const books = [
     featured: false,
   },
 ]
+// --- Fonction utilitaire pour appliquer les métadonnées d'administration ---
+export function getEnhancedBooks() {
+  const meta = getAllBooksMeta()
+  return books.map((book) => {
+    const bookMeta = meta[book.id]
+    if (!bookMeta) return book
+    // Surcharge les propriétés avec celles définies par l'admin
+    return {
+      ...book,
+      ...bookMeta,
+      // On s'assure que languages est bien un tableau s'il a été saisi comme ça, 
+      // ou qu'il remplace le champ "language" unique.
+      language: bookMeta.languages && bookMeta.languages.length > 0 ? bookMeta.languages.join(', ') : (bookMeta.language || book.language)
+    }
+  })
+}
+
+// --- Fonctions d'accès utilisant les données enrichies ---
 
 export function getBookById(id) {
-  return books.find((book) => book.id === id)
+  return getEnhancedBooks().find((book) => book.id === id)
 }
 
 export function getBooksByAuthor(authorId) {
-  return books.filter((book) => book.authorId === authorId)
+  return getEnhancedBooks().filter((book) => book.authorId === authorId || book.author === authorId)
 }
 
 export function getBooksByCollection(collectionId) {
-  return books.filter((book) => (book.collections || []).includes(collectionId))
+  return getEnhancedBooks().filter((book) => (book.collections || []).includes(collectionId))
 }
 
 export function getFeaturedBooks() {
-  return books.filter((book) => book.featured)
+  return getEnhancedBooks().filter((book) => book.featured)
+}
+
+export function getPopularBooks() {
+  return getEnhancedBooks().filter((book) => book.popular)
 }
 
 export function getAuthorNames() {
-  return [...new Set(books.map((book) => book.author))].sort()
+  return [...new Set(getEnhancedBooks().map((book) => book.author))].sort()
 }
 
 export function getCategories() {
-  return [...new Set(books.map((book) => book.category))].sort()
+  return [...new Set(getEnhancedBooks().map((book) => book.category))].sort()
 }

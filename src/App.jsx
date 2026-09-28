@@ -13,6 +13,7 @@ import { About } from './pages/About.jsx'
 import { Library } from './pages/Library.jsx'
 import { Authors } from './pages/Authors.jsx'
 import { AuthorDetails } from './pages/AuthorDetails.jsx'
+import { AuthorWorks } from './pages/AuthorWorks.jsx'
 import { Collections } from './pages/Collections.jsx'
 import { CollectionDetails } from './pages/CollectionDetails.jsx'
 import { BookDetails } from './pages/BookDetails.jsx'
@@ -79,6 +80,7 @@ export default function App() {
                 <Route path="/bibliotheque" element={<Library />} />
                 <Route path="/auteurs" element={<Authors />} />
                 <Route path="/auteurs/:id" element={<AuthorDetails />} />
+                <Route path="/auteurs/:id/oeuvres" element={<AuthorWorks />} />
                 <Route path="/collections" element={<Collections />} />
                 <Route path="/collections/:id" element={<CollectionDetails />} />
                 <Route path="/livres/:id" element={<BookDetails />} />

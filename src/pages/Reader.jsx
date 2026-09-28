@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Heart, Library, X } from 'lucide-react'
 import { getBookById } from '../data/books.js'
 import { readerSections } from '../data/reader.js'
 import { STORAGE_KEYS, readString, writeString } from '../services/storage.js'
+import { recordRead } from '../services/readCount.js'
 import {
   getBookmarks,
   getReadingProgress,
@@ -68,6 +69,15 @@ export function Reader() {
   useDocumentTitle(book ? `Lire — ${book.title}` : 'Lecteur')
 
   const section = readerSections[sectionIndex]
+
+  // Enregistrer une lecture réelle (une seule fois par session/utilisateur)
+  const recordedRef = useRef(false)
+  useEffect(() => {
+    if (book && !recordedRef.current) {
+      recordedRef.current = true
+      recordRead(book.id)
+    }
+  }, [book])
 
   useEffect(() => {
     const onScroll = () => {
