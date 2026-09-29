@@ -111,32 +111,32 @@ export function Header() {
       </button>
 
       {menuOpen ? (
-        <div className="mobile-menu-animate fixed inset-x-0 top-16 z-40 border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 shadow-lg lg:hidden">
-          <nav className="flex flex-col gap-4 text-sm text-[#705f57]" aria-label="Navigation mobile">
+        <div className="mobile-menu-animate absolute inset-x-0 top-full z-40 border-b border-[#d9d1c6] bg-[#f8f3e9] px-5 py-4 shadow-lg lg:hidden">
+          <nav className="flex flex-col text-sm text-[#705f57]" aria-label="Navigation mobile">
             {navItems.map((item) => (
-              <NavLink key={item.to} to={item.to} end={item.to === '/'} className={linkClass}>
+              <NavLink key={item.to} to={item.to} end={item.to === '/'} className={`${linkClass} py-3`}>
                 {item.label}
               </NavLink>
             ))}
           </nav>
-          <div className="mt-4 flex flex-col gap-3">
+          <div className="mt-2 flex flex-col gap-1 border-t border-[#d9d1c6] pt-3">
             <SearchBar variant="mobile" />
             
             {isAuthenticated ? (
               <>
-                <Link to="/favoris" className="text-sm text-[#705f57] hover:text-[#133a28]">
+                <Link to="/favoris" className="py-3 text-sm text-[#705f57] hover:text-[#133a28]">
                   Favoris ({count})
                 </Link>
-                <Link to="/profil" className="flex items-center gap-2 text-sm text-[#705f57] hover:text-[#133a28]">
+                <Link to="/profil" className="flex items-center gap-2 py-3 text-sm text-[#705f57] hover:text-[#133a28]">
                   <User className="h-4 w-4" /> Mon profil
                 </Link>
               </>
             ) : (
               <>
-                <Link to="/connexion" className="text-sm text-[#705f57] hover:text-[#133a28]">
+                <Link to="/connexion" className="py-3 text-sm text-[#705f57] hover:text-[#133a28]">
                   Connexion
                 </Link>
-                <Link to="/inscription" className="border border-[#133a28] bg-[#133a28] px-4 py-2 text-center text-sm text-[#fff8fa] shimmer-effect">
+                <Link to="/inscription" className="mt-2 border border-[#133a28] bg-[#133a28] px-4 py-3 text-center text-sm text-[#fff8fa] shimmer-effect">
                   S'inscrire
                 </Link>
               </>

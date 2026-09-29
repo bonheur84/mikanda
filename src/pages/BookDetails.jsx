@@ -48,6 +48,16 @@ export function BookDetails() {
     setComments(synced)
   }, [book])
 
+  const ordered = useMemo(() => {
+    const copy = [...comments]
+    copy.sort((a, b) =>
+      sort === 'recent'
+        ? new Date(b.date) - new Date(a.date)
+        : new Date(a.date) - new Date(b.date),
+    )
+    return copy
+  }, [comments, sort])
+
   if (!book) return <NotFound />
 
   // Note moyenne calculée
@@ -64,16 +74,6 @@ export function BookDetails() {
     : book.readers
 
   const displayRating = hoverRating || rating || 0
-
-  const ordered = useMemo(() => {
-    const copy = [...comments]
-    copy.sort((a, b) =>
-      sort === 'recent'
-        ? new Date(b.date) - new Date(a.date)
-        : new Date(a.date) - new Date(b.date),
-    )
-    return copy
-  }, [comments, sort])
 
   const topLevel = ordered.filter((item) => !item.parentId)
 
@@ -195,9 +195,9 @@ export function BookDetails() {
           <div className="mt-6 flex flex-wrap gap-2">
             <Link
               to={`/livres/${book.id}/lire`}
-              className="inline-flex items-center gap-2 rounded-lg bg-[#133a28] px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#245743] active:scale-95"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#133a28] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#245743] active:scale-95"
             >
-              <Play className="h-3.5 w-3.5" /> Lire maintenant
+              <Play className="h-4 w-4" /> Lire maintenant
             </Link>
 
             {/* Bouton de téléchargement PDF */}
@@ -207,18 +207,18 @@ export function BookDetails() {
                 download
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-[#d9d1c6] px-4 py-2.5 text-xs transition-colors hover:border-[#133a28] hover:text-[#133a28] active:scale-95"
+                className="inline-flex items-center gap-2 rounded-lg border border-[#d9d1c6] px-4 py-3 text-sm transition-colors hover:border-[#133a28] hover:text-[#133a28] active:scale-95"
               >
-                <Download className="h-3.5 w-3.5" /> Télécharger PDF
+                <Download className="h-4 w-4" /> Télécharger PDF
               </a>
             ) : (
               <button
                 type="button"
                 title="PDF non disponible pour ce livre"
-                className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border border-[#d9d1c6] px-4 py-2.5 text-xs text-[#8f7770] opacity-60"
+                className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border border-[#d9d1c6] px-4 py-3 text-sm text-[#8f7770] opacity-60"
                 onClick={() => notify.info('Le PDF de ce livre n\'est pas encore disponible.')}
               >
-                <Download className="h-3.5 w-3.5" /> PDF non disponible
+                <Download className="h-4 w-4" /> PDF non disponible
               </button>
             )}
 
@@ -226,18 +226,18 @@ export function BookDetails() {
             <button
               type="button"
               aria-label="Partager"
-              className="rounded-lg border border-[#d9d1c6] p-2.5 transition-colors hover:border-[#133a28] hover:text-[#133a28] active:scale-95"
+              className="rounded-lg border border-[#d9d1c6] p-3 transition-colors hover:border-[#133a28] hover:text-[#133a28] active:scale-95"
               onClick={() => setShareOpen(true)}
             >
-              <Share2 className="h-3.5 w-3.5" />
+              <Share2 className="h-4 w-4" />
             </button>
             <button
               type="button"
               aria-label="Aperçu"
-              className="rounded-lg border border-[#d9d1c6] p-2.5 transition-colors hover:border-[#133a28] hover:text-[#133a28] active:scale-95"
+              className="rounded-lg border border-[#d9d1c6] p-3 transition-colors hover:border-[#133a28] hover:text-[#133a28] active:scale-95"
               onClick={() => setPreviewOpen(true)}
             >
-              <Eye className="h-3.5 w-3.5" />
+              <Eye className="h-4 w-4" />
             </button>
           </div>
 

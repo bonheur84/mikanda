@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { LayoutGrid, List } from 'lucide-react'
+import { ChevronRight, LayoutGrid, List, SlidersHorizontal, X } from 'lucide-react'
 import { books, getAuthorNames, getCategories } from '../data/books.js'
 import { filterBooks } from '../services/search.js'
 import { STORAGE_KEYS, readString, writeString } from '../services/storage.js'
@@ -24,6 +24,7 @@ export function Library() {
   const [query, setQuery] = useState('')
   const [page, setPage] = useState(1)
   const [view, setView] = useState(() => readString(STORAGE_KEYS.bookView, 'grid') || 'grid')
+  const [showFilters, setShowFilters] = useState(false)
 
   const allCategories = getCategories()
   const authors = getAuthorNames()
@@ -64,7 +65,19 @@ export function Library() {
       <p className="mt-4 max-w-xl text-[#705f57]">Explorez les œuvres, filtrez par genre, auteur ou époque, et ajoutez vos lectures aux favoris.</p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[260px_1fr]">
-        <aside className="space-y-6 rounded-xl border border-[#E5DDCB] bg-white p-5">
+        {/* Bouton pour afficher/masquer les filtres sur mobile */}
+        <button
+          type="button"
+          onClick={() => setShowFilters((v) => !v)}
+          className="flex items-center justify-between rounded-lg border border-[#E5DDCB] bg-white px-4 py-3 text-sm font-medium text-[#1a1410] lg:hidden"
+        >
+          <span className="flex items-center gap-2">
+            <SlidersHorizontal className="h-4 w-4" /> Filtres
+          </span>
+          {showFilters ? <X className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+        </button>
+
+        <aside className={`${showFilters ? 'block' : 'hidden'} space-y-6 rounded-xl border border-[#E5DDCB] bg-white p-5 lg:block`}>
           <div>
             <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#6B5E4F]">Disponibilité</p>
             <div className="grid grid-cols-3 gap-1.5 rounded-lg bg-[#F5EFE4] p-1 text-xs font-semibold">
@@ -137,19 +150,19 @@ export function Library() {
           <BookGrid books={pageItems} view={view} />
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
             <p className="text-sm text-[#705f57]">Page {page} sur {totalPages} ({filtered.length} œuvres)</p>
-            <div className="flex gap-2">
-              <button type="button" disabled={page === 1} onClick={() => setPage((p) => p - 1)} className="rounded-lg border px-3 py-1.5 text-sm disabled:opacity-40">Précédent</button>
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              <button type="button" disabled={page === 1} onClick={() => setPage((p) => p - 1)} className="shrink-0 rounded-lg border px-3 py-1.5 text-sm disabled:opacity-40">Précédent</button>
               {Array.from({ length: totalPages }, (_, index) => (
                 <button
                   key={index}
                   type="button"
                   onClick={() => setPage(index + 1)}
-                  className={`rounded-lg px-3 py-1.5 text-sm ${page === index + 1 ? 'bg-[#8E461F] text-white' : 'border border-[#DDD1BE]'}`}
+                  className={`shrink-0 rounded-lg px-3 py-1.5 text-sm ${page === index + 1 ? 'bg-[#8E461F] text-white' : 'border border-[#DDD1BE]'}`}
                 >
                   {index + 1}
                 </button>
               ))}
-              <button type="button" disabled={page === totalPages} onClick={() => setPage((p) => p + 1)} className="rounded-lg border px-3 py-1.5 text-sm disabled:opacity-40">Suivant</button>
+              <button type="button" disabled={page === totalPages} onClick={() => setPage((p) => p + 1)} className="shrink-0 rounded-lg border px-3 py-1.5 text-sm disabled:opacity-40">Suivant</button>
             </div>
           </div>
         </section>

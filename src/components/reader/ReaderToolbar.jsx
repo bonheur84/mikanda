@@ -51,7 +51,7 @@ export function ReaderToolbar({
       <p id="progress-text" className="mr-3 hidden text-xs text-[#8f7770] sm:block">
         {progress} %
       </p>
-      <div className="flex flex-wrap items-center justify-end gap-1">
+      <div className="flex items-center justify-end gap-1 overflow-x-auto">
         <IconButton label="Rechercher dans le texte" onClick={onSearch}><Search className="h-4 w-4" /></IconButton>
         <IconButton label="Paramètres" onClick={onSettings}><Settings className="h-4 w-4" /></IconButton>
         <IconButton label="Mode immersif" onClick={onImmersive}><Maximize className="h-4 w-4" /></IconButton>

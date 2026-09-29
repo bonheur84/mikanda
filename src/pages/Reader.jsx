@@ -56,7 +56,7 @@ export function Reader() {
   
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
-  const [tocHidden, setTocHidden] = useState(false)
+  const [tocHidden, setTocHidden] = useState(() => typeof window !== 'undefined' && window.innerWidth < 1024)
   const [focusMode, setFocusMode] = useState(false)
   const [doublePage, setDoublePage] = useState(false)
   const [completed, setCompleted] = useState(false)
@@ -220,8 +220,8 @@ export function Reader() {
           />
         ) : null}
         
-        <main className={`flex-1 ${WIDTHS[width]} mx-auto px-6 py-12 ${immersive ? 'min-h-screen' : ''}`}>
-          <article className={`${ARTICLE_STYLES[theme]} rounded-xl p-8 shadow-sm sm:p-12 ${doublePage ? 'grid grid-cols-2 gap-8' : ''}`}>
+        <main className={`flex-1 ${WIDTHS[width]} mx-auto px-4 py-8 sm:px-6 sm:py-12 ${immersive ? 'min-h-screen' : ''}`}>
+          <article className={`${ARTICLE_STYLES[theme]} rounded-xl p-5 shadow-sm sm:p-8 lg:p-12 ${doublePage ? 'grid grid-cols-2 gap-8' : ''}`}>
             <div className="mb-6 flex items-center justify-between">
               <p className="text-sm text-[#8f7770]">{book.title} — {section.title}</p>
               <FavoriteButton book={book} variant="button" className="relative top-auto right-auto" />

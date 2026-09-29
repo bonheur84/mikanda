@@ -194,10 +194,10 @@ export function AudioSettings({ rate, volume, onRate, onVolume }) {
       {/* Vitesse */}
       <div className="flex items-center gap-2">
         <span className="text-xs text-[#705f57] w-14">Vitesse</span>
-        <div className="flex gap-1">
+        <div className="flex gap-1 overflow-x-auto">
           {rates.map((r) => (
             <button key={r} onClick={() => onRate(r)}
-              className={`rounded px-2 py-0.5 text-xs transition-colors ${rate === r ? 'bg-[#133a28] text-white' : 'border border-[#d9d1c6] text-[#705f57] hover:border-[#133a28]'}`}>
+              className={`shrink-0 rounded px-2.5 py-1 text-xs transition-colors ${rate === r ? 'bg-[#133a28] text-white' : 'border border-[#d9d1c6] text-[#705f57] hover:border-[#133a28]'}`}>
               {r}×
             </button>
           ))}

@@ -27,3 +27,9 @@ h6 {
 #reading-content ::selection {
   background: #fde68a;
 }
+
+/* Hide scrollbar for horizontally scrollable button rows on mobile */
+.overflow-x-auto {
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
