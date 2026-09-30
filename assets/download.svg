@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 540" role="img" aria-labelledby="title desc">
+  <title id="title">Mikanda — bibliothèque numérique congolaise</title>
+  <desc id="desc">Emblème noir détaillé réunissant un livre ouvert, un fleuve, un soleil et des feuillages, accompagné du nom Mikanda.</desc>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Double cadre gravé -->
+    <circle cx="260" cy="270" r="190" stroke-width="5.5"/>
+    <circle cx="260" cy="270" r="177" stroke-width="1.8"/>
+    <path d="M260 65l12 12-12 12-12-12zM260 451l12 12-12 12-12-12zM68 270l12-12 12 12-12 12zM440 270l12-12 12 12-12 12z" stroke-width="3.5"/>
+    <path d="M128 114l7 7-7 7-7-7zM392 114l7 7-7 7-7-7zM128 419l7 7-7 7-7-7zM392 419l7 7-7 7-7-7z" stroke-width="2.5"/>
+    <!-- Lever de soleil et lignes de lumière -->
+    <circle cx="260" cy="158" r="25" stroke-width="4.5"/>
+    <path d="M260 113V96M260 220v-17M215 158h-17M322 158h-17M228 126l-12-12M304 202l-12-12M292 126l12-12M216 202l12-12" stroke-width="3.5"/>
+    <path d="M240 158h40" stroke-width="2"/>
+    <!-- Rives et feuillages originaux -->
+    <path d="M103 253c39-32 76-44 116-35M301 218c39-9 76 3 116 35" stroke-width="4"/>
+    <path transform="matrix(.8 0 0 .8 52 54)" d="M106 250c-25-15-31-37-27-59 22 10 37 28 39 49M107 257c-30-4-49 8-62 28 26 5 47-2 62-22M138 230c-9-27-1-47 14-63 14 20 16 40 3 61M414 250c25-15 31-37 27-59-22 10-37 28-39 49M413 257c30-4 49 8 62 28-26 5-47-2-62-22M382 230c9-27 1-47-14-63-14 20-16 40-3 61" stroke-width="3.5"/>
+    <path transform="matrix(.8 0 0 .8 52 54)" d="M82 192c11 3 24 10 36 24M52 285c19 0 38-7 55-22M152 169c-1 13 0 27 5 42M438 192c-11 3-24 10-36 24M468 285c-19 0-38-7-55-22M368 169c1 13 0 27-5 42" stroke-width="1.8"/>
+    <!-- Fleuve en mouvement -->
+    <path d="M260 187c-4 25-43 27-40 54 2 22 40 24 40 46 0 16-18 22-22 38" stroke-width="7"/>
+    <path d="M242 198c11 12 23 16 38 17M224 248c13 4 26 3 38-4M242 286c12 5 21 11 25 21" stroke-width="2.5"/>
+    <!-- Livre ouvert, pages et lignes de lecture -->
+    <path d="M260 310c-38-27-83-29-127-12v78c45-17 88-15 127 13 39-28 82-30 127-13v-78c-44-17-89-15-127 12z" stroke-width="5.5"/>
+    <path d="M260 310v79M148 323c31-9 63-6 94 10M148 345c31-9 63-6 94 10M372 323c-31-9-63-6-94 10M372 345c-31-9-63-6-94 10" stroke-width="3"/>
+    <path d="M118 390c47-17 95-14 142 12 47-26 95-29 142-12M158 410c35-10 69-6 102 12 33-18 67-22 102-12" stroke-width="3.2"/>
+    <!-- Petits repères de gravure -->
+    <path d="M95 270h15M410 270h15M260 100v10M260 429v10" stroke-width="2.4"/>
+  </g>
+  <text x="500" y="330" fill="white" font-family="arial, serif" font-size="160" font-weight="bold" letter-spacing="-7">Mikanda</text>
+</svg>
