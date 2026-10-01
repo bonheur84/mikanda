@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="/assets/" />
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="selection:bg-[#e6bd76] selection:text-[#19231f]">
+<body class="selection:bg-[#e6bd76] selection:text-[#19231f] bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
     <div class="min-h-158 px-5 bg-[url('/assets/background.png')] bg-cover bg-center bg-no-repeat">
         <header class="grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-7 py-4 max-[1024px]:grid-cols-[1fr_auto] max-[1024px]:gap-3 max-[640px]:px-4 max-[640px]:py-3">
             <a href="" class="justify-self-start leading-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
@@ -42,7 +42,7 @@
             </div>
         </header>
 
-        <section class="px-7 pt-10">
+        <section class="px-7 pt-10 pb-25.5">
             <div class="text-[#e6bd76] uppercase text-[10px] font-medium tracking-[2px]">
                 <span>Une bibliotheque de la litterature Congolaise</span>
             </div>
@@ -59,7 +59,7 @@
                 <div>
                     <a href="">
                         <button class="mt-8 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#b85235] px-5 text-[14px] font-semibold text-white cursor-pointer no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-[#9a452b] ">
-                            <i data-lucide="book-open" class="mr-2 h-4 w-4"></i> Explorer la bibliothèque
+                            <i data-lucide="book-open" class="mr-2 h-4 w-4"></i> Explorer la bibliothèque <i data-lucide="arrow-up-right" class="ml-2 h-4.5 w-4.5"></i>
                         </button>
                     </a>
 
@@ -71,7 +71,78 @@
                 </div>
             </div>
         </section>
+        
     </div>
+
+    <section class="relative bg-[#f4f1ea] px-5 pb-6">
+        <div class="relative mx-auto max-w-230 bg-white px-5 py-2 rounded-full shadow-md bottom-11">
+            <div class="grid grid-cols-[1fr_208px] items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="search" class="h-6 w-6 text-[#b85235]"></i>
+                    <input type="search"
+                        placeholder="Un livre, un auteur, une envie de lecture..."
+                        class="w-full border-0 bg-transparent font-['Playfair_Display',Georgia,serif] text-[24px] placeholder:text-[#81776e] focus:outline-none">
+                </div>
+
+                <button type="button" class="inline-flex min-h-15 items-center cursor-pointer justify-center gap-3 rounded-full bg-[#19231f] px-5 text-[16px] font-semibold text-white hover:transform hover:-translate-y-px transition duration-150">
+                    Rechercher
+                    <i data-lucide="arrow-up-right" class="h-4.5 w-4.5"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#f4f1ea] px-5 pb-10">
+        <blockquote class="mx-auto max-w-225 pb-12 pt-6 text-center">
+            <p class="mb-3 text-[12px] font-semibold uppercase tracking-[3px] text-[#b85235]">
+                Une parole de Patrice Lumumba
+            </p>
+            <p class="font-['Playfair_Display',Georgia,serif] text-[40px] leading-tight text-[#19231f]">
+                « L’indépendance du Congo marque un pas décisif vers la libération de tout le continent africain. »
+            </p>
+            <cite class="mt-4 block text-[14px] not-italic text-[#81776e]">
+                Discours de l’indépendance, 30 juin 1960
+            </cite>
+        </blockquote>
+
+        <div class="grid grid-cols-4 gap-4">
+            <article class="group relative h-90 overflow-hidden rounded-lg cursor-pointer">
+                <img src="assets/image1.jfif" alt="Un jeune lecteur absorbé dans un livre" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-linear-to-t from-[#101713]/90 via-[#101713]/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="mb-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]">Lecture</p>
+                    <h3 class="font-['Playfair_Display',Georgia,serif] text-[26px] leading-[1.15]">La force des mots</h3>
+                </div>
+            </article>
+
+            <article class="group relative h-90 overflow-hidden rounded-lg cursor-pointer">
+                <img src="assets/image2.jfif" alt="Fresque de Patrice Lumumba peinte sur un mur" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-linear-to-t from-[#101713]/90 via-[#101713]/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="mb-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]">Mémoire</p>
+                    <h3 class="font-['Playfair_Display',Georgia,serif] text-[26px] leading-[1.15]">Une voix vivante</h3>
+                </div>
+            </article>
+
+            <article class="group relative h-90 overflow-hidden rounded-lg cursor-pointer">
+                <img src="assets/image3.jfif" alt="Une femme et un enfant près d’un drapeau de la RDC" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-linear-to-t from-[#101713]/90 via-[#101713]/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="mb-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]">Transmission</p>
+                    <h3 class="font-['Playfair_Display',Georgia,serif] text-[26px] leading-[1.15]">D’une génération à l’autre</h3>
+                </div>
+            </article>
+
+            <article class="group relative h-90 overflow-hidden rounded-lg cursor-pointer">
+                <img src="assets/image4.jfif" alt="Portrait illustré de Patrice Lumumba et citation" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-linear-to-t from-[#101713]/90 via-[#101713]/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="mb-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]">Héritage</p>
+                    <h3 class="font-['Playfair_Display',Georgia,serif] text-[26px] leading-[1.15]">L’Afrique en partage</h3>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <script>
         lucide.createIcons();
