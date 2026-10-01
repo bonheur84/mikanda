@@ -2,16 +2,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#19231f">
     <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/tailwind.css" rel="stylesheet">
     <title>Mikanda - Bibliothèque de la littérature congolaise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <div class="min-h-158 px-5 bg-[url('/assets/Image%20ChatGPT%2030%20sept.%202026%2C%2009_56_49.png')] bg-cover bg-center bg-no-repeat">
-        <header class="grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-10 py-4 max-[1024px]:grid-cols-[1fr_auto] max-[1024px]:gap-3 max-[640px]:px-4 max-[640px]:py-3">
+<body class="selection:bg-[#e6bd76] selection:text-[#19231f]">
+    <div class="min-h-158 px-5 bg-[url('/assets/background.png')] bg-cover bg-center bg-no-repeat">
+        <header class="grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-7 py-4 max-[1024px]:grid-cols-[1fr_auto] max-[1024px]:gap-3 max-[640px]:px-4 max-[640px]:py-3">
             <a href="" class="justify-self-start leading-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                 <img src="assets/download.svg" alt="Mikanda" class="block h-13 w-32 object-contain brightness-0 invert max-[640px]:h-11 max-[640px]:w-24">
             </a>
@@ -26,10 +29,52 @@
                 <a href="" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-[#f3b552] no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-[#f3b552] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Premium</a>
             </nav>
 
-            <a href="" class="inline-flex min-h-12 items-center justify-center justify-self-end whitespace-nowrap rounded-full bg-[#133a28] px-6 text-[15px] font-semibold text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white max-[640px]:min-h-11 max-[640px]:px-4 max-[640px]:text-[14px]">
-                Se connecter
-            </a>
+            <div class="flex items-center justify-end gap-4">
+                <div>
+                    <a href="">
+                        <i data-lucide="heart" class="text-[#6b5b50] hover:text-[#5a4a40]"></i>
+                    </a>
+                </div>
+
+                <a href="" class="inline-flex min-h-12 items-center justify-center justify-self-end whitespace-nowrap rounded-full bg-[#133a28] px-6 text-[15px] font-semibold text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white max-[640px]:min-h-11 max-[640px]:px-4 max-[640px]:text-[14px]">
+                    <i data-lucide="user" class="mr-2 h-4 w-4"></i> Se connecter 
+                </a>
+            </div>
         </header>
+
+        <section class="px-7 pt-10">
+            <div class="text-[#e6bd76] uppercase text-[10px] font-medium tracking-[2px]">
+                <span>Une bibliotheque de la litterature Congolaise</span>
+            </div>
+
+            <h1 class="text-white text-[80px] font-bold leading-20 tracking-wide w-220 mt-4 font-['Playfair_Display',Georgia,serif]">
+                Découvrez la richesse de la <em class="text-[#e6bd76]">littérature congolaise.</em>
+            </h1>
+
+            <p class="text-white text-[16px] leading-7 tracking-wide mt-6 w-130">
+                Mikanda rassemble les voix, les histoires et les idées de la littérature congolaise. Une bibliothèque à découvrir, lire et partager, où que l’on soit.
+            </p>
+
+            <div>
+                <div>
+                    <a href="">
+                        <button class="mt-8 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#b85235] px-5 text-[14px] font-semibold text-white cursor-pointer no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-[#9a452b] ">
+                            <i data-lucide="book-open" class="mr-2 h-4 w-4"></i> Explorer la bibliothèque
+                        </button>
+                    </a>
+
+                    <a href="">
+                        <button class="mt-8 ml-4 inline-flex min-h-11 items-center justify-center rounded-sm border border-white px-5 text-[14px] font-semibold cursor-pointer text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-white/10 ">
+                            Decouvrir les auteurs
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
