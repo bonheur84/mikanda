@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" role="img" aria-labelledby="title desc">
+  <title id="title">Mikanda — la bibliothèque congolaise</title>
+  <desc id="desc">Le nom Mikanda accompagné de trois barres colorées et de la signature La bibliothèque congolaise.</desc>
+  <g aria-hidden="true">
+    <path d="M5 57 27 51v37L5 94z" fill="#b85235"/>
+    <path d="m32 44 22-6v47l-22 6z" fill="#6b866f"/>
+    <path d="m59 49 22-6v39l-22 6z" fill="#e6bd76"/>
+  </g>
+  <text x="98" y="59" fill="#f4f1ea" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="-2">mikanda<tspan fill="#b85235">.</tspan></text>
+  <text x="100" y="92" fill="#c4c9c3" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.2">LA BIBLIOTHÈQUE CONGOLAISE</text>
+</svg>
