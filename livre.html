@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Fiches de lecture de la bibliothèque Mikanda : romans, essais et récits sur le Congo.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#19231f">
+  <link href="./dist/tailwind.css" rel="stylesheet">
+  <title>Fiches de lecture | Mikanda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-5 py-3 sm:px-8 sm:py-4">
+      <a href="index.html#accueil" aria-label="Mikanda, accueil" class="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52"></a>
+      <nav aria-label="Navigation principale" class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-none lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
+        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] hover:bg-white/10 hover:text-white">Accueil</a>
+        <a href="bibliotheque.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76]">Bibliothèque</a>
+        <a href="auteurs.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] hover:bg-white/10 hover:text-white">Auteurs</a>
+        <a href="index.html#collections" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] hover:bg-white/10 hover:text-white">Collections</a>
+      </nav>
+      <a href="bibliotheque.html" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] lg:inline-flex">Retour au catalogue <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="px-5 pb-20 sm:px-8">
+    <div class="mx-auto max-w-7xl pt-8 sm:pt-12">
+      <nav aria-label="Fil d’Ariane" class="mb-8 flex flex-wrap items-center gap-2 text-xs text-[#81776e]">
+        <a href="index.html#accueil" class="hover:text-[#b85235]">Accueil</a><span aria-hidden="true">/</span>
+        <a href="bibliotheque.html" class="hover:text-[#b85235]">Bibliothèque</a><span aria-hidden="true">/</span>
+        <span aria-current="page" class="text-[#19231f]">Fiches de lecture</span>
+      </nav>
+      <div class="mb-10 max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Le catalogue Mikanda</p>
+        <h1 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-tight sm:text-6xl">Chaque livre ouvre un monde.</h1>
+        <p class="mt-4 max-w-2xl text-base leading-7 text-[#59635d]">Découvrez les œuvres du catalogue, leurs auteurs et les histoires qu’elles font circuler.</p>
+      </div>
+
+      <div class="mb-10 flex flex-wrap gap-2 border-y border-[#d8d2c5] py-4 text-xs font-semibold">
+        <a href="#dans-le-ventre-du-congo" class="rounded-full bg-[#19231f] px-4 py-2.5 text-white hover:bg-[#133a28]">Dans le ventre du Congo</a>
+        <a href="#a-quand-le-congo" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">À quand le Congo ?</a>
+        <a href="#congo-inc" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Congo Inc.</a>
+        <a href="#congo-histoire" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Congo : une histoire épique</a>
+      </div>
+
+      <div class="space-y-6">
+        <article id="dans-le-ventre-du-congo" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm md:grid-cols-[minmax(260px,0.72fr)_1.28fr]">
+          <div class="flex min-h-[360px] items-center justify-center bg-[#e9e4d9] p-8 sm:min-h-[430px]">
+            <img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo de Blaise Ndala" class="max-h-[390px] w-full object-contain drop-shadow-[0_18px_20px_rgba(25,35,31,0.24)]">
+          </div>
+          <div class="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Roman · Mémoire &amp; histoire</p>
+            <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl leading-tight sm:text-5xl">Dans le ventre du Congo</h2>
+            <p class="mt-3 text-lg text-[#59635d]">Blaise Ndala</p>
+            <p class="mt-7 max-w-2xl text-base leading-7 text-[#59635d]">Un roman qui fait dialoguer les histoires intimes et la mémoire du Congo. Une invitation à parcourir un récit où les voix et les souvenirs se répondent.</p>
+            <dl class="mt-8 grid gap-4 border-y border-[#e3ddd0] py-5 text-sm sm:grid-cols-2">
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Genre</dt><dd class="mt-1 font-semibold">Roman historique</dd></div>
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Éditeur</dt><dd class="mt-1 font-semibold">Mémoire d’Encrier</dd></div>
+            </dl>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="auteur.html#blaise-ndala" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#133a28] px-5 text-sm font-semibold text-white hover:bg-[#1d5239]">Découvrir Blaise Ndala <span aria-hidden="true">↗</span></a>
+              <a href="bibliotheque.html" class="inline-flex min-h-12 items-center justify-center rounded-full border border-[#cfc8b9] px-5 text-sm font-semibold text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Retour au catalogue</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="a-quand-le-congo" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm md:grid-cols-[minmax(260px,0.72fr)_1.28fr]">
+          <div class="flex min-h-[360px] items-center justify-center bg-[#e9e4d9] p-8 sm:min-h-[430px]"><img src="assets/livre (2).jfif" alt="Couverture de À quand le Congo ? de Jean-Pierre Mbelu" class="max-h-[390px] w-full object-contain drop-shadow-[0_18px_20px_rgba(25,35,31,0.24)]"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Essai · Idées &amp; réflexions</p>
+            <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl leading-tight sm:text-5xl">À quand le Congo ?</h2>
+            <p class="mt-3 text-lg text-[#59635d]">Jean-Pierre Mbelu</p>
+            <p class="mt-2 text-sm text-[#81776e]">Entretiens avec Esimba Ifonge</p>
+            <p class="mt-7 max-w-2xl text-base leading-7 text-[#59635d]">Des réflexions et propositions pour une renaissance panafricaine, présentées sous la forme d’entretiens.</p>
+            <dl class="mt-8 grid gap-4 border-y border-[#e3ddd0] py-5 text-sm sm:grid-cols-2">
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Genre</dt><dd class="mt-1 font-semibold">Essai</dd></div>
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Éditeur</dt><dd class="mt-1 font-semibold">Congo Lobi Lelo</dd></div>
+            </dl>
+            <div class="mt-7 flex flex-wrap gap-3"><a href="auteur.html#jean-pierre-mbelu" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#133a28] px-5 text-sm font-semibold text-white hover:bg-[#1d5239]">Découvrir Jean-Pierre Mbelu <span aria-hidden="true">↗</span></a><a href="bibliotheque.html" class="inline-flex min-h-12 items-center justify-center rounded-full border border-[#cfc8b9] px-5 text-sm font-semibold text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Retour au catalogue</a></div>
+          </div>
+        </article>
+
+        <article id="congo-inc" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm md:grid-cols-[minmax(260px,0.72fr)_1.28fr]">
+          <div class="flex min-h-[360px] items-center justify-center bg-[#e9e4d9] p-8 sm:min-h-[430px]"><img src="assets/livre (3).jfif" alt="Couverture de Congo Inc. : Le testament de Bismarck d’In Koli Jean Bofane" class="max-h-[390px] w-full object-contain drop-shadow-[0_18px_20px_rgba(25,35,31,0.24)]"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Roman · Fiction contemporaine</p>
+            <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl leading-tight sm:text-5xl">Congo Inc. : Le testament de Bismarck</h2>
+            <p class="mt-3 text-lg text-[#59635d]">In Koli Jean Bofane</p>
+            <p class="mt-7 max-w-2xl text-base leading-7 text-[#59635d]">Une fiction contemporaine au croisement des imaginaires congolais et du monde. Le récit invite à découvrir un regard singulier sur le Congo d’aujourd’hui.</p>
+            <dl class="mt-8 grid gap-4 border-y border-[#e3ddd0] py-5 text-sm sm:grid-cols-2">
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Genre</dt><dd class="mt-1 font-semibold">Roman</dd></div>
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Éditeur indiqué sur la couverture</dt><dd class="mt-1 font-semibold">Actes Sud</dd></div>
+            </dl>
+            <div class="mt-7 flex flex-wrap gap-3"><a href="auteur.html#in-koli-jean-bofane" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#133a28] px-5 text-sm font-semibold text-white hover:bg-[#1d5239]">Découvrir In Koli Jean Bofane <span aria-hidden="true">↗</span></a><a href="bibliotheque.html" class="inline-flex min-h-12 items-center justify-center rounded-full border border-[#cfc8b9] px-5 text-sm font-semibold text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Retour au catalogue</a></div>
+          </div>
+        </article>
+
+        <article id="congo-histoire" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm md:grid-cols-[minmax(260px,0.72fr)_1.28fr]">
+          <div class="flex min-h-[360px] items-center justify-center bg-[#e9e4d9] p-8 sm:min-h-[430px]"><img src="assets/livre (4).jfif" alt="Couverture de Congo: The Epic History of a People de David Van Reybrouck" class="max-h-[390px] w-full object-contain drop-shadow-[0_18px_20px_rgba(25,35,31,0.24)]"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Histoire · Récit</p>
+            <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl leading-tight sm:text-5xl">Congo : une histoire épique d’un peuple</h2>
+            <p class="mt-3 text-lg text-[#59635d]">David Van Reybrouck</p>
+            <p class="mt-7 max-w-2xl text-base leading-7 text-[#59635d]">Une traversée de l’histoire du Congo à hauteur de celles et ceux qui l’ont vécue. Cette édition porte le titre anglais <em>Congo: The Epic History of a People</em> sur sa couverture.</p>
+            <dl class="mt-8 grid gap-4 border-y border-[#e3ddd0] py-5 text-sm sm:grid-cols-2">
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Genre</dt><dd class="mt-1 font-semibold">Récit historique</dd></div>
+              <div><dt class="text-xs uppercase tracking-wide text-[#81776e]">Auteur</dt><dd class="mt-1 font-semibold">David Van Reybrouck</dd></div>
+            </dl>
+            <div class="mt-7 flex flex-wrap gap-3"><a href="auteur.html#david-van-reybrouck" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#133a28] px-5 text-sm font-semibold text-white hover:bg-[#1d5239]">Découvrir David Van Reybrouck <span aria-hidden="true">↗</span></a><a href="bibliotheque.html" class="inline-flex min-h-12 items-center justify-center rounded-full border border-[#cfc8b9] px-5 text-sm font-semibold text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Retour au catalogue</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#19231f] px-5 py-8 text-sm text-[#d1d8d2] sm:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <a href="index.html#accueil" class="font-['Playfair_Display',Georgia,serif] text-xl font-bold text-[#f4f1ea]">mikanda<span class="text-[#b85235]">.</span></a>
+      <p>© 2026 Mikanda · Maquette de démonstration</p>
+      <a href="bibliotheque.html" class="hover:text-[#e6bd76]">Retour à la bibliothèque ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

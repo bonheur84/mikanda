@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portraits et repères pour découvrir les auteurs présents dans l’univers Mikanda.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#19231f">
+  <link href="./dist/tailwind.css" rel="stylesheet">
+  <title>Portraits d’auteurs | Mikanda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-5 py-3 sm:px-8 sm:py-4">
+      <a href="index.html#accueil" aria-label="Mikanda, accueil" class="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52"></a>
+      <nav aria-label="Navigation principale" class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-none lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
+        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] hover:bg-white/10 hover:text-white">Accueil</a>
+        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] hover:bg-white/10 hover:text-white">Bibliothèque</a>
+        <a href="auteurs.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76]">Auteurs</a>
+        <a href="index.html#collections" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] hover:bg-white/10 hover:text-white">Collections</a>
+      </nav>
+      <a href="auteurs.html" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] lg:inline-flex">Retour aux auteurs <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="px-5 pb-20 sm:px-8">
+    <div class="mx-auto max-w-7xl pt-8 sm:pt-12">
+      <nav aria-label="Fil d’Ariane" class="mb-8 flex items-center gap-2 text-xs text-[#81776e]"><a href="index.html#accueil" class="hover:text-[#b85235]">Accueil</a><span aria-hidden="true">/</span><a href="auteurs.html" class="hover:text-[#b85235]">Auteurs</a><span aria-hidden="true">/</span><span aria-current="page" class="text-[#19231f]">Portraits</span></nav>
+      <div class="mb-10 max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Voix &amp; parcours</p>
+        <h1 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-tight sm:text-6xl">Rencontrer les auteurs.</h1>
+        <p class="mt-4 max-w-2xl text-base leading-7 text-[#59635d]">Quelques repères pour entrer dans leurs univers et retrouver les œuvres liées au catalogue Mikanda.</p>
+      </div>
+      <nav aria-label="Choisir un portrait" class="mb-10 flex flex-wrap gap-2 border-y border-[#d8d2c5] py-4 text-xs font-semibold">
+        <a href="#blaise-ndala" class="rounded-full bg-[#19231f] px-4 py-2.5 text-white hover:bg-[#133a28]">Blaise Ndala</a>
+        <a href="#fiston-mwanza-mujila" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Fiston Mwanza Mujila</a>
+        <a href="#in-koli-jean-bofane" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">In Koli Jean Bofane</a>
+        <a href="#kama-sywor-kamanda" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Kama Sywor Kamanda</a>
+        <a href="#jean-pierre-mbelu" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Jean-Pierre Mbelu</a>
+        <a href="#david-van-reybrouck" class="rounded-full border border-[#cfc8b9] px-4 py-2.5 text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">David Van Reybrouck</a>
+      </nav>
+
+      <div class="space-y-5">
+        <article id="blaise-ndala" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] md:grid-cols-[minmax(230px,0.65fr)_1.35fr]">
+          <div class="min-h-72 overflow-hidden bg-[#d8d2c5] sm:min-h-96"><img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" loading="lazy" class="h-full min-h-72 w-full object-cover object-top grayscale sm:min-h-96"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12"><p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Romancier</p><h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl">Blaise Ndala</h2><p class="mt-5 max-w-2xl text-base leading-7 text-[#59635d]">Ses récits font se rencontrer la mémoire et l’histoire. Dans le catalogue Mikanda, il est représenté par <em>Dans le ventre du Congo</em>.</p><a href="livre.html#dans-le-ventre-du-congo" class="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#133a28] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1d5239]">Voir le livre <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article id="fiston-mwanza-mujila" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] md:grid-cols-[minmax(230px,0.65fr)_1.35fr]">
+          <div class="min-h-72 overflow-hidden bg-[#d8d2c5] sm:min-h-96"><img src="assets/auteurs/fiston-mwanza-mujila.jpg" alt="Portrait de Fiston Mwanza Mujila" loading="lazy" class="h-full min-h-72 w-full object-cover object-top grayscale sm:min-h-96"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12"><p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Poète et romancier</p><h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl">Fiston Mwanza Mujila</h2><p class="mt-5 max-w-2xl text-base leading-7 text-[#59635d]">Une langue inventive, traversée par le rythme et la poésie. Son parcours invite à explorer les formes et les sonorités du récit.</p><a href="bibliotheque.html" class="mt-7 inline-flex w-fit items-center gap-2 rounded-full border border-[#cfc8b9] px-5 py-3 text-sm font-semibold text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Parcourir la bibliothèque <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article id="in-koli-jean-bofane" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] md:grid-cols-[minmax(230px,0.65fr)_1.35fr]">
+          <div class="min-h-72 overflow-hidden bg-[#d8d2c5] sm:min-h-96"><img src="assets/auteurs/in-koli-jean-bofane.jpg" alt="Portrait d’In Koli Jean Bofane" loading="lazy" class="h-full min-h-72 w-full object-cover object-top grayscale sm:min-h-96"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12"><p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Romancier</p><h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl">In Koli Jean Bofane</h2><p class="mt-5 max-w-2xl text-base leading-7 text-[#59635d]">Un regard singulier sur le Congo et le monde contemporain. <em>Congo Inc. : Le testament de Bismarck</em> figure dans le catalogue.</p><a href="livre.html#congo-inc" class="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#133a28] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1d5239]">Voir le livre <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article id="kama-sywor-kamanda" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] md:grid-cols-[minmax(230px,0.65fr)_1.35fr]">
+          <div class="min-h-72 overflow-hidden bg-[#d8d2c5] sm:min-h-96"><img src="assets/auteurs/kama-sywor-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" loading="lazy" class="h-full min-h-72 w-full object-cover object-top grayscale sm:min-h-96"></div>
+          <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12"><p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Poète et conteur</p><h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl">Kama Sywor Kamanda</h2><p class="mt-5 max-w-2xl text-base leading-7 text-[#59635d]">Ses poèmes et récits s’inspirent des imaginaires africains et donnent une place centrale à la parole et à la transmission.</p><a href="bibliotheque.html" class="mt-7 inline-flex w-fit items-center gap-2 rounded-full border border-[#cfc8b9] px-5 py-3 text-sm font-semibold text-[#59635d] hover:border-[#133a28] hover:text-[#133a28]">Parcourir la bibliothèque <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article id="jean-pierre-mbelu" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] md:grid-cols-[minmax(230px,0.65fr)_1.35fr]">
+          <div class="flex min-h-64 items-center justify-center bg-[#e9e4d9] p-8 sm:min-h-80"><span aria-hidden="true" class="font-['Playfair_Display',Georgia,serif] text-7xl text-[#b85235]/75">JM</span></div>
+          <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12"><p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Auteur d’essais</p><h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl">Jean-Pierre Mbelu</h2><p class="mt-5 max-w-2xl text-base leading-7 text-[#59635d]">Dans <em>À quand le Congo ?</em>, il propose des réflexions et des entretiens autour d’une renaissance panafricaine.</p><a href="livre.html#a-quand-le-congo" class="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#133a28] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1d5239]">Voir le livre <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article id="david-van-reybrouck" class="scroll-mt-32 grid overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] md:grid-cols-[minmax(230px,0.65fr)_1.35fr]">
+          <div class="flex min-h-64 items-center justify-center bg-[#e9e4d9] p-8 sm:min-h-80"><span aria-hidden="true" class="font-['Playfair_Display',Georgia,serif] text-7xl text-[#133a28]/75">DV</span></div>
+          <div class="flex flex-col justify-center p-6 sm:p-9 lg:p-12"><p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#b85235]">Auteur</p><h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl">David Van Reybrouck</h2><p class="mt-5 max-w-2xl text-base leading-7 text-[#59635d]">Le récit <em>Congo : une histoire épique d’un peuple</em> traverse l’histoire du pays et s’attache aux voix de celles et ceux qui l’ont vécue.</p><a href="livre.html#congo-histoire" class="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#133a28] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1d5239]">Voir le livre <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#19231f] px-5 py-8 text-sm text-[#d1d8d2] sm:px-8"><div class="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><a href="index.html#accueil" class="font-['Playfair_Display',Georgia,serif] text-xl font-bold text-[#f4f1ea]">mikanda<span class="text-[#b85235]">.</span></a><p>© 2026 Mikanda · Maquette de démonstration</p><a href="auteurs.html" class="hover:text-[#e6bd76]">Retour aux auteurs ↑</a></div></footer>
+</body>
+</html>

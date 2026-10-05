@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -10,27 +10,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
   <a href="#catalogue" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-[#19231f]">Aller au catalogue</a>
 
-  <header class="bg-[#19231f] text-[#f4f1ea]">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-4 px-5 py-4 sm:px-8">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-5 py-3 sm:px-8 sm:py-4">
       <a href="index.html#accueil" aria-label="Mikanda, accueil" class="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">
         <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52">
       </a>
 
-      <nav aria-label="Navigation principale" class="order-3 flex w-full flex-wrap items-center justify-center gap-1 sm:order-none sm:w-auto sm:gap-2">
-        <a href="index.html#accueil" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Accueil</a>
-        <a href="bibliotheque.html" aria-current="page" class="rounded-full bg-white/10 px-3 py-2 text-sm font-semibold text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Bibliothèque</a>
-        <a href="index.html#auteurs" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Auteurs</a>
-        <a href="index.html#collections" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Collections</a>
-        <a href="index.html#mission" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">À propos</a>
+      <nav aria-label="Navigation principale" class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-none lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
+        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Accueil</a>
+        <a href="bibliotheque.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Bibliothèque</a>
+        <a href="auteurs.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Auteurs</a>
+        <a href="index.html#collections" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Collections</a>
+        <a href="index.html#mission" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">À propos</a>
       </nav>
 
-      <a href="#catalogue" class="hidden items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium transition-colors hover:border-[#e6bd76] hover:text-[#e6bd76] sm:inline-flex">
-        <i data-lucide="search" class="h-4 w-4"></i> Trouver un livre
+      <a href="#catalogue" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
+        Explorer le catalogue <span aria-hidden="true">↗</span>
       </a>
     </div>
   </header>
@@ -50,8 +49,8 @@
             Romans, essais et récits : prenez le temps de découvrir les voix qui racontent le Congo, ses mémoires et ses imaginaires.
           </p>
           <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[#e8e7df]">
-            <span class="inline-flex items-center gap-2"><i data-lucide="book-open" class="h-4 w-4 text-[#e6bd76]"></i> 4 œuvres à explorer</span>
-            <span class="inline-flex items-center gap-2"><i data-lucide="feather" class="h-4 w-4 text-[#e6bd76]"></i> Des voix et des mémoires</span>
+            <span>4 œuvres à explorer</span>
+            <span>Des voix et des mémoires</span>
           </div>
         </div>
         <div class="absolute bottom-5 right-5 hidden max-w-[210px] rotate-2 rounded-xl border border-white/20 bg-[#19231f]/80 p-4 text-white shadow-2xl backdrop-blur-sm md:block lg:bottom-8 lg:right-8">
@@ -70,47 +69,24 @@
             <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium tracking-tight sm:text-5xl">Explorer les livres</h2>
             <p class="mt-3 max-w-xl text-sm leading-6 text-[#59635d] sm:text-base">Un premier aperçu des œuvres et des idées qui font vivre la bibliothèque.</p>
           </div>
-          <p class="inline-flex items-center gap-2 text-sm text-[#59635d]"><i data-lucide="library" class="h-4 w-4 text-[#b85235]"></i> Une bibliothèque en mouvement</p>
+          <p class="text-sm text-[#59635d]">Une bibliothèque en mouvement</p>
         </div>
 
-        <div class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-3 shadow-[0_12px_36px_rgba(25,35,31,0.06)] sm:p-4">
-          <form id="search-form" role="search" class="flex flex-col gap-3 sm:flex-row" action="#catalogue">
-            <label for="search-input" class="sr-only">Rechercher un titre, un auteur ou un genre</label>
-            <div class="flex min-h-14 flex-1 items-center gap-3 rounded-xl border border-[#e3ddd0] bg-white px-4 focus-within:border-[#b85235] focus-within:ring-2 focus-within:ring-[#b85235]/15">
-              <i data-lucide="search" class="h-5 w-5 shrink-0 text-[#b85235]"></i>
-              <input id="search-input" type="search" autocomplete="off" placeholder="Un livre, un auteur, un genre…" class="h-full min-w-0 flex-1 bg-transparent py-3 text-sm text-[#19231f] outline-none placeholder:text-[#81776e] sm:text-base">
-              <kbd class="hidden rounded border border-[#e3ddd0] px-2 py-1 text-[10px] text-[#81776e] sm:inline">⌕</kbd>
-            </div>
-            <button type="submit" class="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#133a28] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#1d5239] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">
-              Rechercher <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-            </button>
-          </form>
-          <div class="mt-4 flex flex-col gap-4 border-t border-[#e8e2d8] pt-4 sm:flex-row sm:items-center sm:justify-between">
-            <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filtrer par genre">
-              <span class="mr-1 text-xs font-semibold uppercase tracking-[1.2px] text-[#81776e]">Genres</span>
-              <button type="button" data-filter="all" aria-pressed="true" class="filter-chip rounded-full bg-[#19231f] px-4 py-2 text-xs font-semibold text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Tout</button>
-              <button type="button" data-filter="roman" aria-pressed="false" class="filter-chip rounded-full border border-[#d8d2c5] px-4 py-2 text-xs font-medium text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Romans</button>
-              <button type="button" data-filter="essai" aria-pressed="false" class="filter-chip rounded-full border border-[#d8d2c5] px-4 py-2 text-xs font-medium text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Essais</button>
-              <button type="button" data-filter="histoire" aria-pressed="false" class="filter-chip rounded-full border border-[#d8d2c5] px-4 py-2 text-xs font-medium text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Histoire</button>
-            </div>
-            <label class="flex items-center gap-2 text-xs text-[#59635d]">
-              <span>Trier par</span>
-              <select id="sort-select" class="rounded-lg border border-[#d8d2c5] bg-white px-3 py-2 text-xs font-medium text-[#19231f] outline-none focus-visible:ring-2 focus-visible:ring-[#b85235]/30">
-                <option value="featured">Sélection Mikanda</option>
-                <option value="az">Titre : A à Z</option>
-                <option value="za">Titre : Z à A</option>
-              </select>
-            </label>
-          </div>
-        </div>
+        <nav aria-label="Accès rapide aux livres" class="flex flex-wrap items-center gap-2 rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-4 shadow-[0_12px_36px_rgba(25,35,31,0.06)] sm:p-5">
+          <span class="mr-1 text-xs font-semibold uppercase tracking-[1.2px] text-[#81776e]">Parcourir</span>
+          <a href="livre.html#dans-le-ventre-du-congo" class="rounded-full bg-[#19231f] px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Romans</a>
+          <a href="livre.html#a-quand-le-congo" class="rounded-full border border-[#d8d2c5] px-4 py-2.5 text-xs font-semibold text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Essai</a>
+          <a href="livre.html#congo-histoire" class="rounded-full border border-[#d8d2c5] px-4 py-2.5 text-xs font-semibold text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Histoire</a>
+          <a href="livre.html" class="ml-auto inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold text-[#b85235] hover:text-[#8f3d27]">Toutes les fiches <span aria-hidden="true">↗</span></a>
+        </nav>
 
         <div class="mb-5 mt-8 flex items-center justify-between gap-4">
-          <p id="result-count" aria-live="polite" class="text-sm text-[#59635d]">4 œuvres</p>
+          <p class="text-sm text-[#59635d]">4 œuvres</p>
           <span class="hidden text-xs text-[#81776e] sm:inline">Littérature et mémoire du Congo</span>
         </div>
 
         <div id="book-grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <article class="book-card group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]" data-genre="roman" data-title="Dans le ventre du Congo" data-author="Blaise Ndala">
+          <article class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]">
             <div class="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden bg-[#e9e4d9] p-7">
               <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[1.3px] text-[#133a28]">Roman</span>
               <img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo de Blaise Ndala" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_15px_16px_rgba(25,35,31,0.22)] transition-transform duration-500 group-hover:scale-[1.04]">
@@ -120,12 +96,13 @@
               <p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
               <div class="mt-5 flex items-center justify-between border-t border-[#e3ddd0] pt-4">
                 <span class="text-xs font-medium text-[#81776e]">Roman historique</span>
-                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><i data-lucide="bookmark" class="h-4 w-4"></i></span>
+                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><span aria-hidden="true">✦</span></span>
               </div>
+              <a href="livre.html#dans-le-ventre-du-congo" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28] hover:text-[#b85235]">Voir la fiche <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <article class="book-card group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]" data-genre="essai" data-title="À quand le Congo ?" data-author="Jean-Pierre Mbelu">
+          <article class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]">
             <div class="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden bg-[#e9e4d9] p-7">
               <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[1.3px] text-[#133a28]">Essai</span>
               <img src="assets/livre (2).jfif" alt="Couverture de À quand le Congo ? de Jean-Pierre Mbelu" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_15px_16px_rgba(25,35,31,0.22)] transition-transform duration-500 group-hover:scale-[1.04]">
@@ -135,12 +112,13 @@
               <p class="mt-1 text-sm text-[#59635d]">Jean-Pierre Mbelu</p>
               <div class="mt-5 flex items-center justify-between border-t border-[#e3ddd0] pt-4">
                 <span class="text-xs font-medium text-[#81776e]">Réflexions &amp; propositions</span>
-                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><i data-lucide="bookmark" class="h-4 w-4"></i></span>
+                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><span aria-hidden="true">✦</span></span>
               </div>
+              <a href="livre.html#a-quand-le-congo" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28] hover:text-[#b85235]">Voir la fiche <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <article class="book-card group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]" data-genre="roman" data-title="Congo Inc. : Le testament de Bismarck" data-author="In Koli Jean Bofane">
+          <article class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]">
             <div class="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden bg-[#e9e4d9] p-7">
               <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[1.3px] text-[#133a28]">Roman</span>
               <img src="assets/livre (3).jfif" alt="Couverture de Congo Inc. : Le testament de Bismarck d’In Koli Jean Bofane" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_15px_16px_rgba(25,35,31,0.22)] transition-transform duration-500 group-hover:scale-[1.04]">
@@ -150,12 +128,13 @@
               <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
               <div class="mt-5 flex items-center justify-between border-t border-[#e3ddd0] pt-4">
                 <span class="text-xs font-medium text-[#81776e]">Fiction contemporaine</span>
-                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><i data-lucide="bookmark" class="h-4 w-4"></i></span>
+                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><span aria-hidden="true">✦</span></span>
               </div>
+              <a href="livre.html#congo-inc" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28] hover:text-[#b85235]">Voir la fiche <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <article class="book-card group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]" data-genre="histoire" data-title="Congo : une histoire épique d’un peuple" data-author="David Van Reybrouck">
+          <article class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/35 hover:shadow-[0_18px_42px_rgba(25,35,31,0.12)]">
             <div class="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden bg-[#e9e4d9] p-7">
               <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[1.3px] text-[#133a28]">Histoire</span>
               <img src="assets/livre (4).jfif" alt="Couverture de Congo, une histoire épique d’un peuple de David Van Reybrouck" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_15px_16px_rgba(25,35,31,0.22)] transition-transform duration-500 group-hover:scale-[1.04]">
@@ -165,18 +144,13 @@
               <p class="mt-1 text-sm text-[#59635d]">David Van Reybrouck</p>
               <div class="mt-5 flex items-center justify-between border-t border-[#e3ddd0] pt-4">
                 <span class="text-xs font-medium text-[#81776e]">Récit historique</span>
-                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><i data-lucide="bookmark" class="h-4 w-4"></i></span>
+                <span aria-label="Sélection de la bibliothèque" class="grid h-8 w-8 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><span aria-hidden="true">✦</span></span>
               </div>
+              <a href="livre.html#congo-histoire" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28] hover:text-[#b85235]">Voir la fiche <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </div>
 
-        <div id="empty-state" class="hidden rounded-2xl border border-dashed border-[#d8d2c5] bg-[#fbfaf6] px-6 py-16 text-center">
-          <span class="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#f1e8d5] text-[#b85235]"><i data-lucide="book-x" class="h-6 w-6"></i></span>
-          <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Aucun livre ne correspond</h3>
-          <p class="mt-2 text-sm text-[#59635d]">Essayez un autre titre, un auteur ou un genre.</p>
-          <button id="reset-search" type="button" class="mt-5 rounded-full bg-[#133a28] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1d5239]">Voir tous les livres</button>
-        </div>
       </div>
     </section>
 
@@ -187,8 +161,8 @@
           <h2 class="mt-2 max-w-2xl font-['Playfair_Display',Georgia,serif] text-3xl leading-tight sm:text-4xl">Découvrez celles et ceux qui font vivre les récits.</h2>
           <p class="mt-3 max-w-xl text-sm leading-6 text-[#59635d]">Rencontrez les auteurs, leurs parcours et les univers qui nourrissent leurs œuvres.</p>
         </div>
-        <a href="index.html#auteurs" class="inline-flex min-h-12 items-center justify-center gap-3 justify-self-start rounded-full bg-[#19231f] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235] lg:justify-self-end">
-          Rencontrer les auteurs <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        <a href="auteurs.html" class="inline-flex min-h-12 items-center justify-center gap-3 justify-self-start rounded-full bg-[#19231f] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235] lg:justify-self-end">
+          Rencontrer les auteurs <span aria-hidden="true">↗</span>
         </a>
       </div>
     </section>
@@ -204,7 +178,7 @@
       </div>
       <nav aria-label="Liens de pied de page" class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#d1d8d2]">
         <a href="index.html#accueil" class="transition-colors hover:text-[#e6bd76]">Accueil</a>
-        <a href="index.html#auteurs" class="transition-colors hover:text-[#e6bd76]">Les auteurs</a>
+        <a href="auteurs.html" class="transition-colors hover:text-[#e6bd76]">Les auteurs</a>
         <a href="index.html#mission" class="transition-colors hover:text-[#e6bd76]">Notre mission</a>
       </nav>
     </div>
@@ -214,78 +188,7 @@
     </div>
   </footer>
 
-  <script>
-    const cards = [...document.querySelectorAll('.book-card')];
-    const searchInput = document.querySelector('#search-input');
-    const filterButtons = [...document.querySelectorAll('.filter-chip')];
-    const sortSelect = document.querySelector('#sort-select');
-    const resultCount = document.querySelector('#result-count');
-    const emptyState = document.querySelector('#empty-state');
-    const bookGrid = document.querySelector('#book-grid');
-    let activeGenre = 'all';
-
-    function normalize(value) {
-      return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('fr');
-    }
-
-    function updateCatalogue() {
-      const query = normalize(searchInput.value.trim());
-      const visibleCards = [];
-
-      cards.forEach((card) => {
-        const matchesGenre = activeGenre === 'all' || card.dataset.genre === activeGenre;
-        const matchesQuery = normalize(`${card.dataset.title} ${card.dataset.author} ${card.dataset.genre} ${card.textContent}`).includes(query);
-        const isVisible = matchesGenre && matchesQuery;
-        card.hidden = !isVisible;
-        if (isVisible) visibleCards.push(card);
-      });
-
-      const sortOrder = sortSelect.value;
-      if (sortOrder === 'az' || sortOrder === 'za') {
-        visibleCards.sort((a, b) => {
-          const titleOrder = a.dataset.title.localeCompare(b.dataset.title, 'fr', { sensitivity: 'base' });
-          return sortOrder === 'az' ? titleOrder : -titleOrder;
-        });
-        visibleCards.forEach((card) => bookGrid.append(card));
-      } else {
-        cards.forEach((card) => bookGrid.append(card));
-      }
-
-      resultCount.textContent = `${visibleCards.length} ${visibleCards.length === 1 ? 'œuvre' : 'œuvres'}`;
-      emptyState.classList.toggle('hidden', visibleCards.length > 0);
-      bookGrid.classList.toggle('hidden', visibleCards.length === 0);
-    }
-
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        activeGenre = button.dataset.filter;
-        filterButtons.forEach((chip) => {
-          const selected = chip === button;
-          chip.setAttribute('aria-pressed', String(selected));
-          chip.classList.toggle('bg-[#19231f]', selected);
-          chip.classList.toggle('text-white', selected);
-          chip.classList.toggle('border', !selected);
-          chip.classList.toggle('border-[#d8d2c5]', !selected);
-          chip.classList.toggle('text-[#59635d]', !selected);
-        });
-        updateCatalogue();
-      });
-    });
-
-    searchInput.addEventListener('input', updateCatalogue);
-    sortSelect.addEventListener('change', updateCatalogue);
-    document.querySelector('#search-form').addEventListener('submit', (event) => {
-      event.preventDefault();
-      updateCatalogue();
-    });
-    document.querySelector('#reset-search').addEventListener('click', () => {
-      searchInput.value = '';
-      activeGenre = 'all';
-      filterButtons[0].click();
-      searchInput.focus();
-    });
-
-    lucide.createIcons();
-  </script>
 </body>
 </html>
+
+
