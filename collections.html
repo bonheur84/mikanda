@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Explorez les collections Mikanda : romans, contes, poésie, théâtre, jeunesse, essais et sélections autour des littératures congolaises.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#19231f">
+  <link href="./dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Collections | Mikanda</title>
+</head>
+<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-5 py-3 sm:px-8 sm:py-4">
+      <a href="index.html" class="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">
+        <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52">
+      </a>
+      <nav aria-label="Navigation principale" class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-0 lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
+        <a href="index.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Accueil</a>
+        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Bibliothèque</a>
+        <a href="auteurs.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Auteurs</a>
+        <a href="collections.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Collections</a>
+        <a href="index.html#mission" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">À propos</a>
+      </nav>
+      <a href="bibliotheque.html#catalogue" class="order-2 ml-auto inline-flex min-h-10 items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:order-0 lg:ml-0">Voir le catalogue <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="px-4 pb-12 pt-5 sm:px-8 sm:pb-16 sm:pt-8">
+      <div class="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-[#19231f] px-6 py-12 text-[#f4f1ea] shadow-[0_28px_70px_rgba(25,35,31,0.16)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+        <div aria-hidden="true" class="absolute -right-28 -top-36 -z-10 h-112 w-112 rounded-full border border-white/10 sm:right-6 sm:top-1/2 sm:-translate-y-1/2"></div>
+        <div aria-hidden="true" class="absolute -right-8 -top-16 -z-10 h-80 w-80 rounded-full border border-[#e6bd76]/20 sm:right-16 sm:top-1/2 sm:-translate-y-1/2"></div>
+        <div class="relative max-w-3xl">
+          <nav aria-label="Fil d’Ariane" class="mb-8 flex items-center gap-2 text-sm text-[#aeb9b1]">
+            <a href="index.html" class="transition-colors hover:text-white">Accueil</a><span aria-hidden="true">/</span><span aria-current="page" class="text-[#f4f1ea]">Collections</span>
+          </nav>
+          <p class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]"><span aria-hidden="true" class="h-px w-5 bg-[#e6bd76]"></span> Sélections Mikanda</p>
+          <h1 class="mt-5 font-['Playfair_Display',Georgia,serif] text-5xl font-medium leading-[1.02] tracking-[-1.5px] sm:text-6xl lg:text-7xl">Des lectures<br><em class="text-[#e6bd76]">à votre image.</em></h1>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-[#d1d8d2] sm:text-lg sm:leading-8">Des genres littéraires aux grandes thématiques, parcourez les voix, les idées et les imaginaires qui racontent le Congo.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#genres" class="inline-flex min-h-12 items-center gap-3 rounded-full bg-[#e6bd76] px-5 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Explorer les collections <span aria-hidden="true">↓</span></a>
+            <span class="rounded-full border border-white/20 px-4 py-2.5 text-xs text-[#d1d8d2]">11 univers de lecture · 4 sélections thématiques</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="genres" class="scroll-mt-28 px-5 py-10 sm:px-8 sm:py-14">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-8 flex flex-col justify-between gap-4 border-b border-[#d8d2c5] pb-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Les collections</p>
+            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium tracking-tight sm:text-5xl">Explorer par genre</h2>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-[#59635d] sm:text-base">Retrouvez les genres déjà présentés sur Mikanda et de nouveaux chemins pour découvrir le fonds.</p>
+          </div>
+          <a href="bibliotheque.html#catalogue" class="inline-flex w-fit shrink-0 items-center gap-2 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235]">Tout le catalogue <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <a id="romans" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/roman.jfif" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">À dévorer</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Romans &amp; récits</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des destins singuliers, des fresques historiques et des mondes imaginaires.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="contes" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/conte.jfif" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">Petites merveilles</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Contes &amp; traditions</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Récits transmis, imaginaires populaires et paroles qui traversent les générations.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="poesie" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/poesie.jfif" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">Mots choisis</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Poésie</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des voix et des rythmes pour dire l’intime, le pays et le monde.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="theatre" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/theatre.jfif" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">La scène vous attend</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Théâtre</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des textes à faire entendre, des personnages à rencontrer et des scènes à imaginer.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="essais" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/essai.jfif" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">Pour réfléchir</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Essais &amp; pensée</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des idées, des prises de parole et des regards sur les sociétés congolaises.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="jeunesse" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/jeunesse.jfif" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">Pour les jeunes lecteurs</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Jeunesse</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des histoires à partager et de nouvelles portes d’entrée dans la lecture.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+
+          <a id="bande-dessinee" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative flex aspect-[16/9] items-end overflow-hidden bg-linear-to-br from-[#b85235] via-[#8d442f] to-[#26332c] p-5"><span aria-hidden="true" class="absolute -right-6 -top-12 h-48 w-48 rounded-full border border-white/20"></span><span aria-hidden="true" class="absolute right-6 top-3 h-32 w-32 rounded-full border border-white/20"></span><span class="relative text-4xl font-bold uppercase tracking-[0.08em] text-white/85">BD</span><span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">L’image raconte aussi</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Bande dessinée</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Dessinateurs, scénaristes et récits graphiques congolais.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="biographies" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#19231f]"><img src="assets/auteurs/blaise-ndala.jpg" alt="" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"><span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span><span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80">Vies &amp; trajectoires</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Biographies</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Parcours de vie et expériences qui éclairent une époque ou une œuvre.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="memoires" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative flex aspect-[16/9] items-end overflow-hidden bg-linear-to-br from-[#445d4b] via-[#314237] to-[#19231f] p-5"><span aria-hidden="true" class="absolute -right-8 -top-16 h-52 w-52 rounded-full border border-white/15"></span><span aria-hidden="true" class="absolute right-8 top-4 h-32 w-32 rounded-full border border-[#e6bd76]/35"></span><span class="relative text-4xl font-['Playfair_Display',Georgia,serif] italic text-[#f4f1ea]">Mémoires</span><span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/75">Récits vécus</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Mémoires &amp; témoignages</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des récits personnels pour transmettre une expérience et en garder la trace.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="histoire" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative flex aspect-[16/9] items-end overflow-hidden bg-linear-to-br from-[#765d3f] via-[#584a37] to-[#26332c] p-5"><span aria-hidden="true" class="absolute -right-10 -top-20 h-56 w-56 rounded-full border border-white/15"></span><span aria-hidden="true" class="absolute right-7 top-5 h-36 w-36 rounded-full border border-[#e6bd76]/35"></span><span class="relative text-4xl font-['Playfair_Display',Georgia,serif] text-white">Histoire</span><span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/75">Comprendre les sociétés</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Histoire &amp; sociétés</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Des ouvrages pour comprendre les périodes, les idées et les transformations sociales.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a id="archives" href="bibliotheque.html#catalogue" class="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235]">
+            <div class="relative flex aspect-[16/9] items-end overflow-hidden bg-linear-to-br from-[#d5c29d] via-[#92836b] to-[#445044] p-5"><span aria-hidden="true" class="absolute left-1/2 top-1/2 h-40 w-52 -translate-x-1/2 -translate-y-1/2 rotate-[-8deg] rounded-sm border border-white/40 bg-[#f4f1ea]/15 shadow-xl"></span><span aria-hidden="true" class="absolute left-1/2 top-1/2 h-40 w-52 -translate-x-[42%] -translate-y-[42%] rotate-[7deg] rounded-sm border border-white/40 bg-[#f4f1ea]/20"></span><span class="relative text-3xl font-['Playfair_Display',Georgia,serif] text-[#19231f]">Archives</span><span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/90">Patrimoine écrit</span></div>
+            <div class="p-5"><h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Archives &amp; patrimoine</h3><p class="mt-2 text-sm leading-6 text-[#59635d]">Manuscrits, documents et traces littéraires à préserver et à redécouvrir.</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue <span aria-hidden="true">→</span></span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="selections" class="bg-[#19231f] px-5 py-12 text-[#f4f1ea] sm:px-8 sm:py-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Nouveautés Mikanda</p>
+            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium tracking-tight sm:text-5xl">Des parcours thématiques</h2>
+          </div>
+          <p class="max-w-md text-sm leading-6 text-[#d1d8d2]">Quatre portes d’entrée pour choisir votre prochaine lecture.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="group overflow-hidden rounded-2xl border border-white/15 bg-white/5 transition-colors hover:border-[#e6bd76]/60">
+            <a href="livre.html" class="block focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#e6bd76]">
+              <div class="aspect-[4/3] overflow-hidden bg-[#26332c]"><img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"></div>
+              <div class="p-5"><p class="text-[10px] font-semibold uppercase tracking-[1.5px] text-[#e6bd76]">Histoire &amp; transmission</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-2xl">Les mémoires en partage</h3><p class="mt-3 text-sm leading-6 text-[#d1d8d2]">Un parcours autour des récits familiaux, des héritages et de la mémoire collective.</p><p class="mt-4 border-t border-white/15 pt-4 text-sm font-semibold text-white">À lire : <em>Dans le ventre du Congo</em></p></div>
+            </a>
+          </article>
+          <article class="group overflow-hidden rounded-2xl border border-white/15 bg-white/5 transition-colors hover:border-[#e6bd76]/60">
+            <a href="https://editions-metailie.com/livre/tram-83/" target="_blank" rel="noreferrer" class="block focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#e6bd76]">
+              <div class="aspect-[4/3] overflow-hidden bg-[#26332c]"><img src="assets/couvertures/tram-83.jpg" alt="Couverture de Tram 83 de Fiston Mwanza Mujila" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"></div>
+              <div class="p-5"><p class="text-[10px] font-semibold uppercase tracking-[1.5px] text-[#e6bd76]">Villes &amp; nuits</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-2xl">Kinshasa en mouvement</h3><p class="mt-3 text-sm leading-6 text-[#d1d8d2]">Des histoires urbaines pleines d’énergie, de musique et de rencontres.</p><p class="mt-4 border-t border-white/15 pt-4 text-sm font-semibold text-white">À lire : <em>Tram 83</em></p></div>
+            </a>
+          </article>
+          <article class="group overflow-hidden rounded-2xl border border-white/15 bg-white/5 transition-colors hover:border-[#e6bd76]/60">
+            <a href="https://books.google.com/books/about/Congo_Inc.html?id=_2UjAwAAQBAJ" target="_blank" rel="noreferrer" class="block focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#e6bd76]">
+              <div class="aspect-[4/3] overflow-hidden bg-[#26332c]"><img src="assets/livre (3).jfif" alt="Couverture de Congo Inc. : Le testament de Bismarck" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"></div>
+              <div class="p-5"><p class="text-[10px] font-semibold uppercase tracking-[1.5px] text-[#e6bd76]">Territoires &amp; monde</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-2xl">Le Congo et le monde</h3><p class="mt-3 text-sm leading-6 text-[#d1d8d2]">Des romans qui font voyager entre le quotidien local et les enjeux mondiaux.</p><p class="mt-4 border-t border-white/15 pt-4 text-sm font-semibold text-white">À lire : <em>Congo Inc.</em></p></div>
+            </a>
+          </article>
+          <article class="group overflow-hidden rounded-2xl border border-white/15 bg-white/5 transition-colors hover:border-[#e6bd76]/60">
+            <a href="https://www.fnac.com/a16666994/Sony-Labou-Tansi-La-Vie-et-demie-Nouvelle-edition" target="_blank" rel="noreferrer" class="block focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#e6bd76]">
+              <div class="aspect-[4/3] overflow-hidden bg-[#26332c]"><img src="assets/couvertures/la-vie-et-demie.jpg" alt="Couverture de La Vie et demie de Sony Labou Tansi" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"></div>
+              <div class="p-5"><p class="text-[10px] font-semibold uppercase tracking-[1.5px] text-[#e6bd76]">Classiques congolais</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-2xl">Les incontournables</h3><p class="mt-3 text-sm leading-6 text-[#d1d8d2]">Des œuvres repères à redécouvrir et à transmettre aux prochaines générations.</p><p class="mt-4 border-t border-white/15 pt-4 text-sm font-semibold text-white">À lire : <em>La Vie et demie</em></p></div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-12 sm:px-8 sm:py-16">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[1.7px] text-[#b85235]">Continuer l’exploration</p>
+          <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Une collection vous a inspiré ?</h2>
+          <p class="mt-2 max-w-xl text-sm leading-6 text-[#59635d]">Parcourez la bibliothèque pour retrouver les titres disponibles et choisir votre prochaine lecture.</p>
+        </div>
+        <a href="bibliotheque.html#catalogue" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-[#b85235] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#9a452b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#19231f]">Ouvrir la bibliothèque <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#19231f] px-5 py-8 text-[#d1d8d2] sm:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
+      <a href="index.html" class="font-['Playfair_Display',Georgia,serif] text-xl text-white">Mikanda</a>
+      <p class="text-xs">Une bibliothèque dédiée aux voix et aux récits congolais.</p>
+      <a href="index.html#accueil" class="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#e6bd76]">← Retour à l’accueil</a>
+    </div>
+  </footer>
+</body>
+</html>
