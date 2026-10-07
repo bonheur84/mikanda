@@ -17,6 +17,7 @@
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
+    --container-4xl: 56rem;
     --container-7xl: 80rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -295,6 +296,9 @@
   .-right-12 {
     right: calc(var(--spacing) * -12);
   }
+  .-right-20 {
+    right: calc(var(--spacing) * -20);
+  }
   .-right-28 {
     right: calc(var(--spacing) * -28);
   }
@@ -466,6 +470,9 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
   }
@@ -514,6 +521,9 @@
   .aspect-4\/3 {
     aspect-ratio: 4/3;
   }
+  .aspect-\[3\/4\] {
+    aspect-ratio: 3/4;
+  }
   .aspect-\[4\/3\] {
     aspect-ratio: 4/3;
   }
@@ -525,6 +535,9 @@
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
+  }
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
   }
   .h-2 {
     height: calc(var(--spacing) * 2);
@@ -549,6 +562,9 @@
   }
   .h-7 {
     height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-9 {
     height: calc(var(--spacing) * 9);
@@ -661,6 +677,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1\.5 {
+    width: calc(var(--spacing) * 1.5);
+  }
   .w-2 {
     width: calc(var(--spacing) * 2);
   }
@@ -762,6 +781,9 @@
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
@@ -1085,6 +1107,9 @@
   .border-\[\#e6bd76\]\/35 {
     border-color: color-mix(in oklab, #e6bd76 35%, transparent);
   }
+  .border-\[\#e6bd76\]\/40 {
+    border-color: color-mix(in oklab, #e6bd76 40%, transparent);
+  }
   .border-\[\#e6bd76\]\/55 {
     border-color: color-mix(in oklab, #e6bd76 55%, transparent);
   }
@@ -1168,6 +1193,9 @@
   }
   .bg-\[\#e6bd76\]\/35 {
     background-color: color-mix(in oklab, #e6bd76 35%, transparent);
+  }
+  .bg-\[\#e8e2d6\] {
+    background-color: #e8e2d6;
   }
   .bg-\[\#e9e0d1\] {
     background-color: #e9e0d1;
@@ -1824,6 +1852,12 @@
   .text-\[\#19231f\] {
     color: #19231f;
   }
+  .text-\[\#39463e\] {
+    color: #39463e;
+  }
+  .text-\[\#59452b\] {
+    color: #59452b;
+  }
   .text-\[\#59635d\] {
     color: #59635d;
   }
@@ -2210,6 +2244,14 @@
     .hover\:border-\[\#e6bd76\]\/60:hover {
       border-color: color-mix(in oklab, #e6bd76 60%, transparent);
     }
+    .hover\:border-white\/50:hover {
+      border-color: color-mix(in srgb, #fff 50%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-white\/50:hover {
+        border-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+      }
+    }
     .hover\:bg-\[\#9a452b\]:hover {
       background-color: #9a452b;
     }
@@ -2221,6 +2263,9 @@
     }
     .hover\:bg-\[\#26332c\]:hover {
       background-color: #26332c;
+    }
+    .hover\:bg-\[\#314237\]:hover {
+      background-color: #314237;
     }
     .hover\:bg-\[\#b85235\]\/10:hover {
       background-color: color-mix(in oklab, #b85235 10%, transparent);
@@ -2416,6 +2461,9 @@
     .sm\:right-20 {
       right: calc(var(--spacing) * 20);
     }
+    .sm\:right-36 {
+      right: calc(var(--spacing) * 36);
+    }
     .sm\:bottom-8 {
       bottom: calc(var(--spacing) * 8);
     }
@@ -2531,6 +2579,9 @@
     .sm\:py-4 {
       padding-block: calc(var(--spacing) * 4);
     }
+    .sm\:py-10 {
+      padding-block: calc(var(--spacing) * 10);
+    }
     .sm\:py-12 {
       padding-block: calc(var(--spacing) * 12);
     }
@@ -2539,6 +2590,9 @@
     }
     .sm\:py-16 {
       padding-block: calc(var(--spacing) * 16);
+    }
+    .sm\:pt-6 {
+      padding-top: calc(var(--spacing) * 6);
     }
     .sm\:pt-8 {
       padding-top: calc(var(--spacing) * 8);
@@ -2688,11 +2742,17 @@
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .lg\:grid-cols-6 {
       grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-\[0\.8fr_1\.2fr\] {
+      grid-template-columns: 0.8fr 1.2fr;
     }
     .lg\:grid-cols-\[0\.82fr_1\.18fr\] {
       grid-template-columns: 0.82fr 1.18fr;
