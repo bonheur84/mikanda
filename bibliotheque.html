@@ -15,7 +15,7 @@
 </head>
 <body class="min-h-screen bg-[#f4f1ea] font-sans text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
   <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-5 py-3 sm:px-8 sm:py-4">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
       <a href="index.html#accueil" class="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">
         <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52">
       </a>
@@ -29,10 +29,13 @@
         <a href="index.html#bibliotheque" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Premium</a>
       </nav>
 
-      <div class="order-2 ml-auto flex items-center gap-2 lg:order-0 lg:ml-0">
-        <span aria-hidden="true" class="grid h-10 w-10 shrink-0 place-items-center text-[#e6bd76]">♡</span>
+      <div class="flex items-center gap-3">
+        <a href="">
+          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+        </a>
+        
         <a href="#connexion" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
-          Se connecter <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          Se connecter <i data-lucide="user" class="w-4 h-4"></i>
         </a>
       </div>
     </div>
