@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
   <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
@@ -24,16 +23,14 @@
         <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Bibliothèque</a>
         <a href="auteurs.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Auteurs</a>
         <a href="collections.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Collections</a>
-        <a href="" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">À propos</a>
-        <a href="" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Premium</a>
+        <a href="index.html#mission" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">À propos</a>
+        <a href="bibliotheque.html#catalogue" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">Bibliothèque</a>
       </nav>
 
       <div class="order-2 ml-auto flex items-center gap-2 lg:order-0 lg:ml-0">
-        <button type="button" aria-label="Favoris" title="Favoris" class="grid h-10 w-10 shrink-0 place-items-center cursor-pointer text-[#e6bd76] transition hover:text-[#be9959] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
-          <i data-lucide="heart" class="h-5 w-5"></i>
-        </button>
+        <span aria-hidden="true" class="grid h-10 w-10 shrink-0 place-items-center text-[#e6bd76]">♡</span>
         <a href="#connexion" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
-          Se connecter <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          Se connecter <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
         </a>
       </div>
     </div>
@@ -77,38 +74,17 @@
 
         <div class="mb-4 rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-4 shadow-sm sm:p-5">
           <div class="grid gap-4 sm:grid-cols-[minmax(0,1fr)_15rem] sm:items-end">
-            <label for="author-search">
-              <span class="mb-1.5 block text-[10px] font-semibold uppercase tracking-[1.7px] text-[#81776e]">Rechercher un auteur</span>
-              <span class="relative block">
-                <i data-lucide="search" aria-hidden="true" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#81776e]"></i>
-                <input id="author-search" type="search" autocomplete="off" aria-controls="author-grid" placeholder="Nom, spécialité ou mot-clé" class="h-12 w-full rounded-xl border border-[#d8d2c5] bg-[#f4f1ea] pl-10 pr-4 text-sm text-[#19231f] outline-none transition placeholder:text-[#81776e] focus:border-[#b85235] focus:ring-2 focus:ring-[#e6bd76]/50">
-              </span>
-            </label>
-            <label for="author-category-filter">
-              <span class="mb-1.5 block text-[10px] font-semibold uppercase tracking-[1.7px] text-[#81776e]">Filtrer par univers</span>
-              <span class="relative block">
-                <i data-lucide="sliders-horizontal" aria-hidden="true" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#81776e]"></i>
-                <select id="author-category-filter" aria-controls="author-grid" class="h-12 w-full appearance-none rounded-xl border border-[#d8d2c5] bg-[#f4f1ea] pl-10 pr-10 text-sm text-[#19231f] outline-none transition focus:border-[#b85235] focus:ring-2 focus:ring-[#e6bd76]/50">
-                  <option value="all">Tous les univers</option>
-                  <option value="roman">Romans &amp; récits</option>
-                  <option value="poesie">Poésie</option>
-                  <option value="pensee">Essais &amp; pensée</option>
-                  <option value="bd">Bande dessinée</option>
-                </select>
-                <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#81776e]"></i>
-              </span>
-            </label>
+            <div>
+              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#81776e]">Le répertoire Mikanda</p>
+              <p class="mt-1.5 text-sm leading-6 text-[#59635d]">Parcourez les portraits et découvrez les univers de chaque auteur.</p>
+            </div>
+            <p class="rounded-xl bg-[#f4f1ea] px-4 py-3 text-sm font-medium text-[#19231f]">20 auteurs à découvrir</p>
           </div>
         </div>
-        <div class="mb-5 flex min-h-8 items-center justify-between gap-4">
-          <p id="author-results" aria-live="polite" class="text-xs font-medium text-[#59635d]">20 auteurs affichés</p>
-          <button id="author-reset" type="button" hidden class="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold text-[#b85235] transition-colors hover:bg-[#b85235]/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">
-            <i data-lucide="rotate-ccw" aria-hidden="true" class="h-3.5 w-3.5"></i> Effacer les filtres
-          </button>
-        </div>
+        <p class="mb-5 min-h-8 text-xs font-medium text-[#59635d]">20 portraits en lumière</p>
 
-        <div id="author-grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#blaise-ndala" aria-label="Lire le parcours de Blaise Ndala" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -122,7 +98,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="poesie" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#fiston-mwanza-mujila" aria-label="Lire le parcours de Fiston Mwanza Mujila" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/fiston-mwanza-mujila.jpg" alt="Portrait de Fiston Mwanza Mujila" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -136,7 +112,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#in-koli-jean-bofane" aria-label="Lire le parcours d’In Koli Jean Bofane" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/in-koli-jean-bofane.jpg" alt="Portrait d’In Koli Jean Bofane" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -150,7 +126,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="poesie" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#kama-sywor-kamanda" aria-label="Lire le parcours de Kama Sywor Kamanda" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/kama-sywor-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -164,7 +140,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="pensee" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#v-y-mudimbe" aria-label="Lire le parcours de V. Y. Mudimbe" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/v-y-mudimbe.jpg" alt="Portrait de V. Y. Mudimbe" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -178,7 +154,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#zamenga-batukezanga" aria-label="Lire le parcours de Zamenga Batukezanga" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/zamenga-batukezanga.jpeg" alt="Portrait de Zamenga Batukezanga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -192,7 +168,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="poesie" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#clementine-faik-nzuji" aria-label="Lire le parcours de Clémentine Faïk-Nzuji" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/clementine-nzuji.jpg" alt="Portrait de Clémentine Faïk-Nzuji" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -206,7 +182,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#marie-eugenie-mpongo" aria-label="Lire le parcours de Marie-Eugénie Mpongo" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/marie-eugenie-mpongo.jpeg" alt="Portrait de Marie-Eugénie Mpongo" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -220,7 +196,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="pensee" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#georges-ngal" aria-label="Lire le parcours de Georges Ngal" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/georges-ngal.jpg" alt="Portrait de Georges Ngal" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -234,7 +210,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#maguy-kabamba" aria-label="Lire le parcours de Maguy Kabamba" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/maguy-kabamba.webp" alt="Portrait de Maguy Kabamba" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -248,7 +224,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#elisabeth-mweya-tolande" aria-label="Lire le parcours d’Élisabeth Mweya Tol’Ande" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/elisabeth-mweya-tolande.jpeg" alt="Portrait de Élisabeth Mweya Tol’Ande" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -262,7 +238,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="poesie" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#christian-gombo" aria-label="Lire le parcours de Christian Gombo" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/christian-gombo.jpg" alt="Portrait de Christian Gombo" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -276,7 +252,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#marie-justine-kalunga" aria-label="Lire le parcours de Marie-Justine Kalunga" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/marie-justine-kalunga.jpg" alt="Portrait de Marie-Justine Kalunga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -290,7 +266,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="poesie" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#joelle-sambi" aria-label="Lire le parcours de Joëlle Sambi" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/joelle-sambi.png" alt="Portrait de Joëlle Sambi" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -304,7 +280,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#lye-yoka" aria-label="Lire le parcours de Lye Yoka" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/lye-yoka.jpg" alt="Portrait de Lye Yoka" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -318,7 +294,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="pensee" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#mukala-kadima-nzuji" aria-label="Lire le parcours de Mukala Kadima-Nzuji" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/mukala-kadima-nzuji.jpg" alt="Portrait de Mukala Kadima-Nzuji" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -332,7 +308,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="pensee" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#pius-ngandu-nkashama" aria-label="Lire le parcours de Pius Ngandu Nkashama" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/pius-ngandu-nkashama.jpg" alt="Portrait de Pius Ngandu Nkashama" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -346,7 +322,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#sinzo-aanza" aria-label="Lire le parcours de Sinzo Aanza" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/sinzo-aanza.jpg" alt="Portrait de Sinzo Aanza" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -360,7 +336,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="bd" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#barly-baruti" aria-label="Lire le parcours de Barly Baruti" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/barly-baruti.jpg" alt="Portrait de Barly Baruti" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -374,7 +350,7 @@
             </div>
           </article>
 
-          <article data-author-card data-author-category="roman" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
             <a href="auteur.html#desire-bolya-baenga" aria-label="Lire le parcours de Désiré Bolya Baenga" class="relative block aspect-[4/4.2] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
               <img src="assets/auteurs/desire-bolya-baenga.jpg" alt="Portrait de Désiré Bolya Baenga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
@@ -387,11 +363,6 @@
               <a href="auteur.html#desire-bolya-baenga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-        </div>
-        <div id="author-empty" hidden class="rounded-2xl border border-dashed border-[#d8d2c5] bg-[#fbfaf6] px-6 py-12 text-center">
-          <span class="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#ebe9e1] text-[#b85235]"><i data-lucide="search-x" aria-hidden="true" class="h-5 w-5"></i></span>
-          <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl text-[#19231f]">Aucun auteur trouvé</h3>
-          <p class="mt-2 text-sm text-[#59635d]">Essayez un autre nom ou modifiez le filtre.</p>
         </div>
       </div>
     </section>
@@ -459,10 +430,6 @@
         </div>
       </div>
     </footer>
-
-  <script>
-      lucide.createIcons();
-  </script>
 </body>
 </html>
 

@@ -7,7 +7,6 @@
   <meta name="theme-color" content="#19231f">
   <link href="./dist/tailwind.css" rel="stylesheet">
   <title>La bibliothèque | Mikanda</title>
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="min-h-screen bg-[#f4f1ea] font-sans text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
   <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
@@ -26,11 +25,9 @@
       </nav>
 
       <div class="order-2 ml-auto flex items-center gap-2 lg:order-0 lg:ml-0">
-        <button type="button" aria-label="Favoris" title="Favoris" class="grid h-10 w-10 shrink-0 place-items-center cursor-pointer text-[#e6bd76] transition hover:text-[#be9959] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
-          <i data-lucide="heart" class="h-5 w-5"></i>
-        </button>
+        <span aria-hidden="true" class="grid h-10 w-10 shrink-0 place-items-center text-[#e6bd76]">♡</span>
         <a href="#connexion" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
-          Se connecter <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          Se connecter <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
         </a>
       </div>
     </div>
@@ -74,11 +71,10 @@
           <p class="text-sm text-[#59635d]">Une bibliothèque en mouvement</p>
         </div>
 
-        <label class="relative mt-8 block max-w-2xl">
-          <span class="sr-only">Rechercher un livre ou un auteur</span>
-          <input type="search" placeholder="Rechercher un livre ou un auteur…" class="min-h-12 w-full rounded-full border border-[#d8d2c5] bg-[#fbfaf6] py-3 pl-12 pr-5 text-sm text-[#19231f] shadow-[0_8px_24px_rgba(25,35,31,0.05)] placeholder:text-[#81776e] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">
-          <i data-lucide="search" class="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#81776e]"></i>
-        </label>
+        <div class="relative mt-8 block max-w-2xl rounded-full border border-[#d8d2c5] bg-[#fbfaf6] py-3 pl-12 pr-5 text-sm text-[#81776e] shadow-[0_8px_24px_rgba(25,35,31,0.05)]">
+          Parcourez les titres à l’aide des filtres ci-dessous.
+          <span aria-hidden="true" class="absolute left-4 top-1/2 -translate-y-1/2">⌕</span>
+        </div>
 
         <div class="mt-5 grid gap-5 rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-5 shadow-[0_12px_36px_rgba(25,35,31,0.06)] lg:grid-cols-[auto_1fr_1.4fr] lg:items-center lg:gap-8 lg:px-7">
           <div>
@@ -105,7 +101,7 @@
                 <option value="youth">Jeunesse</option>
                 <option value="other">Autres</option>
               </select>
-              <i data-lucide="chevron-down" class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#81776e]"></i>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#81776e]"><path d="m6 9 6 6 6-6"/></svg>
             </div>
           </fieldset>
         </div>
@@ -248,12 +244,12 @@
         <p class="hidden rounded-2xl border border-dashed border-[#cfc8b9] bg-[#fbfaf6] px-6 py-12 text-center text-sm text-[#59635d] group-has-[input[name='book-status'][value='premium']:checked]/catalogue:group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:block">Aucun livre ne correspond à ces filtres.</p>
 
         <nav aria-label="Pagination des livres" class="mt-10 flex items-center justify-center gap-3">
-          <span aria-disabled="true" class="hidden min-h-11 items-center rounded-full border border-[#d8d2c5] px-5 py-3 text-sm font-semibold text-[#a39b8e] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:inline-flex group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:inline-flex gap-2"><i data-lucide="arrow-left" class="w-3 h-3"></i>Precedent </span>
-          <label class="hidden min-h-11 cursor-pointer items-center rounded-full border border-[#cfc8b9] px-5 py-3 text-sm font-semibold text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:hidden group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:hidden"><input name="catalogue-page" type="radio" value="one" class="sr-only" aria-label="Afficher la page 1"><span class="flex items-center justify-between gap-2"><i data-lucide="arrow-left" class="w-3 h-3"></i>Precedent </span></label>
+          <span aria-disabled="true" class="hidden min-h-11 items-center rounded-full border border-[#d8d2c5] px-5 py-3 text-sm font-semibold text-[#a39b8e] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:inline-flex group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:inline-flex gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Precedent </span>
+          <label class="hidden min-h-11 cursor-pointer items-center rounded-full border border-[#cfc8b9] px-5 py-3 text-sm font-semibold text-[#59635d] transition-colors hover:border-[#133a28] hover:text-[#133a28] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:hidden group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:hidden"><input name="catalogue-page" type="radio" value="one" class="sr-only" aria-label="Afficher la page 1"><span class="flex items-center justify-between gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Precedent </span></label>
           <label class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d8d2c5] bg-[#fbfaf6] text-sm font-semibold text-[#59635d] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:border-[#19231f] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:bg-[#19231f] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:text-[#e6bd76] group-has-[input[name='book-status'][value='free']:checked]/catalogue:border-[#19231f] group-has-[input[name='book-status'][value='free']:checked]/catalogue:bg-[#19231f] group-has-[input[name='book-status'][value='free']:checked]/catalogue:text-[#e6bd76] group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:border-[#19231f] group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:bg-[#19231f] group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:text-[#e6bd76]"><input name="catalogue-page" type="radio" value="one" class="sr-only" aria-label="Page 1" checked><span>1</span></label>
           <label class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d8d2c5] bg-[#fbfaf6] text-sm font-semibold text-[#59635d] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:border-[#19231f] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:bg-[#19231f] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:text-[#e6bd76] group-has-[input[name='book-status'][value='free']:checked]/catalogue:hidden group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:hidden"><input name="catalogue-page" type="radio" value="two" class="sr-only" aria-label="Page 2"><span>2</span></label>
-          <label class="hidden min-h-11 cursor-pointer items-center rounded-full bg-[#19231f] px-5 py-3 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#133a28] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:hidden group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:hidden"><input name="catalogue-page" type="radio" value="two" class="sr-only" aria-label="Afficher la page 2"><span class="flex items-center justify-between gap-2">Suivant <i data-lucide="arrow-right" class="w-3 h-3"></i></span></label>
-          <span aria-disabled="true" class="hidden min-h-11 items-center rounded-full border border-[#d8d2c5] px-5 py-3 text-sm font-semibold text-[#a39b8e] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:inline-flex group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:inline-flex"><span class="flex items-center justify-between gap-2">Suivant <i data-lucide="arrow-right" class="w-3 h-3"></i></span></span>
+          <label class="hidden min-h-11 cursor-pointer items-center rounded-full bg-[#19231f] px-5 py-3 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#133a28] group-has-[input[name='catalogue-page'][value='one']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:hidden group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:hidden"><input name="catalogue-page" type="radio" value="two" class="sr-only" aria-label="Afficher la page 2"><span class="flex items-center justify-between gap-2">Suivant <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></label>
+          <span aria-disabled="true" class="hidden min-h-11 items-center rounded-full border border-[#d8d2c5] px-5 py-3 text-sm font-semibold text-[#a39b8e] group-has-[input[name='catalogue-page'][value='two']:checked]/catalogue:inline-flex group-has-[input[name='book-status'][value='free']:checked]/catalogue:inline-flex group-has-[select[name='book-type']_option[value='essay']:checked]/catalogue:inline-flex"><span class="flex items-center justify-between gap-2">Suivant <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></span>
         </nav>
 
       </div>
@@ -267,7 +263,7 @@
           <p class="mt-3 max-w-xl text-sm leading-6 text-[#59635d]">Rencontrez les auteurs, leurs parcours et les univers qui nourrissent leurs œuvres.</p>
         </div>
         <a href="auteurs.html" class="inline-flex min-h-12 items-center justify-center gap-3 justify-self-start rounded-full bg-[#19231f] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235] lg:justify-self-end">
-          Rencontrer les auteurs <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          Rencontrer les auteurs <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
         </a>
       </div>
     </section>
@@ -322,10 +318,6 @@
         </div>
       </div>
     </footer>
-
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
 
