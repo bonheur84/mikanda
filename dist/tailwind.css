@@ -2367,6 +2367,15 @@
     .hover\:text-\[\#e6bd76\]:hover {
       color: #e6bd76;
     }
+    .hover\:text-\[\#e6bd76\]\/20:hover {
+      color: color-mix(in oklab, #e6bd76 20%, transparent);
+    }
+    .hover\:text-\[\#e6bd76\]\/45:hover {
+      color: color-mix(in oklab, #e6bd76 45%, transparent);
+    }
+    .hover\:text-\[\#e6bd76\]\/60:hover {
+      color: color-mix(in oklab, #e6bd76 60%, transparent);
+    }
     .hover\:text-\[\#f3b552\]:hover {
       color: #f3b552;
     }

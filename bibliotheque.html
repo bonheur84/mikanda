@@ -2,11 +2,16 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Explorez le catalogue Mikanda : romans, essais et récits autour des voix et des histoires du Congo.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#19231f">
-  <link href="./dist/tailwind.css" rel="stylesheet">
-  <title>La bibliothèque | Mikanda</title>
+    <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Mikanda - Bibliothèque de la littérature congolaise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="min-h-screen bg-[#f4f1ea] font-sans text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
   <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
@@ -293,31 +298,40 @@
           <nav aria-label="À propos de Mikanda">
             <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
             <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="index.html#mission" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Notre mission</a></li>
-              <li><a href="index.html#partenaires" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Nos partenaires</a></li>
-              <li><a href="index.html#accueil" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Revenir à l’accueil</a></li>
+              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Notre mission</a></li>
+              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Nos partenaires</a></li>
+              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Revenir à l’accueil</a></li>
             </ul>
           </nav>
 
           <nav aria-label="Informations sur le catalogue">
             <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
             <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="index.html#bibliotheque" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Œuvres populaires</a></li>
+              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Œuvres populaires</a></li>
               <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Explorer par genre</a></li>
-              <li><a href="index.html#auteurs" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Voix congolaises</a></li>
+              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]">Voix congolaises</a></li>
             </ul>
           </nav>
         </div>
 
         <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
           <p>© 2026 Mikanda · Maquette de démonstration</p>
-          <p class="md:text-center">Conçue avec soin, pour les lecteurs.</p>
-          <a href="bibliotheque.html" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76] md:justify-self-end">
-            Retour en haut <span aria-hidden="true">↑</span>
+          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76] md:justify-self-end">
+            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
           </a>
         </div>
       </div>
     </footer>
+
+    <script>
+      lucide.createIcons()
+    </script>
 </body>
 </html>
 
