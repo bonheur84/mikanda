@@ -5,11 +5,13 @@
     <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <title>Mikanda - Bibliothèque de la littérature congolaise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="selection:bg-[#e6bd76] selection:text-[#19231f] bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
     <div id="accueil" class="min-h-158 px-5 bg-[url('/assets/background.png')] bg-cover bg-center bg-no-repeat">
@@ -23,14 +25,13 @@
                 <a href="bibliotheque.html" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-white no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Bibliothèque</a>
                 <a href="auteurs.html" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-white no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Auteurs</a>
                 <a href="collections.html" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-white no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Collections</a>
-                <a href="#mission" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-white no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">À propos</a>
-                <a href="#partenaires" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-white no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Partenaires</a>
-                <a href="bibliotheque.html#catalogue" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-[#f3b552] no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-[#f3b552] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Bibliothèque</a>
+                <a href="" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-white no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">À propos</a>
+                <a href="" class="inline-flex items-center whitespace-nowrap rounded-full border border-transparent px-2 py-1.25 text-[15px] font-medium text-[#f3b552] no-underline transition-colors duration-150 hover:border-[#133a28]/45 hover:bg-[#133a28]/45 hover:text-[#f3b552] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Premium</a>
             </nav>
 
             <div class="flex items-center justify-end gap-4">
-                <a href="bibliotheque.html#catalogue" class="inline-flex min-h-12 items-center justify-center justify-self-end whitespace-nowrap rounded-full bg-[#133a28] px-6 text-[15px] font-semibold text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white max-[640px]:min-h-11 max-[640px]:px-4 max-[640px]:text-[14px]">
-                    Accéder au catalogue
+                <a href="" class="inline-flex min-h-12 items-center justify-center justify-self-end whitespace-nowrap rounded-full bg-[#133a28] px-6 text-[15px] font-semibold text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white max-[640px]:min-h-11 max-[640px]:px-4 max-[640px]:text-[14px]">
+                   <i data-lucide="user" class="mr-2 w-4 h-4"></i> Se connecter
                 </a>
             </div>
         </header>
@@ -50,11 +51,11 @@
 
             <div>
                 <div>
-                    <a href="bibliotheque.html#catalogue" class="mt-8 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#b85235] px-5 text-[14px] font-semibold text-white cursor-pointer no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-[#9a452b]">
+                    <a href="bibliotheque.html" class="mt-8 inline-flex min-h-11 items-center justify-center rounded-lg bg-[#b85235] px-5 text-[14px] font-semibold text-white cursor-pointer no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-[#9a452b]">
                         Explorer la bibliothèque <span aria-hidden="true" class="ml-2">↗</span>
                     </a>
-
-                    <a href="auteurs.html" class="mt-8 ml-4 inline-flex min-h-11 items-center justify-center rounded-sm border border-white px-5 text-[14px] font-semibold cursor-pointer text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-white/10">
+                    
+                    <a href="auteurs.html" class="mt-8 ml-4 inline-flex min-h-11 items-center justify-center rounded-lg border border-white px-5 text-[14px] font-semibold cursor-pointer text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-white/10">
                         Découvrir les auteurs
                     </a>
                 </div>
@@ -66,14 +67,15 @@
     <section class="relative bg-[#f4f1ea] px-7 pb-6">
         <div class="relative mx-auto max-w-230 bg-white px-5 py-2 rounded-full shadow-md bottom-11">
             <div class="grid grid-cols-[1fr_208px] items-center gap-6">
-                <a href="bibliotheque.html#catalogue" class="flex min-h-15 w-full items-center gap-3 font-['Playfair_Display',Georgia,serif] text-[20px] text-[#81776e] sm:text-[24px]">
-                    <span aria-hidden="true" class="text-[#b85235]">⌕</span>
-                    Parcourir les livres, les auteurs et les collections
-                </a>
+                <form class="flex min-h-15 w-full items-center gap-3 font-['Playfair_Display',Georgia,serif] text-[20px] text-[#81776e] sm:text-[24px]">
+                    <i data-lucide="book-open" class="h-5 w-5 shrink-0"></i>
 
-                <a href="bibliotheque.html#catalogue" class="inline-flex min-h-15 items-center justify-center gap-3 rounded-full bg-[#19231f] px-5 text-[16px] font-semibold text-white transition duration-150 hover:-translate-y-px">
-                    Voir le catalogue <span aria-hidden="true">↗</span>
-                </a>
+                    <input type="search" aria-label="Rechercher des livres, des auteurs et des collections" placeholder="Parcourir les livres, les auteurs et les collections" class="min-w-0 flex-1 bg-transparent outline-none placeholder:text-[#81776e]">
+                </form>
+
+                <button type="submit" form="search-form" class="inline-flex cursor-pointer min-h-15 items-center justify-center gap-3 rounded-full bg-[#19231f] px-5 text-[16px] font-semibold text-white transition duration-150 hover:-translate-y-px">
+                    Rechercher <i data-lucide="search" class="h-4 w-4"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -148,9 +150,8 @@
                 Des pages qui traversent les langues, les générations et les distances. Mikanda est un lieu pour les rencontrer — et pour faire une place à celles qui restent à raconter.
             </p>
 
-            <a href="#mission" class="mt-9 inline-flex h-16.5 w-fit items-center gap-4 rounded-sm bg-[#19231f] px-7.5 text-[16px] font-semibold text-white no-underline transition-colors hover:bg-[#133a28]">
-                Lire notre intention
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4.5 w-4.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            <a href="" class="mt-9 inline-flex h-16.5 w-fit items-center gap-4 rounded-lg bg-[#19231f] px-7.5 text-[16px] font-semibold text-white no-underline transition-colors hover:bg-[#133a28]">
+                Lire notre intention <i data-lucide="arrow-up-right" class="h-4.5 w-4.5"></i>
             </a>
         </div>
     </section>
@@ -176,12 +177,12 @@
               <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Œuvres populaires</h2>
             </div>
             <a href="bibliotheque.html" class="hidden items-center gap-2 text-sm text-[#133a28] hover:underline sm:flex">
-              Tout le catalogue <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              Tout le catalogue <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
             </a>
           </div>
 
           <div class="grid grid-cols-4 gap-5">
-            <a href="livre.html#dans-le-ventre-du-congo">
+            <a href="livre.html">
                <article class="group cursor-pointer">
                     <div class="block overflow-hidden shadow-[0_12px_18px_rgba(25,35,31,0.28)]">
                         <img src="assets/livre (1).jfif" alt="" class="h-110 object-cover transition-transform duration-500 group-hover:scale-105">
@@ -211,7 +212,7 @@
             </a>
             
 
-            <a href="https://congolobilelo.com/projet/a-quand-le-congo/" target="_blank" rel="noreferrer">
+            <a href="livre.html" target="_blank" rel="noreferrer">
                 <article class="group cursor-pointer">
                     <div class="block overflow-hidden shadow-[0_12px_18px_rgba(25,35,31,0.28)]">
                         <img src="assets/livre (2).jfif" alt="" class="h-110 w-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -240,7 +241,7 @@
                 </article>
             </a>
 
-            <a href="https://books.google.com/books/about/Congo_Inc.html?id=_2UjAwAAQBAJ" target="_blank" rel="noreferrer">
+            <a href="livre.html" target="_blank" rel="noreferrer">
                 <article class="group cursor-pointer">
                     <div class="block overflow-hidden shadow-[0_12px_18px_rgba(25,35,31,0.28)]">
                         <img src="assets/livre (3).jfif" alt="" class="h-110 w-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -269,7 +270,7 @@
                 </article>
             </a>
 
-            <a href="https://mediatheques-congo.org/index.php?id=36991&lvl=author_see" target="_blank" rel="noreferrer">
+            <a href="livre.html" target="_blank" rel="noreferrer">
                 <article class="group cursor-pointer">
                     <div class="block overflow-hidden shadow-[0_12px_18px_rgba(25,35,31,0.28)]">
                         <img src="assets/livre (4).jfif" alt="" class="h-110 w-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -290,8 +291,8 @@
                             <span class="text-sm">
                                 <span class="text-[#b85235]">★</span> 4.5 <span class="text-[#59635d]">(45 avis)</span>
                             </span>
-                            <span class="rounded-full text-[#e6bd76] px-2.5 py-1 text-xs font-semibold bg-[#19231f]">
-                                premium
+                            <span class="flex items-center gap-1 rounded-full text-[#e6bd76] px-2.5 py-1 text-xs font-semibold bg-[#19231f]">
+                                <i data-lucide="lock" class="h-3 w-3"></i> premium
                             </span>
                         </div>
                     </div>
@@ -311,8 +312,8 @@
             </p>
           </div>
           <div class="flex w-full shrink-0 flex-col gap-3 sm:flex-row md:w-auto">
-            <a href="collections/archives.html" class="flex items-center gap-4 rounded-sm bg-[#19231f] px-7.5 py-3 text-[16px] font-semibold text-white no-underline transition-colors hover:bg-[#133a28]">
-              Découvrir la collection <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4.5 w-4.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            <a href="collections/archives.html" class="flex items-center gap-4 rounded-lg bg-[#19231f] px-7.5 py-3 text-[16px] font-semibold text-white no-underline transition-colors hover:bg-[#133a28]">
+              Découvrir la collection <i data-lucide="arrow-up-right" class="h-4.5 w-4.5"></i>
             </a>
           </div>
         </div>
@@ -326,7 +327,7 @@
               <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Collections populaires</h2>
             </div>
             <a href="collections.html" class="hidden items-center gap-2 text-sm text-[#133a28] hover:underline sm:flex">
-              Voir toutes les collections <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              Voir toutes les collections <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
             </a>
           </div>
 
@@ -334,7 +335,7 @@
             <a href="collections/romans.html" class="group relative isolate flex aspect-4/3 items-end overflow-hidden rounded-xl bg-cover bg-center p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235] bg-[url('/assets/roman.jfif')]">
                 <span class="absolute inset-0 -z-10 bg-linear-to-t from-[#101b15]/85 via-[#101b15]/20 to-transparent transition group-hover:from-[#101b15]/90"></span>
                 <span class="absolute right-3 top-3 rounded-full bg-white/20 p-1.5 text-white backdrop-blur-sm">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                  <i data-lucide="lock" class="h-3 w-3"></i>
                 </span>
                 <span class="text-white">
                     <span class="block text-[10px] uppercase tracking-[1.5px] text-white/75">À dévorer</span>
@@ -345,7 +346,7 @@
             <a href="collections/contes.html" class="group relative isolate flex aspect-4/3 items-end overflow-hidden rounded-xl bg-cover bg-center p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235] bg-[url('/assets/conte.jfif')]">
                 <span class="absolute inset-0 -z-10 bg-linear-to-t from-[#101b15]/85 via-[#101b15]/20 to-transparent transition group-hover:from-[#101b15]/90"></span>
                 <span class="absolute right-3 top-3 rounded-full bg-white/20 p-1.5 text-white backdrop-blur-sm">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    <i data-lucide="lock" class="h-3 w-3"></i>
                 </span>
                 <span class="text-white">
                     <span class="block text-[10px] uppercase tracking-[1.5px] text-white/75">Petites merveilles</span>
@@ -356,7 +357,7 @@
             <a href="collections/poesie.html" class="group relative isolate flex aspect-4/3 items-end overflow-hidden rounded-xl bg-cover bg-center p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235] bg-[url('/assets/poesie.jfif')]">
                 <span class="absolute inset-0 -z-10 bg-linear-to-t from-[#101b15]/85 via-[#101b15]/20 to-transparent transition group-hover:from-[#101b15]/90"></span>
                 <span class="absolute right-3 top-3 rounded-full bg-white/20 p-1.5 text-white backdrop-blur-sm">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    <i data-lucide="lock" class="h-3 w-3"></i>
                 </span>
                 <span class="text-white">
                     <span class="block text-[10px] uppercase tracking-[1.5px] text-white/75">Mots choisis</span>
@@ -367,7 +368,7 @@
             <a href="collections/theatre.html" class="group relative isolate flex aspect-4/3 items-end overflow-hidden rounded-xl bg-cover bg-center p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235] bg-[url('/assets/theatre.jfif')]">
                 <span class="absolute inset-0 -z-10 bg-linear-to-t from-[#101b15]/85 via-[#101b15]/20 to-transparent transition group-hover:from-[#101b15]/90"></span>
                 <span class="absolute right-3 top-3 rounded-full bg-white/20 p-1.5 text-white backdrop-blur-sm">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    <i data-lucide="lock" class="h-3 w-3"></i>
                 </span>
                 <span class="text-white">
                     <span class="block text-[10px] uppercase tracking-[1.5px] text-white/75">La scène vous attend</span>
@@ -378,7 +379,7 @@
             <a href="collections/essais.html" class="group relative isolate flex aspect-4/3 items-end overflow-hidden rounded-xl bg-cover bg-center p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235] bg-[url('/assets/essai.jfif')]">
                 <span class="absolute inset-0 -z-10 bg-linear-to-t from-[#101b15]/85 via-[#101b15]/20 to-transparent transition group-hover:from-[#101b15]/90"></span>
                 <span class="absolute right-3 top-3 rounded-full bg-white/20 p-1.5 text-white backdrop-blur-sm">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    <i data-lucide="lock" class="h-3 w-3"></i>
                 </span>
                 <span class="text-white">
                     <span class="block text-[10px] uppercase tracking-[1.5px] text-white/75">Pour réfléchir</span>
@@ -389,7 +390,7 @@
             <a href="collections/jeunesse.html" class="group relative isolate flex aspect-4/3 items-end overflow-hidden rounded-xl bg-cover bg-center p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b85235] bg-[url('/assets/jeunesse.jfif')]">
                 <span class="absolute inset-0 -z-10 bg-linear-to-t from-[#101b15]/85 via-[#101b15]/20 to-transparent transition group-hover:from-[#101b15]/90"></span>
                 <span class="absolute right-3 top-3 rounded-full bg-white/20 p-1.5 text-white backdrop-blur-sm">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    <i data-lucide="lock" class="h-3 w-3"></i>
                 </span>
                 <span class="text-white">
                     <span class="block text-[10px] uppercase tracking-[1.5px] text-white/75">Pour les petits lecteurs</span>
@@ -416,8 +417,8 @@
             <p class="mt-6 max-w-2xl text-base leading-7 text-[#d1d8d2] sm:text-lg sm:leading-8">
               Des grands classiques aux voix contemporaines, explorez des œuvres qui racontent le Congo sous mille facettes. Choisissez un livre, laissez-vous porter et faites place à de nouvelles découvertes.
             </p>
-            <a href="bibliotheque.html#catalogue" class="mt-8 inline-flex min-h-14 items-center gap-5 rounded-sm bg-[#f4f1ea] px-7 text-sm font-semibold text-[#19231f] no-underline transition-colors hover:bg-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f4f1ea]">
-              Découvrir les œuvres <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            <a href="bibliotheque.html#catalogue" class="mt-8 inline-flex min-h-14 items-center gap-5 rounded-lg bg-[#f4f1ea] px-7 text-sm font-semibold text-[#19231f] no-underline transition-colors hover:bg-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f4f1ea]">
+              Découvrir les œuvres <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
             </a>
           </div>
 
@@ -455,7 +456,7 @@
               <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Auteurs à découvrir</h2>
             </div>
             <a href="auteurs.html#portraits" class="hidden items-center gap-2 text-sm text-[#133a28] hover:underline sm:flex">
-              Voir tous les auteurs <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              Voir tous les auteurs <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
             </a>
           </div>
 
@@ -465,7 +466,7 @@
                 <img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
                 <span class="absolute inset-0 bg-linear-to-t from-[#101713]/45 via-transparent to-transparent"></span>
                 <span class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/85 text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                  <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                 </span>
               </a>
               <div class="flex flex-1 flex-col p-5">
@@ -480,7 +481,7 @@
                 <img src="assets/auteurs/fiston-mwanza-mujila.jpg" alt="Portrait de Fiston Mwanza Mujila" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
                 <span class="absolute inset-0 bg-linear-to-t from-[#101713]/45 via-transparent to-transparent"></span>
                 <span class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/85 text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                  <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                 </span>
               </a>
               <div class="flex flex-1 flex-col p-5">
@@ -495,7 +496,7 @@
                 <img src="assets/auteurs/in-koli-jean-bofane.jpg" alt="Portrait d’In Koli Jean Bofane" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
                 <span class="absolute inset-0 bg-linear-to-t from-[#101713]/45 via-transparent to-transparent"></span>
                 <span class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/85 text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                  <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                 </span>
               </a>
               <div class="flex flex-1 flex-col p-5">
@@ -510,7 +511,7 @@
                 <img src="assets/auteurs/kama-sywor-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" class="h-full w-full object-cover object-center grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
                 <span class="absolute inset-0 bg-linear-to-t from-[#101713]/45 via-transparent to-transparent"></span>
                 <span class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/85 text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                  <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                 </span>
               </a>
               <div class="flex flex-1 flex-col p-5">
@@ -536,22 +537,45 @@
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <article class="flex min-h-40 flex-col items-center justify-center rounded-lg border border-[#d8d2c5] bg-[#f4f1ea]/70 px-5 py-6 text-center">
               <div class="flex flex-col items-center gap-3">
-                <img src="assets/partenaires/wikimedia-foundation.svg" alt="Logo de la Fondation Wikimedia" class="h-12 w-auto max-w-55 object-contain">
-                <span class="text-sm font-semibold text-[#19231f]">Fondation Wikimedia</span>
+                <img src="https://www.unikin.ac.cd/assets/unikin-logo.png" alt="Logo de l’Université de Kinshasa" loading="lazy" class="h-12 w-40 object-contain">
+                <span class="text-sm font-semibold text-[#19231f]">Université de Kinshasa (UNIKIN)</span>
               </div>
             </article>
 
             <article class="flex min-h-40 flex-col items-center justify-center rounded-lg border border-[#d8d2c5] bg-[#f4f1ea]/70 px-5 py-6 text-center">
               <div class="flex flex-col items-center gap-3">
-                <img src="assets/partenaires/bnf.svg" alt="Logo de la Bibliothèque nationale de France" class="h-12 w-auto max-w-55 object-contain">
-                <span class="text-sm font-semibold text-[#19231f]">Bibliothèque nationale de France</span>
+                <img src="https://www.unilu.ac.cd/wp-content/uploads/2024/02/logo.png" alt="Logo de l’Université de Lubumbashi" loading="lazy" class="h-12 w-52 object-contain">
+                <span class="text-sm font-semibold text-[#19231f]">Université de Lubumbashi (UNILU)</span>
               </div>
             </article>
 
             <article class="flex min-h-40 flex-col items-center justify-center rounded-lg border border-[#d8d2c5] bg-[#f4f1ea]/70 px-5 py-6 text-center">
               <div class="flex flex-col items-center gap-3">
-                <img src="assets/partenaires/rfi.svg" alt="Logo de Radio France Internationale" class="h-12 w-12 object-contain">
-                <span class="text-sm font-semibold text-[#19231f]">Radio France Internationale</span>
+                <img src="https://recours.ucc.ac.cd/images/ucc-logo.png" alt="Logo de l’Université Catholique du Congo" loading="lazy" class="h-12 w-12 object-contain">
+                <span class="text-sm font-semibold text-[#19231f]">Université Catholique du Congo (UCC)</span>
+              </div>
+            </article>
+
+            <article class="flex min-h-40 flex-col items-center justify-center rounded-lg border border-[#d8d2c5] bg-[#f4f1ea]/70 px-5 py-6 text-center">
+              <div class="flex flex-col items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-[#19231f] p-1">
+                  <img src="https://upc.ac.cd/marque/embleme-upc-blanc.png" alt="Logo de l’Université Protestante au Congo" loading="lazy" class="h-full w-full object-contain">
+                </span>
+                <span class="text-sm font-semibold text-[#19231f]">Université Protestante au Congo (UPC)</span>
+              </div>
+            </article>
+
+            <article class="flex min-h-40 flex-col items-center justify-center rounded-lg border border-[#d8d2c5] bg-[#f4f1ea]/70 px-5 py-6 text-center">
+              <div class="flex flex-col items-center gap-3">
+                <img src="https://mediaspaul.cd/images/logo-mediaspaul-small.png" alt="Logo des Éditions Médiaspaul" loading="lazy" class="h-12 w-40 object-contain">
+                <span class="text-sm font-semibold text-[#19231f]">Éditions Médiaspaul</span>
+              </div>
+            </article>
+
+            <article class="flex min-h-40 flex-col items-center justify-center rounded-lg border border-[#d8d2c5] bg-[#f4f1ea]/70 px-5 py-6 text-center">
+              <div class="flex flex-col items-center gap-3">
+                <img src="https://www.unhorizons.org/wp-content/uploads/2017/03/cropped-Logo-UNH-6.png" alt="Logo de l’Université Nouveaux Horizons" loading="lazy" class="h-12 w-40 object-contain">
+                <span class="text-sm font-semibold text-[#19231f]">Université Nouveaux Horizons (UNH)</span>
               </div>
             </article>
           </div>
@@ -600,13 +624,22 @@
 
         <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
           <p>© 2026 Mikanda · Maquette de démonstration</p>
-          <p class="md:text-center">Conçue avec soin, pour les lecteurs.</p>
+          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
           <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76] md:justify-self-end">
-            Retour en haut <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
           </a>
         </div>
       </div>
     </footer>
+
+    <script>
+      lucide.createIcons()
+    </script>
 </body>
 </html>
 
