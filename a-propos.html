@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez la mission de Mikanda, bibliothèque numérique consacrée à la littérature congolaise.">
+  <link href="./dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>À propos | Mikanda</title>
+</head>
+<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
+  <header class="border-b border-white/10 bg-[#19231f] text-[#f4f1ea]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
+      <a href="index.html" aria-label="Accueil Mikanda">
+        <img src="assets/mikanda-logo.svg" alt="Mikanda, bibliothèque numérique de la RDC" class="h-12 w-44 object-contain">
+      </a>
+      <nav aria-label="Navigation principale" class="flex items-center gap-2">
+        <a href="index.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Accueil</a>
+        <a href="bibliotheque.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Bibliothèque</a>
+        <a href="auteurs.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Auteurs</a>
+        <a href="collections.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Collections</a>
+        <a href="a-propos.html" aria-current="page" class="rounded-full bg-white/10 px-3 py-2 text-sm font-semibold text-[#e6bd76]">À propos</a>
+        <a href="premium.html" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] hover:bg-white/10">Premium</a>
+        <a href="profil.html" class="ml-3 flex items-center gap-2 rounded-full border border-[#e6bd76]/35 py-1 pl-1 pr-3 text-sm font-semibold hover:bg-white/10">
+          <img src="assets/auteurs/blaise-ndala.jpg" alt="" class="h-9 w-9 rounded-full object-cover ring-2 ring-[#e6bd76]/60">
+          <span>Blaise Ndala</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-[#19231f] px-8 py-20 text-[#f4f1ea]">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 items-center gap-16">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">À propos de Mikanda</p>
+          <h1 class="mt-5 font-['Playfair_Display',Georgia,serif] text-6xl font-medium leading-tight">Les récits congolais ont leur bibliothèque.</h1>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-[#d1d8d2]">Mikanda est une bibliothèque numérique consacrée aux livres, aux auteurs et aux récits de la République démocratique du Congo. Un espace de découverte pour lire, explorer et faire circuler les voix.</p>
+          <div class="mt-8 flex items-center gap-4">
+            <a href="bibliotheque.html" class="rounded-full bg-[#e6bd76] px-6 py-3 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d]">Explorer la bibliothèque</a>
+            <a href="auteurs.html" class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Rencontrer les auteurs</a>
+          </div>
+        </div>
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-10">
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Mikanda · RDC</p>
+          <p class="mt-8 border-l-2 border-[#e6bd76] pl-6 font-['Playfair_Display',Georgia,serif] text-4xl leading-snug">Une maison pour les livres, les idées et les mémoires.</p>
+          <p class="mt-8 border-t border-white/15 pt-5 text-sm text-[#d1d8d2]">Œuvres <span class="px-2 text-[#e6bd76]">·</span> Auteurs <span class="px-2 text-[#e6bd76]">·</span> Collections</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-16">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Notre mission</p>
+        <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl font-medium">Faire découvrir, relier et transmettre.</h2>
+        <div class="mt-9 grid grid-cols-3 gap-6">
+          <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-7">
+            <p class="text-xs font-semibold uppercase tracking-[1.5px] text-[#b85235]">01 · Découvrir</p>
+            <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Des livres à portée de regard</h3>
+            <p class="mt-3 text-sm leading-7 text-[#59635d]">Parcourez une bibliothèque organisée pour trouver des œuvres et des voix nouvelles.</p>
+          </article>
+          <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-7">
+            <p class="text-xs font-semibold uppercase tracking-[1.5px] text-[#b85235]">02 · Relier</p>
+            <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Des auteurs et des récits</h3>
+            <p class="mt-3 text-sm leading-7 text-[#59635d]">Les fiches d’auteurs et les collections mettent les œuvres en perspective.</p>
+          </article>
+          <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-7">
+            <p class="text-xs font-semibold uppercase tracking-[1.5px] text-[#b85235]">03 · Transmettre</p>
+            <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Une mémoire vivante</h3>
+            <p class="mt-3 text-sm leading-7 text-[#59635d]">Mikanda rassemble des histoires qui nourrissent le dialogue entre les générations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-[#e3ddd0] bg-[#e8e2d6] px-8 py-14">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-12">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Continuer la découverte</p>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl">Choisissez votre prochain livre.</h2>
+        </div>
+        <a href="bibliotheque.html" class="rounded-full bg-[#19231f] px-6 py-3 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#26332c]">Voir le catalogue</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#19231f] px-8 py-7 text-[#d1d8d2]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between text-sm">
+      <a href="index.html" class="font-['Playfair_Display',Georgia,serif] text-xl text-white">Mikanda</a>
+      <p>© 2026 Mikanda · Bibliothèque numérique de la littérature congolaise</p>
+      <a href="profil.html" class="text-[#e6bd76] hover:text-white">Mon profil</a>
+    </div>
+  </footer>
+</body>
+</html>
