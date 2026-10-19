@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Créez votre compte Mikanda et explorez la littérature de la République démocratique du Congo.">
+  <link href="./dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Créer un compte | Mikanda</title>
+</head>
+<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
+  <main class="grid min-h-screen grid-cols-[1.08fr_0.92fr] max-[900px]:grid-cols-1">
+    <aside class="relative isolate flex min-h-screen flex-col justify-between overflow-hidden bg-[#10221b] px-14 py-12 text-white max-[900px]:min-h-[680px] max-[640px]:px-7 max-[640px]:py-8">
+      <!-- Vidéo de Noor Khalafy, publiée sur Pexels sous licence gratuite : https://www.pexels.com/video/view-inside-of-vast-modern-library-9848468/ -->
+      <video class="absolute inset-0 -z-20 h-full w-full object-cover object-center" autoplay muted loop playsinline preload="metadata" poster="assets/bibliotheque-congolaise-illustration.png" aria-hidden="true">
+        <source src="assets/videos/mikanda-auth-library.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 -z-10 bg-linear-to-br from-[#10221b]/95 via-[#10221b]/70 to-[#10221b]/35" aria-hidden="true"></div>
+      <div class="absolute inset-0 -z-10 bg-linear-to-t from-[#10221b]/70 via-transparent to-[#10221b]/20" aria-hidden="true"></div>
+
+      <a href="index.html" class="inline-flex w-fit rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+        <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-14 w-52 object-contain object-left">
+      </a>
+
+      <div class="max-w-xl py-16">
+        <p class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#f0d49d] backdrop-blur-sm">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#e6bd76]"></span> Une bibliothèque, mille voix
+        </p>
+        <h1 class="mt-7 font-['Playfair_Display',Georgia,serif] text-6xl font-medium leading-[1.08] tracking-tight max-[640px]:text-5xl">Faites une place aux histoires <span class="text-[#e6bd76]">qui nous ressemblent.</span></h1>
+        <p class="mt-6 max-w-lg text-base leading-8 text-white/85">Créez votre espace de lecture et découvrez le patrimoine littéraire de la République démocratique du Congo.</p>
+
+        <div class="mt-10 flex max-w-md items-center gap-4 rounded-2xl border border-white/15 bg-[#10221b]/55 p-4 backdrop-blur-md">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#e6bd76]/15 text-[#e6bd76]">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" class="h-8 w-8">
+              <path d="M24 13.5c-5.8-4-11.3-4.6-17-2.8v23.8c5.7-1.8 11.2-1.2 17 2.8m0-23.8c5.8-4 11.3-4.6 17-2.8v23.8c-5.7-1.8-11.2-1.2-17 2.8m0-23.8v23.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 17.5c2.5-.4 5.2.1 7.5 1.3M12 23c2.5-.4 5.2.1 7.5 1.3m16-6.8c-2.5-.4-5.2.1-7.5 1.3m7.5 4.2c-2.5-.4-5.2.1-7.5 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-['Playfair_Display',Georgia,serif] text-lg text-white">Votre bibliothèque vous suit</p>
+            <p class="mt-1 text-xs leading-5 text-white/65">Conservez vos découvertes et explorez de nouvelles voix.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs font-medium tracking-wide text-white/65">Kinshasa, RDC <span class="mx-2 text-[#e6bd76]">•</span> Des histoires qui nous relient</p>
+    </aside>
+
+    <section class="flex min-h-screen items-center justify-center px-12 py-12 max-[640px]:px-6 max-[640px]:py-10">
+      <div class="w-full max-w-md">
+        <div class="mb-10 flex items-center justify-between gap-4">
+          <a href="index.html" class="text-sm font-semibold text-[#59635d] transition-colors hover:text-[#133a28]">← Retour à l’accueil</a>
+          <p class="text-sm text-[#59635d]">Déjà membre ? <a href="connexion.html" class="font-semibold text-[#133a28] underline decoration-[#e6bd76] decoration-2 underline-offset-4 hover:text-[#b85235]">Se connecter</a></p>
+        </div>
+
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Rejoignez Mikanda</p>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-5xl font-medium tracking-tight text-[#19231f]">Créer un compte</h2>
+          <p class="mt-3 text-sm leading-6 text-[#69716b]">Un espace pour garder vos lectures et découvrir les auteurs congolais.</p>
+        </div>
+
+        <div class="mt-7">
+          <button type="button" class="flex min-h-14 w-full items-center justify-center gap-3 rounded-xl border border-[#d8d4ca] bg-white px-5 text-sm font-semibold text-[#252a27] shadow-sm transition hover:border-[#aaa79f] hover:bg-[#fbfaf7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#133a28]">
+            <svg viewBox="0 0 48 48" aria-hidden="true" class="h-5 w-5">
+              <path fill="#4285F4" d="M43.6 24.5c0-1.4-.1-2.8-.4-4.2H24v7.9h11a9.4 9.4 0 0 1-4.1 6.2v5.1h6.7c3.9-3.6 6-8.8 6-15Z"/>
+              <path fill="#34A853" d="M24 44c5.5 0 10.1-1.8 13.5-4.9l-6.7-5.1c-1.9 1.3-4.2 2-6.8 2-5.2 0-9.6-3.5-11.2-8.2H5.9v5.2A20 20 0 0 0 24 44Z"/>
+              <path fill="#FBBC05" d="M12.8 27.8a12 12 0 0 1 0-7.6V15H5.9a20 20 0 0 0 0 17.9l6.9-5.1Z"/>
+              <path fill="#EA4335" d="M24 12c3 0 5.7 1 7.8 3l5.9-5.9A19.7 19.7 0 0 0 24 4 20 20 0 0 0 5.9 15l6.9 5.2C14.4 15.5 18.8 12 24 12Z"/>
+            </svg>
+            S’inscrire avec Google
+          </button>
+        </div>
+
+        <div class="my-6 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[1.5px] text-[#9a9d97]">
+          <span class="h-px flex-1 bg-[#dedbd2]"></span><span>ou par e-mail</span><span class="h-px flex-1 bg-[#dedbd2]"></span>
+        </div>
+
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="mb-2 block text-sm font-semibold text-[#29342e]">Nom complet</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Votre nom" required class="min-h-12 w-full rounded-xl border border-[#d8d4ca] bg-white px-4 text-sm text-[#19231f] outline-none transition placeholder:text-[#a1a39d] focus:border-[#133a28] focus:ring-4 focus:ring-[#133a28]/10">
+          </div>
+          <div>
+            <label for="email" class="mb-2 block text-sm font-semibold text-[#29342e]">Adresse e-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required class="min-h-12 w-full rounded-xl border border-[#d8d4ca] bg-white px-4 text-sm text-[#19231f] outline-none transition placeholder:text-[#a1a39d] focus:border-[#133a28] focus:ring-4 focus:ring-[#133a28]/10">
+          </div>
+          <div>
+            <label for="password" class="mb-2 block text-sm font-semibold text-[#29342e]">Mot de passe</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="8 caractères minimum" minlength="8" required class="min-h-12 w-full rounded-xl border border-[#d8d4ca] bg-white px-4 text-sm text-[#19231f] outline-none transition placeholder:text-[#a1a39d] focus:border-[#133a28] focus:ring-4 focus:ring-[#133a28]/10">
+          </div>
+          <button type="button" class="mt-2 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-[#133a28] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(19,58,40,0.18)] transition hover:-translate-y-0.5 hover:bg-[#1b4b35] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#133a28]">
+            Créer mon compte <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="mt-7 text-center text-xs leading-6 text-[#858a84]">Une fois inscrit, retrouvez votre espace de lecture depuis tous vos appareils.</p>
+        <div class="mt-7 flex items-center justify-center gap-2 border-t border-[#e0dcd3] pt-5 text-xs text-[#777e77]">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="h-4 w-4 text-[#133a28]"><path d="M10 2.5 4 5v4.3c0 3.8 2.6 6.6 6 8.2 3.4-1.6 6-4.4 6-8.2V5l-6-2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m7.4 9.8 1.7 1.7 3.6-3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Votre compte Mikanda, votre bibliothèque
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
