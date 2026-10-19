@@ -14,8 +14,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="selection:bg-[#e6bd76] selection:text-[#19231f] bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
-    <div id="accueil" class="min-h-158 px-5 bg-[url('/assets/bibliotheque-congolaise-fond-drapeau.png')] bg-cover bg-center bg-no-repeat">
-        <header class="grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-7 py-4 max-[1024px]:grid-cols-[1fr_auto] max-[1024px]:gap-3 max-[640px]:px-4 max-[640px]:py-3">
+    <div id="accueil" class="relative isolate min-h-158 px-5 bg-[url('/assets/bibliotheque-congolaise-fond-drapeau.png')] bg-cover bg-center bg-no-repeat">
+        <div aria-hidden="true" class="pointer-events-none absolute left-0 top-0 z-0 h-full w-1/2" style="background: linear-gradient(90deg, rgba(19,58,40,.72) 0%, rgba(19,58,40,.30) 65%, rgba(19,58,40,.05) 100%), radial-gradient(ellipse 75% 58% at 20% 35%, rgba(19,58,40,.32) 0%, rgba(19,58,40,.14) 48%, transparent 76%); filter: blur(10px);"></div>
+        <header class="relative z-10 grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-7 py-4 max-[1024px]:grid-cols-[1fr_auto] max-[1024px]:gap-3 max-[640px]:px-4 max-[640px]:py-3">
             <a href="#accueil" class="justify-self-start leading-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                 <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="block h-13 w-52 object-contain">
             </a>
@@ -40,8 +41,7 @@
             </div>
         </header>
 
-        <section class="px-7 pt-10 pb-25.5">
-            <div class="absolute inset-0 -z-10 bg-linear-to-r from-[#101713]/95 via-[#101713]/78 to-[#101713]/10"></div>  
+        <section class="relative z-10 px-7 pt-10 pb-25.5">
             <div class="text-[#e6bd76] uppercase text-[10px] font-medium tracking-[2px]">
                   <p class="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[2.4px] text-[#e6bd76]">
                     <span aria-hidden="true" class="h-px w-5 bg-[#e6bd76]"></span> La bibliothèque de la litterature congolaise
