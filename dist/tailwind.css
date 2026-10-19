@@ -493,9 +493,6 @@
   .inline {
     display: inline;
   }
-  .inline-block {
-    display: inline-block;
-  }
   .inline-flex {
     display: inline-flex;
   }
@@ -1156,6 +1153,9 @@
   .bg-\[\#133a28\] {
     background-color: #133a28;
   }
+  .bg-\[\#10281e\] {
+    background-color: #10281e;
+  }
   .bg-\[\#19231f\] {
     background-color: #19231f;
   }
@@ -1257,6 +1257,12 @@
     }
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\'\/assets\/\'\)\] {
+    background-image: url('/assets/');
+  }
+  .bg-\[url\(\'\/assets\/\.png\'\)\] {
+    background-image: url('/assets/.png');
+  }
   .bg-\[url\(\'\/assets\/Library\.jfif\'\)\] {
     background-image: url('/assets/Library.jfif');
   }
@@ -1265,6 +1271,33 @@
   }
   .bg-\[url\(\'\/assets\/background\.png\'\)\] {
     background-image: url('/assets/background.png');
+  }
+  .bg-\[url\(\'\/assets\/bi\.png\'\)\] {
+    background-image: url('/assets/bi.png');
+  }
+  .bg-\[url\(\'\/assets\/biblio\.png\'\)\] {
+    background-image: url('/assets/biblio.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque-congolai\.png\'\)\] {
+    background-image: url('/assets/bibliotheque-congolai.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque-congolais\.png\'\)\] {
+    background-image: url('/assets/bibliotheque-congolais.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque-congolaise-fond-\.png\'\)\] {
+    background-image: url('/assets/bibliotheque-congolaise-fond-.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque-congolaise-fond-drapeau\.png\'\)\] {
+    background-image: url('/assets/bibliotheque-congolaise-fond-drapeau.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque-congolaise-fond-illustre\.png\'\)\] {
+    background-image: url('/assets/bibliotheque-congolaise-fond-illustre.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque-congolaise-fond\.png\'\)\] {
+    background-image: url('/assets/bibliotheque-congolaise-fond.png');
+  }
+  .bg-\[url\(\'\/assets\/bibliotheque\.png\'\)\] {
+    background-image: url('/assets/bibliotheque.png');
   }
   .bg-\[url\(\'\/assets\/conte\.jfif\'\)\] {
     background-image: url('/assets/conte.jfif');
@@ -1909,6 +1942,12 @@
   }
   .text-\[\#fbfaf6\] {
     color: #fbfaf6;
+  }
+  .text-\[3b85235\] {
+    color: 3b85235;
+  }
+  .text-\[b85235\] {
+    color: b85235;
   }
   .text-white {
     color: var(--color-white);
