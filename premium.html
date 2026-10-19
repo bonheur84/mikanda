@@ -3,92 +3,288 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez la sélection Premium de la bibliothèque numérique Mikanda.">
+  <meta name="description" content="Comparez les offres gratuite et Premium de Mikanda, la bibliothèque numérique de la littérature congolaise.">
   <link href="./dist/tailwind.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <title>Premium | Mikanda</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <title>Offres et tarifs | Mikanda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
-<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
-  <header class="border-b border-white/10 bg-[#19231f] text-[#f4f1ea]">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
-      <a href="index.html" aria-label="Accueil Mikanda">
-        <img src="assets/mikanda-logo.svg" alt="Mikanda, bibliothèque numérique de la RDC" class="h-12 w-44 object-contain">
+<body class="bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
+      <a href="index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
+        <img src="assets/mikanda-logo.png" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52">
       </a>
-      <nav aria-label="Navigation principale" class="flex items-center gap-2">
-        <a href="index.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Accueil</a>
-        <a href="bibliotheque.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Bibliothèque</a>
-        <a href="auteurs.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Auteurs</a>
-        <a href="collections.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Collections</a>
-        <a href="a-propos.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">À propos</a>
-        <a href="premium.html" aria-current="page" class="rounded-full bg-white/10 px-3 py-2 text-sm font-semibold text-[#e6bd76]">Premium</a>
-        <a href="profil.html" class="ml-3 flex items-center gap-2 rounded-full border border-[#e6bd76]/35 py-1 pl-1 pr-3 text-sm font-semibold hover:bg-white/10">
-          <img src="assets/auteurs/blaise-ndala.jpg" alt="" class="h-9 w-9 rounded-full object-cover ring-2 ring-[#e6bd76]/60">
-          <span>Blaise Ndala</span>
-        </a>
+
+      <nav aria-label="Navigation principale" class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-0 lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
+        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
+        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
+        <a href="auteurs.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Auteurs</a>
+        <a href="collections.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Collections</a>
+        <a href="a-propos.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">À propos</a>
+        <a href="premium.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">Premium</a>
       </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="">
+          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+        </a>
+
+        <a href="#connexion" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] lg:inline-flex cursor-pointer">
+          Se connecter <i data-lucide="user" class="w-4 h-4"></i>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="bg-[#19231f] px-8 py-20 text-[#f4f1ea]">
-      <div class="mx-auto grid max-w-7xl grid-cols-2 items-center gap-16">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Mikanda Premium</p>
-          <h1 class="mt-5 font-['Playfair_Display',Georgia,serif] text-6xl font-medium leading-tight">Des lectures choisies, au cœur de la bibliothèque.</h1>
-          <p class="mt-6 max-w-2xl text-base leading-8 text-[#d1d8d2]">Retrouvez les œuvres signalées Premium dans le catalogue Mikanda et poursuivez votre découverte des voix littéraires de la RDC.</p>
-          <a href="bibliotheque.html#catalogue" class="mt-8 inline-flex rounded-full bg-[#e6bd76] px-6 py-3 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d]">Découvrir les œuvres</a>
+    <section class="relative isolate overflow-hidden bg-[#19231f] px-8 py-16 text-[#f4f1ea]">
+      <img src="assets/bibliotheque-congolaise-fond-drapeau.png" alt="" aria-hidden="true" class="absolute inset-0 z-0 h-full w-full object-cover object-center">
+      <div aria-hidden="true" class="absolute inset-0 z-10 bg-linear-to-r from-[#10221b]/95 via-[#10221b]/80 to-[#10221b]/45"></div>
+      <div aria-hidden="true" class="absolute inset-0 z-10 bg-linear-to-t from-[#10221b]/45 via-transparent to-[#10221b]/10"></div>
+      <div class="relative z-20 mx-auto grid max-w-7xl grid-cols-2 items-center gap-16">
+        <div class="py-5">
+          <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">
+            <span class="h-px w-8 bg-[#e6bd76]"></span> Les offres Mikanda
+          </p>
+          <h1 class="mt-6 max-w-2xl font-['Playfair_Display',Georgia,serif] text-6xl font-medium leading-[1.08]">Toute la littérature congolaise, <span class="text-[#e6bd76]">à votre rythme.</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-[#e3e8e3]">Commencez gratuitement, puis ouvrez la porte à toutes les œuvres avec Mikanda Premium.</p>
+          <a href="#tarifs" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#e6bd76] px-6 py-3.5 text-sm font-semibold text-[#19231f] shadow-lg shadow-black/20 transition-colors hover:bg-[#f0cd8d]">
+            Comparer les offres <i data-lucide="arrow-down" aria-hidden="true" class="h-4 w-4"></i>
+          </a>
         </div>
-        <div class="rounded-[2rem] border border-[#e6bd76]/30 bg-white/5 p-10">
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">La sélection Mikanda</p>
-          <p class="mt-8 font-['Playfair_Display',Georgia,serif] text-4xl leading-snug">Une autre porte d’entrée vers les livres.</p>
-          <p class="mt-6 border-t border-white/15 pt-5 text-sm leading-7 text-[#d1d8d2]">Les titres concernés portent la mention Premium dans les cartes et les fiches du catalogue.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="px-8 py-16">
-      <div class="mx-auto max-w-7xl">
-        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Une expérience de lecture claire</p>
-        <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl font-medium">Tout pour choisir votre prochaine lecture.</h2>
-        <div class="mt-9 grid grid-cols-3 gap-6">
-          <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-7">
-            <p class="text-xs font-semibold uppercase tracking-[1.5px] text-[#b85235]">Sélection</p>
-            <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Des œuvres à explorer</h3>
-            <p class="mt-3 text-sm leading-7 text-[#59635d]">Repérez les titres Premium au fil des livres et des collections de la bibliothèque.</p>
-          </article>
-          <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-7">
-            <p class="text-xs font-semibold uppercase tracking-[1.5px] text-[#b85235]">Repères</p>
-            <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Une mention visible</h3>
-            <p class="mt-3 text-sm leading-7 text-[#59635d]">Chaque œuvre concernée est distinguée par son badge Premium dans le catalogue.</p>
-          </article>
-          <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-7">
-            <p class="text-xs font-semibold uppercase tracking-[1.5px] text-[#b85235]">Découverte</p>
-            <h3 class="mt-4 font-['Playfair_Display',Georgia,serif] text-2xl">Des voix à rencontrer</h3>
-            <p class="mt-3 text-sm leading-7 text-[#59635d]">Parcourez les fiches des auteurs et laissez-vous guider d’un livre à l’autre.</p>
-          </article>
+        <div class="flex justify-end py-5">
+          <div class="w-95 rounded-3xl border border-white/20 bg-[#19231f]/75 p-8 shadow-2xl shadow-black/25 backdrop-blur-sm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e6bd76]/15 text-[#e6bd76]">
+              <i data-lucide="book-open-check" aria-hidden="true" class="h-6 w-6"></i>
+            </div>
+            <p class="mt-7 text-xs font-semibold uppercase tracking-[1.8px] text-[#e6bd76]">Une seule bibliothèque</p>
+            <p class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl leading-snug text-white">Deux façons de faire vivre les récits.</p>
+            <p class="mt-4 text-sm leading-7 text-[#d1d8d2]">Gardez l’accès aux œuvres gratuites ou choisissez l’offre complète pour lire aussi tous les titres Premium.</p>
+            <div class="mt-6 flex items-center gap-3 border-t border-white/15 pt-5 text-sm text-white/80">
+              <i data-lucide="badge-check" aria-hidden="true" class="h-5 w-5 text-[#e6bd76]"></i>
+              <span>Prix affichés en francs congolais</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#e8e2d6] px-8 py-14">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-12">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">À vous de choisir</p>
-          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl">Explorez les titres du catalogue.</h2>
+    <section id="tarifs" class="px-8 py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Des offres simples et transparentes</p>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-5xl font-medium">Choisissez votre façon de lire.</h2>
+          <p class="mt-4 text-base leading-7 text-[#59635d]">Commencez avec les livres gratuits ou profitez de l’accès complet au catalogue Mikanda.</p>
         </div>
-        <a href="bibliotheque.html#catalogue" class="rounded-full bg-[#19231f] px-6 py-3 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#26332c]">Ouvrir la bibliothèque</a>
+
+        <div class="mt-12 grid grid-cols-2 items-stretch gap-7">
+          <article class="flex flex-col rounded-3xl border border-[#ded8cc] bg-[#fbfaf6] p-9 shadow-[0_16px_40px_rgba(25,35,31,0.06)]">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[1.8px] text-[#59635d]">Pour commencer</p>
+                <h3 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl">Gratuit</h3>
+              </div>
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e9e4d9] text-[#59635d]">
+                <i data-lucide="book-open" aria-hidden="true" class="h-5 w-5"></i>
+              </span>
+            </div>
+            <div class="mt-7 flex items-baseline gap-2">
+              <span class="font-['Playfair_Display',Georgia,serif] text-5xl font-semibold">0</span>
+              <span class="text-xl font-semibold">FC</span>
+              <span class="text-sm text-[#59635d]">/ toujours</span>
+            </div>
+            <p class="mt-3 text-sm leading-6 text-[#59635d]">L’essentiel pour découvrir les voix et les récits de la RDC.</p>
+            <div class="my-7 h-px bg-[#e3ddd0]"></div>
+            <p class="text-xs font-semibold uppercase tracking-[1.4px] text-[#59635d]">Inclus dans l’offre</p>
+            <ul class="mt-5 space-y-4 text-sm text-[#35423a]">
+              <li class="flex items-start gap-3"><i data-lucide="check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[#133a28]"></i><span>Lecture des œuvres marquées <strong>Gratuit</strong></span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[#133a28]"></i><span>Découverte des auteurs et des collections</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[#133a28]"></i><span>Accès aux fiches du catalogue</span></li>
+            </ul>
+            <div class="mt-6 border-t border-[#e3ddd0] pt-5">
+              <p class="text-xs font-semibold uppercase tracking-[1.4px] text-[#8c8981]">Non inclus</p>
+              <ul class="mt-4 space-y-3 text-sm text-[#79776f]">
+                <li class="flex items-start gap-3"><i data-lucide="lock-keyhole" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0"></i><span>Lecture des œuvres Premium</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="lock-keyhole" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0"></i><span>Accès à l’intégralité du catalogue</span></li>
+              </ul>
+            </div>
+            <a href="bibliotheque.html#catalogue" class="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#19231f]/20 px-5 py-3 text-sm font-semibold text-[#19231f] transition-colors hover:border-[#19231f] hover:bg-[#19231f] hover:text-white">
+              Explorer les œuvres gratuites <i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i>
+            </a>
+          </article>
+
+          <article class="relative flex flex-col overflow-hidden rounded-3xl border-2 border-[#e6bd76] bg-[#19231f] p-9 text-[#f4f1ea] shadow-[0_22px_55px_rgba(25,35,31,0.2)]">
+            <div aria-hidden="true" class="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-[#e6bd76]/10"></div>
+            <div aria-hidden="true" class="absolute -right-9 -top-9 h-44 w-44 rounded-full border border-[#e6bd76]/10"></div>
+            <div class="relative flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[1.8px] text-[#e6bd76]">L’expérience complète</p>
+                <h3 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl">Mikanda Premium</h3>
+              </div>
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e6bd76]/15 text-[#e6bd76]">
+                <i data-lucide="crown" aria-hidden="true" class="h-5 w-5"></i>
+              </span>
+            </div>
+            <p class="relative mt-4 text-sm leading-6 text-[#d1d8d2]">Tout le catalogue, toutes les histoires.</p>
+
+            <div class="relative mt-6 grid grid-cols-2 gap-3">
+              <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
+                <p class="text-xs font-semibold uppercase tracking-[1.2px] text-[#d1d8d2]">Au mois</p>
+                <p class="mt-3 flex items-baseline gap-1.5"><span class="font-['Playfair_Display',Georgia,serif] text-3xl font-semibold text-white">15 000</span><span class="text-sm font-semibold text-[#e6bd76]">FC</span></p>
+                <p class="mt-1 text-xs text-[#d1d8d2]">par mois</p>
+              </div>
+              <div class="rounded-2xl border border-[#e6bd76]/45 bg-[#e6bd76]/10 p-4">
+                <div class="flex items-center justify-between gap-2">
+                  <p class="text-xs font-semibold uppercase tracking-[1.2px] text-[#e6bd76]">À l’année</p>
+                  <span class="rounded-full bg-[#e6bd76] px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-[#19231f]">Économisez</span>
+                </div>
+                <p class="mt-3 flex items-baseline gap-1.5"><span class="font-['Playfair_Display',Georgia,serif] text-3xl font-semibold text-white">110 000</span><span class="text-sm font-semibold text-[#e6bd76]">FC</span></p>
+                <p class="mt-1 text-xs text-[#d1d8d2]">par an · soit env. 9 167 FC/mois</p>
+              </div>
+            </div>
+            <p class="relative mt-3 text-xs text-[#d1d8d2]">L’offre annuelle revient à 70 000 FC de moins que 12 paiements mensuels.</p>
+
+            <div class="relative my-6 h-px bg-white/15"></div>
+            <p class="relative text-xs font-semibold uppercase tracking-[1.4px] text-[#e6bd76]">Tout est débloqué</p>
+            <ul class="relative mt-5 space-y-4 text-sm text-[#f4f1ea]">
+              <li class="flex items-start gap-3"><i data-lucide="check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[#e6bd76]"></i><span>Tous les avantages de l’offre gratuite</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[#e6bd76]"></i><span>Lecture de toutes les œuvres marquées <strong>Premium</strong></span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[#e6bd76]"></i><span>Accès complet au catalogue Mikanda</span></li>
+            </ul>
+            <a href="bibliotheque.html#catalogue" class="relative mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#e6bd76] px-5 py-3 text-sm font-bold text-[#19231f] transition-colors hover:bg-[#f0cd8d]">
+              Découvrir les œuvres Premium <i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i>
+            </a>
+          </article>
+        </div>
+        <p class="mt-7 text-center text-xs leading-6 text-[#77766e]">Tous les prix sont indiqués en francs congolais (FC).</p>
+      </div>
+    </section>
+
+    <section class="border-y border-[#e3ddd0] bg-[#ece6da] px-8 py-16">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-8 text-center">
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Comparer en un coup d’œil</p>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl font-medium">Qu’est-ce qui est compris ?</h2>
+        </div>
+        <div class="overflow-hidden rounded-2xl border border-[#ded8cc] bg-[#fbfaf6]">
+          <div class="grid grid-cols-[1fr_190px_220px] items-center bg-[#19231f] px-7 py-4 text-sm font-semibold text-white">
+            <span>Fonctionnalités</span><span class="text-center text-[#d1d8d2]">Gratuit</span><span class="text-center text-[#e6bd76]">Premium</span>
+          </div>
+          <div class="grid grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
+            <span>Parcourir les auteurs et les collections</span><span class="text-center font-semibold text-[#133a28]">Inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
+          </div>
+          <div class="grid grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
+            <span>Lire les œuvres gratuites</span><span class="text-center font-semibold text-[#133a28]">Inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
+          </div>
+          <div class="grid grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
+            <span>Lire les œuvres Premium</span><span class="text-center font-medium text-[#8c8981]">Non inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
+          </div>
+          <div class="grid grid-cols-[1fr_190px_220px] items-center px-7 py-5 text-sm">
+            <span>Accéder à l’ensemble du catalogue</span><span class="text-center font-medium text-[#8c8981]">Non inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-20">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-16">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Questions fréquentes</p>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-tight">Avant de vous lancer.</h2>
+          <p class="mt-4 max-w-md text-sm leading-7 text-[#59635d]">Quelques repères pour choisir l’offre adaptée à votre envie de lecture.</p>
+        </div>
+        <div class="space-y-3">
+          <details class="group rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 font-semibold">Quelle est la différence entre les deux offres ? <i data-lucide="plus" aria-hidden="true" class="h-4 w-4 shrink-0 text-[#b85235] transition-transform group-open:rotate-45"></i></summary>
+            <p class="mt-4 max-w-xl text-sm leading-7 text-[#59635d]">L’offre gratuite donne accès aux œuvres signalées comme gratuites. Premium inclut également toutes les œuvres signalées Premium et l’ensemble du catalogue.</p>
+          </details>
+          <details class="group rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 font-semibold">Quel est l’avantage du tarif annuel ? <i data-lucide="plus" aria-hidden="true" class="h-4 w-4 shrink-0 text-[#b85235] transition-transform group-open:rotate-45"></i></summary>
+            <p class="mt-4 max-w-xl text-sm leading-7 text-[#59635d]">L’abonnement annuel coûte 110 000 FC. Il revient à 70 000 FC de moins que douze mois payés séparément au tarif mensuel.</p>
+          </details>
+          <details class="group rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 font-semibold">Comment repérer les œuvres Premium ? <i data-lucide="plus" aria-hidden="true" class="h-4 w-4 shrink-0 text-[#b85235] transition-transform group-open:rotate-45"></i></summary>
+            <p class="mt-4 max-w-xl text-sm leading-7 text-[#59635d]">Elles portent un badge Premium dans les cartes du catalogue Mikanda.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#133a28] px-8 py-14 text-[#f4f1ea]">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-12">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">La prochaine histoire vous attend</p>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl">Parcourez les voix de la RDC.</h2>
+        </div>
+        <a href="bibliotheque.html#catalogue" class="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#e6bd76] px-6 py-3.5 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d]">
+          Ouvrir la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-white/10 bg-[#19231f] px-8 py-7 text-[#d1d8d2]">
-    <div class="mx-auto flex max-w-7xl items-center justify-between text-sm">
-      <a href="index.html" class="font-['Playfair_Display',Georgia,serif] text-xl text-white">Mikanda</a>
-      <p>© 2026 Mikanda · Bibliothèque numérique de la littérature congolaise</p>
-      <a href="profil.html" class="text-[#e6bd76] hover:text-white">Mon profil</a>
-    </div>
-  </footer>
+  <footer class="bg-[#19231f] px-7 py-14 text-[#f4f1ea] lg:px-8 lg:pt-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-[1.35fr_0.8fr_0.9fr_0.9fr]">
+          <div class="max-w-sm">
+            <a href="#accueil" aria-label="Mikanda, retourner à l’accueil" class="inline-flex rounded-sm cursor-pointer">
+              <img src="assets/mikanda-logo.svg" alt="" class="block h-14 w-52 object-contain object-left">
+            </a>
+            
+            <p class="mt-7 max-w-xs text-sm leading-7 text-[#d1d8d2]">
+              Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.
+            </p>
+          </div>
+
+          <nav aria-label="Explorer Mikanda">
+            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Explorer</h2>
+            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
+              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">La bibliothèque</a></li>
+              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les auteurs</a></li>
+              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les collections</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="À propos de Mikanda">
+            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
+            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
+              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Notre mission</a></li>
+              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Nos partenaires</a></li>
+              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Revenir à l’accueil</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Informations sur le catalogue">
+            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
+            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
+              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Œuvres populaires</a></li>
+              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Explorer par genre</a></li>
+              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Voix congolaises</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
+          <p>© 2026 Mikanda · Maquette de démonstration</p>
+          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] md:justify-self-end cursor-pointer">
+            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons()
+    </script>
 </body>
 </html>
