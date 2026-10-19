@@ -6,6 +6,6 @@
     <path d="m32 44 22-6v47l-22 6z" fill="#6b866f"/>
     <path d="m59 49 22-6v39l-22 6z" fill="#e6bd76"/>
   </g>
-  <text x="98" y="59" fill="#133a28" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="-2">mikanda<tspan fill="#b85235">.</tspan></text>
-  <text x="100" y="92" fill="#133a28" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.2">LA BIBLIOTHÈQUE CONGOLAISE</text>
+  <text x="98" y="59" fill="#ecf1ea" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="-2">mikanda<tspan fill="#b85235">.</tspan></text>
+  <text x="100" y="92" fill="#ecf1ea" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.2">LA BIBLIOTHÈQUE CONGOLAISE</text>
 </svg>

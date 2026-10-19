@@ -1211,8 +1211,20 @@
   .bg-\[url\(\'\/assets\/auteurs\/blaise-ndala\.jpg\'\)\] {
     background-image: url('/assets/auteurs/blaise-ndala.jpg');
   }
+  .bg-\[url\(\'\/assets\/b\.png\'\)\] {
+    background-image: url('/assets/b.png');
+  }
+  .bg-\[url\(\'\/assets\/ba\.png\'\)\] {
+    background-image: url('/assets/ba.png');
+  }
   .bg-\[url\(\'\/assets\/background\.png\'\)\] {
     background-image: url('/assets/background.png');
+  }
+  .bg-\[url\(\'\/assets\/bib\.png\'\)\] {
+    background-image: url('/assets/bib.png');
+  }
+  .bg-\[url\(\'\/assets\/biblio\.png\'\)\] {
+    background-image: url('/assets/biblio.png');
   }
   .bg-\[url\(\'\/assets\/bibliotheque-congolaise-fond-drapeau\.png\'\)\] {
     background-image: url('/assets/bibliotheque-congolaise-fond-drapeau.png');
