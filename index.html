@@ -14,7 +14,11 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="selection:bg-[#e6bd76] selection:text-[#19231f] bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
-    <div id="accueil" class="relative isolate min-h-158 px-5 bg-[url('/assets/bibliotheque-congolaise-fond-drapeau.png')] bg-cover bg-center bg-no-repeat">
+    <div id="accueil" class="relative isolate h-[220vh]">
+      <div class="sticky top-0 h-screen overflow-hidden bg-[#10221b]">
+        <video id="hero-scroll-video" class="absolute inset-0 z-0 h-full w-full object-cover object-center" muted playsinline preload="auto" aria-hidden="true">
+          <source src="assets/videos/mikanda-library-scroll.mp4?v=scrub-gop2" type="video/mp4">
+        </video>
         <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 bg-linear-to-r from-[#10221b]/95 via-[#10221b]/75 to-[#10221b]/30"></div>
         <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 bg-linear-to-t from-[#10221b]/45 via-transparent to-[#10221b]/20"></div>
         <header class="relative z-10 grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-7 py-4 max-[1024px]:grid-cols-[1fr_auto] max-[1024px]:gap-3 max-[640px]:px-4 max-[640px]:py-3">
@@ -69,7 +73,7 @@
                 </div>
             </div>
         </section>
-        
+      </div>
     </div>
 
     <section class="relative bg-[#f4f1ea] px-7 pb-6">
@@ -646,7 +650,45 @@
     </footer>
 
     <script>
-      lucide.createIcons()
+      const heroSection = document.getElementById("accueil");
+      const heroVideo = document.getElementById("hero-scroll-video");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let videoFrame = null;
+      let lastRequestedFrame = null;
+
+      function syncHeroVideo() {
+        videoFrame = null;
+        if (reduceMotion || !heroVideo.duration || !Number.isFinite(heroVideo.duration)) return;
+
+        const scrollDistance = heroSection.offsetHeight - window.innerHeight;
+        const progress = scrollDistance > 0
+          ? Math.min(1, Math.max(0, -heroSection.getBoundingClientRect().top / scrollDistance))
+          : 0;
+        const lastFrameTime = Math.max(0, heroVideo.duration - 0.04);
+        const frameDuration = 1 / 25;
+        const targetTime = Math.min(
+          lastFrameTime,
+          Math.round(progress * lastFrameTime / frameDuration) * frameDuration
+        );
+        const targetFrame = Math.round(targetTime / frameDuration);
+
+        if (heroVideo.seeking || targetFrame === lastRequestedFrame) return;
+
+        lastRequestedFrame = targetFrame;
+        if (typeof heroVideo.fastSeek === "function") heroVideo.fastSeek(targetTime);
+        else heroVideo.currentTime = targetTime;
+      }
+
+      function requestVideoSync() {
+        if (videoFrame === null) videoFrame = window.requestAnimationFrame(syncHeroVideo);
+      }
+
+      window.addEventListener("scroll", requestVideoSync, { passive: true });
+      window.addEventListener("resize", requestVideoSync);
+      heroVideo.addEventListener("loadedmetadata", requestVideoSync);
+      heroVideo.addEventListener("seeked", requestVideoSync);
+      requestVideoSync();
+      lucide.createIcons();
     </script>
 </body>
 </html>
