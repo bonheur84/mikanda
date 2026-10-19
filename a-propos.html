@@ -2,44 +2,55 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez la mission de Mikanda, bibliothèque numérique consacrée aux livres, aux auteurs et aux archives littéraires de la RDC.">
-  <link href="./dist/tailwind.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="assets/mikanda-logo.svg">
-  <title>À propos | Mikanda</title>
+    <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Mikanda - Bibliothèque de la littérature congolaise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
-  <header class="border-b border-white/10 bg-[#19231f] text-[#f4f1ea]">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
-      <a href="index.html" aria-label="Accueil Mikanda">
-        <img src="assets/mikanda-logo.svg" alt="Mikanda, bibliothèque numérique de la RDC" class="h-12 w-44 object-contain">
+<body class="bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
+      <a href="index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
+        <img src="assets/mikanda-logo.png" alt="Mikanda, la bibliothèque congolaise" class="h-12 w-44 object-contain sm:h-14 sm:w-52">
       </a>
-      <nav aria-label="Navigation principale" class="flex items-center gap-2">
-        <a href="index.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Accueil</a>
-        <a href="bibliotheque.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Bibliothèque</a>
-        <a href="auteurs.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Auteurs</a>
-        <a href="collections.html" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Collections</a>
-        <a href="#partenaires" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Partenaires</a>
-        <a href="#contact" class="rounded-full px-3 py-2 text-sm text-[#d1d8d2] hover:bg-white/10">Contact</a>
-        <a href="a-propos.html" aria-current="page" class="rounded-full bg-white/10 px-3 py-2 text-sm font-semibold text-[#e6bd76]">À propos</a>
-        <a href="premium.html" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] hover:bg-white/10">Premium</a>
+
+      <nav aria-label="Navigation principale" class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-0 lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
+        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
+        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
+        <a href="auteurs.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Auteurs</a>
+        <a href="collections.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Collections</a>
+        <a href="a-propos.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">À propos</a>
+        <a href="premium.html" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 cursor-pointer">Premium</a>
       </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="">
+          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+        </a>
+
+        <a href="#connexion" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] lg:inline-flex cursor-pointer">
+          Se connecter <i data-lucide="user" class="w-4 h-4"></i>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="relative isolate min-h-[620px] overflow-hidden bg-[#19231f] px-8 py-14 text-[#f4f1ea]">
+    <section class="relative isolate min-h-155 overflow-hidden bg-[#19231f] px-8 py-14 text-[#f4f1ea]">
       <img src="assets/bibliotheque-congolaise-fond-drapeau.png" alt="" aria-hidden="true" class="absolute inset-0 z-0 h-full w-full object-cover object-center">
       <div aria-hidden="true" class="absolute inset-0 z-10 bg-linear-to-r from-[#10221b]/95 via-[#10221b]/75 to-[#10221b]/30"></div>
       <div aria-hidden="true" class="absolute inset-0 z-10 bg-linear-to-t from-[#10221b]/45 via-transparent to-[#10221b]/20"></div>
-      <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 left-6 z-10 select-none font-['Playfair_Display',Georgia,serif] text-[190px] leading-none text-white/[0.025]">MIKANDA</div>
-      <div class="relative z-20 mx-auto grid min-h-[520px] max-w-7xl grid-cols-2 items-center gap-16">
+      <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 left-6 z-10 select-none font-['Playfair_Display',Georgia,serif] text-[190px] leading-none text-white/2.5">MIKANDA</div>
+      <div class="relative z-20 mx-auto grid min-h-130 max-w-7xl grid-cols-2 items-center gap-16">
         <div class="py-6">
           <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">
-            <svg role="img" aria-label="Drapeau de la République démocratique du Congo" viewBox="0 0 60 40" class="h-5 w-8 shrink-0 rounded-[2px] shadow-sm">
+            <svg role="img" aria-label="Drapeau de la République démocratique du Congo" viewBox="0 0 60 40" class="h-5 w-8 shrink-0 rounded-xs shadow-sm">
               <rect width="60" height="40" fill="#007FFF"></rect>
               <path d="M12 2.5 14.3 8.1 20.3 8.6 15.7 12.5 17.1 18.4 12 15.2 6.9 18.4 8.3 12.5 3.7 8.6 9.7 8.1Z" fill="#F7D618"></path>
               <polygon points="0,34 0,40 8,40 60,0 52,0" fill="#F7D618"></polygon>
@@ -52,16 +63,16 @@
             Mikanda rassemble les livres, les auteurs et les récits de la République démocratique du Congo. Un espace pour découvrir les voix d’hier et d’aujourd’hui, et les faire circuler.
           </p>
           <div class="mt-9 flex items-center gap-4">
-            <a href="bibliotheque.html" class="rounded-full bg-[#e6bd76] px-6 py-3 text-sm font-semibold text-[#19231f] shadow-lg shadow-black/15 transition-colors hover:bg-[#f0cd8d]">Explorer la bibliothèque <span aria-hidden="true" class="ml-2">↗</span></a>
+            <a href="bibliotheque.html" class="rounded-full bg-[#e6bd76] px-6 py-3 text-sm font-semibold text-[#19231f] shadow-lg shadow-black/15 transition-colors hover:bg-[#f0cd8d]">Explorer la bibliothèque <i data-lucide="arrow-up-right" class="inline w-4 h-4 ml-2"></i></a>
             <a href="#mission" class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Notre mission</a>
           </div>
           <div class="mt-9 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[1.5px] text-white/55">
             <span class="h-1.5 w-1.5 rounded-full bg-[#00a3e0]"></span> Lire
-            <span class="text-white/25">·</span><span class="h-1.5 w-1.5 rounded-full bg-[#f7d618]"></span> Préserver
-            <span class="text-white/25">·</span><span class="h-1.5 w-1.5 rounded-full bg-[#ce1021]"></span> Transmettre
+            <span class="h-1.5 w-1.5 rounded-full bg-[#f7d618]"></span> Préserver
+            <span class="h-1.5 w-1.5 rounded-full bg-[#ce1021]"></span> Transmettre
           </div>
         </div>
-        <div class="flex min-h-[440px] flex-col items-end justify-between py-6">
+        <div class="flex min-h-110 flex-col items-end justify-between py-6">
           <div class="rounded-full border border-[#e6bd76]/40 bg-[#19231f]/65 px-5 py-3 text-[10px] font-semibold uppercase tracking-[1.5px] text-[#e6bd76] shadow-xl backdrop-blur-sm">Littérature · Mémoire</div>
           <div class="max-w-sm rounded-2xl border border-white/20 bg-[#19231f]/65 p-7 shadow-2xl shadow-black/20 backdrop-blur-sm">
             <p class="text-[10px] font-semibold uppercase tracking-[2px] text-[#e6bd76]">Mikanda · RDC</p>
@@ -106,8 +117,8 @@
 
     <section class="bg-[#e9e0d1] px-8 py-16">
       <div class="mx-auto grid max-w-7xl grid-cols-2 items-center gap-12">
-        <div class="h-[430px] overflow-hidden rounded-2xl">
-          <img src="assets/échangeur.jfif" alt="Paysage urbain congolais" class="h-full w-full object-cover">
+        <div class="h-107.5 overflow-hidden rounded-2xl">
+          <img src="assets/1064819905670464116.jfif" alt="Paysage urbain congolais" class="h-full w-full object-cover">
         </div>
         <div class="py-5">
           <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Une mémoire en mouvement</p>
@@ -118,7 +129,7 @@
           <blockquote class="mt-7 border-l-2 border-[#b85235] pl-5 font-['Playfair_Display',Georgia,serif] text-2xl italic text-[#133a28]">
             « Les récits voyagent. Les voix restent. »
           </blockquote>
-          <a href="collections/archives.html" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#19231f] px-6 py-3 text-sm font-semibold text-[#e6bd76] hover:bg-[#26332c]">Explorer les archives <span aria-hidden="true">↗</span></a>
+          <a href="collections.html" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#19231f] px-6 py-3 text-sm font-semibold text-[#e6bd76] hover:bg-[#26332c]">Explorer les archives <i data-lucide="arrow-up-right" class="inline w-4 h-4"></i></a>
         </div>
       </div>
     </section>
@@ -133,26 +144,29 @@
           <p class="max-w-md text-sm leading-7 text-[#59635d]">Romans, poésie, jeunesse et théâtre : chaque collection ouvre une nouvelle porte sur les imaginaires congolais.</p>
         </div>
         <div class="grid grid-cols-4 gap-5">
-          <a href="collections/romans.html" class="group relative h-[330px] overflow-hidden rounded-2xl">
+          <div class="group relative h-82.5 overflow-hidden rounded-2xl">
             <img src="assets/roman.jfif" alt="Livre de la collection Romans" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-linear-to-t from-[#19231f]/90 via-[#19231f]/20 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white"><p class="text-xs uppercase tracking-[2px] text-[#e6bd76]">Fiction</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Romans</h3></div>
-          </a>
-          <a href="collections/poesie.html" class="group relative h-[330px] overflow-hidden rounded-2xl">
+          </div>
+
+          <div class="group relative h-82.5 overflow-hidden rounded-2xl">
             <img src="assets/poesie.jfif" alt="Livre de la collection Poésie" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-linear-to-t from-[#19231f]/90 via-[#19231f]/20 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white"><p class="text-xs uppercase tracking-[2px] text-[#e6bd76]">Voix et rythmes</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Poésie</h3></div>
-          </a>
-          <a href="collections/jeunesse.html" class="group relative h-[330px] overflow-hidden rounded-2xl">
+          </div>
+
+          <div class="group relative h-82.5 overflow-hidden rounded-2xl">
             <img src="assets/jeunesse.jfif" alt="Livre de la collection Jeunesse" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-linear-to-t from-[#19231f]/90 via-[#19231f]/20 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white"><p class="text-xs uppercase tracking-[2px] text-[#e6bd76]">À partager</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Jeunesse</h3></div>
-          </a>
-          <a href="collections/theatre.html" class="group relative h-[330px] overflow-hidden rounded-2xl">
+          </div>
+
+          <div class="group relative h-82.5 overflow-hidden rounded-2xl">
             <img src="assets/theatre.jfif" alt="Livre de la collection Théâtre" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-linear-to-t from-[#19231f]/90 via-[#19231f]/20 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white"><p class="text-xs uppercase tracking-[2px] text-[#e6bd76]">Scènes et dialogues</p><h3 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Théâtre</h3></div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -165,19 +179,19 @@
           <p class="mt-6 max-w-xl text-base leading-8 text-[#d1d8d2]">
             Les auteurs sont au cœur de Mikanda. Leurs œuvres traversent les genres, les époques et les frontières, et invitent chacun à poursuivre la lecture.
           </p>
-          <a href="auteurs.html" class="mt-7 inline-flex rounded-full bg-[#e6bd76] px-6 py-3 text-sm font-semibold text-[#19231f] hover:bg-white">Découvrir les auteurs <span aria-hidden="true">↗</span></a>
+          <a href="auteurs.html" class="mt-7 inline-flex rounded-full bg-[#e6bd76] px-6 py-3 text-sm font-semibold text-[#19231f] hover:bg-white">Découvrir les auteurs <i data-lucide="arrow-up-right" class="w-4 h-4 ml-2" aria-hidden="true"></i></a>
         </div>
         <div class="grid grid-cols-3 gap-4">
           <a href="auteur.html" class="group">
-            <div class="h-[290px] overflow-hidden rounded-xl"><img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"></div>
+            <div class="h-72.5 overflow-hidden rounded-xl"><img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"></div>
             <p class="mt-3 text-sm font-semibold">Blaise Ndala</p>
           </a>
           <a href="auteur.html" class="group">
-            <div class="h-[290px] overflow-hidden rounded-xl"><img src="assets/auteurs/fiston-mwanza-mujila.jpg" alt="Portrait de Fiston Mwanza Mujila" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"></div>
+            <div class="h-72.5 overflow-hidden rounded-xl"><img src="assets/auteurs/fiston-mwanza-mujila.jpg" alt="Portrait de Fiston Mwanza Mujila" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"></div>
             <p class="mt-3 text-sm font-semibold">Fiston Mwanza Mujila</p>
           </a>
           <a href="auteur.html" class="group">
-            <div class="h-[290px] overflow-hidden rounded-xl"><img src="assets/auteurs/kama-sywor-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"></div>
+            <div class="h-72.5 overflow-hidden rounded-xl"><img src="assets/auteurs/kama-sywor-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"></div>
             <p class="mt-3 text-sm font-semibold">Kama Sywor Kamanda</p>
           </a>
         </div>
@@ -186,7 +200,7 @@
 
     <section id="contact" class="px-8 py-20">
       <div class="mx-auto grid max-w-7xl grid-cols-2 overflow-hidden rounded-3xl bg-[#e9e0d1]">
-        <div class="relative min-h-[600px]">
+        <div class="relative min-h-150">
           <img src="assets/bibliotheque-congolaise-fond-illustre.png" alt="Illustration d’une bibliothèque congolaise ouverte sur le fleuve" class="absolute inset-0 h-full w-full object-cover">
           <div class="absolute inset-0 bg-[#133a28]/65"></div>
           <div class="relative flex h-full flex-col justify-center p-12 text-white">
@@ -225,7 +239,7 @@
                 <textarea name="message" rows="3" class="mt-2 w-full resize-none rounded-lg border border-[#d8d2c5] bg-white px-4 py-3 outline-none focus:border-[#133a28]"></textarea>
               </label>
               <label class="block text-sm font-medium">Joindre un document (facultatif)
-                <input type="file" name="document" accept=".pdf,.doc,.docx,.odt,.jpg,.png" class="mt-2 w-full rounded-lg border border-[#d8d2c5] bg-white px-4 py-3 text-sm text-[#59635d]">
+                <input type="file" name="document" accept=".pdf,.doc,.docx,.odt,.jpg,.png,.zip,.rar,.mp4" class="mt-2 w-full rounded-lg border border-[#d8d2c5] bg-white px-4 py-3 text-sm text-[#59635d]">
               </label>
               <button type="button" disabled class="w-full cursor-not-allowed rounded-lg bg-[#b85235] px-6 py-4 text-sm font-semibold text-white opacity-60">Formulaire bientôt disponible</button>
             </form>
@@ -273,39 +287,69 @@
     <section class="bg-[#133a28] px-8 py-16 text-center text-white">
       <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Une mémoire en mouvement</p>
       <p class="mx-auto mt-4 max-w-3xl font-['Playfair_Display',Georgia,serif] text-4xl leading-tight">Les récits congolais ont leur bibliothèque.</p>
-      <a href="bibliotheque.html" class="mt-7 inline-flex rounded-full bg-[#e6bd76] px-7 py-3 text-sm font-semibold text-[#19231f] hover:bg-white">Entrer dans Mikanda <span aria-hidden="true">↗</span></a>
+      <a href="bibliotheque.html" class="mt-7 inline-flex rounded-full bg-[#e6bd76] px-7 py-3 text-sm font-semibold text-[#19231f] hover:bg-white">Entrer dans Mikanda <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1" aria-hidden="true"></i></a>
     </section>
   </main>
 
-  <footer class="border-t border-white/10 bg-[#19231f] px-8 py-10 text-[#d1d8d2]">
-    <div class="mx-auto grid max-w-7xl grid-cols-4 gap-10">
-      <div>
-        <a href="index.html"><img src="assets/mikanda-logo.svg" alt="Mikanda" class="h-12 w-48 object-contain object-left"></a>
-        <p class="mt-5 max-w-xs text-sm leading-7">Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
+  <footer class="bg-[#19231f] px-7 py-14 text-[#f4f1ea] lg:px-8 lg:pt-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-[1.35fr_0.8fr_0.9fr_0.9fr]">
+          <div class="max-w-sm">
+            <a href="#accueil" aria-label="Mikanda, retourner à l’accueil" class="inline-flex rounded-sm cursor-pointer">
+              <img src="assets/mikanda-logo.svg" alt="" class="block h-14 w-52 object-contain object-left">
+            </a>
+            
+            <p class="mt-7 max-w-xs text-sm leading-7 text-[#d1d8d2]">
+              Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.
+            </p>
+          </div>
+
+          <nav aria-label="Explorer Mikanda">
+            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Explorer</h2>
+            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
+              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">La bibliothèque</a></li>
+              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les auteurs</a></li>
+              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les collections</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="À propos de Mikanda">
+            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
+            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
+              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Notre mission</a></li>
+              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Nos partenaires</a></li>
+              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Revenir à l’accueil</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Informations sur le catalogue">
+            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
+            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
+              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Œuvres populaires</a></li>
+              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Explorer par genre</a></li>
+              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Voix congolaises</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
+          <p>© 2026 Mikanda · Maquette de démonstration</p>
+          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] md:justify-self-end cursor-pointer">
+            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
+          </a>
+        </div>
       </div>
-      <div>
-        <h2 class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Explorer</h2>
-        <ul class="mt-5 space-y-3 text-sm">
-          <li><a href="bibliotheque.html" class="hover:text-[#e6bd76]">La bibliothèque</a></li>
-          <li><a href="collections.html" class="hover:text-[#e6bd76]">Les collections</a></li>
-          <li><a href="auteurs.html" class="hover:text-[#e6bd76]">Les auteurs</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Le projet</h2>
-        <ul class="mt-5 space-y-3 text-sm">
-          <li><a href="#mission" class="hover:text-[#e6bd76]">Notre mission</a></li>
-          <li><a href="#partenaires" class="hover:text-[#e6bd76]">Nos partenaires</a></li>
-          <li><a href="#contact" class="hover:text-[#e6bd76]">Proposer une œuvre</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">Mikanda</h2>
-        <p class="mt-5 text-sm leading-7">Bibliothèque numérique de la littérature de la République démocratique du Congo.</p>
-      </div>
-    </div>
-    <div class="mx-auto mt-10 max-w-7xl border-t border-white/15 pt-5 text-xs">© 2026 Mikanda · Bibliothèque numérique de la littérature congolaise</div>
-  </footer>
+    </footer>
+
+    <script>
+      lucide.createIcons()
+    </script>
 </body>
 </html>
 
