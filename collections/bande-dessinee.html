@@ -25,25 +25,25 @@
   <header
     class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
     <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
-      <a href="index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
+      <a href="../index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
         <img src="../assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise"
-          class="h-12 w-44 object-contain sm:h-14 sm:w-52">
+          class="h-9 w-32 object-contain sm:h-12 sm:w-44 lg:h-14 lg:w-52">
       </a>
 
       <nav aria-label="Navigation principale"
-        class="order-3 -mx-5 flex w-[calc(100%+2.5rem)] items-center gap-1 overflow-x-auto border-t border-white/10 px-5 pt-3 sm:-mx-8 sm:w-[calc(100%+4rem)] sm:px-8 lg:order-0 lg:mx-0 lg:w-auto lg:gap-2 lg:overflow-visible lg:border-0 lg:px-0 lg:pt-0">
-        <a href="index.html#accueil"
+        class="hidden items-center gap-1 lg:flex lg:gap-2">
+        <a href="../index.html#accueil"
           class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
-        <a href="bibliotheque.html"
+        <a href="../bibliotheque.html"
           class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
-        <a href="auteurs.html"
+        <a href="../auteurs.html"
           class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Auteurs</a>
         <a href="../collections.html" aria-current="page"
           class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">Collections</a>
-        <a href="a-propos.html"
+        <a href="../a-propos.html"
           class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">À
           propos</a>
-        <a href="premium.html"
+        <a href="../premium.html"
           class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 cursor-pointer">Premium</a>
       </nav>
 
@@ -59,6 +59,23 @@
           <span class="whitespace-nowrap">Blaise Ndala</span>
         </a>
       </div>
+      <details class="relative ml-auto lg:hidden">
+        <summary aria-label="Ouvrir le menu de navigation" class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full border border-white/20 text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
+          <i data-lucide="menu" aria-hidden="true" class="h-5 w-5"></i>
+          <span class="sr-only">Ouvrir le menu</span>
+        </summary>
+        <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#19231f] p-2 shadow-2xl">
+          <nav aria-label="Navigation mobile" class="grid gap-1">
+            <a href="../index.html#accueil" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Accueil</a>
+            <a href="../bibliotheque.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Biblioth&#232;que</a>
+            <a href="../auteurs.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Auteurs</a>
+            <a href="../collections.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Collections</a>
+            <a href="../a-propos.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">&#192; propos</a>
+            <a href="../premium.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Premium</a>
+          </nav>
+        </div>
+      </details>
+
     </div>
   </header>
 
@@ -157,17 +174,17 @@
           </div>
           <p class="text-sm text-[#59635d]">11 œuvres à découvrir</p>
         </div>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
           <a href="../livre.html"
             class="group block cursor-pointer">
             <article class="h-full cursor-pointer">
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]">
                 <img
                   src="../assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo" loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Dans le ventre du Congo</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Dans le ventre du Congo</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2021</span>
@@ -188,10 +205,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/livre (3).jfif" alt="Couverture de Congo Inc. : Le testament de Bismarck"
                   loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Congo Inc. : Le testament de Bismarck</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Congo Inc. : Le testament de Bismarck</h3>
                 <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2014</span>
@@ -211,10 +228,10 @@
             <article class="h-full cursor-pointer">
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/tram-83.jpg" alt="Couverture de Tram 83" loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Tram 83</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Tram 83</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Fiston Mwanza Mujila</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2014</span>
@@ -234,10 +251,10 @@
             <article class="h-full cursor-pointer">
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/la-belle-de-casa.jpg" alt="Couverture de La Belle de Casa" loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">La Belle de Casa</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">La Belle de Casa</h3>
                 <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2018</span>
@@ -257,10 +274,10 @@
             <article class="h-full cursor-pointer">
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/la-vie-et-demie.jpg" alt="Couverture de La Vie et demie" loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">La Vie et demie</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">La Vie et demie</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Sony Labou Tansi</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>1979</span>
@@ -281,10 +298,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/mathematiques-congolaises.jpg"
                   alt="Couverture de Mathématiques congolaises" loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Mathématiques congolaises</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Mathématiques congolaises</h3>
                 <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2008</span>
@@ -305,10 +322,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/la-danse-du-vilain.jpg" alt="Couverture de La Danse du Vilain"
                   loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">La Danse du Vilain</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">La Danse du Vilain</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Fiston Mwanza Mujila</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2020</span>
@@ -329,10 +346,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/le-feu-des-origines.jpg" alt="Couverture de Le Feu des origines"
                   loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Le Feu des origines</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Le Feu des origines</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Emmanuel Dongala</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>1987</span>
@@ -353,10 +370,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/memoires-de-porc-epic.jpg" alt="Couverture de Mémoires de porc-épic"
                   loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Mémoires de porc-épic</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Mémoires de porc-épic</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Alain Mabanckou</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2006</span>
@@ -377,10 +394,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/photo-de-groupe-au-bord-du-fleuve.jpg"
                   alt="Couverture de Photo de groupe au bord du fleuve" loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Photo de groupe au bord du fleuve</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Photo de groupe au bord du fleuve</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Emmanuel Dongala</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2010</span>
@@ -401,10 +418,10 @@
               <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
                   src="../assets/couvertures/johnny-chien-mechant.jpg" alt="Couverture de Johnny Chien Méchant"
                   loading="lazy"
-                  class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-96 lg:h-110">
+                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
               </div>
               <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-xl">Johnny Chien Méchant</h3>
+                <h3 class="font-serif text-base leading-snug sm:text-lg">Johnny Chien Méchant</h3>
                 <p class="mt-1 text-sm text-[#59635d]">Emmanuel Dongala</p>
                 <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
                   <span>Roman</span><span>2002</span>
