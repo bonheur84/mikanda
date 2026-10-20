@@ -1,8 +1,214 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="../dist/tailwind.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@latest"></script><title>Gestion des comptes | Mikanda Admin</title></head>
-<body class="min-h-screen bg-[#f5f3ed] font-['DM_Sans',Arial,sans-serif] text-[#19231f]"><div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]"><aside class="bg-[#10221b] px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen"><a href="index.html" class="mb-8 flex items-center gap-3"><img src="../assets/mikanda-logo.svg" alt="Mikanda" class="h-10 w-36 object-contain object-left"><span class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#e6bd76]">Admin</span></a><p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">Espace de gestion</p><nav aria-label="Navigation admin" class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:flex-col"><a href="index.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i data-lucide="layout-dashboard" class="h-4 w-4"></i> Vue d’ensemble</a><a href="livres.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i data-lucide="book-open" class="h-4 w-4"></i> Livres</a><a href="auteurs.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i data-lucide="feather" class="h-4 w-4"></i> Auteurs</a><a href="comptes.html" aria-current="page" class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold"><i data-lucide="users" class="h-4 w-4 text-[#e6bd76]"></i> Comptes</a><a href="messages.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i data-lucide="mail" class="h-4 w-4"></i> Messages <span class="ml-auto rounded-full bg-[#b85235] px-2 py-0.5 text-[10px]">3</span></a><a href="statistiques.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i data-lucide="chart-no-axes-column-increasing" class="h-4 w-4"></i> Statistiques</a><a href="parametres.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i data-lucide="settings-2" class="h-4 w-4"></i> Paramètres</a></nav><a href="../index.html" class="mt-8 hidden items-center gap-3 border-t border-white/10 pt-5 text-sm text-white/60 hover:text-white lg:flex"><i data-lucide="arrow-left" class="h-4 w-4"></i> Retour au site</a></aside>
-<main class="min-w-0 px-4 py-6 sm:px-7 lg:px-10 lg:py-9"><header class="mb-7"><a href="index.html" class="mb-2 inline-flex items-center gap-1 text-xs font-semibold text-[#687169] hover:text-[#286143]"><i data-lucide="arrow-left" class="h-3.5 w-3.5"></i> Tableau de bord</a><h1 class="font-['Playfair_Display',Georgia,serif] text-3xl font-semibold sm:text-4xl">Comptes lecteurs</h1><p class="mt-2 text-sm text-[#687169]">Consultez les membres, leur statut et leur abonnement.</p></header><div class="mb-5 grid gap-3 sm:grid-cols-3"><article class="rounded-2xl border border-[#e6e2d8] bg-white p-4"><p class="text-xs text-[#687169]">Comptes au total</p><p class="mt-1 text-2xl font-bold">1 284</p></article><article class="rounded-2xl border border-[#e6e2d8] bg-white p-4"><p class="text-xs text-[#687169]">Abonnés Premium</p><p class="mt-1 text-2xl font-bold text-[#896315]">316</p></article><article class="rounded-2xl border border-[#e6e2d8] bg-white p-4"><p class="text-xs text-[#687169]">En attente de vérification</p><p class="mt-1 text-2xl font-bold text-[#b85235]">7</p></article></div>
-<section class="overflow-hidden rounded-2xl border border-[#e6e2d8] bg-white shadow-sm"><form action="comptes.html" method="get" class="flex flex-wrap gap-3 border-b border-[#eeeae2] p-4"><label class="relative min-w-[220px] flex-1"><span class="sr-only">Rechercher un compte</span><i data-lucide="search" class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#899087]"></i><input type="search" name="q" placeholder="Nom ou adresse e-mail…" class="w-full rounded-xl border border-[#e2ded4] py-2.5 pl-10 pr-3 text-sm outline-none focus:border-[#286143]"></label><select name="abonnement" aria-label="Filtrer par abonnement" class="rounded-xl border border-[#e2ded4] bg-white px-3 py-2.5 text-sm"><option value="">Tous les abonnements</option><option>Gratuit</option><option>Premium</option></select><select name="statut" aria-label="Filtrer par statut" class="rounded-xl border border-[#e2ded4] bg-white px-3 py-2.5 text-sm"><option value="">Tous les statuts</option><option>Actif</option><option>À vérifier</option><option>Suspendu</option></select><button class="rounded-xl border border-[#e2ded4] px-4 py-2.5 text-sm font-semibold hover:bg-[#f7f5ef]">Filtrer</button></form><div class="overflow-x-auto"><table class="w-full min-w-[720px] text-left text-sm"><thead class="bg-[#faf9f6] text-[10px] uppercase tracking-[1.4px] text-[#899087]"><tr><th class="px-5 py-3 font-semibold">Membre</th><th class="px-4 py-3 font-semibold">Inscription</th><th class="px-4 py-3 font-semibold">Abonnement</th><th class="px-4 py-3 font-semibold">Activité</th><th class="px-4 py-3 font-semibold">Statut</th><th class="px-5 py-3 text-right font-semibold">Actions</th></tr></thead><tbody class="divide-y divide-[#eeeae2]"><tr><td class="px-5 py-4"><div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#e4eee7] text-xs font-bold text-[#286143]">AM</span><span><span class="block font-semibold">Amina Mbuyi</span><span class="block text-xs text-[#687169]">amina.mbuyi@email.com</span></span></div></td><td class="px-4 py-4 text-xs text-[#687169]">12 oct. 2026</td><td class="px-4 py-4"><span class="rounded-full bg-[#fbf2dc] px-2.5 py-1 text-xs font-semibold text-[#896315]">Premium</span></td><td class="px-4 py-4 text-xs text-[#687169]">24 livres lus</td><td class="px-4 py-4 text-xs font-medium text-[#286143]">Actif</td><td class="px-5 py-4"><div class="flex justify-end gap-2"><button type="button" aria-label="Voir le compte d’Amina Mbuyi" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i data-lucide="eye" class="h-4 w-4"></i></button><button type="button" aria-label="Gérer le compte d’Amina Mbuyi" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i data-lucide="ellipsis" class="h-4 w-4"></i></button></div></td></tr>
-<tr><td class="px-5 py-4"><div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#f4e9df] text-xs font-bold text-[#9a573b]">JK</span><span><span class="block font-semibold">Jean Kabasele</span><span class="block text-xs text-[#687169]">jean.kabasele@email.com</span></span></div></td><td class="px-4 py-4 text-xs text-[#687169]">10 oct. 2026</td><td class="px-4 py-4"><span class="rounded-full bg-[#f1f0ec] px-2.5 py-1 text-xs font-semibold text-[#59635d]">Gratuit</span></td><td class="px-4 py-4 text-xs text-[#687169]">6 livres lus</td><td class="px-4 py-4 text-xs font-medium text-[#286143]">Actif</td><td class="px-5 py-4"><div class="flex justify-end gap-2"><button type="button" aria-label="Voir le compte de Jean Kabasele" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i data-lucide="eye" class="h-4 w-4"></i></button><button type="button" aria-label="Gérer le compte de Jean Kabasele" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i data-lucide="ellipsis" class="h-4 w-4"></i></button></div></td></tr>
-<tr><td class="px-5 py-4"><div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#e8edf0] text-xs font-bold text-[#52636b]">LN</span><span><span class="block font-semibold">Léonie Nsimba</span><span class="block text-xs text-[#687169]">leonie.nsimba@email.com</span></span></div></td><td class="px-4 py-4 text-xs text-[#687169]">8 oct. 2026</td><td class="px-4 py-4"><span class="rounded-full bg-[#fbf2dc] px-2.5 py-1 text-xs font-semibold text-[#896315]">Premium</span></td><td class="px-4 py-4 text-xs text-[#687169]">12 livres lus</td><td class="px-4 py-4 text-xs font-medium text-[#286143]">Actif</td><td class="px-5 py-4"><div class="flex justify-end gap-2"><button type="button" aria-label="Voir le compte de Léonie Nsimba" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i data-lucide="eye" class="h-4 w-4"></i></button><button type="button" aria-label="Gérer le compte de Léonie Nsimba" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i data-lucide="ellipsis" class="h-4 w-4"></i></button></div></td></tr>
-<tr><td class="px-5 py-4"><div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0e6e6] text-xs font-bold text-[#8f4c4c]">PM</span><span><span class="block font-semibold">Patrick Moke</span><span class="block text-xs text-[#687169]">patrick.moke@email.com</span></span></div></td><td class="px-4 py-4 text-xs text-[#687169]">7 oct. 2026</td><td class="px-4 py-4"><span class="rounded-full bg-[#f1f0ec] px-2.5 py-1 text-xs font-semibold text-[#59635d]">Gratuit</span></td><td class="px-4 py-4 text-xs text-[#687169]">—</td><td class="px-4 py-4"><span class="rounded-full bg-[#fff3e0] px-2.5 py-1 text-xs font-semibold text-[#896315]">À vérifier</span></td><td class="px-5 py-4"><div class="flex justify-end gap-2"><button type="button" aria-label="Vérifier le compte de Patrick Moke" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i data-lucide="user-check" class="h-4 w-4"></i></button><button type="button" aria-label="Gérer le compte de Patrick Moke" class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i data-lucide="ellipsis" class="h-4 w-4"></i></button></div></td></tr></tbody></table></div><div class="flex flex-wrap items-center justify-between gap-3 border-t border-[#eeeae2] px-5 py-4 text-xs text-[#687169]"><span>Affichage de 4 comptes sur 1 284</span><span class="inline-flex items-center gap-2"><i data-lucide="shield-check" class="h-4 w-4 text-[#286143]"></i> Les actions d’administration sont réservées aux administrateurs.</span></div></section></main></div><script>lucide.createIcons()</script></body></html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Gestion des comptes | Mikanda Admin</title>
+</head>
+
+<body class="min-h-screen bg-[#f5f3ed] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
+    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
+        <aside class="bg-[#10221b] px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen"><a href="index.html"
+                class="mb-8 flex items-center gap-3"><img src="../assets/mikanda-logo.svg" alt="Mikanda"
+                    class="h-10 w-36 object-contain object-left"><span
+                    class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#e6bd76]">Admin</span></a>
+            <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">Espace de gestion</p>
+            <nav aria-label="Navigation admin" class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:flex-col"><a
+                    href="index.html"
+                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
+                        data-lucide="layout-dashboard" class="h-4 w-4"></i> Vue d’ensemble</a><a href="livres.html"
+                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
+                        data-lucide="book-open" class="h-4 w-4"></i> Livres</a><a href="auteurs.html"
+                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
+                        data-lucide="feather" class="h-4 w-4"></i> Auteurs</a><a href="comptes.html" aria-current="page"
+                    class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold"><i
+                        data-lucide="users" class="h-4 w-4 text-[#e6bd76]"></i> Comptes</a><a href="messages.html"
+                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
+                        data-lucide="mail" class="h-4 w-4"></i> Messages <span
+                        class="ml-auto rounded-full bg-[#b85235] px-2 py-0.5 text-[10px]">3</span></a><a
+                    href="statistiques.html"
+                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
+                        data-lucide="chart-no-axes-column-increasing" class="h-4 w-4"></i> Statistiques</a><a
+                    href="parametres.html"
+                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
+                        data-lucide="settings-2" class="h-4 w-4"></i> Paramètres</a></nav><a href="../index.html"
+                class="mt-8 hidden items-center gap-3 border-t border-white/10 pt-5 text-sm text-white/60 hover:text-white lg:flex"><i
+                    data-lucide="arrow-left" class="h-4 w-4"></i> Retour au site</a>
+        </aside>
+        <main class="min-w-0 px-4 py-6 sm:px-7 lg:px-10 lg:py-9">
+            <header class="mb-7"><a href="index.html"
+                    class="mb-2 inline-flex items-center gap-1 text-xs font-semibold text-[#687169] hover:text-[#286143]"><i
+                        data-lucide="arrow-left" class="h-3.5 w-3.5"></i> Tableau de bord</a>
+                <h1 class="font-['Playfair_Display',Georgia,serif] text-3xl font-semibold sm:text-4xl">Comptes lecteurs
+                </h1>
+                <p class="mt-2 text-sm text-[#687169]">Consultez les membres, leur statut et leur abonnement.</p>
+            </header>
+            <div class="mb-5 grid gap-3 sm:grid-cols-3">
+                <article class="rounded-2xl border border-[#e6e2d8] bg-white p-4">
+                    <p class="text-xs text-[#687169]">Comptes au total</p>
+                    <p class="mt-1 text-2xl font-bold">1 284</p>
+                </article>
+                <article class="rounded-2xl border border-[#e6e2d8] bg-white p-4">
+                    <p class="text-xs text-[#687169]">Abonnés Premium</p>
+                    <p class="mt-1 text-2xl font-bold text-[#896315]">316</p>
+                </article>
+                <article class="rounded-2xl border border-[#e6e2d8] bg-white p-4">
+                    <p class="text-xs text-[#687169]">En attente de vérification</p>
+                    <p class="mt-1 text-2xl font-bold text-[#b85235]">7</p>
+                </article>
+            </div>
+            <section class="overflow-hidden rounded-2xl border border-[#e6e2d8] bg-white shadow-sm">
+                <form action="comptes.html" method="get" class="flex flex-wrap gap-3 border-b border-[#eeeae2] p-4">
+                    <label class="relative min-w-[220px] flex-1"><span class="sr-only">Rechercher un compte</span><i
+                            data-lucide="search"
+                            class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#899087]"></i><input
+                            type="search" name="q" placeholder="Nom ou adresse e-mail…"
+                            class="w-full rounded-xl border border-[#e2ded4] py-2.5 pl-10 pr-3 text-sm outline-none focus:border-[#286143]"></label><select
+                        name="abonnement" aria-label="Filtrer par abonnement"
+                        class="rounded-xl border border-[#e2ded4] bg-white px-3 py-2.5 text-sm">
+                        <option value="">Tous les abonnements</option>
+                        <option>Gratuit</option>
+                        <option>Premium</option>
+                    </select><select name="statut" aria-label="Filtrer par statut"
+                        class="rounded-xl border border-[#e2ded4] bg-white px-3 py-2.5 text-sm">
+                        <option value="">Tous les statuts</option>
+                        <option>Actif</option>
+                        <option>À vérifier</option>
+                        <option>Suspendu</option>
+                    </select><button
+                        class="rounded-xl border border-[#e2ded4] px-4 py-2.5 text-sm font-semibold hover:bg-[#f7f5ef]">Filtrer</button>
+                </form>
+                <div class="overflow-x-auto">
+                    <table class="w-full min-w-[720px] text-left text-sm">
+                        <thead class="bg-[#faf9f6] text-[10px] uppercase tracking-[1.4px] text-[#899087]">
+                            <tr>
+                                <th class="px-5 py-3 font-semibold">Membre</th>
+                                <th class="px-4 py-3 font-semibold">Inscription</th>
+                                <th class="px-4 py-3 font-semibold">Abonnement</th>
+                                <th class="px-4 py-3 font-semibold">Activité</th>
+                                <th class="px-4 py-3 font-semibold">Statut</th>
+                                <th class="px-5 py-3 text-right font-semibold">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-[#eeeae2]">
+                            <tr>
+                                <td class="px-5 py-4">
+                                    <div class="flex items-center gap-3"><span
+                                            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#e4eee7] text-xs font-bold text-[#286143]">AM</span><span><span
+                                                class="block font-semibold">Amina Mbuyi</span><span
+                                                class="block text-xs text-[#687169]">amina.mbuyi@email.com</span></span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">12 oct. 2026</td>
+                                <td class="px-4 py-4"><span
+                                        class="rounded-full bg-[#fbf2dc] px-2.5 py-1 text-xs font-semibold text-[#896315]">Premium</span>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">24 livres lus</td>
+                                <td class="px-4 py-4 text-xs font-medium text-[#286143]">Actif</td>
+                                <td class="px-5 py-4">
+                                    <div class="flex justify-end gap-2"><button type="button"
+                                            aria-label="Voir le compte d’Amina Mbuyi"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i
+                                                data-lucide="eye" class="h-4 w-4"></i></button><button type="button"
+                                            aria-label="Gérer le compte d’Amina Mbuyi"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i
+                                                data-lucide="ellipsis" class="h-4 w-4"></i></button></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-5 py-4">
+                                    <div class="flex items-center gap-3"><span
+                                            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#f4e9df] text-xs font-bold text-[#9a573b]">JK</span><span><span
+                                                class="block font-semibold">Jean Kabasele</span><span
+                                                class="block text-xs text-[#687169]">jean.kabasele@email.com</span></span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">10 oct. 2026</td>
+                                <td class="px-4 py-4"><span
+                                        class="rounded-full bg-[#f1f0ec] px-2.5 py-1 text-xs font-semibold text-[#59635d]">Gratuit</span>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">6 livres lus</td>
+                                <td class="px-4 py-4 text-xs font-medium text-[#286143]">Actif</td>
+                                <td class="px-5 py-4">
+                                    <div class="flex justify-end gap-2"><button type="button"
+                                            aria-label="Voir le compte de Jean Kabasele"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i
+                                                data-lucide="eye" class="h-4 w-4"></i></button><button type="button"
+                                            aria-label="Gérer le compte de Jean Kabasele"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i
+                                                data-lucide="ellipsis" class="h-4 w-4"></i></button></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-5 py-4">
+                                    <div class="flex items-center gap-3"><span
+                                            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#e8edf0] text-xs font-bold text-[#52636b]">LN</span><span><span
+                                                class="block font-semibold">Léonie Nsimba</span><span
+                                                class="block text-xs text-[#687169]">leonie.nsimba@email.com</span></span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">8 oct. 2026</td>
+                                <td class="px-4 py-4"><span
+                                        class="rounded-full bg-[#fbf2dc] px-2.5 py-1 text-xs font-semibold text-[#896315]">Premium</span>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">12 livres lus</td>
+                                <td class="px-4 py-4 text-xs font-medium text-[#286143]">Actif</td>
+                                <td class="px-5 py-4">
+                                    <div class="flex justify-end gap-2"><button type="button"
+                                            aria-label="Voir le compte de Léonie Nsimba"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i
+                                                data-lucide="eye" class="h-4 w-4"></i></button><button type="button"
+                                            aria-label="Gérer le compte de Léonie Nsimba"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i
+                                                data-lucide="ellipsis" class="h-4 w-4"></i></button></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-5 py-4">
+                                    <div class="flex items-center gap-3"><span
+                                            class="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0e6e6] text-xs font-bold text-[#8f4c4c]">PM</span><span><span
+                                                class="block font-semibold">Patrick Moke</span><span
+                                                class="block text-xs text-[#687169]">patrick.moke@email.com</span></span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">7 oct. 2026</td>
+                                <td class="px-4 py-4"><span
+                                        class="rounded-full bg-[#f1f0ec] px-2.5 py-1 text-xs font-semibold text-[#59635d]">Gratuit</span>
+                                </td>
+                                <td class="px-4 py-4 text-xs text-[#687169]">—</td>
+                                <td class="px-4 py-4"><span
+                                        class="rounded-full bg-[#fff3e0] px-2.5 py-1 text-xs font-semibold text-[#896315]">À
+                                        vérifier</span></td>
+                                <td class="px-5 py-4">
+                                    <div class="flex justify-end gap-2"><button type="button"
+                                            aria-label="Vérifier le compte de Patrick Moke"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i
+                                                data-lucide="user-check" class="h-4 w-4"></i></button><button
+                                            type="button" aria-label="Gérer le compte de Patrick Moke"
+                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d]"><i
+                                                data-lucide="ellipsis" class="h-4 w-4"></i></button></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div
+                    class="flex flex-wrap items-center justify-between gap-3 border-t border-[#eeeae2] px-5 py-4 text-xs text-[#687169]">
+                    <span>Affichage de 4 comptes sur 1 284</span><span class="inline-flex items-center gap-2"><i
+                            data-lucide="shield-check" class="h-4 w-4 text-[#286143]"></i> Les actions d’administration
+                        sont réservées aux administrateurs.</span></div>
+            </section>
+        </main>
+    </div>
+    <script>lucide.createIcons()</script>
+</body>
+
+</html>
