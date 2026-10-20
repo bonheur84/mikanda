@@ -41,23 +41,23 @@
   </header>
 
   <main>
-    <section class="relative isolate overflow-hidden bg-[#19231f] px-8 py-16 text-[#f4f1ea]">
+    <section class="relative isolate overflow-hidden bg-[#19231f] px-4 py-12 text-[#f4f1ea] sm:px-8 sm:py-16">
       <img src="assets/bibliotheque-congolaise-fond-drapeau.png" alt="" aria-hidden="true" class="absolute inset-0 z-0 h-full w-full object-cover object-center">
       <div aria-hidden="true" class="absolute inset-0 z-10 bg-linear-to-r from-[#10221b]/95 via-[#10221b]/80 to-[#10221b]/45"></div>
       <div aria-hidden="true" class="absolute inset-0 z-10 bg-linear-to-t from-[#10221b]/45 via-transparent to-[#10221b]/10"></div>
-      <div class="relative z-20 mx-auto grid max-w-7xl grid-cols-2 items-center gap-16">
+      <div class="relative z-20 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-16">
         <div class="py-5">
           <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">
             <span class="h-px w-8 bg-[#e6bd76]"></span> Les offres Mikanda
           </p>
-          <h1 class="mt-6 max-w-2xl font-['Playfair_Display',Georgia,serif] text-6xl font-medium leading-[1.08]">Toute la littérature congolaise, <span class="text-[#e6bd76]">à votre rythme.</span></h1>
+          <h1 class="mt-6 max-w-2xl font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-[1.08] sm:text-6xl">Toute la littérature congolaise, <span class="text-[#e6bd76]">à votre rythme.</span></h1>
           <p class="mt-6 max-w-xl text-base leading-8 text-[#e3e8e3]">Commencez gratuitement, puis ouvrez la porte à toutes les œuvres avec Mikanda Premium.</p>
           <a href="#tarifs" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#e6bd76] px-6 py-3.5 text-sm font-semibold text-[#19231f] shadow-lg shadow-black/20 transition-colors hover:bg-[#f0cd8d]">
             Comparer les offres <i data-lucide="arrow-down" aria-hidden="true" class="h-4 w-4"></i>
           </a>
         </div>
         <div class="flex justify-end py-5">
-          <div class="w-95 rounded-3xl border border-white/20 bg-[#19231f]/75 p-8 shadow-2xl shadow-black/25 backdrop-blur-sm">
+          <div class="w-full max-w-md rounded-3xl border border-white/20 bg-[#19231f]/75 p-6 shadow-2xl shadow-black/25 backdrop-blur-sm sm:p-8">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e6bd76]/15 text-[#e6bd76]">
               <i data-lucide="book-open-check" aria-hidden="true" class="h-6 w-6"></i>
             </div>
@@ -73,16 +73,16 @@
       </div>
     </section>
 
-    <section id="tarifs" class="px-8 py-20">
+    <section id="tarifs" class="px-4 py-14 sm:px-8 sm:py-20">
       <div class="mx-auto max-w-6xl">
         <div class="mx-auto max-w-3xl text-center">
           <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Des offres simples et transparentes</p>
-          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-5xl font-medium">Choisissez votre façon de lire.</h2>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl font-medium sm:text-5xl">Choisissez votre façon de lire.</h2>
           <p class="mt-4 text-base leading-7 text-[#59635d]">Commencez avec les livres gratuits ou profitez de l’accès complet au catalogue Mikanda.</p>
         </div>
 
-        <div class="mt-12 grid grid-cols-2 items-stretch gap-7">
-          <article class="flex flex-col rounded-3xl border border-[#ded8cc] bg-[#fbfaf6] p-9 shadow-[0_16px_40px_rgba(25,35,31,0.06)]">
+        <div class="mt-12 grid items-stretch gap-5 lg:grid-cols-2 lg:gap-7">
+          <article class="flex flex-col rounded-3xl border border-[#ded8cc] bg-[#fbfaf6] p-6 shadow-[0_16px_40px_rgba(25,35,31,0.06)] sm:p-9">
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-semibold uppercase tracking-[1.8px] text-[#59635d]">Pour commencer</p>
@@ -117,7 +117,7 @@
             </a>
           </article>
 
-          <article class="relative flex flex-col overflow-hidden rounded-3xl border-2 border-[#e6bd76] bg-[#19231f] p-9 text-[#f4f1ea] shadow-[0_22px_55px_rgba(25,35,31,0.2)]">
+          <article class="relative flex flex-col overflow-hidden rounded-3xl border-2 border-[#e6bd76] bg-[#19231f] p-6 text-[#f4f1ea] shadow-[0_22px_55px_rgba(25,35,31,0.2)] sm:p-9">
             <div aria-hidden="true" class="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-[#e6bd76]/10"></div>
             <div aria-hidden="true" class="absolute -right-9 -top-9 h-44 w-44 rounded-full border border-[#e6bd76]/10"></div>
             <div class="relative flex items-start justify-between gap-4">
@@ -131,7 +131,7 @@
             </div>
             <p class="relative mt-4 text-sm leading-6 text-[#d1d8d2]">Tout le catalogue, toutes les histoires.</p>
 
-            <div class="relative mt-6 grid grid-cols-2 gap-3">
+            <div class="relative mt-6 grid gap-3 sm:grid-cols-2">
               <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
                 <p class="text-xs font-semibold uppercase tracking-[1.2px] text-[#d1d8d2]">Au mois</p>
                 <p class="mt-3 flex items-baseline gap-1.5"><span class="font-['Playfair_Display',Georgia,serif] text-3xl font-semibold text-white">15 000</span><span class="text-sm font-semibold text-[#e6bd76]">FC</span></p>
@@ -170,31 +170,31 @@
           <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Comparer en un coup d’œil</p>
           <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl font-medium">Qu’est-ce qui est compris ?</h2>
         </div>
-        <div class="overflow-hidden rounded-2xl border border-[#ded8cc] bg-[#fbfaf6]">
-          <div class="grid grid-cols-[1fr_190px_220px] items-center bg-[#19231f] px-7 py-4 text-sm font-semibold text-white">
+        <div class="overflow-x-auto rounded-2xl border border-[#ded8cc] bg-[#fbfaf6]">
+          <div class="grid min-w-[620px] grid-cols-[1fr_190px_220px] items-center bg-[#19231f] px-7 py-4 text-sm font-semibold text-white">
             <span>Fonctionnalités</span><span class="text-center text-[#d1d8d2]">Gratuit</span><span class="text-center text-[#e6bd76]">Premium</span>
           </div>
-          <div class="grid grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
+          <div class="grid min-w-[620px] grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
             <span>Parcourir les auteurs et les collections</span><span class="text-center font-semibold text-[#133a28]">Inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
           </div>
-          <div class="grid grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
+          <div class="grid min-w-[620px] grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
             <span>Lire les œuvres gratuites</span><span class="text-center font-semibold text-[#133a28]">Inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
           </div>
-          <div class="grid grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
+          <div class="grid min-w-[620px] grid-cols-[1fr_190px_220px] items-center border-b border-[#e3ddd0] px-7 py-5 text-sm">
             <span>Lire les œuvres Premium</span><span class="text-center font-medium text-[#8c8981]">Non inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
           </div>
-          <div class="grid grid-cols-[1fr_190px_220px] items-center px-7 py-5 text-sm">
+          <div class="grid min-w-[620px] grid-cols-[1fr_190px_220px] items-center px-7 py-5 text-sm">
             <span>Accéder à l’ensemble du catalogue</span><span class="text-center font-medium text-[#8c8981]">Non inclus</span><span class="text-center font-semibold text-[#133a28]">Inclus</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="px-8 py-20">
-      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-16">
+    <section class="px-4 py-14 sm:px-8 sm:py-20">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:gap-16">
         <div>
           <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Questions fréquentes</p>
-          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-tight">Avant de vous lancer.</h2>
+          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl font-medium leading-tight sm:text-4xl">Avant de vous lancer.</h2>
           <p class="mt-4 max-w-md text-sm leading-7 text-[#59635d]">Quelques repères pour choisir l’offre adaptée à votre envie de lecture.</p>
         </div>
         <div class="space-y-3">
@@ -215,7 +215,7 @@
     </section>
 
     <section class="bg-[#133a28] px-8 py-14 text-[#f4f1ea]">
-      <div class="mx-auto flex max-w-6xl items-center justify-between gap-12">
+      <div class="mx-auto flex max-w-6xl flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-12">
         <div>
           <p class="text-xs font-semibold uppercase tracking-[2px] text-[#e6bd76]">La prochaine histoire vous attend</p>
           <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl">Parcourez les voix de la RDC.</h2>
