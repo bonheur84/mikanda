@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/assets/" />
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script defer src="assets/book-favorites.js"></script>
+
 </head>
 <body class="selection:bg-[#e6bd76] selection:text-[#19231f] bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
     <div id="accueil" class="relative isolate h-auto min-h-screen sm:h-[220vh]">
@@ -84,7 +84,7 @@
                     <a href="bibliotheque.html" class="mt-8 inline-flex min-h-11 items-center justify-center rounded-lg bg-[#b85235] px-5 text-[14px] font-semibold text-white cursor-pointer no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-[#9a452b]">
                         Explorer la bibliothèque <span aria-hidden="true" class="ml-2"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span>
                     </a>
-                    
+
                     <a href="auteurs.html" class="mt-8 ml-4 inline-flex min-h-11 items-center justify-center rounded-lg border border-white px-5 text-[14px] font-semibold cursor-pointer text-white no-underline shadow-md transition duration-150 hover:-translate-y-px hover:bg-white/10">
                         Découvrir les auteurs
                     </a>
@@ -240,7 +240,7 @@
                     </div>
                 </article> 
             </a>
-            
+
 
             <a href="livre.html" target="_blank" rel="noreferrer">
                 <article class="group cursor-pointer">
@@ -667,45 +667,8 @@
       </div>
     </footer>
 
+
     <script>
-      const heroSection = document.getElementById("accueil");
-      const heroVideo = document.getElementById("hero-scroll-video");
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      let videoFrame = null;
-      let lastRequestedFrame = null;
-
-      function syncHeroVideo() {
-        videoFrame = null;
-        if (reduceMotion || !heroVideo.duration || !Number.isFinite(heroVideo.duration)) return;
-
-        const scrollDistance = heroSection.offsetHeight - window.innerHeight;
-        const progress = scrollDistance > 0
-          ? Math.min(1, Math.max(0, -heroSection.getBoundingClientRect().top / scrollDistance))
-          : 0;
-        const lastFrameTime = Math.max(0, heroVideo.duration - 0.04);
-        const frameDuration = 1 / 25;
-        const targetTime = Math.min(
-          lastFrameTime,
-          Math.round(progress * lastFrameTime / frameDuration) * frameDuration
-        );
-        const targetFrame = Math.round(targetTime / frameDuration);
-
-        if (heroVideo.seeking || targetFrame === lastRequestedFrame) return;
-
-        lastRequestedFrame = targetFrame;
-        if (typeof heroVideo.fastSeek === "function") heroVideo.fastSeek(targetTime);
-        else heroVideo.currentTime = targetTime;
-      }
-
-      function requestVideoSync() {
-        if (videoFrame === null) videoFrame = window.requestAnimationFrame(syncHeroVideo);
-      }
-
-      window.addEventListener("scroll", requestVideoSync, { passive: true });
-      window.addEventListener("resize", requestVideoSync);
-      heroVideo.addEventListener("loadedmetadata", requestVideoSync);
-      heroVideo.addEventListener("seeked", requestVideoSync);
-      requestVideoSync();
       lucide.createIcons();
     </script>
 </body>
