@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../dist/tailwind.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link href="../dist/tailwind.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap"
         rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <title>Gestion des auteurs | Mikanda Admin</title>
 </head>
 
-<body class="min-h-screen bg-[#f5f3ed] font-['DM_Sans',Arial,sans-serif] text-[#19231f]">
+<body class="min-h-screen bg-ivory font-sans text-ink">
     <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-        <aside class="bg-[#10221b] px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen">
+        <aside class="bg-forest-deep px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen">
             <a href="index.html" class="mb-8 flex items-center gap-3"><img src="../assets/mikanda-logo.svg"
                     alt="Mikanda" class="h-10 w-36 object-contain object-left" /><span
-                    class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#e6bd76]">Admin</span></a>
+                    class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-brass">Admin</span></a>
             <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">
                 Espace de gestion
             </p>
@@ -32,7 +33,7 @@
                         data-lucide="book-open" class="h-4 w-4"></i> Livres</a><a href="auteurs.html"
                     aria-current="page"
                     class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold"><i
-                        data-lucide="feather" class="h-4 w-4 text-[#e6bd76]"></i>
+                        data-lucide="feather" class="h-4 w-4 text-brass"></i>
                     Auteurs</a><a href="comptes.html"
                     class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
                         data-lucide="users" class="h-4 w-4"></i> Comptes</a><a href="messages.html"
@@ -54,54 +55,54 @@
             <header class="mb-7 flex flex-wrap items-end justify-between gap-4">
                 <div>
                     <a href="index.html"
-                        class="mb-2 inline-flex items-center gap-1 text-xs font-semibold text-[#687169] hover:text-[#286143]"><i
+                        class="mb-2 inline-flex items-center gap-1 text-xs font-semibold text-ink-mute hover:text-leaf"><i
                             data-lucide="arrow-left" class="h-3.5 w-3.5"></i> Tableau de
                         bord</a>
-                    <h1 class="font-['Playfair_Display',Georgia,serif] text-3xl font-semibold sm:text-4xl">
+                    <h1 class="font-serif text-3xl font-semibold sm:text-4xl">
                         Les auteurs
                     </h1>
-                    <p class="mt-2 text-sm text-[#687169]">
+                    <p class="mt-2 text-sm text-ink-mute">
                         Gérez les portraits, biographies et bibliographies.
                     </p>
                 </div>
                 <a href="auteur-formulaire.html"
-                    class="inline-flex items-center gap-2 rounded-xl bg-[#133a28] px-4 py-3 text-sm font-semibold text-white hover:bg-[#1b4a34]"><i
+                    class="inline-flex items-center gap-2 rounded-xl bg-forest px-4 py-3 text-sm font-semibold text-white hover:bg-[#1b4a34]"><i
                         data-lucide="plus" class="h-4 w-4"></i> Ajouter un auteur</a>
             </header>
             <div class="mb-5 grid gap-3 sm:grid-cols-3">
-                <article class="rounded-2xl border border-[#e6e2d8] bg-white p-4">
-                    <p class="text-xs text-[#687169]">Auteurs référencés</p>
+                <article class="rounded-2xl border border-line-soft bg-white p-4">
+                    <p class="text-xs text-ink-mute">Auteurs référencés</p>
                     <p class="mt-1 text-2xl font-bold">86</p>
                 </article>
-                <article class="rounded-2xl border border-[#e6e2d8] bg-white p-4">
-                    <p class="text-xs text-[#687169]">Fiches complètes</p>
-                    <p class="mt-1 text-2xl font-bold text-[#286143]">82</p>
+                <article class="rounded-2xl border border-line-soft bg-white p-4">
+                    <p class="text-xs text-ink-mute">Fiches complètes</p>
+                    <p class="mt-1 text-2xl font-bold text-leaf">82</p>
                 </article>
-                <article class="rounded-2xl border border-[#e6e2d8] bg-white p-4">
-                    <p class="text-xs text-[#687169]">À compléter</p>
+                <article class="rounded-2xl border border-line-soft bg-white p-4">
+                    <p class="text-xs text-ink-mute">À compléter</p>
                     <p class="mt-1 text-2xl font-bold text-[#896315]">4</p>
                 </article>
             </div>
-            <section class="overflow-hidden rounded-2xl border border-[#e6e2d8] bg-white shadow-sm">
-                <form action="auteurs.html" method="get" class="flex flex-wrap gap-3 border-b border-[#eeeae2] p-4">
+            <section class="overflow-hidden rounded-2xl border border-line-soft bg-white shadow-sm">
+                <form action="auteurs.html" method="get" class="flex flex-wrap gap-3 border-b border-linen p-4">
                     <label class="relative min-w-[220px] flex-1"><span class="sr-only">Rechercher un auteur</span><i
                             data-lucide="search"
-                            class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#899087]"></i><input
+                            class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-mute"></i><input
                             type="search" name="q" placeholder="Rechercher un auteur…"
-                            class="w-full rounded-xl border border-[#e2ded4] py-2.5 pl-10 pr-3 text-sm outline-none focus:border-[#286143]" /></label><select
+                            class="w-full rounded-xl border border-line-soft py-2.5 pl-10 pr-3 text-sm outline-none focus:border-leaf" /></label><select
                         aria-label="Filtrer les fiches auteur" name="etat"
-                        class="rounded-xl border border-[#e2ded4] bg-white px-3 py-2.5 text-sm">
+                        class="rounded-xl border border-line-soft bg-white px-3 py-2.5 text-sm">
                         <option value="">Toutes les fiches</option>
                         <option>Complètes</option>
                         <option>À compléter</option>
                     </select><button
-                        class="rounded-xl border border-[#e2ded4] px-4 py-2.5 text-sm font-semibold hover:bg-[#f7f5ef]">
+                        class="rounded-xl border border-line-soft px-4 py-2.5 text-sm font-semibold hover:bg-paper">
                         Filtrer
                     </button>
                 </form>
                 <div class="overflow-x-auto">
                     <table class="w-full min-w-[680px] text-left text-sm">
-                        <thead class="bg-[#faf9f6] text-[10px] uppercase tracking-[1.4px] text-[#899087]">
+                        <thead class="bg-[#faf9f6] text-[10px] uppercase tracking-[1.4px] text-ink-mute">
                             <tr>
                                 <th class="px-5 py-3 font-semibold">Auteur</th>
                                 <th class="px-4 py-3 font-semibold">Pays</th>
@@ -110,27 +111,27 @@
                                 <th class="px-5 py-3 text-right font-semibold">Actions</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-[#eeeae2]">
+                        <tbody class="divide-y divide-linen">
                             <tr>
                                 <td class="px-5 py-4">
                                     <div class="flex items-center gap-3">
                                         <img src="../assets/auteurs/blaise-ndala.jpg" alt=""
                                             class="h-10 w-10 rounded-full object-cover" /><span><span
                                                 class="block font-semibold">Blaise Ndala</span><span
-                                                class="mt-1 block text-xs text-[#687169]">Écrivain ·
+                                                class="mt-1 block text-xs text-ink-mute">Écrivain ·
                                                 romancier</span></span>
                                     </div>
                                 </td>
-                                <td class="px-4 py-4 text-[#687169]">RDC · Canada</td>
+                                <td class="px-4 py-4 text-ink-mute">RDC · Canada</td>
                                 <td class="px-4 py-4">4 œuvres</td>
                                 <td class="px-4 py-4">
                                     <span
-                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-[#286143]">Complète</span>
+                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Complète</span>
                                 </td>
                                 <td class="px-5 py-4">
                                     <div class="flex justify-end gap-2">
                                         <a href="auteur-formulaire.html" aria-label="Modifier Blaise Ndala"
-                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i
+                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
                                                 data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
                                             aria-label="Supprimer Blaise Ndala"
                                             class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
@@ -143,21 +144,21 @@
                                 <td class="px-5 py-4">
                                     <div class="flex items-center gap-3">
                                         <img src="../assets/auteurs/fiston-mwanza-mujila.jpg" alt=""
-                                            class="h-10 w-10 rounded-full bg-[#eeeae2] object-cover" /><span><span
+                                            class="h-10 w-10 rounded-full bg-linen object-cover" /><span><span
                                                 class="block font-semibold">Fiston Mwanza Mujila</span><span
-                                                class="mt-1 block text-xs text-[#687169]">Écrivain · poète</span></span>
+                                                class="mt-1 block text-xs text-ink-mute">Écrivain · poète</span></span>
                                     </div>
                                 </td>
-                                <td class="px-4 py-4 text-[#687169]">RDC · Autriche</td>
+                                <td class="px-4 py-4 text-ink-mute">RDC · Autriche</td>
                                 <td class="px-4 py-4">3 œuvres</td>
                                 <td class="px-4 py-4">
                                     <span
-                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-[#286143]">Complète</span>
+                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Complète</span>
                                 </td>
                                 <td class="px-5 py-4">
                                     <div class="flex justify-end gap-2">
                                         <a href="auteur-formulaire.html" aria-label="Modifier Fiston Mwanza Mujila"
-                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i
+                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
                                                 data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
                                             aria-label="Supprimer Fiston Mwanza Mujila"
                                             class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
@@ -172,20 +173,20 @@
                                         <span
                                             class="flex h-10 w-10 items-center justify-center rounded-full bg-[#f4e9df] font-semibold text-[#9a573b]">IB</span><span><span
                                                 class="block font-semibold">In Koli Jean Bofane</span><span
-                                                class="mt-1 block text-xs text-[#687169]">Écrivain ·
+                                                class="mt-1 block text-xs text-ink-mute">Écrivain ·
                                                 romancier</span></span>
                                     </div>
                                 </td>
-                                <td class="px-4 py-4 text-[#687169]">RDC · Belgique</td>
+                                <td class="px-4 py-4 text-ink-mute">RDC · Belgique</td>
                                 <td class="px-4 py-4">5 œuvres</td>
                                 <td class="px-4 py-4">
                                     <span
-                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-[#286143]">Complète</span>
+                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Complète</span>
                                 </td>
                                 <td class="px-5 py-4">
                                     <div class="flex justify-end gap-2">
                                         <a href="auteur-formulaire.html" aria-label="Modifier In Koli Jean Bofane"
-                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i
+                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
                                                 data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
                                             aria-label="Supprimer In Koli Jean Bofane"
                                             class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
@@ -200,11 +201,11 @@
                                         <span
                                             class="flex h-10 w-10 items-center justify-center rounded-full bg-[#e8edf0] font-semibold text-[#52636b]">MM</span><span><span
                                                 class="block font-semibold">Marie-Louise Mumbu</span><span
-                                                class="mt-1 block text-xs text-[#687169]">Autrice ·
+                                                class="mt-1 block text-xs text-ink-mute">Autrice ·
                                                 dramaturge</span></span>
                                     </div>
                                 </td>
-                                <td class="px-4 py-4 text-[#687169]">RDC</td>
+                                <td class="px-4 py-4 text-ink-mute">RDC</td>
                                 <td class="px-4 py-4">1 œuvre</td>
                                 <td class="px-4 py-4">
                                     <span
@@ -215,7 +216,7 @@
                                     <div class="flex justify-end gap-2">
                                         <a href="auteur-formulaire.html"
                                             aria-label="Compléter la fiche de Marie-Louise Mumbu"
-                                            class="rounded-lg border border-[#e2ded4] p-2 text-[#59635d] hover:bg-[#f7f5ef]"><i
+                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
                                                 data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
                                             aria-label="Supprimer Marie-Louise Mumbu"
                                             class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
@@ -227,7 +228,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="border-t border-[#eeeae2] px-5 py-4 text-xs text-[#687169]">
+                <div class="border-t border-linen px-5 py-4 text-xs text-ink-mute">
                     Affichage de 4 auteurs sur 86
                 </div>
             </section>
