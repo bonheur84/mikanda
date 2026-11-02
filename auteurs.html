@@ -1,468 +1,477 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
     <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Mikanda - Bibliothèque de la littérature congolaise</title>
+    <title>Les auteurs | Mikanda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="assets/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
-      <a href="index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
-        <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-9 w-32 object-contain sm:h-12 sm:w-44 lg:h-14 lg:w-52">
+<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" data-site-header>
+    <div class="shell flex h-18 items-center gap-3 lg:h-22">
+      <a href="index.html" class="shrink-0 rounded-md" aria-label="Mikanda, retour à l’accueil">
+        <img src="assets/mikanda-logo-ink.svg" alt="" width="180" height="50" class="h-11 w-auto sm:h-12 lg:h-14">
       </a>
 
-      <nav aria-label="Navigation principale" class="hidden items-center gap-1 lg:flex lg:gap-2">
-        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
-        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
-        <a href="auteurs.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">Auteurs</a>
-        <a href="collections.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Collections</a>
-        <a href="a-propos.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">À propos</a>
-        <a href="premium.html" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 cursor-pointer">Premium</a>
+      <nav aria-label="Navigation principale" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-0.5 xl:gap-1">
+          <li><a class="nav-link" href="index.html">Accueil</a></li>
+          <li><a class="nav-link" href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a class="nav-link" href="auteurs.html" aria-current="page">Auteurs</a></li>
+          <li><a class="nav-link" href="collections.html">Collections</a></li>
+          <li><a class="nav-link" href="a-propos.html">À propos</a></li>
+          <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
+        </ul>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="favoris.html" aria-label="Voir mes favoris">
-          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+      <div class="ml-auto flex items-center gap-1.5 sm:gap-2 lg:ml-3">
+        <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
+          <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-
-        <a href="connexion.html" class="hidden items-center gap-2 rounded-full border border-[#e6bd76]/55 px-4 py-2.5 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-[#e6bd76] hover:text-[#19231f] lg:inline-flex cursor-pointer">
-          Se connecter <i data-lucide="user" class="w-4 h-4"></i>
+        <a href="connexion.html" class="btn btn-primary btn-sm hidden sm:inline-flex">
+          <i data-lucide="user-round" aria-hidden="true"></i>Se connecter
         </a>
+        <details class="menu lg:hidden" data-menu>
+          <summary class="icon-btn" aria-label="Menu">
+            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
+            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+          </summary>
+          <div class="menu-panel">
+            <nav aria-label="Navigation mobile" class="shell">
+              <ul class="grid gap-0.5">
+              <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html" aria-current="page">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="collections.html">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+                <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+            <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
+              <a href="connexion.html" class="btn btn-primary">Se connecter</a>
+              <a href="inscription.html" class="btn btn-secondary">Créer un compte</a>
+            </div>
+          </div>
+        </details>
       </div>
-      <details class="relative ml-auto lg:hidden">
-        <summary aria-label="Ouvrir le menu de navigation" class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full border border-white/20 text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
-          <i data-lucide="menu" aria-hidden="true" class="h-5 w-5"></i>
-          <span class="sr-only">Ouvrir le menu</span>
-        </summary>
-        <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#19231f] p-2 shadow-2xl">
-          <nav aria-label="Navigation mobile" class="grid gap-1">
-            <a href="index.html#accueil" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Accueil</a>
-            <a href="bibliotheque.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Biblioth&#232;que</a>
-            <a href="auteurs.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Auteurs</a>
-            <a href="collections.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Collections</a>
-            <a href="a-propos.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">&#192; propos</a>
-            <a href="premium.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Premium</a>
-          </nav>
-        </div>
-      </details>
-
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="px-4 pt-5 sm:px-8 sm:pt-8">
-      <div class="relative isolate mx-auto flex min-h-107.5 max-w-7xl items-center overflow-hidden rounded-[1.6rem] bg-[#19231f] bg-[url('/assets/bibliotheque-congolaise-fond-drapeau.png')] bg-cover bg-position-[center_58%] px-6 py-12 sm:px-12 lg:min-h-125 lg:px-16">
-        <div class="absolute inset-0 -z-10 bg-linear-to-r from-[#101713]/95 via-[#101713]/78 to-[#101713]/10"></div>
+      <div class="relative isolate mx-auto flex min-h-107.5 max-w-7xl items-center overflow-hidden rounded-[1.6rem] bg-forest bg-[url('../assets/bibliotheque-congolaise-fond-drapeau.jpg')] bg-cover bg-position-[center_58%] px-6 py-12 sm:px-12 lg:min-h-125 lg:px-16">
+        <div class="absolute inset-0 -z-10 bg-linear-to-r from-forest-deep/95 via-forest-deep/78 to-forest-deep/10"></div>
         <div class="max-w-2xl text-white">
-          <p class="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[2.4px] text-[#e6bd76]">
-            <span class="h-px w-8 bg-[#e6bd76]"></span> Rencontres &amp; parcours
+          <p class="mb-5 inline-flex items-center gap-2 text-[13px] font-semibold tracking-[2.4px] text-brass">
+            <span class="h-px w-8 bg-brass"></span> Rencontres &amp; parcours
           </p>
 
-          <h1 class="font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-[1.04] tracking-[-1.4px] sm:text-6xl lg:text-[76px]">
-            Les voix qui<br><em class="text-[#e6bd76]">font vivre</em> nos récits.
+          <h1 class="font-serif text-4xl font-medium leading-[1.04] tracking-[-1.4px] sm:text-6xl lg:text-[76px] hero-enter" style="--d:1">
+            Les voix qui<br><em class="text-brass">font vivre</em> nos récits.
           </h1>
 
-          <p class="mt-6 max-w-xl text-base leading-7 text-[#e8e7df] sm:text-lg sm:leading-8">
+          <p class="mt-6 max-w-xl text-base leading-7 text-[#e8e7df] sm:text-lg sm:leading-8 hero-enter" style="--d:2">
             Écrivains, poètes et conteurs : découvrez les parcours et les univers qui façonnent la littérature congolaise.
           </p>
 
-          <a href="#portraits" class="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-[#b85235] px-6 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#9a452b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+          <a href="#portraits" class="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-brass-deep px-6 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-brass-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
             Rencontrer les auteurs <span aria-hidden="true"><i data-lucide="arrow-down" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span>
           </a>
         </div>
-        <div class="absolute bottom-6 right-6 hidden max-w-55 rotate-2 rounded-xl border border-white/20 bg-[#19231f]/85 p-5 text-white shadow-2xl backdrop-blur-sm md:block lg:bottom-9 lg:right-9">
-          <p class="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#e6bd76]">Voix · mémoire · imaginaire</p>
-          <p class="mt-2 font-['Playfair_Display',Georgia,serif] text-lg leading-snug">Une littérature vivante, plurielle et en mouvement.</p>
+        <div class="absolute bottom-6 right-6 hidden max-w-55 rotate-2 rounded-xl border border-white/20 bg-forest/85 p-5 text-white shadow-2xl backdrop-blur-sm md:block lg:bottom-9 lg:right-9">
+          <p class="text-[13px] font-semibold tracking-[1.8px] text-brass">Voix · mémoire · imaginaire</p>
+          <p class="mt-2 font-serif text-lg leading-snug">Une littérature vivante, plurielle et en mouvement.</p>
         </div>
       </div>
     </section>
 
     <section id="portraits" class="reveal scroll-mt-32 px-5 pb-20 pt-14 sm:px-8 sm:pt-20">
       <div class="mx-auto max-w-7xl">
-        <div class="mb-8 flex flex-col justify-between gap-5 border-b border-[#d8d2c5] pb-7 sm:flex-row sm:items-end">
+        <div class="mb-8 flex flex-col justify-between gap-5 border-b border-line pb-7 sm:flex-row sm:items-end">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Auteurs à découvrir</p>
-            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium tracking-tight sm:text-5xl">Des parcours singuliers</h2>
-            <p class="mt-3 max-w-xl text-sm leading-6 text-[#59635d] sm:text-base">Des écritures, des rythmes et des regards qui ouvrent de nouvelles portes sur le Congo.</p>
+            <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Auteurs à découvrir</p>
+            <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Des parcours singuliers</h2>
+            <p class="mt-3 max-w-xl text-sm leading-6 text-ink-soft sm:text-base">Des écritures, des rythmes et des regards qui ouvrent de nouvelles portes sur le Congo.</p>
           </div>
 
-          <p class="shrink-0 text-sm text-[#81776e]">20 portraits en lumière</p>
+          <p class="shrink-0 text-sm text-ink-mute">20 portraits en lumière</p>
         </div>
 
-        <div class="mb-5 rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-4 shadow-sm sm:p-5">
+        <div class="mb-5 rounded-2xl border border-line-soft bg-paper p-4 shadow-sm sm:p-5">
           <form role="search" method="get" class="flex items-center gap-3">
-            <input type="search" name="q" aria-label="Rechercher un auteur" placeholder="Rechercher un auteur..." class="h-12 min-w-0 flex-1 rounded-xl border border-[#e3ddd0] bg-white px-4 text-sm text-[#19231f] outline-none transition-colors placeholder:text-[#81776e] focus:border-[#b85235]">
-            <button type="submit" class="h-12 shrink-0 rounded-xl bg-[#19231f] px-5 text-sm font-semibold text-[#fbfaf6] transition-colors hover:bg-[#b85235]">Rechercher</button>
+            <input type="search" name="q" aria-label="Rechercher un auteur" placeholder="Rechercher un auteur..." class="h-12 min-w-0 flex-1 rounded-xl border border-line-soft bg-white px-4 text-sm text-ink outline-none transition-colors placeholder:text-ink-mute focus:border-brass-deep">
+            <button type="submit" class="h-12 shrink-0 rounded-xl bg-forest px-5 text-sm font-semibold text-paper transition-colors hover:bg-brass-deep">Rechercher</button>
           </form>
         </div>
-        <p class="mb-5 min-h-8 text-xs font-medium text-[#59635d]">20 portraits en lumière</p>
+        <p class="mb-5 min-h-8 text-[13px] font-medium text-ink-soft">20 portraits en lumière</p>
 
         <div class="grid grid-cols-2 gap-3 sm:gap-5 xl:grid-cols-4">
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#blaise-ndala" aria-label="Lire le parcours de Blaise Ndala" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#blaise-ndala" aria-label="Lire le parcours de Blaise Ndala" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
 
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Romancier</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Blaise Ndala</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des récits où la mémoire et l’histoire se rencontrent.</p>
-              <a href="auteur.html#blaise-ndala" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Romancier</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Blaise Ndala</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des récits où la mémoire et l’histoire se rencontrent.</p>
+              <a href="auteur.html#blaise-ndala" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#fiston-mwanza-mujila" aria-label="Lire le parcours de Fiston Mwanza Mujila" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#fiston-mwanza-mujila" aria-label="Lire le parcours de Fiston Mwanza Mujila" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/fiston-mwanza-mujila.jpg" alt="Portrait de Fiston Mwanza Mujila" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
 
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Poète et romancier</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Fiston Mwanza Mujila</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une langue inventive, traversée par le rythme et la poésie.</p>
-              <a href="auteur.html#fiston-mwanza-mujila" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Poète et romancier</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Fiston Mwanza Mujila</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une langue inventive, traversée par le rythme et la poésie.</p>
+              <a href="auteur.html#fiston-mwanza-mujila" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#in-koli-jean-bofane" aria-label="Lire le parcours d’In Koli Jean Bofane" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#in-koli-jean-bofane" aria-label="Lire le parcours d’In Koli Jean Bofane" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/in-koli-jean-bofane.jpg" alt="Portrait d’In Koli Jean Bofane" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Romancier</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">In Koli Jean Bofane</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Un regard singulier sur le Congo et le monde contemporain.</p>
-              <a href="auteur.html#in-koli-jean-bofane" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Romancier</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">In Koli Jean Bofane</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Un regard singulier sur le Congo et le monde contemporain.</p>
+              <a href="auteur.html#in-koli-jean-bofane" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#kama-sywor-kamanda" aria-label="Lire le parcours de Kama Sywor Kamanda" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#kama-sywor-kamanda" aria-label="Lire le parcours de Kama Sywor Kamanda" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/kama-sywor-kamanda.jpg" alt="Portrait de Kama Sywor Kamanda" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Poète et conteur</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Kama Sywor Kamanda</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des poèmes et récits inspirés par les imaginaires africains.</p>
-              <a href="auteur.html#kama-sywor-kamanda" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Poète et conteur</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Kama Sywor Kamanda</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des poèmes et récits inspirés par les imaginaires africains.</p>
+              <a href="auteur.html#kama-sywor-kamanda" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#v-y-mudimbe" aria-label="Lire le parcours de V. Y. Mudimbe" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#v-y-mudimbe" aria-label="Lire le parcours de V. Y. Mudimbe" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/v-y-mudimbe.jpg" alt="Portrait de V. Y. Mudimbe" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Philosophe et écrivain</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">V. Y. Mudimbe</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une œuvre singulière au croisement de la philosophie, de l’essai et du roman.</p>
-              <a href="auteur.html#v-y-mudimbe" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Philosophe et écrivain</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">V. Y. Mudimbe</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une œuvre singulière au croisement de la philosophie, de l’essai et du roman.</p>
+              <a href="auteur.html#v-y-mudimbe" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#zamenga-batukezanga" aria-label="Lire le parcours de Zamenga Batukezanga" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#zamenga-batukezanga" aria-label="Lire le parcours de Zamenga Batukezanga" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/zamenga-batukezanga.jpeg" alt="Portrait de Zamenga Batukezanga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et conteur</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Zamenga Batukezanga</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des récits attentifs aux réalités sociales et aux voix du quotidien.</p>
-              <a href="auteur.html#zamenga-batukezanga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et conteur</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Zamenga Batukezanga</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des récits attentifs aux réalités sociales et aux voix du quotidien.</p>
+              <a href="auteur.html#zamenga-batukezanga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#clementine-faik-nzuji" aria-label="Lire le parcours de Clémentine Faïk-Nzuji" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#clementine-faik-nzuji" aria-label="Lire le parcours de Clémentine Faïk-Nzuji" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/clementine-nzuji.jpg" alt="Portrait de Clémentine Faïk-Nzuji" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Poète et linguiste</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Clémentine Faïk-Nzuji</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une poésie nourrie par les langues et les traditions orales congolaises.</p>
-              <a href="auteur.html#clementine-faik-nzuji" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Poète et linguiste</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Clémentine Faïk-Nzuji</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une poésie nourrie par les langues et les traditions orales congolaises.</p>
+              <a href="auteur.html#clementine-faik-nzuji" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#marie-eugenie-mpongo" aria-label="Lire le parcours de Marie-Eugénie Mpongo" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#marie-eugenie-mpongo" aria-label="Lire le parcours de Marie-Eugénie Mpongo" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/marie-eugenie-mpongo.jpeg" alt="Portrait de Marie-Eugénie Mpongo" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivaine</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Marie-Eugénie Mpongo</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une plume qui explore les expériences et les imaginaires de son époque.</p>
-              <a href="auteur.html#marie-eugenie-mpongo" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivaine</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Marie-Eugénie Mpongo</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une plume qui explore les expériences et les imaginaires de son époque.</p>
+              <a href="auteur.html#marie-eugenie-mpongo" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#georges-ngal" aria-label="Lire le parcours de Georges Ngal" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#georges-ngal" aria-label="Lire le parcours de Georges Ngal" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/georges-ngal.jpg" alt="Portrait de Georges Ngal" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et critique littéraire</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Georges Ngal</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des œuvres qui interrogent les formes du roman et les héritages culturels.</p>
-              <a href="auteur.html#georges-ngal" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et critique littéraire</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Georges Ngal</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des œuvres qui interrogent les formes du roman et les héritages culturels.</p>
+              <a href="auteur.html#georges-ngal" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#maguy-kabamba" aria-label="Lire le parcours de Maguy Kabamba" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#maguy-kabamba" aria-label="Lire le parcours de Maguy Kabamba" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/maguy-kabamba.webp" alt="Portrait de Maguy Kabamba" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Romancière</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Maguy Kabamba</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des histoires ancrées dans les parcours et les réalités congolaises.</p>
-              <a href="auteur.html#maguy-kabamba" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Romancière</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Maguy Kabamba</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des histoires ancrées dans les parcours et les réalités congolaises.</p>
+              <a href="auteur.html#maguy-kabamba" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#elisabeth-mweya-tolande" aria-label="Lire le parcours d’Élisabeth Mweya Tol’Ande" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#elisabeth-mweya-tolande" aria-label="Lire le parcours d’Élisabeth Mweya Tol’Ande" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/elisabeth-mweya-tolande.jpeg" alt="Portrait de Élisabeth Mweya Tol’Ande" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivaine</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Élisabeth Mweya Tol’Ande</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une voix contemporaine qui invite à découvrir de nouveaux récits.</p>
-              <a href="auteur.html#elisabeth-mweya-tolande" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivaine</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Élisabeth Mweya Tol’Ande</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une voix contemporaine qui invite à découvrir de nouveaux récits.</p>
+              <a href="auteur.html#elisabeth-mweya-tolande" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#christian-gombo" aria-label="Lire le parcours de Christian Gombo" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#christian-gombo" aria-label="Lire le parcours de Christian Gombo" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/christian-gombo.jpg" alt="Portrait de Christian Gombo" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et poète</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Christian Gombo</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une écriture vivante où se rencontrent poésie, humour et observation.</p>
-              <a href="auteur.html#christian-gombo" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et poète</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Christian Gombo</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une écriture vivante où se rencontrent poésie, humour et observation.</p>
+              <a href="auteur.html#christian-gombo" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#marie-justine-kalunga" aria-label="Lire le parcours de Marie-Justine Kalunga" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#marie-justine-kalunga" aria-label="Lire le parcours de Marie-Justine Kalunga" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/marie-justine-kalunga.jpg" alt="Portrait de Marie-Justine Kalunga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivaine</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Marie-Justine Kalunga</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des textes qui font entendre une voix nouvelle de la littérature congolaise.</p>
-              <a href="auteur.html#marie-justine-kalunga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivaine</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Marie-Justine Kalunga</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des textes qui font entendre une voix nouvelle de la littérature congolaise.</p>
+              <a href="auteur.html#marie-justine-kalunga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#joelle-sambi" aria-label="Lire le parcours de Joëlle Sambi" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#joelle-sambi" aria-label="Lire le parcours de Joëlle Sambi" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/joelle-sambi.png" alt="Portrait de Joëlle Sambi" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivaine et poète</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Joëlle Sambi</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une parole libre qui traverse les genres et questionne les frontières.</p>
-              <a href="auteur.html#joelle-sambi" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivaine et poète</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Joëlle Sambi</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une parole libre qui traverse les genres et questionne les frontières.</p>
+              <a href="auteur.html#joelle-sambi" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#lye-yoka" aria-label="Lire le parcours de Lye Yoka" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#lye-yoka" aria-label="Lire le parcours de Lye Yoka" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/lye-yoka.jpg" alt="Portrait de Lye Yoka" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et dramaturge</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Lye Yoka</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Une œuvre attentive aux voix, aux scènes et aux cultures de Kinshasa.</p>
-              <a href="auteur.html#lye-yoka" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et dramaturge</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Lye Yoka</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Une œuvre attentive aux voix, aux scènes et aux cultures de Kinshasa.</p>
+              <a href="auteur.html#lye-yoka" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#mukala-kadima-nzuji" aria-label="Lire le parcours de Mukala Kadima-Nzuji" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#mukala-kadima-nzuji" aria-label="Lire le parcours de Mukala Kadima-Nzuji" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/mukala-kadima-nzuji.jpg" alt="Portrait de Mukala Kadima-Nzuji" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et universitaire</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Mukala Kadima-Nzuji</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Un parcours consacré à la création et à l’histoire littéraire africaine.</p>
-              <a href="auteur.html#mukala-kadima-nzuji" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et universitaire</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Mukala Kadima-Nzuji</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Un parcours consacré à la création et à l’histoire littéraire africaine.</p>
+              <a href="auteur.html#mukala-kadima-nzuji" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#pius-ngandu-nkashama" aria-label="Lire le parcours de Pius Ngandu Nkashama" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#pius-ngandu-nkashama" aria-label="Lire le parcours de Pius Ngandu Nkashama" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/pius-ngandu-nkashama.jpg" alt="Portrait de Pius Ngandu Nkashama" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et universitaire</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Pius Ngandu Nkashama</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des romans et des essais qui explorent l’histoire et les sociétés africaines.</p>
-              <a href="auteur.html#pius-ngandu-nkashama" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et universitaire</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Pius Ngandu Nkashama</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des romans et des essais qui explorent l’histoire et les sociétés africaines.</p>
+              <a href="auteur.html#pius-ngandu-nkashama" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#sinzo-aanza" aria-label="Lire le parcours de Sinzo Aanza" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#sinzo-aanza" aria-label="Lire le parcours de Sinzo Aanza" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/sinzo-aanza.jpg" alt="Portrait de Sinzo Aanza" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et artiste</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Sinzo Aanza</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des récits contemporains qui croisent littérature, art et société.</p>
-              <a href="auteur.html#sinzo-aanza" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et artiste</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Sinzo Aanza</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des récits contemporains qui croisent littérature, art et société.</p>
+              <a href="auteur.html#sinzo-aanza" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#barly-baruti" aria-label="Lire le parcours de Barly Baruti" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#barly-baruti" aria-label="Lire le parcours de Barly Baruti" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/barly-baruti.jpg" alt="Portrait de Barly Baruti" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Auteur de bande dessinée</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Barly Baruti</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Un auteur qui fait vivre les imaginaires congolais en images.</p>
-              <a href="auteur.html#barly-baruti" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Auteur de bande dessinée</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Barly Baruti</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Un auteur qui fait vivre les imaginaires congolais en images.</p>
+              <a href="auteur.html#barly-baruti" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#b85235]/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
-            <a href="auteur.html#desire-bolya-baenga" aria-label="Lire le parcours de Désiré Bolya Baenga" class="relative block aspect-[4/3] overflow-hidden bg-[#d8d2c5] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#b85235]">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brass-deep/40 hover:shadow-[0_20px_35px_rgba(25,35,31,0.16)]">
+            <a href="auteur.html#desire-bolya-baenga" aria-label="Lire le parcours de Désiré Bolya Baenga" class="relative block aspect-[4/3] overflow-hidden bg-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brass-deep">
               <img src="assets/auteurs/desire-bolya-baenga.jpg" alt="Portrait de Désiré Bolya Baenga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 motion-reduce:transition-none">
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/55 via-transparent to-transparent"></span>
-              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-[#19231f] shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-[#e6bd76]"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/55 via-transparent to-transparent"></span>
+              <span aria-hidden="true" class="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition duration-300 group-hover:rotate-45 group-hover:bg-brass"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
             </a>
             <div class="flex flex-1 flex-col p-3 sm:p-5">
-              <p class="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#b85235]">Écrivain et journaliste</p>
-              <h3 class="mt-1 font-['Playfair_Display',Georgia,serif] text-lg sm:text-2xl text-[#19231f] transition-colors group-hover:text-[#b85235]">Désiré Bolya Baenga</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-[#59635d]">Des romans portés par un regard critique sur les sociétés contemporaines.</p>
-              <a href="auteur.html#desire-bolya-baenga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-[#e3ddd0] pt-4 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235]">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
+              <p class="text-[13px] font-semibold tracking-[1.7px] text-brass-deep">Écrivain et journaliste</p>
+              <h3 class="mt-1 font-serif text-lg sm:text-2xl text-ink transition-colors group-hover:text-brass-deep">Désiré Bolya Baenga</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-ink-soft">Des romans portés par un regard critique sur les sociétés contemporaines.</p>
+              <a href="auteur.html#desire-bolya-baenga" class="mt-5 inline-flex w-fit items-center gap-2 border-t border-line-soft pt-4 text-sm font-semibold text-forest transition-colors hover:text-brass-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir le portrait <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i></a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="reveal mx-4 mb-16 overflow-hidden rounded-3xl bg-[#ebe9e1] sm:mx-8">
+    <section class="reveal mx-4 mb-16 overflow-hidden rounded-3xl bg-linen sm:mx-8">
       <div class="mx-auto grid max-w-7xl gap-8 px-6 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1fr_auto] lg:items-center">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Prolongez la découverte</p>
-          <h2 class="mt-2 max-w-2xl font-['Playfair_Display',Georgia,serif] text-3xl leading-tight sm:text-4xl">Retrouvez les œuvres dans la bibliothèque.</h2>
-          <p class="mt-3 max-w-xl text-sm leading-6 text-[#59635d]">Parcourez le catalogue et laissez-vous guider vers votre prochaine lecture.</p>
+          <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Prolongez la découverte</p>
+          <h2 class="mt-2 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">Retrouvez les œuvres dans la bibliothèque.</h2>
+          <p class="mt-3 max-w-xl text-sm leading-6 text-ink-soft">Parcourez le catalogue et laissez-vous guider vers votre prochaine lecture.</p>
         </div>
-        <a href="bibliotheque.html" class="inline-flex min-h-12 items-center justify-center gap-3 justify-self-start rounded-full bg-[#19231f] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#133a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b85235] lg:justify-self-end">
+        <a href="bibliotheque.html" class="inline-flex min-h-12 items-center justify-center gap-3 justify-self-start rounded-full bg-forest px-6 text-sm font-semibold text-white transition-colors hover:bg-forest-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep lg:justify-self-end">
           Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true" class="h-3.5 w-3.5"></i>
         </a>
       </div>
     </section>
   </main>
 
-  <footer class="bg-[#19231f] px-7 py-14 text-[#f4f1ea] lg:px-8 lg:pt-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-[1.35fr_0.8fr_0.9fr_0.9fr]">
-          <div class="max-w-sm">
-            <a href="#accueil" aria-label="Mikanda, retourner à l’accueil" class="inline-flex rounded-sm cursor-pointer">
-              <img src="assets/mikanda-logo.svg" alt="" class="block h-14 w-52 object-contain object-left">
-            </a>
-            
-            <p class="mt-7 max-w-xs text-sm leading-7 text-[#d1d8d2]">
-              Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.
-            </p>
-          </div>
-
-          <nav aria-label="Explorer Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Explorer</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">La bibliothèque</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les auteurs</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les collections</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="À propos de Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Notre mission</a></li>
-              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Nos partenaires</a></li>
-              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Revenir à l’accueil</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="Informations sur le catalogue">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Œuvres populaires</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Explorer par genre</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Voix congolaises</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
-          <p>© 2026 Mikanda · Maquette de démonstration</p>
-          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          </div>
-          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] md:justify-self-end cursor-pointer">
-            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
+  <footer class="on-dark overflow-hidden bg-forest text-ivory">
+    <div class="shell pb-10 pt-20 sm:pt-24">
+      <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div class="max-w-sm">
+          <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
+            <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
+
+        <nav aria-labelledby="pied-explorer">
+          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
+            <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-mikanda">
+          <h2 id="pied-mikanda" class="font-serif text-xl text-ivory">Mikanda</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
+            <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
+            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-espace">
+          <h2 id="pied-espace" class="font-serif text-xl text-ivory">Mon espace</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="connexion.html" class="link-arrow !font-normal text-mist hover:text-ivory">Se connecter</a></li>
+            <li><a href="inscription.html" class="link-arrow !font-normal text-mist hover:text-ivory">Créer un compte</a></li>
+            <li><a href="favoris.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mes favoris</a></li>
+            <li><a href="profil.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mon profil</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
+
+      <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
+
+      <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+        <a href="#top" class="link-arrow">Retour en haut <i data-lucide="arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
 
     <script>
       lucide.createIcons()

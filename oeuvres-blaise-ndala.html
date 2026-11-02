@@ -1,83 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
     <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Mikanda - Bibliothèque de la littérature congolaise</title>
+    <title>Les œuvres de Blaise Ndala | Mikanda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="assets/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
-      <a href="index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
-        <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-9 w-32 object-contain sm:h-12 sm:w-44 lg:h-14 lg:w-52">
+<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" data-site-header>
+    <div class="shell flex h-18 items-center gap-3 lg:h-22">
+      <a href="index.html" class="shrink-0 rounded-md" aria-label="Mikanda, retour à l’accueil">
+        <img src="assets/mikanda-logo-ink.svg" alt="" width="180" height="50" class="h-11 w-auto sm:h-12 lg:h-14">
       </a>
 
-      <nav aria-label="Navigation principale" class="hidden items-center gap-1 lg:flex lg:gap-2">
-        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
-        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
-        <a href="auteurs.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">Auteurs</a>
-        <a href="collections.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Collections</a>
-        <a href="a-propos.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">À propos</a>
-        <a href="premium.html" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 cursor-pointer">Premium</a>
+      <nav aria-label="Navigation principale" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-0.5 xl:gap-1">
+          <li><a class="nav-link" href="index.html">Accueil</a></li>
+          <li><a class="nav-link" href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a class="nav-link" href="auteurs.html" aria-current="true">Auteurs</a></li>
+          <li><a class="nav-link" href="collections.html">Collections</a></li>
+          <li><a class="nav-link" href="a-propos.html">À propos</a></li>
+          <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
+        </ul>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="favoris.html" aria-label="Voir mes favoris">
-          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+      <div class="ml-auto flex items-center gap-1.5 sm:gap-2 lg:ml-3">
+        <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
+          <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-
-        <a href="profil.html" aria-label="Voir le profil de Blaise Ndala" class="hidden items-center gap-2.5 rounded-full border border-[#e6bd76]/35 py-1 pl-1 pr-3 text-sm font-semibold text-[#f4f1ea] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
-          <img src="assets/auteurs/blaise-ndala.jpg" alt="" class="h-9 w-9 rounded-full object-cover ring-2 ring-[#e6bd76]/60">
-          <span class="whitespace-nowrap">Blaise Ndala</span>
+        <a href="profil.html" class="profile-chip" aria-label="Voir le profil de Blaise Ndala">
+          <img src="assets/auteurs/blaise-ndala.jpg" alt="" width="36" height="36">
+          <span class="hidden pr-3 xl:inline">Blaise Ndala</span>
         </a>
+        <details class="menu lg:hidden" data-menu>
+          <summary class="icon-btn" aria-label="Menu">
+            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
+            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+          </summary>
+          <div class="menu-panel">
+            <nav aria-label="Navigation mobile" class="shell">
+              <ul class="grid gap-0.5">
+              <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html" aria-current="true">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="collections.html">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+                <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+            <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
+              <a href="profil.html" class="btn btn-primary">Mon profil</a>
+              <a href="favoris.html" class="btn btn-secondary">Mes favoris</a>
+            </div>
+          </div>
+        </details>
       </div>
-      <details class="relative ml-auto lg:hidden">
-        <summary aria-label="Ouvrir le menu de navigation" class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full border border-white/20 text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
-          <i data-lucide="menu" aria-hidden="true" class="h-5 w-5"></i>
-          <span class="sr-only">Ouvrir le menu</span>
-        </summary>
-        <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#19231f] p-2 shadow-2xl">
-          <nav aria-label="Navigation mobile" class="grid gap-1">
-            <a href="index.html#accueil" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Accueil</a>
-            <a href="bibliotheque.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Biblioth&#232;que</a>
-            <a href="auteurs.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Auteurs</a>
-            <a href="collections.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Collections</a>
-            <a href="a-propos.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">&#192; propos</a>
-            <a href="premium.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Premium</a>
-          </nav>
-        </div>
-      </details>
-
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="px-5 pb-10 pt-6 sm:px-8 sm:pb-14 sm:pt-9">
       <div class="mx-auto max-w-7xl">
-        <nav aria-label="Fil d’Ariane" class="mb-7 flex flex-wrap items-center gap-2 text-sm text-[#59635d]">
-          <a href="index.html" class="transition-colors hover:text-[#b85235]">Accueil</a><span aria-hidden="true">/</span>
-          <a href="auteur.html#blaise-ndala" class="transition-colors hover:text-[#b85235]">Blaise Ndala</a><span aria-hidden="true">/</span>
-          <span aria-current="page" class="font-medium text-[#19231f]">Ses œuvres</span>
+        <nav aria-label="Fil d’Ariane" class="mb-7 flex flex-wrap items-center gap-2 text-sm text-ink-soft">
+          <a href="index.html" class="transition-colors hover:text-brass-deep">Accueil</a><span aria-hidden="true">/</span>
+          <a href="auteur.html#blaise-ndala" class="transition-colors hover:text-brass-deep">Blaise Ndala</a><span aria-hidden="true">/</span>
+          <span aria-current="page" class="font-medium text-ink">Ses œuvres</span>
         </nav>
 
-        <div class="relative isolate overflow-hidden rounded-[1.75rem] bg-[#19231f] bg-[url('/assets/background.png')] bg-cover bg-position-[center_58%] px-6 py-10 text-[#f4f1ea] shadow-[0_28px_70px_rgba(25,35,31,0.18)] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
-          <div aria-hidden="true" class="absolute inset-0 -z-10 bg-linear-to-r from-[#101713]/95 via-[#101713]/78 to-[#101713]/10"></div>
+        <div class="relative isolate overflow-hidden rounded-[1.75rem] bg-forest bg-[url('../assets/background.png')] bg-cover bg-position-[center_58%] px-6 py-10 text-ivory shadow-[0_28px_70px_rgba(25,35,31,0.18)] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+          <div aria-hidden="true" class="absolute inset-0 -z-10 bg-linear-to-r from-forest-deep/95 via-forest-deep/78 to-forest-deep/10"></div>
           <div aria-hidden="true" class="absolute -right-12 -top-24 -z-10 h-80 w-80 rounded-full border border-white/10 sm:right-10 sm:top-1/2 sm:-translate-y-1/2"></div>
-          <div aria-hidden="true" class="absolute -right-1 -top-12 -z-10 h-56 w-56 rounded-full border border-[#e6bd76]/20 sm:right-20 sm:top-1/2 sm:-translate-y-1/2"></div>
+          <div aria-hidden="true" class="absolute -right-1 -top-12 -z-10 h-56 w-56 rounded-full border border-brass/20 sm:right-20 sm:top-1/2 sm:-translate-y-1/2"></div>
           <div class="relative max-w-3xl">
-            <p class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]"><span aria-hidden="true" class="h-px w-5 bg-[#e6bd76]"></span> Bibliographie</p>
-            <h1 class="mt-5 font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-tight tracking-[-1px] sm:text-4xl lg:text-6xl">Les œuvres de<br class="hidden sm:block"> Blaise Ndala</h1>
-            <p class="mt-5 max-w-2xl text-base leading-7 text-[#d1d8d2] sm:text-lg sm:leading-8">Quatre romans, du premier paru en 2014 au plus récent en 2025. Des récits où les destins personnels rencontrent les histoires politiques et les mémoires du Congo.</p>
-            <div class="mt-7 flex flex-wrap items-center gap-3 text-xs text-[#d1d8d2]">
+            <p class="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[2px] text-brass"><span aria-hidden="true" class="h-px w-5 bg-brass"></span> Bibliographie</p>
+            <h1 class="mt-5 font-serif text-4xl font-medium leading-tight tracking-[-1px] sm:text-4xl lg:text-6xl hero-enter" style="--d:1">Les œuvres de<br class="hidden sm:block"> Blaise Ndala</h1>
+            <p class="mt-5 max-w-2xl text-base leading-7 text-mist sm:text-lg sm:leading-8 hero-enter" style="--d:2">Quatre romans, du premier paru en 2014 au plus récent en 2025. Des récits où les destins personnels rencontrent les histoires politiques et les mémoires du Congo.</p>
+            <div class="mt-7 flex flex-wrap items-center gap-3 text-[13px] text-mist">
               <span class="rounded-full border border-white/20 px-3.5 py-2">4 romans</span>
               <span class="rounded-full border border-white/20 px-3.5 py-2">2014–2025</span>
               <span class="rounded-full border border-white/20 px-3.5 py-2">Écriture en français</span>
@@ -89,22 +97,22 @@
 
     <section class="reveal px-5 pb-16 sm:px-8 sm:pb-20">
       <div class="mx-auto max-w-7xl">
-        <div class="mb-7 flex flex-col justify-between gap-4 border-b border-[#d8d2c5] pb-6 sm:flex-row sm:items-end">
+        <div class="mb-7 flex flex-col justify-between gap-4 border-b border-line pb-6 sm:flex-row sm:items-end">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Dans l’ordre de parution</p>
-            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl font-medium tracking-tight sm:text-4xl">Quatre romans, quatre regards</h2>
+            <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Dans l’ordre de parution</p>
+            <h2 class="mt-2 font-serif text-3xl font-medium tracking-tight sm:text-4xl">Quatre romans, quatre regards</h2>
           </div>
-          <p class="max-w-md text-sm leading-6 text-[#59635d]">Les rééditions et traductions ne sont pas répétées dans cette liste.</p>
+          <p class="max-w-md text-sm leading-6 text-ink-soft">Les rééditions et traductions ne sont pas répétées dans cette liste.</p>
         </div>
 
         <ol class="grid grid-cols-2 gap-3 sm:gap-5 xl:grid-cols-4">
           <li id="j-irai-danser">
             <a href="https://refc.ca/livres/fiche-livre/?ISBN=9782896994311&amp;titre=j%27irai-danser-sur-la-tombe-de-senghor" target="_blank" rel="noreferrer" class="group block cursor-pointer">
               <article class="h-full cursor-pointer">
-                <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/couvertures/blaise-jirai-danser-senghor.jpg" alt="Couverture de J’irai danser sur la tombe de Senghor de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain"></div>
-                <div class="pt-3 text-[#19231f]"><h3 class="font-serif text-base leading-snug sm:text-lg">J’irai danser sur la tombe de Senghor</h3><p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
-                  <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]"><span>Roman</span><span>2014</span></div>
-                  <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span class="text-sm text-[#59635d]">L’Interligne</span><span class="rounded-full bg-[#e6bd76] px-2.5 py-1 text-xs font-semibold text-[#19231f]">Voir la fiche</span></div>
+                <div class="block overflow-hidden bg-sand shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/couvertures/blaise-jirai-danser-senghor.jpg" alt="Couverture de J’irai danser sur la tombe de Senghor de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-sand object-contain"></div>
+                <div class="pt-3 text-ink"><h3 class="font-serif text-base leading-snug sm:text-lg">J’irai danser sur la tombe de Senghor</h3><p class="mt-1 text-sm text-ink-soft">Blaise Ndala</p>
+                  <div class="mt-3 flex items-center justify-between gap-2 text-[13px] text-ink-soft"><span>Roman</span><span>2014</span></div>
+                  <div class="mt-3 flex items-center justify-between border-t border-line pt-3"><span class="text-sm text-ink-soft">L’Interligne</span><span class="rounded-full bg-brass px-2.5 py-1 text-[13px] font-semibold text-ink">Voir la fiche</span></div>
                 </div>
               </article>
             </a>
@@ -113,10 +121,10 @@
           <li id="sans-capote">
             <a href="https://memoiredencrier.com/catalogue/sans-capote-ni-kalachnikov/" target="_blank" rel="noreferrer" class="group block cursor-pointer">
               <article class="h-full cursor-pointer">
-                <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/couvertures/blaise-sans-capote-ni-kalachnikov.jpg" alt="Couverture de Sans capote ni kalachnikov de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain"></div>
-                <div class="pt-3 text-[#19231f]"><h3 class="font-serif text-base leading-snug sm:text-lg">Sans capote ni kalachnikov</h3><p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
-                  <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]"><span>Roman</span><span>2017</span></div>
-                  <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span class="text-sm text-[#59635d]">Mémoire d’encrier</span><span class="rounded-full bg-[#e6bd76] px-2.5 py-1 text-xs font-semibold text-[#19231f]">Voir la fiche</span></div>
+                <div class="block overflow-hidden bg-sand shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/couvertures/blaise-sans-capote-ni-kalachnikov.jpg" alt="Couverture de Sans capote ni kalachnikov de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-sand object-contain"></div>
+                <div class="pt-3 text-ink"><h3 class="font-serif text-base leading-snug sm:text-lg">Sans capote ni kalachnikov</h3><p class="mt-1 text-sm text-ink-soft">Blaise Ndala</p>
+                  <div class="mt-3 flex items-center justify-between gap-2 text-[13px] text-ink-soft"><span>Roman</span><span>2017</span></div>
+                  <div class="mt-3 flex items-center justify-between border-t border-line pt-3"><span class="text-sm text-ink-soft">Mémoire d’encrier</span><span class="rounded-full bg-brass px-2.5 py-1 text-[13px] font-semibold text-ink">Voir la fiche</span></div>
                 </div>
               </article>
             </a>
@@ -125,10 +133,10 @@
           <li id="dans-le-ventre-du-congo">
             <a href="livre.html" class="group block cursor-pointer">
               <article class="h-full cursor-pointer">
-                <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain"></div>
-                <div class="pt-3 text-[#19231f]"><h3 class="font-serif text-base leading-snug sm:text-lg">Dans le ventre du Congo</h3><p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
-                  <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]"><span>Roman</span><span>2021</span></div>
-                  <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span class="text-sm"><span class="text-[#b85235]"><i data-lucide="star" aria-hidden="true" class="inline h-[1em] w-[1em] fill-current"></i></span> 4.5 <span class="text-[#59635d]">(12 avis)</span></span><span class="rounded-full bg-[#e6bd76] px-2.5 py-1 text-xs font-semibold text-[#19231f]">Gratuit</span></div>
+                <div class="block overflow-hidden bg-sand shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-sand object-contain"></div>
+                <div class="pt-3 text-ink"><h3 class="font-serif text-base leading-snug sm:text-lg">Dans le ventre du Congo</h3><p class="mt-1 text-sm text-ink-soft">Blaise Ndala</p>
+                  <div class="mt-3 flex items-center justify-between gap-2 text-[13px] text-ink-soft"><span>Roman</span><span>2021</span></div>
+                  <div class="mt-3 flex items-center justify-between border-t border-line pt-3"><span class="text-sm"><span class="text-brass-deep"><i data-lucide="star" aria-hidden="true" class="inline h-[1em] w-[1em] fill-current"></i></span> 4.5 <span class="text-ink-soft">(12 avis)</span></span><span class="rounded-full bg-brass px-2.5 py-1 text-[13px] font-semibold text-ink">Gratuit</span></div>
                 </div>
               </article>
             </a>
@@ -137,82 +145,83 @@
           <li id="equation-avant-la-nuit">
             <a href="https://memoiredencrier.com/catalogue/l-equation-avant-la-nuit/" target="_blank" rel="noreferrer" class="group block cursor-pointer">
               <article class="h-full cursor-pointer">
-                <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/couvertures/blaise-equation-avant-la-nuit.jpg" alt="Couverture de L’équation avant la nuit de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain"></div>
-                <div class="pt-3 text-[#19231f]"><h3 class="font-serif text-base leading-snug sm:text-lg">L’équation avant la nuit</h3><p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
-                  <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]"><span>Roman</span><span>2025</span></div>
-                  <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span class="text-sm text-[#59635d]">JC Lattès</span><span class="rounded-full bg-[#e6bd76] px-2.5 py-1 text-xs font-semibold text-[#19231f]">Voir la fiche</span></div>
+                <div class="block overflow-hidden bg-sand shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img src="assets/couvertures/blaise-equation-avant-la-nuit.jpg" alt="Couverture de L’équation avant la nuit de Blaise Ndala" loading="lazy" class="aspect-[2/3] w-full bg-sand object-contain"></div>
+                <div class="pt-3 text-ink"><h3 class="font-serif text-base leading-snug sm:text-lg">L’équation avant la nuit</h3><p class="mt-1 text-sm text-ink-soft">Blaise Ndala</p>
+                  <div class="mt-3 flex items-center justify-between gap-2 text-[13px] text-ink-soft"><span>Roman</span><span>2025</span></div>
+                  <div class="mt-3 flex items-center justify-between border-t border-line pt-3"><span class="text-sm text-ink-soft">JC Lattès</span><span class="rounded-full bg-brass px-2.5 py-1 text-[13px] font-semibold text-ink">Voir la fiche</span></div>
                 </div>
               </article>
             </a>
           </li>
         </ol>
 
-        <div class="mt-10 flex flex-col gap-5 rounded-2xl bg-[#19231f] p-6 text-[#f4f1ea] sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div class="mt-10 flex flex-col gap-5 rounded-2xl bg-forest p-6 text-ivory sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[1.7px] text-[#e6bd76]">Explorer son univers</p>
-            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-2xl sm:text-3xl">Revenir au parcours de l’auteur</h2>
-            <p class="mt-2 text-sm leading-6 text-[#d1d8d2]">Retrouvez sa biographie et les distinctions reçues.</p>
+            <p class="text-sm font-semibold tracking-[1.7px] text-brass">Explorer son univers</p>
+            <h2 class="mt-2 font-serif text-2xl sm:text-3xl">Revenir au parcours de l’auteur</h2>
+            <p class="mt-2 text-sm leading-6 text-mist">Retrouvez sa biographie et les distinctions reçues.</p>
           </div>
-          <a href="auteur.html#blaise-ndala" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-[#e6bd76] px-5 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Fiche de Blaise Ndala <span aria-hidden="true"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></a>
+          <a href="auteur.html#blaise-ndala" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-brass px-5 text-sm font-semibold text-ink transition-colors hover:bg-brass-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Fiche de Blaise Ndala <span aria-hidden="true"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></a>
         </div>
     </section>
   </main>
 
-  <footer class="bg-[#19231f] px-7 py-14 text-[#f4f1ea] lg:px-8 lg:pt-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-[1.35fr_0.8fr_0.9fr_0.9fr]">
-          <div class="max-w-sm">
-            <a href="#accueil" aria-label="Mikanda, retourner à l’accueil" class="inline-flex rounded-sm cursor-pointer">
-              <img src="assets/mikanda-logo.svg" alt="" class="block h-14 w-52 object-contain object-left">
-            </a>
-
-            <p class="mt-7 max-w-xs text-sm leading-7 text-[#d1d8d2]">
-              Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.
-            </p>
-          </div>
-
-          <nav aria-label="Explorer Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Explorer</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">La bibliothèque</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les auteurs</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les collections</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="À propos de Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Notre mission</a></li>
-              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Nos partenaires</a></li>
-              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Revenir à l’accueil</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="Informations sur le catalogue">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Œuvres populaires</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Explorer par genre</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Voix congolaises</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
-          <p>© 2026 Mikanda · Maquette de démonstration</p>
-          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          </div>
-          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] md:justify-self-end cursor-pointer">
-            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
+  <footer class="on-dark overflow-hidden bg-forest text-ivory">
+    <div class="shell pb-10 pt-20 sm:pt-24">
+      <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div class="max-w-sm">
+          <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
+            <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
+
+        <nav aria-labelledby="pied-explorer">
+          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
+            <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-mikanda">
+          <h2 id="pied-mikanda" class="font-serif text-xl text-ivory">Mikanda</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
+            <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
+            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-espace">
+          <h2 id="pied-espace" class="font-serif text-xl text-ivory">Mon espace</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="connexion.html" class="link-arrow !font-normal text-mist hover:text-ivory">Se connecter</a></li>
+            <li><a href="inscription.html" class="link-arrow !font-normal text-mist hover:text-ivory">Créer un compte</a></li>
+            <li><a href="favoris.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mes favoris</a></li>
+            <li><a href="profil.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mon profil</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
+
+      <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
+
+      <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+        <a href="#top" class="link-arrow">Retour en haut <i data-lucide="arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
 
     <script>
       lucide.createIcons()

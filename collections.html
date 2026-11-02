@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
     <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Mikanda - Bibliothèque de la littérature congolaise</title>
+    <title>Les collections | Mikanda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/assets/" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="assets/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
-      <a href="index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
-        <img src="assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise" class="h-9 w-32 object-contain sm:h-12 sm:w-44 lg:h-14 lg:w-52">
+<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" data-site-header>
+    <div class="shell flex h-18 items-center gap-3 lg:h-22">
+      <a href="index.html" class="shrink-0 rounded-md" aria-label="Mikanda, retour à l’accueil">
+        <img src="assets/mikanda-logo-ink.svg" alt="" width="180" height="50" class="h-11 w-auto sm:h-12 lg:h-14">
       </a>
 
-      <nav aria-label="Navigation principale" class="hidden items-center gap-1 lg:flex lg:gap-2">
-        <a href="index.html#accueil" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
-        <a href="bibliotheque.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
-        <a href="auteurs.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Auteurs</a>
-        <a href="collections.html" aria-current="page" class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">Collections</a>
-        <a href="a-propos.html" class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">À propos</a>
-        <a href="premium.html" class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 cursor-pointer">Premium</a>
+      <nav aria-label="Navigation principale" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-0.5 xl:gap-1">
+          <li><a class="nav-link" href="index.html">Accueil</a></li>
+          <li><a class="nav-link" href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
+          <li><a class="nav-link" href="collections.html" aria-current="page">Collections</a></li>
+          <li><a class="nav-link" href="a-propos.html">À propos</a></li>
+          <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
+        </ul>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="favoris.html" aria-label="Voir mes favoris">
-          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+      <div class="ml-auto flex items-center gap-1.5 sm:gap-2 lg:ml-3">
+        <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
+          <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-
-        <a href="profil.html" aria-label="Voir le profil de Blaise Ndala" class="hidden items-center gap-2.5 rounded-full border border-[#e6bd76]/35 py-1 pl-1 pr-3 text-sm font-semibold text-[#f4f1ea] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
-          <img src="assets/auteurs/blaise-ndala.jpg" alt="" class="h-9 w-9 rounded-full object-cover ring-2 ring-[#e6bd76]/60">
-          <span class="whitespace-nowrap">Blaise Ndala</span>
+        <a href="profil.html" class="profile-chip" aria-label="Voir le profil de Blaise Ndala">
+          <img src="assets/auteurs/blaise-ndala.jpg" alt="" width="36" height="36">
+          <span class="hidden pr-3 xl:inline">Blaise Ndala</span>
         </a>
+        <details class="menu lg:hidden" data-menu>
+          <summary class="icon-btn" aria-label="Menu">
+            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
+            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+          </summary>
+          <div class="menu-panel">
+            <nav aria-label="Navigation mobile" class="shell">
+              <ul class="grid gap-0.5">
+              <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="collections.html" aria-current="page">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+                <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+            <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
+              <a href="profil.html" class="btn btn-primary">Mon profil</a>
+              <a href="favoris.html" class="btn btn-secondary">Mes favoris</a>
+            </div>
+          </div>
+        </details>
       </div>
-      <details class="relative ml-auto lg:hidden">
-        <summary aria-label="Ouvrir le menu de navigation" class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full border border-white/20 text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
-          <i data-lucide="menu" aria-hidden="true" class="h-5 w-5"></i>
-          <span class="sr-only">Ouvrir le menu</span>
-        </summary>
-        <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#19231f] p-2 shadow-2xl">
-          <nav aria-label="Navigation mobile" class="grid gap-1">
-            <a href="index.html#accueil" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Accueil</a>
-            <a href="bibliotheque.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Biblioth&#232;que</a>
-            <a href="auteurs.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Auteurs</a>
-            <a href="collections.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Collections</a>
-            <a href="a-propos.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">&#192; propos</a>
-            <a href="premium.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Premium</a>
-          </nav>
-        </div>
-      </details>
-
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="px-4 pb-12 pt-5 sm:px-8 sm:pb-16 sm:pt-8">
-      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-[#19231f] px-6 py-12 text-[#f4f1ea] shadow-[0_28px_70px_rgba(25,35,31,0.16)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
-        <div aria-hidden="true" class="absolute inset-0 bg-cover bg-[url('/assets/bibliotheque-congolaise-fond-illustre.png')] bg-position-[68%_center]"></div>
-        <div aria-hidden="true" class="absolute inset-0 bg-linear-to-r from-[#101713]/95 via-[#101713]/75 to-[#101713]/20"></div>
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-forest px-6 py-12 text-ivory shadow-[0_28px_70px_rgba(25,35,31,0.16)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+        <div aria-hidden="true" class="absolute inset-0 bg-cover bg-[url('../assets/bibliotheque-congolaise-fond-illustre.jpg')] bg-position-[68%_center]"></div>
+        <div aria-hidden="true" class="absolute inset-0 bg-linear-to-r from-forest-deep/95 via-forest-deep/75 to-forest-deep/20"></div>
         <div aria-hidden="true" class="absolute -right-28 -top-36 z-0 h-112 w-md rounded-full border border-white/10 sm:right-6 sm:top-1/2 sm:-translate-y-1/2"></div>
-        <div aria-hidden="true" class="absolute -right-8 -top-16 z-0 h-80 w-80 rounded-full border border-[#e6bd76]/20 sm:right-16 sm:top-1/2 sm:-translate-y-1/2"></div>
+        <div aria-hidden="true" class="absolute -right-8 -top-16 z-0 h-80 w-80 rounded-full border border-brass/20 sm:right-16 sm:top-1/2 sm:-translate-y-1/2"></div>
         <div class="relative z-10 max-w-3xl">
-          <nav aria-label="Fil d’Ariane" class="mb-8 flex items-center gap-2 text-sm text-[#aeb9b1]">
-            <a href="index.html" class="transition-colors hover:text-white">Accueil</a><span aria-hidden="true">/</span><span aria-current="page" class="text-[#f4f1ea]">Collections</span>
+          <nav aria-label="Fil d’Ariane" class="mb-8 flex items-center gap-2 text-sm text-mist-mute">
+            <a href="index.html" class="transition-colors hover:text-white">Accueil</a><span aria-hidden="true">/</span><span aria-current="page" class="text-ivory">Collections</span>
           </nav>
-          <p class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]"><span aria-hidden="true" class="h-px w-5 bg-[#e6bd76]"></span> Sélections Mikanda</p>
-          <h1 class="mt-5 font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-[1.02] tracking-[-1.5px] sm:text-6xl lg:text-7xl">Des lectures<br><em class="text-[#e6bd76]">à votre image.</em></h1>
-          <p class="mt-6 max-w-2xl text-base leading-7 text-[#d1d8d2] sm:text-lg sm:leading-8">Des genres littéraires aux grandes thématiques, parcourez les voix, les idées et les imaginaires qui racontent le Congo.</p>
+          <p class="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[2px] text-brass"><span aria-hidden="true" class="h-px w-5 bg-brass"></span> Sélections Mikanda</p>
+          <h1 class="mt-5 font-serif text-4xl font-medium leading-[1.02] tracking-[-1.5px] sm:text-6xl lg:text-7xl hero-enter" style="--d:1">Des lectures<br><em class="text-brass">à votre image.</em></h1>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-mist sm:text-lg sm:leading-8 hero-enter" style="--d:2">Des genres littéraires aux grandes thématiques, parcourez les voix, les idées et les imaginaires qui racontent le Congo.</p>
           <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#genres" class="inline-flex min-h-12 items-center gap-3 rounded-full bg-[#e6bd76] px-5 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d]">Explorer les collections <span aria-hidden="true"><i data-lucide="arrow-down" class="inline h-4 w-4" aria-hidden="true"></i></span></a>
+            <a href="#genres" class="inline-flex min-h-12 items-center gap-3 rounded-full bg-brass px-5 text-sm font-semibold text-ink transition-colors hover:bg-brass-soft">Explorer les collections <span aria-hidden="true"><i data-lucide="arrow-down" class="inline h-4 w-4" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </div>
@@ -83,191 +91,191 @@
 
     <section id="genres" class="reveal scroll-mt-28 px-5 py-10 sm:px-8 sm:py-14">
       <div class="mx-auto max-w-7xl">
-        <div class="mb-8 flex flex-col justify-between gap-4 border-b border-[#d8d2c5] pb-6 sm:flex-row sm:items-end">
+        <div class="mb-8 flex flex-col justify-between gap-4 border-b border-line pb-6 sm:flex-row sm:items-end">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Les collections</p>
-            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium tracking-tight sm:text-5xl">Explorer par genre</h2>
-            <p class="mt-3 max-w-2xl text-sm leading-6 text-[#59635d] sm:text-base">Retrouvez les genres déjà présentés sur Mikanda et de nouveaux chemins pour découvrir le fonds.</p>
+            <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Les collections</p>
+            <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Explorer par genre</h2>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">Retrouvez les genres déjà présentés sur Mikanda et de nouveaux chemins pour découvrir le fonds.</p>
           </div>
-          <a href="bibliotheque.html" class="inline-flex w-fit shrink-0 items-center gap-2 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235]">Tout le catalogue <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span></a>
+          <a href="bibliotheque.html" class="inline-flex w-fit shrink-0 items-center gap-2 text-sm font-semibold text-forest transition-colors hover:text-brass-deep">Tout le catalogue <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span></a>
         </div>
 
         <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          <a id="romans" href="collections/romans.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/roman.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>À dévorer</span>
+          <a id="romans" href="collections/romans.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/roman.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>À dévorer</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Romans &amp; récits</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des destins singuliers, des fresques historiques et des mondes imaginaires.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Romans &amp; récits</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des destins singuliers, des fresques historiques et des mondes imaginaires.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="contes" href="collections/contes.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/conte.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Petites merveilles</span>
+          <a id="contes" href="collections/contes.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/conte.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Petites merveilles</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Contes &amp; traditions</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Récits transmis, imaginaires populaires et paroles qui traversent les générations.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Contes &amp; traditions</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Récits transmis, imaginaires populaires et paroles qui traversent les générations.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="poesie" href="collections/poesie.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/poesie.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Mots choisis</span>
+          <a id="poesie" href="collections/poesie.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/poesie.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Mots choisis</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Poésie</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des voix et des rythmes pour dire l’intime, le pays et le monde.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Poésie</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des voix et des rythmes pour dire l’intime, le pays et le monde.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="theatre" href="collections/theatre.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/theatre.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>La scène vous attend</span>
+          <a id="theatre" href="collections/theatre.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/theatre.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>La scène vous attend</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Théâtre</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des textes à faire entendre, des personnages à rencontrer et des scènes à imaginer.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Théâtre</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des textes à faire entendre, des personnages à rencontrer et des scènes à imaginer.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="essais" href="collections/essais.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/essai.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Pour réfléchir</span>
+          <a id="essais" href="collections/essais.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/essai.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Pour réfléchir</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Essais &amp; pensée</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des idées, des prises de parole et des regards sur les sociétés congolaises.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Essais &amp; pensée</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des idées, des prises de parole et des regards sur les sociétés congolaises.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="jeunesse" href="collections/jeunesse.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/jeunesse.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Pour les jeunes lecteurs</span>
+          <a id="jeunesse" href="collections/jeunesse.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/jeunesse.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Pour les jeunes lecteurs</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Jeunesse</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des histoires à partager et de nouvelles portes d’entrée dans la lecture.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Jeunesse</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des histoires à partager et de nouvelles portes d’entrée dans la lecture.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="bande-dessinee" href="collections/bande-dessinee.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-[#19231f] p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/image2.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/25 to-[#101713]/10"></span>
-              <span class="relative text-4xl font-bold uppercase tracking-[0.08em] text-white/85">BD</span>
-              <span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>L’image raconte aussi</span>
+          <a id="bande-dessinee" href="collections/bande-dessinee.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative flex aspect-video items-end overflow-hidden bg-forest p-5">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/image2.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/25 to-forest-deep/10"></span>
+              <span class="relative text-4xl font-bold tracking-[0.08em] text-white/85">BD</span>
+              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>L’image raconte aussi</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Bande dessinée</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Dessinateurs, scénaristes et récits graphiques congolais.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Bande dessinée</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Dessinateurs, scénaristes et récits graphiques congolais.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="biographies" href="collections/biographies.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-[#19231f]">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/auteurs/blaise-ndala.jpg')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Vies &amp; trajectoires</span>
+          <a id="biographies" href="collections/biographies.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative aspect-video overflow-hidden bg-forest">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/auteurs/blaise-ndala.jpg')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
+              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Vies &amp; trajectoires</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Biographies</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Parcours de vie et expériences qui éclairent une époque ou une œuvre.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Biographies</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Parcours de vie et expériences qui éclairent une époque ou une œuvre.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="memoires" href="collections/memoires.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
+          <a id="memoires" href="collections/memoires.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
             <div class="relative flex aspect-video items-end overflow-hidden bg-[#10281e] p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/image3.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/25 to-[#101713]/10"></span>
-              <span class="relative text-4xl font-['Playfair_Display',Georgia,serif] italic text-[#f4f1ea]">Mémoires</span>
-              <span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/75"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Récits vécus</span>
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/image3.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/25 to-forest-deep/10"></span>
+              <span class="relative text-4xl font-serif italic text-ivory">Mémoires</span>
+              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/75"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Récits vécus</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Mémoires &amp; témoignages</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des récits personnels pour transmettre une expérience et en garder la trace.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Mémoires &amp; témoignages</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des récits personnels pour transmettre une expérience et en garder la trace.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="histoire" href="collections/histoire.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-[#19231f] p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/image4.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/90 via-[#101713]/55 to-[#101713]/10"></span>
-              <span class="relative text-4xl font-['Playfair_Display',Georgia,serif] text-white">Histoire</span>
-              <span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/75"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Comprendre les sociétés</span>
+          <a id="histoire" href="collections/histoire.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative flex aspect-video items-end overflow-hidden bg-forest p-5">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/image4.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/90 via-forest-deep/55 to-forest-deep/10"></span>
+              <span class="relative text-4xl font-serif text-white">Histoire</span>
+              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/75"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Comprendre les sociétés</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Histoire &amp; sociétés</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Des ouvrages pour comprendre les périodes, les idées et les transformations sociales.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Histoire &amp; sociétés</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des ouvrages pour comprendre les périodes, les idées et les transformations sociales.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
               </span>
             </div>
           </a>
 
-          <a id="archives" href="collections/archives.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b85235]/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-[#19231f] p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('/assets/Library.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-[#101713]/85 via-[#101713]/25 to-[#101713]/5"></span>
-              <span class="relative text-3xl font-['Playfair_Display',Georgia,serif] text-white">Archives</span>
-              <span class="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[1.7px] text-white/90"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Patrimoine écrit</span>
+          <a id="archives" href="collections/archives.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
+            <div class="relative flex aspect-video items-end overflow-hidden bg-forest p-5">
+              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/Library.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
+              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/25 to-forest-deep/5"></span>
+              <span class="relative text-3xl font-serif text-white">Archives</span>
+              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/90"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Patrimoine écrit</span>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-['Playfair_Display',Georgia,serif] text-2xl">Archives &amp; patrimoine</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-[#59635d]">Manuscrits, documents et traces littéraires à préserver et à redécouvrir.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28]">Parcourir le catalogue 
+              <h3 class="font-serif text-2xl">Archives &amp; patrimoine</h3>
+              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Manuscrits, documents et traces littéraires à préserver et à redécouvrir.</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
                 <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
               </span>
             </div>
@@ -277,72 +285,73 @@
     </section>
 
     <section class="reveal px-5 py-12 sm:px-8 sm:py-16">
-      <div class="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-line-soft bg-paper p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-8">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[1.7px] text-[#b85235]">Continuer l’exploration</p>
-          <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Une collection vous a inspiré ?</h2>
-          <p class="mt-2 max-w-xl text-sm leading-6 text-[#59635d]">Parcourez la bibliothèque pour retrouver les titres disponibles et choisir votre prochaine lecture.</p>
+          <p class="text-sm font-semibold tracking-[1.7px] text-brass-deep">Continuer l’exploration</p>
+          <h2 class="mt-2 font-serif text-3xl">Une collection vous a inspiré ?</h2>
+          <p class="mt-2 max-w-xl text-sm leading-6 text-ink-soft">Parcourez la bibliothèque pour retrouver les titres disponibles et choisir votre prochaine lecture.</p>
         </div>
-        <a href="bibliotheque.html#catalogue" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-[#b85235] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#9a452b]">Ouvrir la bibliothèque <span aria-hidden="true"><i data-lucide="external-link" class="inline h-[1em] w-[1em]" aria-hidden="true">↗</i></span></a>
+        <a href="bibliotheque.html#catalogue" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-brass-deep px-5 text-sm font-semibold text-white transition-colors hover:bg-brass-ink">Ouvrir la bibliothèque <span aria-hidden="true"><i data-lucide="external-link" class="inline h-[1em] w-[1em]" aria-hidden="true">↗</i></span></a>
       </div>
     </section>
   </main>
 
-    <footer class="bg-[#19231f] px-7 py-14 text-[#f4f1ea] lg:px-8 lg:pt-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-[1.35fr_0.8fr_0.9fr_0.9fr]">
-          <div class="max-w-sm">
-            <a href="#accueil" aria-label="Mikanda, retourner à l’accueil" class="inline-flex rounded-sm cursor-pointer">
-              <img src="assets/mikanda-logo.svg" alt="" class="block h-14 w-52 object-contain object-left">
-            </a>
-            
-            <p class="mt-7 max-w-xs text-sm leading-7 text-[#d1d8d2]">
-              Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.
-            </p>
-          </div>
-
-          <nav aria-label="Explorer Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Explorer</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">La bibliothèque</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les auteurs</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les collections</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="À propos de Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Notre mission</a></li>
-              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Nos partenaires</a></li>
-              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Revenir à l’accueil</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="Informations sur le catalogue">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Œuvres populaires</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Explorer par genre</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Voix congolaises</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
-          <p>© 2026 Mikanda · Maquette de démonstration</p>
-          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          </div>
-          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] md:justify-self-end cursor-pointer">
-            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
+    <footer class="on-dark overflow-hidden bg-forest text-ivory">
+    <div class="shell pb-10 pt-20 sm:pt-24">
+      <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div class="max-w-sm">
+          <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
+            <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
+
+        <nav aria-labelledby="pied-explorer">
+          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
+            <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-mikanda">
+          <h2 id="pied-mikanda" class="font-serif text-xl text-ivory">Mikanda</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
+            <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
+            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-espace">
+          <h2 id="pied-espace" class="font-serif text-xl text-ivory">Mon espace</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="connexion.html" class="link-arrow !font-normal text-mist hover:text-ivory">Se connecter</a></li>
+            <li><a href="inscription.html" class="link-arrow !font-normal text-mist hover:text-ivory">Créer un compte</a></li>
+            <li><a href="favoris.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mes favoris</a></li>
+            <li><a href="profil.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mon profil</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
+
+      <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
+
+      <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+        <a href="#top" class="link-arrow">Retour en haut <i data-lucide="arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
 
     <script>
       lucide.createIcons()

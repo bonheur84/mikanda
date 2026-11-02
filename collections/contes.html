@@ -2,514 +2,204 @@
 <html lang="fr">
 
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
-  <meta name="description"
-    content="Des destins singuliers, des fresques historiques et des mondes imaginaires. Cette sélection rassemble les romans déjà présents dans la bibliothèque Mikanda. — Explorez la collection Romans &amp; récits sur Mikanda.">
+  <meta name="description" content="Récits transmis, imaginaires populaires et paroles qui traversent les générations. Explorez la collection Contes &amp; traditions sur Mikanda.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#19231f">
+  <meta name="theme-color" content="#f6f2e9">
   <link href="../dist/tailwind.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/mikanda-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap"
     rel="stylesheet">
-  <title>Romans &amp; récits | Collections Mikanda</title>
+  <title>Contes &amp; traditions | Collections Mikanda</title>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/main.js" defer></script>
 
 </head>
 
 <body
-  class="min-h-screen bg-[#f4f1ea] font-['DM_Sans',Arial,sans-serif] text-[#19231f] selection:bg-[#e6bd76] selection:text-[#19231f]">
-  <header
-    class="sticky top-0 z-40 border-b border-white/10 bg-[#19231f] text-[#f4f1ea] shadow-[0_8px_24px_rgba(16,23,19,0.12)]">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-3">
-      <a href="../index.html#accueil" class="shrink-0 rounded-sm cursor-pointer">
-        <img src="../assets/mikanda-logo.svg" alt="Mikanda, la bibliothèque congolaise"
-          class="h-9 w-32 object-contain sm:h-12 sm:w-44 lg:h-14 lg:w-52">
+  class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" data-site-header>
+    <div class="shell flex h-18 items-center gap-3 lg:h-22">
+      <a href="../index.html" class="shrink-0 rounded-md" aria-label="Mikanda, retour à l’accueil">
+        <img src="../assets/mikanda-logo-ink.svg" alt="" width="180" height="50" class="h-11 w-auto sm:h-12 lg:h-14">
       </a>
 
-      <nav aria-label="Navigation principale"
-        class="hidden items-center gap-1 lg:flex lg:gap-2">
-        <a href="../index.html#accueil"
-          class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Accueil</a>
-        <a href="../bibliotheque.html"
-          class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Bibliothèque</a>
-        <a href="../auteurs.html"
-          class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">Auteurs</a>
-        <a href="../collections.html" aria-current="page"
-          class="whitespace-nowrap rounded-full bg-white/10 px-3.5 py-2 text-sm font-semibold text-[#e6bd76] cursor-pointer">Collections</a>
-        <a href="../a-propos.html"
-          class="whitespace-nowrap rounded-full px-3.5 py-2 text-sm text-[#d1d8d2] transition-colors hover:bg-white/10 hover:text-white cursor-pointer">À
-          propos</a>
-        <a href="../premium.html"
-          class="rounded-full px-3 py-2 text-sm font-semibold text-[#e6bd76] transition-colors hover:bg-white/10 cursor-pointer">Premium</a>
+      <nav aria-label="Navigation principale" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-0.5 xl:gap-1">
+          <li><a class="nav-link" href="../index.html">Accueil</a></li>
+          <li><a class="nav-link" href="../bibliotheque.html">Bibliothèque</a></li>
+          <li><a class="nav-link" href="../auteurs.html">Auteurs</a></li>
+          <li><a class="nav-link" href="../collections.html" aria-current="true">Collections</a></li>
+          <li><a class="nav-link" href="../a-propos.html">À propos</a></li>
+          <li><a class="nav-link nav-link--premium" href="../premium.html">Premium</a></li>
+        </ul>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="../favoris.html" aria-label="Voir mes favoris">
-          <i data-lucide="heart" class="w-5 h-5 text-[#f3b552] hover:text-[#e6bd76]/60"></i>
+      <div class="ml-auto flex items-center gap-1.5 sm:gap-2 lg:ml-3">
+        <a href="../favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
+          <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-
-        <a href="../profil.html" aria-label="Voir le profil de Blaise Ndala"
-          class="hidden items-center gap-2.5 rounded-full border border-[#e6bd76]/35 py-1 pl-1 pr-3 text-sm font-semibold text-[#f4f1ea] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76] lg:inline-flex">
-          <img src="../assets/auteurs/blaise-ndala.jpg" alt=""
-            class="h-9 w-9 rounded-full object-cover ring-2 ring-[#e6bd76]/60">
-          <span class="whitespace-nowrap">Blaise Ndala</span>
+        <a href="../profil.html" class="profile-chip" aria-label="Voir le profil de Blaise Ndala">
+          <img src="../assets/auteurs/blaise-ndala.jpg" alt="" width="36" height="36">
+          <span class="hidden pr-3 xl:inline">Blaise Ndala</span>
         </a>
+        <details class="menu lg:hidden" data-menu>
+          <summary class="icon-btn" aria-label="Menu">
+            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
+            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+          </summary>
+          <div class="menu-panel">
+            <nav aria-label="Navigation mobile" class="shell">
+              <ul class="grid gap-0.5">
+              <li><a class="menu-link" href="../index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="../bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="../auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="../collections.html" aria-current="true">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="../a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+                <li><a class="menu-link text-brass-deep" href="../premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+            <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
+              <a href="../profil.html" class="btn btn-primary">Mon profil</a>
+              <a href="../favoris.html" class="btn btn-secondary">Mes favoris</a>
+            </div>
+          </div>
+        </details>
       </div>
-      <details class="relative ml-auto lg:hidden">
-        <summary aria-label="Ouvrir le menu de navigation" class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full border border-white/20 text-[#e6bd76] transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6bd76]">
-          <i data-lucide="menu" aria-hidden="true" class="h-5 w-5"></i>
-          <span class="sr-only">Ouvrir le menu</span>
-        </summary>
-        <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#19231f] p-2 shadow-2xl">
-          <nav aria-label="Navigation mobile" class="grid gap-1">
-            <a href="../index.html#accueil" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Accueil</a>
-            <a href="../bibliotheque.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Biblioth&#232;que</a>
-            <a href="../auteurs.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Auteurs</a>
-            <a href="../collections.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Collections</a>
-            <a href="../a-propos.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">&#192; propos</a>
-            <a href="../premium.html" class="rounded-xl px-4 py-3 text-sm font-medium text-[#f4f1ea] transition-colors hover:bg-white/10 hover:text-[#e6bd76]">Premium</a>
-          </nav>
-        </div>
-      </details>
-
     </div>
   </header>
 
-  <main>
-    <section class="px-4 pb-8 pt-5 sm:px-8 sm:pt-8">
-      <div
-        class="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-[#19231f] bg-[url('/assets/bibliotheque-congolaise-fond-illustre.png')] bg-cover bg-position-[center_58%] px-6 py-10 text-[#f4f1ea] shadow-[0_28px_70px_rgba(25,35,31,0.16)] sm:px-10 sm:py-14 lg:px-16 lg:py-16">
-        <span aria-hidden="true"
-          class="absolute inset-0 z-0 bg-linear-to-r from-[#101713]/95 via-[#101713]/78 to-[#101713]/30"></span>
-        <span aria-hidden="true"
-          class="absolute -right-20 -top-20 -z-10 h-80 w-80 rounded-full border border-white/10 sm:right-20 sm:top-1/2 sm:-translate-y-1/2"></span>
-        <span aria-hidden="true"
-          class="absolute right-5 top-5 -z-10 h-52 w-52 rounded-full border border-[#e6bd76]/20 sm:right-36 sm:top-1/2 sm:-translate-y-1/2"></span>
+  <main id="contenu">
+    <section aria-labelledby="collection-title">
+      <div class="shell pt-8 sm:pt-12">
+        <nav aria-label="Fil d’Ariane" class="text-sm text-ink-mute">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href="../index.html" class="underline-offset-4 transition-colors hover:text-ink hover:underline">Accueil</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="../collections.html" class="underline-offset-4 transition-colors hover:text-ink hover:underline">Collections</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="font-medium text-ink">Contes &amp; traditions</li>
+          </ol>
+        </nav>
 
-        <div class="relative z-10 max-w-4xl">
-          <nav aria-label="Fil d’Ariane" class="mb-8 flex flex-wrap items-center gap-2 text-sm text-[#aeb9b1]">
-            <a href="../index.html" class="hover:text-white">Accueil</a><span aria-hidden="true">/</span>
-            <a href="../collections.html" class="hover:text-white">Collections</a><span aria-hidden="true">/</span>
-            <span aria-current="page" class="text-[#f4f1ea]">Romans & récits</span>
-          </nav>
-
-          <p class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#e6bd76]">
-            <span aria-hidden="true" class="h-px w-5 bg-[#e6bd76]"></span>Collection par genre · À dévorer
-          </p>
-          <h1
-            class="mt-5 max-w-3xl font-['Playfair_Display',Georgia,serif] text-4xl font-medium leading-[1.02] tracking-[-1.5px] sm:text-6xl lg:text-7xl">
-            Romans & récits</h1>
-          <p class="mt-6 max-w-3xl text-base leading-7 text-[#d1d8d2] sm:text-lg sm:leading-8">Des destins singuliers,
-            des fresques historiques et des mondes imaginaires. Cette sélection rassemble les romans déjà présents dans
-            la bibliothèque Mikanda.</p>
-
-          <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#selection"
-              class="inline-flex min-h-12 items-center gap-3 rounded-full bg-[#e6bd76] px-5 text-sm font-semibold text-[#19231f] transition-colors hover:bg-[#f0cd8d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-              Explorer la sélection
-              <span aria-hidden="true">
-                <i data-lucide="arrow-down" class="inline h-4 w-4" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-          <div class="relative z-10 mt-9 grid gap-3 border-t border-white/15 pt-5 sm:grid-cols-3 sm:pt-6">
-            <div class="flex items-center gap-3 text-sm text-[#d1d8d2]">
-              <span
-                class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#e6bd76]/40 font-['Playfair_Display',Georgia,serif] text-[#e6bd76]">01</span>Fresques
-              et destins
-            </div>
-
-            <div class="flex items-center gap-3 text-sm text-[#d1d8d2]">
-              <span
-                class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#e6bd76]/40 font-['Playfair_Display',Georgia,serif] text-[#e6bd76]">02</span>Voix
-              contemporaines
-            </div>
-
-            <div class="flex items-center gap-3 text-sm text-[#d1d8d2]">
-              <span
-                class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#e6bd76]/40 font-['Playfair_Display',Georgia,serif] text-[#e6bd76]">03</span>Classiques
-              à relire
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section class="px-5 py-8 sm:px-8 sm:py-10">
-      <div class="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-        <article class="rounded-2xl border border-[#e3ddd0] bg-[#fbfaf6] p-6 sm:p-8">
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">À propos de la collection</p>
-          <h2 class="mt-3 font-['Playfair_Display',Georgia,serif] text-3xl sm:text-4xl">Un univers à explorer</h2>
-          <p class="mt-4 max-w-3xl text-sm leading-7 text-[#59635d]">Le catalogue rassemble onze romans de périodes et
-            de sensibilités différentes, des classiques aux écritures contemporaines.</p><a
-            href="../bibliotheque.html#catalogue"
-            class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#133a28] transition-colors hover:text-[#b85235]">Parcourir
-            toute la bibliothèque <span aria-hidden="true"><i data-lucide="external-link" class="inline h-4 w-4"
-                aria-hidden="true"></i></span></a>
-        </article>
-        <aside class="rounded-2xl bg-[#e8e2d6] p-6 sm:p-8">
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">Repères de lecture</p>
-          <ul class="mt-4 space-y-3">
-            <li class="flex gap-3 text-sm leading-6 text-[#39463e]"><span aria-hidden="true"
-                class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#b85235]"></span>Fresques et destins</li>
-            <li class="flex gap-3 text-sm leading-6 text-[#39463e]"><span aria-hidden="true"
-                class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#b85235]"></span>Voix contemporaines</li>
-            <li class="flex gap-3 text-sm leading-6 text-[#39463e]"><span aria-hidden="true"
-                class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#b85235]"></span>Classiques à relire</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section id="selection" class="scroll-mt-28 px-5 py-12 sm:px-8 sm:py-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-8 flex flex-col justify-between gap-4 border-b border-[#d8d2c5] pb-6 sm:flex-row sm:items-end">
+        <div class="mt-8 grid gap-10 pb-16 sm:pb-20 lg:grid-cols-2 lg:items-center lg:gap-14 lg:pb-28">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[2px] text-[#b85235]">La sélection Mikanda</p>
-            <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-4xl font-medium tracking-tight sm:text-5xl">Les
-              livres de la collection</h2>
+            <p class="kicker hero-enter" style="--d:0">Collection · Petites merveilles</p>
+            <h1 id="collection-title" class="display hero-enter mt-6 text-[clamp(2.5rem,5.2vw,4.75rem)]" style="--d:1">Contes &amp; traditions</h1>
+            <p class="hero-enter mt-6 max-w-xl text-lg leading-8 text-ink-soft" style="--d:2">Récits transmis, imaginaires populaires et paroles qui traversent les générations.</p>
+            <p class="hero-enter mt-4 text-base font-semibold text-brass-deep" style="--d:2">Collection en cours de constitution</p>
+            <div class="hero-enter mt-9 flex flex-wrap gap-3" style="--d:3">
+              <a href="../bibliotheque.html" class="btn btn-primary">Parcourir le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              <a href="../collections.html" class="btn btn-secondary">Toutes les collections</a>
+            </div>
           </div>
-          <p class="text-sm text-[#59635d]">11 œuvres à découvrir</p>
-        </div>
-        <div class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
-          <a href="../livre.html"
-            class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]">
-                <img
-                  src="../assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo" loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Dans le ventre du Congo</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Blaise Ndala</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2021</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.5 <span
-                      class="text-[#59635d]">(12 avis)</span></span><span
-                    class="rounded-full bg-[#e6bd76] px-2.5 py-1 text-xs font-semibold text-[#19231f]">Gratuit</span>
-                </div>
-              </div>
-            </article>
-          </a>
-
-          <a href="" target="_blank" rel="noreferrer"
-            class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/livre (3).jfif" alt="Couverture de Congo Inc. : Le testament de Bismarck"
-                  loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Congo Inc. : Le testament de Bismarck</h3>
-                <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2014</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.3 <span
-                      class="text-[#59635d]">(21 avis)</span></span><span
-                    class="rounded-full bg-[#e6bd76] px-2.5 py-1 text-xs font-semibold text-[#19231f]">Gratuit</span>
-                </div>
-              </div>
-            </article>
-          </a>
-
-          <a href="" target="_blank" rel="noreferrer"
-            class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/tram-83.jpg" alt="Couverture de Tram 83" loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Tram 83</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Fiston Mwanza Mujila</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2014</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.6 <span
-                      class="text-[#59635d]">(84 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href="" target="_blank" rel="noreferrer"
-            class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/la-belle-de-casa.jpg" alt="Couverture de La Belle de Casa" loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">La Belle de Casa</h3>
-                <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2018</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.4 <span
-                      class="text-[#59635d]">(52 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href="" target="_blank"
-            rel="noreferrer" class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/la-vie-et-demie.jpg" alt="Couverture de La Vie et demie" loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">La Vie et demie</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Sony Labou Tansi</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>1979</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.7 <span
-                      class="text-[#59635d]">(97 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href=""
-            target="_blank" rel="noreferrer" class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/mathematiques-congolaises.jpg"
-                  alt="Couverture de Mathématiques congolaises" loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Mathématiques congolaises</h3>
-                <p class="mt-1 text-sm text-[#59635d]">In Koli Jean Bofane</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2008</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.5 <span
-                      class="text-[#59635d]">(68 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href="" target="_blank" rel="noreferrer"
-            class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/la-danse-du-vilain.jpg" alt="Couverture de La Danse du Vilain"
-                  loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">La Danse du Vilain</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Fiston Mwanza Mujila</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2020</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.8 <span
-                      class="text-[#59635d]">(73 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href=""
-            target="_blank" rel="noreferrer" class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/le-feu-des-origines.jpg" alt="Couverture de Le Feu des origines"
-                  loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Le Feu des origines</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Emmanuel Dongala</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>1987</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.6 <span
-                      class="text-[#59635d]">(41 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href=""
-            target="_blank" rel="noreferrer" class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/memoires-de-porc-epic.jpg" alt="Couverture de Mémoires de porc-épic"
-                  loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Mémoires de porc-épic</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Alain Mabanckou</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2006</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.7 <span
-                      class="text-[#59635d]">(56 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href=""
-            target="_blank" rel="noreferrer" class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/photo-de-groupe-au-bord-du-fleuve.jpg"
-                  alt="Couverture de Photo de groupe au bord du fleuve" loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Photo de groupe au bord du fleuve</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Emmanuel Dongala</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2010</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.5 <span
-                      class="text-[#59635d]">(38 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
-
-          <a href=""
-            target="_blank" rel="noreferrer" class="group block cursor-pointer">
-            <article class="h-full cursor-pointer">
-              <div class="block overflow-hidden bg-[#e9e4d9] shadow-[0_12px_18px_rgba(25,35,31,0.28)]"><img
-                  src="../assets/couvertures/johnny-chien-mechant.jpg" alt="Couverture de Johnny Chien Méchant"
-                  loading="lazy"
-                  class="aspect-[2/3] w-full bg-[#e9e4d9] object-contain">
-              </div>
-              <div class="pt-3 text-[#19231f]">
-                <h3 class="font-serif text-base leading-snug sm:text-lg">Johnny Chien Méchant</h3>
-                <p class="mt-1 text-sm text-[#59635d]">Emmanuel Dongala</p>
-                <div class="mt-3 flex items-center justify-between gap-2 text-xs text-[#59635d]">
-                  <span>Roman</span><span>2002</span>
-                </div>
-                <div class="mt-3 flex items-center justify-between border-t border-[#d8d2c5] pt-3"><span
-                    class="text-sm"><span class="text-[#b85235]"><i data-lucide="star"
-                        class="inline h-[1em] w-[1em] fill-current" aria-hidden="true">★</i></span> 4.4 <span
-                      class="text-[#59635d]">(46 avis)</span></span><span
-                    class="inline-flex items-center gap-1 rounded-full bg-[#19231f] px-2.5 py-1 text-xs font-semibold text-[#e6bd76]"><i
-                      data-lucide="lock" class="h-3 w-3" aria-hidden="true"></i>Premium</span></div>
-              </div>
-            </article>
-          </a>
+          <figure class="hero-enter overflow-hidden rounded-[1.75rem] bg-forest" style="--d:2">
+            <img src="../assets/conte.jfif" alt="" width="1200" height="900" class="aspect-[4/3] w-full object-cover">
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="px-5 pb-14 sm:px-8 sm:pb-20">
-      <div
-        class="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl bg-[#e6bd76] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+    <section id="selection" aria-labelledby="selection-title" class="reveal pb-24 sm:pb-32">
+      <div class="shell">
+        <h2 id="selection-title" class="display text-[clamp(2rem,3.6vw,3rem)]" data-reveal>Bientôt sur les rayons</h2>
+        <div class="mt-10 grid gap-8 rounded-[1.75rem] bg-linen px-6 py-12 sm:px-12 lg:grid-cols-[1.4fr_1fr] lg:items-center" data-reveal>
+          <div>
+            <p class="font-serif text-2xl leading-snug sm:text-3xl">Aucun titre n’est encore disponible dans cette collection.</p>
+            <p class="mt-4 max-w-xl text-lg leading-8 text-ink-soft">Les œuvres arrivent au fil des numérisations. En attendant, parcourez le catalogue ou rencontrez les auteurs de la bibliothèque.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-start">
+            <a href="../auteurs.html" class="btn btn-primary">Découvrir les auteurs <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            <a href="../bibliotheque.html" class="btn btn-secondary">Parcourir le catalogue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="autres-title" class="reveal on-dark bg-forest py-20 text-ivory sm:py-24">
+      <div class="shell grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-16">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[1.7px] text-[#59452b]">Poursuivre la découverte</p>
-          <h2 class="mt-2 font-['Playfair_Display',Georgia,serif] text-3xl">Laissez-vous guider par une autre voix.</h2>
-          <p class="mt-2 max-w-xl text-sm leading-6 text-[#39463e]">Retrouvez les autres collections et les œuvres de la
-            bibliothèque Mikanda.</p>
-        </div><a href="../collections.html"
-          class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-[#19231f] px-5 text-sm font-semibold text-[#f4f1ea] transition-colors hover:bg-[#314237] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#19231f]">Toutes
-          les collections <span aria-hidden="true"><i data-lucide="external-link" class="inline h-4 w-4"
-              aria-hidden="true"></i></span></a>
+          <h2 id="autres-title" class="display text-[clamp(1.875rem,3.4vw,3rem)]" data-reveal>Laissez-vous guider par une autre voix.</h2>
+          <p class="mt-4 max-w-md text-lg leading-8 text-mist" data-reveal>Retrouvez les autres collections et les œuvres de la bibliothèque Mikanda.</p>
+        </div>
+        <ul class="flex flex-wrap gap-2.5" data-reveal>
+            <li><a href="romans.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Romans &amp; récits</a></li>
+            <li><a href="poesie.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Poésie</a></li>
+            <li><a href="theatre.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Théâtre</a></li>
+            <li><a href="essais.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Essais &amp; pensée</a></li>
+            <li><a href="jeunesse.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Jeunesse</a></li>
+            <li><a href="bande-dessinee.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Bande dessinée</a></li>
+            <li><a href="biographies.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Biographies</a></li>
+            <li><a href="memoires.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Mémoires &amp; témoignages</a></li>
+            <li><a href="histoire.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Histoire &amp; sociétés</a></li>
+            <li><a href="archives.html" class="chip !border-white/25 !bg-transparent !text-ivory hover:!border-brass hover:!text-brass">Archives &amp; patrimoine</a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="bg-[#19231f] px-7 py-14 text-[#f4f1ea] lg:px-8 lg:pt-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-[1.35fr_0.8fr_0.9fr_0.9fr]">
-          <div class="max-w-sm">
-            <a href="#accueil" aria-label="Mikanda, retourner à l’accueil" class="inline-flex rounded-sm cursor-pointer">
-              <img src="../assets/mikanda-logo.svg" alt="" class="block h-14 w-52 object-contain object-left">
-            </a>
-
-            <p class="mt-7 max-w-xs text-sm leading-7 text-[#d1d8d2]">
-              Des livres pour faire circuler les voix, les idées et les imaginaires de la RDC.
-            </p>
-          </div>
-
-          <nav aria-label="Explorer Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Explorer</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">La bibliothèque</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les auteurs</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Les collections</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="À propos de Mikanda">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">Mikanda</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#mission" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Notre mission</a></li>
-              <li><a href="#partenaires" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Nos partenaires</a></li>
-              <li><a href="#accueil" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Revenir à l’accueil</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="Informations sur le catalogue">
-            <h2 class="text-xs font-medium uppercase tracking-[1.8px] text-[#f3b552]">À découvrir</h2>
-            <ul class="mt-6 space-y-4 text-[15px] text-[#d1d8d2]">
-              <li><a href="#bibliotheque" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Œuvres populaires</a></li>
-              <li><a href="collections.html" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Explorer par genre</a></li>
-              <li><a href="#auteurs" class="transition-colors hover:text-[#e6bd76] cursor-pointer">Voix congolaises</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="mt-14 grid gap-4 border-t border-white/15 pt-6 text-xs text-[#c4c9c3] md:grid-cols-3 md:items-center">
-          <p>© 2026 Mikanda · Maquette de démonstration</p>
-          <div class="flex items-center justify-center gap-3 md:justify-self-center" role="group" aria-label="Réseaux sociaux">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-xl transition-colors hover:text-[#e6bd76] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e6bd76]"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          </div>
-          <a href="#accueil" class="inline-flex items-center gap-1 font-medium text-[#f3b552] transition-colors hover:text-[#e6bd76] md:justify-self-end cursor-pointer">
-            Retour en haut <i data-lucide="arrow-up" class="h-3.5 w-3.5"></i>
+  <footer class="on-dark overflow-hidden bg-forest text-ivory">
+    <div class="shell pb-10 pt-20 sm:pt-24">
+      <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div class="max-w-sm">
+          <a href="../index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
+            <img src="../assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
+          <a href="../bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
+
+        <nav aria-labelledby="pied-explorer">
+          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="../bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="../collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
+            <li><a href="../auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
+            <li><a href="../premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-mikanda">
+          <h2 id="pied-mikanda" class="font-serif text-xl text-ivory">Mikanda</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="../a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
+            <li><a href="../a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
+            <li><a href="../a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="../collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pied-espace">
+          <h2 id="pied-espace" class="font-serif text-xl text-ivory">Mon espace</h2>
+          <ul class="mt-5 space-y-3 text-base">
+            <li><a href="../connexion.html" class="link-arrow !font-normal text-mist hover:text-ivory">Se connecter</a></li>
+            <li><a href="../inscription.html" class="link-arrow !font-normal text-mist hover:text-ivory">Créer un compte</a></li>
+            <li><a href="../favoris.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mes favoris</a></li>
+            <li><a href="../profil.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mon profil</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
+
+      <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
+
+      <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+        <a href="#top" class="link-arrow">Retour en haut <i data-lucide="arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     lucide.createIcons()
