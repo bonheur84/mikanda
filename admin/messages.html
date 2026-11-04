@@ -1,149 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espace d’administration de Mikanda.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Messages | Administration Mikanda</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link href="../dist/tailwind.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <title>Messages | Mikanda Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/main.js" defer></script>
 </head>
+<body class="bg-ivory font-sans text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="min-h-dvh lg:grid lg:grid-cols-[17rem_1fr]">
+    <aside class="on-dark bg-forest-deep text-ivory lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:overflow-y-auto">
+      <div class="flex items-center justify-between gap-3 px-5 pb-4 pt-5 lg:pb-8 lg:pt-7">
+        <a href="index.html" class="flex items-center gap-3 rounded-md" aria-label="Mikanda, tableau de bord">
+          <img src="../assets/mikanda-logo.svg" alt="" width="150" height="42" class="h-10 w-auto">
+          <span class="rounded-full bg-forest px-2.5 py-1 text-xs font-semibold text-brass">Admin</span>
+        </a>
+        <a href="../index.html" class="icon-btn !text-mist hover:!bg-white/10 lg:hidden" aria-label="Retour au site"><i data-lucide="external-link" aria-hidden="true"></i></a>
+      </div>
+      <nav aria-label="Administration" class="px-3 pb-4 lg:pb-0">
+        <ul class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:grid-cols-1">
+          <li><a class="admin-link" href="index.html"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Vue d’ensemble</a></li><li><a class="admin-link" href="livres.html"><i data-lucide="book-open" aria-hidden="true"></i>Livres</a></li><li><a class="admin-link" href="auteurs.html"><i data-lucide="feather" aria-hidden="true"></i>Auteurs</a></li><li><a class="admin-link" href="comptes.html"><i data-lucide="users" aria-hidden="true"></i>Comptes</a></li><li><a class="admin-link" href="messages.html" aria-current="page"><i data-lucide="mail" aria-hidden="true"></i>Messages<span class="ml-auto rounded-full bg-brass px-2 py-0.5 text-xs font-bold text-ink">3</span></a></li><li><a class="admin-link" href="statistiques.html"><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i>Statistiques</a></li><li><a class="admin-link" href="parametres.html"><i data-lucide="settings-2" aria-hidden="true"></i>Paramètres</a></li>
+        </ul>
+      </nav>
+      <div class="mt-auto hidden px-3 pb-6 lg:block">
+        <a class="admin-link" href="../index.html"><i data-lucide="arrow-left" aria-hidden="true"></i>Retour au site</a>
+      </div>
+    </aside>
 
-<body class="min-h-screen bg-ivory font-sans text-ink">
-    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-        <aside class="bg-forest-deep px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen"><a href="index.html"
-                class="mb-8 flex items-center gap-3"><img src="../assets/mikanda-logo.svg" alt="Mikanda"
-                    class="h-10 w-36 object-contain object-left"><span
-                    class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-brass">Admin</span></a>
-            <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">Espace de gestion</p>
-            <nav aria-label="Navigation admin" class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:flex-col"><a
-                    href="index.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="layout-dashboard" class="h-4 w-4"></i> Vue d’ensemble</a><a href="livres.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="book-open" class="h-4 w-4"></i> Livres</a><a href="auteurs.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="feather" class="h-4 w-4"></i> Auteurs</a><a href="comptes.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="users" class="h-4 w-4"></i> Comptes</a><a href="messages.html" aria-current="page"
-                    class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold"><i
-                        data-lucide="mail" class="h-4 w-4 text-brass"></i> Messages <span
-                        class="ml-auto rounded-full bg-[#b85235] px-2 py-0.5 text-[10px]">3</span></a><a
-                    href="statistiques.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="chart-no-axes-column-increasing" class="h-4 w-4"></i> Statistiques</a><a
-                    href="parametres.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="settings-2" class="h-4 w-4"></i> Paramètres</a></nav><a href="../index.html"
-                class="mt-8 hidden items-center gap-3 border-t border-white/10 pt-5 text-sm text-white/60 hover:text-white lg:flex"><i
-                    data-lucide="arrow-left" class="h-4 w-4"></i> Retour au site</a>
-        </aside>
-        <main class="min-w-0 px-4 py-6 sm:px-7 lg:px-10 lg:py-9">
-            <header class="mb-6"><a href="index.html"
-                    class="mb-2 inline-flex items-center gap-1 text-xs font-semibold text-ink-mute hover:text-leaf"><i
-                        data-lucide="arrow-left" class="h-3.5 w-3.5"></i> Tableau de bord</a>
-                <h1 class="font-serif text-3xl font-semibold sm:text-4xl">Boîte de
-                    réception</h1>
-                <p class="mt-2 text-sm text-ink-mute">Lisez les demandes reçues depuis le site Mikanda.</p>
-            </header>
-            <section
-                class="grid min-h-[620px] overflow-hidden rounded-2xl border border-line-soft bg-white shadow-sm lg:grid-cols-[330px_1fr]">
-                <div class="border-b border-linen lg:border-r lg:border-b-0">
-                    <div class="flex items-center justify-between border-b border-linen p-4">
-                        <div>
-                            <h2 class="font-bold">Messages reçus</h2>
-                            <p class="mt-1 text-xs text-ink-mute">3 non lus · 18 au total</p>
-                        </div><button type="button" aria-label="Actualiser les messages"
-                            class="rounded-lg p-2 text-ink-mute hover:bg-paper"><i data-lucide="refresh-cw"
-                                class="h-4 w-4"></i></button>
-                    </div>
-                    <form action="messages.html" method="get" class="p-3"><label class="relative block"><span
-                                class="sr-only">Rechercher un message</span><i data-lucide="search"
-                                class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-mute"></i><input
-                                type="search" name="q" placeholder="Rechercher…"
-                                class="w-full rounded-xl border border-line-soft py-2.5 pl-9 pr-3 text-sm outline-none focus:border-leaf"></label>
-                    </form>
-                    <div class="divide-y divide-linen"><button type="button"
-                            class="w-full border-l-4 border-leaf bg-[#f3f8f4] p-4 text-left"><span
-                                class="flex items-center justify-between"><span class="font-semibold">Chantal
-                                    Ilunga</span><span class="text-[10px] text-ink-mute">14:32</span></span><span
-                                class="mt-1 block text-xs font-semibold">Proposition de partenariat</span><span
-                                class="mt-1 block truncate text-xs text-ink-mute">Bonjour, je souhaiterais vous
-                                proposer…</span><span
-                                class="mt-2 inline-block rounded-full bg-[#edf4ef] px-2 py-0.5 text-[10px] font-semibold text-leaf">Nouveau</span></button><button
-                            type="button" class="w-full p-4 text-left transition hover:bg-[#faf9f6]"><span
-                                class="flex items-center justify-between"><span class="font-semibold">Patrick
-                                    Moke</span><span class="text-[10px] text-ink-mute">Hier</span></span><span
-                                class="mt-1 block text-xs font-medium">Problème de connexion</span><span
-                                class="mt-1 block truncate text-xs text-ink-mute">Je n’arrive plus à accéder à mon
-                                compte…</span></button><button type="button"
-                            class="w-full p-4 text-left transition hover:bg-[#faf9f6]"><span
-                                class="flex items-center justify-between"><span class="font-semibold">Aline
-                                    Kabeya</span><span class="text-[10px] text-ink-mute">18 oct.</span></span><span
-                                class="mt-1 block text-xs font-medium">Suggestion de livre</span><span
-                                class="mt-1 block truncate text-xs text-ink-mute">Pourriez-vous ajouter un ouvrage
-                                de…</span></button><button type="button"
-                            class="w-full p-4 text-left transition hover:bg-[#faf9f6]"><span
-                                class="flex items-center justify-between"><span
-                                    class="font-medium text-ink-soft">Éditions du Fleuve</span><span
-                                    class="text-[10px] text-ink-mute">16 oct.</span></span><span
-                                class="mt-1 block text-xs text-ink-soft">Demande d’information</span><span
-                                class="mt-1 block truncate text-xs text-ink-mute">Nous souhaiterions en savoir plus
-                                sur…</span></button></div>
-                </div>
-                <article class="flex min-h-[500px] flex-col">
-                    <header class="flex flex-wrap items-center justify-between gap-3 border-b border-linen p-5">
-                        <div>
-                            <p class="text-xs text-ink-mute">Proposition de partenariat</p>
-                            <h2 class="mt-1 font-bold">Chantal Ilunga</h2><a href="mailto:chantal.ilunga@email.com"
-                                class="text-xs text-leaf hover:underline">chantal.ilunga@email.com</a>
-                        </div>
-                        <div class="flex gap-2"><button type="button" aria-label="Marquer comme non lu"
-                                class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
-                                    data-lucide="mail-open" class="h-4 w-4"></i></button><button type="button"
-                                aria-label="Archiver le message"
-                                class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
-                                    data-lucide="archive" class="h-4 w-4"></i></button><button type="button"
-                                aria-label="Supprimer le message"
-                                class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]"><i
-                                    data-lucide="trash-2" class="h-4 w-4"></i></button></div>
-                    </header>
-                    <div class="flex-1 p-5 sm:p-7">
-                        <p class="text-xs text-ink-mute">Reçu le 20 octobre 2026 à 14:32</p>
-                        <div class="mt-5 max-w-2xl space-y-4 text-sm leading-7 text-[#465149]">
-                            <p>Bonjour l’équipe Mikanda,</p>
-                            <p>Je vous contacte au nom de l’association Les Voix du Fleuve. Nous organisons à Kinshasa
-                                des ateliers de lecture et aimerions échanger avec vous autour d’un partenariat pour
-                                faire découvrir la littérature congolaise aux jeunes.</p>
-                            <p>Seriez-vous disponibles pour en discuter dans les prochaines semaines ? Je peux vous
-                                envoyer notre dossier de présentation.</p>
-                            <p>Merci pour votre travail de valorisation des auteurs congolais.</p>
-                            <p>Bien cordialement,<br><span class="font-semibold text-ink">Chantal Ilunga</span>
-                            </p>
-                        </div>
-                    </div>
-                    <form action="mailto:chantal.ilunga@email.com" method="post" enctype="text/plain"
-                        class="border-t border-linen bg-[#faf9f6] p-4 sm:p-5"><label for="reponse"
-                            class="mb-2 block text-xs font-semibold text-ink-soft">Répondre par e-mail</label><textarea
-                            id="reponse" name="message" rows="3" placeholder="Écrivez votre réponse…"
-                            class="w-full resize-y rounded-xl border border-line-soft bg-white px-3.5 py-3 text-sm outline-none focus:border-leaf"></textarea>
-                        <div class="mt-3 flex justify-end"><button type="submit"
-                                class="inline-flex items-center gap-2 rounded-xl bg-forest px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1b4a34]"><i
-                                    data-lucide="send" class="h-4 w-4"></i> Préparer la réponse</button></div>
-                    </form>
-                </article>
-            </section>
-            <p class="mt-3 text-xs text-ink-mute">Les demandes du formulaire de contact seront centralisées ici lorsque
-                le site sera connecté à une boîte de réception.</p>
-        </main>
+    <div class="min-w-0">
+      <header class="flex flex-wrap items-end justify-between gap-4 px-5 pb-6 pt-8 sm:px-8 lg:px-12 lg:pt-10">
+        <div>
+          <p class="text-sm text-ink-mute">Mardi 20 octobre 2026</p>
+          <h1 class="display mt-1 text-[clamp(2rem,3.4vw,3rem)]">Messages</h1>
+          <p class="mt-2 max-w-2xl text-base text-ink-soft">Répondez aux lecteurs, auteurs et partenaires.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="grid h-11 w-11 place-items-center rounded-full bg-forest font-semibold text-brass" title="Administrateur Mikanda" aria-hidden="true">AM</span>
+        </div>
+      </header>
+      <main id="contenu" class="px-5 pb-16 sm:px-8 lg:px-12">
+        <p class="notice"><i data-lucide="info" aria-hidden="true"></i><span>Aperçu de l’interface avec des données d’exemple. Les enregistrements, suppressions, comptes et messages nécessiteront une connexion au serveur.</span></p>
+        <div class="reveal mt-6 grid gap-6 xl:grid-cols-[22rem_1fr]" data-inbox>
+          <section class="panel" aria-labelledby="boite">
+            <h2 id="boite" class="font-serif text-2xl">Boîte de réception</h2>
+            <p class="mt-1 text-sm text-ink-mute">3 non lus · 18 au total</p>
+            <ul class="mt-4 grid gap-1"><li><button type="button" class="w-full rounded-2xl p-4 text-left transition-colors hover:bg-linen aria-[current=true]:bg-linen" data-message="chantal" aria-current="true">
+              <span class="flex items-center justify-between gap-3"><span class="font-semibold text-ink">Chantal Ilunga</span><span class="text-sm text-ink-mute">14:32</span></span>
+              <span class="mt-1 flex items-center justify-between gap-3"><span class="text-sm font-medium text-ink-soft">Proposition de partenariat</span><span class="status status-wait" data-unread>Nouveau</span></span>
+              <span class="mt-1 block truncate text-sm text-ink-mute">Bonjour, je souhaiterais vous proposer…</span>
+            </button></li><li><button type="button" class="w-full rounded-2xl p-4 text-left transition-colors hover:bg-linen aria-[current=true]:bg-linen" data-message="patrick" aria-current="false">
+              <span class="flex items-center justify-between gap-3"><span class="font-semibold text-ink">Patrick Moke</span><span class="text-sm text-ink-mute">Hier</span></span>
+              <span class="mt-1 flex items-center justify-between gap-3"><span class="text-sm font-medium text-ink-soft">Problème de connexion</span><span class="status status-wait" data-unread>Nouveau</span></span>
+              <span class="mt-1 block truncate text-sm text-ink-mute">Je n’arrive plus à accéder à mon compte…</span>
+            </button></li><li><button type="button" class="w-full rounded-2xl p-4 text-left transition-colors hover:bg-linen aria-[current=true]:bg-linen" data-message="aline" aria-current="false">
+              <span class="flex items-center justify-between gap-3"><span class="font-semibold text-ink">Aline Kabeya</span><span class="text-sm text-ink-mute">18 oct.</span></span>
+              <span class="mt-1 flex items-center justify-between gap-3"><span class="text-sm font-medium text-ink-soft">Suggestion de livre</span><span class="status status-wait" data-unread>Nouveau</span></span>
+              <span class="mt-1 block truncate text-sm text-ink-mute">Pourriez-vous ajouter un ouvrage de…</span>
+            </button></li><li><button type="button" class="w-full rounded-2xl p-4 text-left transition-colors hover:bg-linen aria-[current=true]:bg-linen" data-message="fleuve" aria-current="false">
+              <span class="flex items-center justify-between gap-3"><span class="font-semibold text-ink">Éditions du Fleuve</span><span class="text-sm text-ink-mute">16 oct.</span></span>
+              <span class="mt-1 flex items-center justify-between gap-3"><span class="text-sm font-medium text-ink-soft">Demande d’information</span></span>
+              <span class="mt-1 block truncate text-sm text-ink-mute">Nous souhaiterions en savoir plus sur…</span>
+            </button></li></ul>
+          </section>
+          <div><article class="panel" data-pane="chantal" aria-labelledby="m-chantal">
+            <p class="text-sm text-ink-mute">Reçu le 20 octobre 2026 à 14:32</p>
+            <h2 id="m-chantal" class="mt-1 font-serif text-3xl">Proposition de partenariat</h2>
+            <p class="mt-1 text-base text-ink-soft">De Chantal Ilunga</p>
+            <div class="prose-mk mt-6 !text-base"><p>Bonjour l’équipe Mikanda,</p>
+              <p>Je vous contacte au nom de l’association Les Voix du Fleuve. Nous organisons à Kinshasa des ateliers de lecture et aimerions échanger avec vous autour d’un partenariat pour faire découvrir la littérature congolaise.</p>
+              <p>Seriez-vous disponibles pour en discuter dans les prochaines semaines&nbsp;? Je peux vous envoyer notre dossier de présentation.</p>
+              <p>Merci pour votre travail de valorisation des auteurs congolais.</p>
+              <p>Bien cordialement,<br>Chantal Ilunga</p></div>
+            <form class="mt-8 grid gap-3 rounded-2xl bg-linen p-5" data-demo-form="Brouillon prêt : l’envoi sera possible une fois la messagerie connectée.">
+              <label for="r-chantal" class="text-sm font-semibold">Répondre par e-mail</label>
+              <textarea id="r-chantal" rows="4" required class="field" placeholder="Écrivez votre réponse…"></textarea>
+              <div><button type="submit" class="btn btn-primary btn-sm"><i data-lucide="send" aria-hidden="true"></i>Préparer la réponse</button></div>
+              <p class="form-status notice !bg-paper" role="status" tabindex="-1" data-form-status></p>
+            </form>
+          </article><article class="panel" data-pane="patrick" hidden aria-labelledby="m-patrick">
+            <p class="text-sm text-ink-mute">Reçu : Hier</p>
+            <h2 id="m-patrick" class="mt-1 font-serif text-3xl">Problème de connexion</h2>
+            <p class="mt-1 text-base text-ink-soft">De Patrick Moke</p>
+            <div class="prose-mk mt-6 !text-base"><p>Je n’arrive plus à accéder à mon compte…</p><p class="text-ink-mute">Aperçu seulement&nbsp;: le message complet s’affichera une fois la boîte de réception connectée.</p></div>
+            <form class="mt-8 grid gap-3 rounded-2xl bg-linen p-5" data-demo-form="Brouillon prêt : l’envoi sera possible une fois la messagerie connectée.">
+              <label for="r-patrick" class="text-sm font-semibold">Répondre par e-mail</label>
+              <textarea id="r-patrick" rows="4" required class="field" placeholder="Écrivez votre réponse…"></textarea>
+              <div><button type="submit" class="btn btn-primary btn-sm"><i data-lucide="send" aria-hidden="true"></i>Préparer la réponse</button></div>
+              <p class="form-status notice !bg-paper" role="status" tabindex="-1" data-form-status></p>
+            </form>
+          </article><article class="panel" data-pane="aline" hidden aria-labelledby="m-aline">
+            <p class="text-sm text-ink-mute">Reçu : 18 oct.</p>
+            <h2 id="m-aline" class="mt-1 font-serif text-3xl">Suggestion de livre</h2>
+            <p class="mt-1 text-base text-ink-soft">De Aline Kabeya</p>
+            <div class="prose-mk mt-6 !text-base"><p>Pourriez-vous ajouter un ouvrage de…</p><p class="text-ink-mute">Aperçu seulement&nbsp;: le message complet s’affichera une fois la boîte de réception connectée.</p></div>
+            <form class="mt-8 grid gap-3 rounded-2xl bg-linen p-5" data-demo-form="Brouillon prêt : l’envoi sera possible une fois la messagerie connectée.">
+              <label for="r-aline" class="text-sm font-semibold">Répondre par e-mail</label>
+              <textarea id="r-aline" rows="4" required class="field" placeholder="Écrivez votre réponse…"></textarea>
+              <div><button type="submit" class="btn btn-primary btn-sm"><i data-lucide="send" aria-hidden="true"></i>Préparer la réponse</button></div>
+              <p class="form-status notice !bg-paper" role="status" tabindex="-1" data-form-status></p>
+            </form>
+          </article><article class="panel" data-pane="fleuve" hidden aria-labelledby="m-fleuve">
+            <p class="text-sm text-ink-mute">Reçu : 16 oct.</p>
+            <h2 id="m-fleuve" class="mt-1 font-serif text-3xl">Demande d’information</h2>
+            <p class="mt-1 text-base text-ink-soft">De Éditions du Fleuve</p>
+            <div class="prose-mk mt-6 !text-base"><p>Nous souhaiterions en savoir plus sur…</p><p class="text-ink-mute">Aperçu seulement&nbsp;: le message complet s’affichera une fois la boîte de réception connectée.</p></div>
+            <form class="mt-8 grid gap-3 rounded-2xl bg-linen p-5" data-demo-form="Brouillon prêt : l’envoi sera possible une fois la messagerie connectée.">
+              <label for="r-fleuve" class="text-sm font-semibold">Répondre par e-mail</label>
+              <textarea id="r-fleuve" rows="4" required class="field" placeholder="Écrivez votre réponse…"></textarea>
+              <div><button type="submit" class="btn btn-primary btn-sm"><i data-lucide="send" aria-hidden="true"></i>Préparer la réponse</button></div>
+              <p class="form-status notice !bg-paper" role="status" tabindex="-1" data-form-status></p>
+            </form>
+          </article></div>
+        </div>
+        <p class="mt-6 text-sm text-ink-mute">Les messages envoyés depuis le formulaire de contact du site arriveront ici une fois la boîte de réception connectée.</p>
+      </main>
     </div>
-    <script>lucide.createIcons()</script>
+  </div>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
-
 </html>

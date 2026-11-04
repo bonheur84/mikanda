@@ -1,242 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link href="../dist/tailwind.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-        rel="stylesheet" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <title>Gestion des auteurs | Mikanda Admin</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espace d’administration de Mikanda.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Auteurs | Administration Mikanda</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link href="../dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/main.js" defer></script>
 </head>
+<body class="bg-ivory font-sans text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="min-h-dvh lg:grid lg:grid-cols-[17rem_1fr]">
+    <aside class="on-dark bg-forest-deep text-ivory lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:overflow-y-auto">
+      <div class="flex items-center justify-between gap-3 px-5 pb-4 pt-5 lg:pb-8 lg:pt-7">
+        <a href="index.html" class="flex items-center gap-3 rounded-md" aria-label="Mikanda, tableau de bord">
+          <img src="../assets/mikanda-logo.svg" alt="" width="150" height="42" class="h-10 w-auto">
+          <span class="rounded-full bg-forest px-2.5 py-1 text-xs font-semibold text-brass">Admin</span>
+        </a>
+        <a href="../index.html" class="icon-btn !text-mist hover:!bg-white/10 lg:hidden" aria-label="Retour au site"><i data-lucide="external-link" aria-hidden="true"></i></a>
+      </div>
+      <nav aria-label="Administration" class="px-3 pb-4 lg:pb-0">
+        <ul class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:grid-cols-1">
+          <li><a class="admin-link" href="index.html"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Vue d’ensemble</a></li><li><a class="admin-link" href="livres.html"><i data-lucide="book-open" aria-hidden="true"></i>Livres</a></li><li><a class="admin-link" href="auteurs.html" aria-current="page"><i data-lucide="feather" aria-hidden="true"></i>Auteurs</a></li><li><a class="admin-link" href="comptes.html"><i data-lucide="users" aria-hidden="true"></i>Comptes</a></li><li><a class="admin-link" href="messages.html"><i data-lucide="mail" aria-hidden="true"></i>Messages<span class="ml-auto rounded-full bg-brass px-2 py-0.5 text-xs font-bold text-ink">3</span></a></li><li><a class="admin-link" href="statistiques.html"><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i>Statistiques</a></li><li><a class="admin-link" href="parametres.html"><i data-lucide="settings-2" aria-hidden="true"></i>Paramètres</a></li>
+        </ul>
+      </nav>
+      <div class="mt-auto hidden px-3 pb-6 lg:block">
+        <a class="admin-link" href="../index.html"><i data-lucide="arrow-left" aria-hidden="true"></i>Retour au site</a>
+      </div>
+    </aside>
 
-<body class="min-h-screen bg-ivory font-sans text-ink">
-    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-        <aside class="bg-forest-deep px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen">
-            <a href="index.html" class="mb-8 flex items-center gap-3"><img src="../assets/mikanda-logo.svg"
-                    alt="Mikanda" class="h-10 w-36 object-contain object-left" /><span
-                    class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-brass">Admin</span></a>
-            <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">
-                Espace de gestion
-            </p>
-            <nav aria-label="Navigation admin" class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:flex-col">
-                <a href="index.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="layout-dashboard" class="h-4 w-4"></i> Vue
-                    d’ensemble</a><a href="livres.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="book-open" class="h-4 w-4"></i> Livres</a><a href="auteurs.html"
-                    aria-current="page"
-                    class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold"><i
-                        data-lucide="feather" class="h-4 w-4 text-brass"></i>
-                    Auteurs</a><a href="comptes.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="users" class="h-4 w-4"></i> Comptes</a><a href="messages.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="mail" class="h-4 w-4"></i> Messages
-                    <span class="ml-auto rounded-full bg-[#b85235] px-2 py-0.5 text-[10px]">3</span></a><a
-                    href="statistiques.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="chart-no-axes-column-increasing" class="h-4 w-4"></i>
-                    Statistiques</a><a href="parametres.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="settings-2" class="h-4 w-4"></i> Paramètres</a>
-            </nav>
-            <a href="../index.html"
-                class="mt-8 hidden items-center gap-3 border-t border-white/10 pt-5 text-sm text-white/60 hover:text-white lg:flex"><i
-                    data-lucide="arrow-left" class="h-4 w-4"></i> Retour au site</a>
-        </aside>
-        <main class="min-w-0 px-4 py-6 sm:px-7 lg:px-10 lg:py-9">
-            <header class="mb-7 flex flex-wrap items-end justify-between gap-4">
-                <div>
-                    <a href="index.html"
-                        class="mb-2 inline-flex items-center gap-1 text-xs font-semibold text-ink-mute hover:text-leaf"><i
-                            data-lucide="arrow-left" class="h-3.5 w-3.5"></i> Tableau de
-                        bord</a>
-                    <h1 class="font-serif text-3xl font-semibold sm:text-4xl">
-                        Les auteurs
-                    </h1>
-                    <p class="mt-2 text-sm text-ink-mute">
-                        Gérez les portraits, biographies et bibliographies.
-                    </p>
-                </div>
-                <a href="auteur-formulaire.html"
-                    class="inline-flex items-center gap-2 rounded-xl bg-forest px-4 py-3 text-sm font-semibold text-white hover:bg-[#1b4a34]"><i
-                        data-lucide="plus" class="h-4 w-4"></i> Ajouter un auteur</a>
-            </header>
-            <div class="mb-5 grid gap-3 sm:grid-cols-3">
-                <article class="rounded-2xl border border-line-soft bg-white p-4">
-                    <p class="text-xs text-ink-mute">Auteurs référencés</p>
-                    <p class="mt-1 text-2xl font-bold">86</p>
-                </article>
-                <article class="rounded-2xl border border-line-soft bg-white p-4">
-                    <p class="text-xs text-ink-mute">Fiches complètes</p>
-                    <p class="mt-1 text-2xl font-bold text-leaf">82</p>
-                </article>
-                <article class="rounded-2xl border border-line-soft bg-white p-4">
-                    <p class="text-xs text-ink-mute">À compléter</p>
-                    <p class="mt-1 text-2xl font-bold text-[#896315]">4</p>
-                </article>
+    <div class="min-w-0">
+      <header class="flex flex-wrap items-end justify-between gap-4 px-5 pb-6 pt-8 sm:px-8 lg:px-12 lg:pt-10">
+        <div>
+          <p class="text-sm text-ink-mute">Mardi 20 octobre 2026</p>
+          <h1 class="display mt-1 text-[clamp(2rem,3.4vw,3rem)]">Auteurs</h1>
+          <p class="mt-2 max-w-2xl text-base text-ink-soft">Tenez à jour les portraits, biographies et bibliographies.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3"><a href="auteur-formulaire.html" class="btn btn-primary btn-sm"><i data-lucide="plus" aria-hidden="true"></i>Ajouter un auteur</a>
+          <span class="grid h-11 w-11 place-items-center rounded-full bg-forest font-semibold text-brass" title="Administrateur Mikanda" aria-hidden="true">AM</span>
+        </div>
+      </header>
+      <main id="contenu" class="px-5 pb-16 sm:px-8 lg:px-12">
+        <p class="notice"><i data-lucide="info" aria-hidden="true"></i><span>Aperçu de l’interface avec des données d’exemple. Les enregistrements, suppressions, comptes et messages nécessiteront une connexion au serveur.</span></p>
+        <ul class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4"><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">Auteurs référencés</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="feather" aria-hidden="true" class="h-4 w-4"></i></span>
             </div>
-            <section class="overflow-hidden rounded-2xl border border-line-soft bg-white shadow-sm">
-                <form action="auteurs.html" method="get" class="flex flex-wrap gap-3 border-b border-linen p-4">
-                    <label class="relative min-w-[220px] flex-1"><span class="sr-only">Rechercher un auteur</span><i
-                            data-lucide="search"
-                            class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-mute"></i><input
-                            type="search" name="q" placeholder="Rechercher un auteur…"
-                            class="w-full rounded-xl border border-line-soft py-2.5 pl-10 pr-3 text-sm outline-none focus:border-leaf" /></label><select
-                        aria-label="Filtrer les fiches auteur" name="etat"
-                        class="rounded-xl border border-line-soft bg-white px-3 py-2.5 text-sm">
-                        <option value="">Toutes les fiches</option>
-                        <option>Complètes</option>
-                        <option>À compléter</option>
-                    </select><button
-                        class="rounded-xl border border-line-soft px-4 py-2.5 text-sm font-semibold hover:bg-paper">
-                        Filtrer
-                    </button>
-                </form>
-                <div class="overflow-x-auto">
-                    <table class="w-full min-w-[680px] text-left text-sm">
-                        <thead class="bg-[#faf9f6] text-[10px] uppercase tracking-[1.4px] text-ink-mute">
-                            <tr>
-                                <th class="px-5 py-3 font-semibold">Auteur</th>
-                                <th class="px-4 py-3 font-semibold">Pays</th>
-                                <th class="px-4 py-3 font-semibold">Œuvres</th>
-                                <th class="px-4 py-3 font-semibold">Fiche</th>
-                                <th class="px-5 py-3 text-right font-semibold">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-linen">
-                            <tr>
-                                <td class="px-5 py-4">
-                                    <div class="flex items-center gap-3">
-                                        <img src="../assets/auteurs/blaise-ndala.jpg" alt=""
-                                            class="h-10 w-10 rounded-full object-cover" /><span><span
-                                                class="block font-semibold">Blaise Ndala</span><span
-                                                class="mt-1 block text-xs text-ink-mute">Écrivain ·
-                                                romancier</span></span>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-4 text-ink-mute">RDC · Canada</td>
-                                <td class="px-4 py-4">4 œuvres</td>
-                                <td class="px-4 py-4">
-                                    <span
-                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Complète</span>
-                                </td>
-                                <td class="px-5 py-4">
-                                    <div class="flex justify-end gap-2">
-                                        <a href="auteur-formulaire.html" aria-label="Modifier Blaise Ndala"
-                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
-                                                data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
-                                            aria-label="Supprimer Blaise Ndala"
-                                            class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
-                                            <i data-lucide="trash-2" class="h-4 w-4"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="px-5 py-4">
-                                    <div class="flex items-center gap-3">
-                                        <img src="../assets/auteurs/fiston-mwanza-mujila.jpg" alt=""
-                                            class="h-10 w-10 rounded-full bg-linen object-cover" /><span><span
-                                                class="block font-semibold">Fiston Mwanza Mujila</span><span
-                                                class="mt-1 block text-xs text-ink-mute">Écrivain · poète</span></span>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-4 text-ink-mute">RDC · Autriche</td>
-                                <td class="px-4 py-4">3 œuvres</td>
-                                <td class="px-4 py-4">
-                                    <span
-                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Complète</span>
-                                </td>
-                                <td class="px-5 py-4">
-                                    <div class="flex justify-end gap-2">
-                                        <a href="auteur-formulaire.html" aria-label="Modifier Fiston Mwanza Mujila"
-                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
-                                                data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
-                                            aria-label="Supprimer Fiston Mwanza Mujila"
-                                            class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
-                                            <i data-lucide="trash-2" class="h-4 w-4"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="px-5 py-4">
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#f4e9df] font-semibold text-[#9a573b]">IB</span><span><span
-                                                class="block font-semibold">In Koli Jean Bofane</span><span
-                                                class="mt-1 block text-xs text-ink-mute">Écrivain ·
-                                                romancier</span></span>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-4 text-ink-mute">RDC · Belgique</td>
-                                <td class="px-4 py-4">5 œuvres</td>
-                                <td class="px-4 py-4">
-                                    <span
-                                        class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Complète</span>
-                                </td>
-                                <td class="px-5 py-4">
-                                    <div class="flex justify-end gap-2">
-                                        <a href="auteur-formulaire.html" aria-label="Modifier In Koli Jean Bofane"
-                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
-                                                data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
-                                            aria-label="Supprimer In Koli Jean Bofane"
-                                            class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
-                                            <i data-lucide="trash-2" class="h-4 w-4"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="px-5 py-4">
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#e8edf0] font-semibold text-[#52636b]">MM</span><span><span
-                                                class="block font-semibold">Marie-Louise Mumbu</span><span
-                                                class="mt-1 block text-xs text-ink-mute">Autrice ·
-                                                dramaturge</span></span>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-4 text-ink-mute">RDC</td>
-                                <td class="px-4 py-4">1 œuvre</td>
-                                <td class="px-4 py-4">
-                                    <span
-                                        class="rounded-full bg-[#fbf2dc] px-2.5 py-1 text-xs font-semibold text-[#896315]">À
-                                        compléter</span>
-                                </td>
-                                <td class="px-5 py-4">
-                                    <div class="flex justify-end gap-2">
-                                        <a href="auteur-formulaire.html"
-                                            aria-label="Compléter la fiche de Marie-Louise Mumbu"
-                                            class="rounded-lg border border-line-soft p-2 text-ink-soft hover:bg-paper"><i
-                                                data-lucide="pencil" class="h-4 w-4"></i></a><button type="button"
-                                            aria-label="Supprimer Marie-Louise Mumbu"
-                                            class="rounded-lg border border-[#f2d9d5] p-2 text-[#b85235] hover:bg-[#fff4f1]">
-                                            <i data-lucide="trash-2" class="h-4 w-4"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="border-t border-linen px-5 py-4 text-xs text-ink-mute">
-                    Affichage de 4 auteurs sur 86
-                </div>
-            </section>
-        </main>
+            <p class="mt-3 font-serif text-4xl">86</p>
+            <p class="mt-1 text-sm text-ink-soft">dans la bibliothèque</p>
+          </li><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">Fiches complètes</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="circle-check" aria-hidden="true" class="h-4 w-4"></i></span>
+            </div>
+            <p class="mt-3 font-serif text-4xl">82</p>
+            <p class="mt-1 text-sm text-ink-soft">biographie et portrait</p>
+          </li><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">À compléter</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="user-round-pen" aria-hidden="true" class="h-4 w-4"></i></span>
+            </div>
+            <p class="mt-3 font-serif text-4xl">4</p>
+            <p class="mt-1 text-sm text-ink-soft">informations manquantes</p>
+          </li></ul>
+        <section class="reveal mt-6 panel" aria-labelledby="liste" data-filter-list>
+          <h2 id="liste" class="font-serif text-2xl">Fiches auteurs</h2>
+          <form role="search" class="mt-8 grid gap-4 rounded-[1.25rem] bg-linen p-4 sm:p-5 md:grid-cols-[1.4fr_repeat(1,minmax(0,1fr))_auto] md:items-end">
+          <div><label for="q" class="text-sm font-semibold">Rechercher</label>
+            <div class="relative mt-2"><i data-lucide="search" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-mute"></i><input id="q" type="search" placeholder="Nom de l’auteur…" class="field pl-12" data-filter="text"></div></div><div><label for="etat" class="text-sm font-semibold">Fiche</label>
+            <select id="etat" class="field mt-2 cursor-pointer" data-filter="etat"><option value="all">Toutes les fiches</option><option value="complete">Complètes</option><option value="incomplete">À compléter</option></select></div>
+          <p class="text-sm font-medium text-ink-soft md:pb-3" aria-live="polite" data-filter-total="auteurs affichés" data-filter-one="auteur affiché">4 auteurs affichés</p>
+        </form>
+          <div class="mt-6 overflow-x-auto">
+          <table class="table-mk min-w-[46rem]">
+            <thead><tr><th scope="col">Auteur</th><th scope="col">Pays</th><th scope="col">Œuvres</th><th scope="col">Fiche</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+            <tbody>
+              <tr data-item data-etat="complete">
+                <td><span class="flex items-center gap-3"><img src="../assets/auteurs/blaise-ndala.jpg" alt="" class="h-11 w-11 shrink-0 rounded-full object-cover object-top"><span><span class="block font-semibold text-ink">Blaise Ndala</span><span class="text-sm text-ink-mute">Écrivain, romancier</span></span></span></td>
+                <td>RDC · Canada</td><td>4 œuvres</td><td><span class="status status-ok">Complète</span></td>
+                <td><a href="auteur-formulaire.html" class="icon-btn" aria-label="Modifier la fiche de Blaise Ndala" title="Modifier la fiche de Blaise Ndala"><i data-lucide="pencil" aria-hidden="true"></i></a></td>
+              </tr>
+              <tr data-item data-etat="complete">
+                <td><span class="flex items-center gap-3"><img src="../assets/auteurs/fiston-mwanza-mujila.jpg" alt="" class="h-11 w-11 shrink-0 rounded-full object-cover object-top"><span><span class="block font-semibold text-ink">Fiston Mwanza Mujila</span><span class="text-sm text-ink-mute">Écrivain, poète</span></span></span></td>
+                <td>RDC · Autriche</td><td>3 œuvres</td><td><span class="status status-ok">Complète</span></td>
+                <td><a href="auteur-formulaire.html" class="icon-btn" aria-label="Modifier la fiche de Fiston Mwanza Mujila" title="Modifier la fiche de Fiston Mwanza Mujila"><i data-lucide="pencil" aria-hidden="true"></i></a></td>
+              </tr>
+              <tr data-item data-etat="complete">
+                <td><span class="flex items-center gap-3"><img src="../assets/auteurs/in-koli-jean-bofane.jpg" alt="" class="h-11 w-11 shrink-0 rounded-full object-cover object-top"><span><span class="block font-semibold text-ink">In Koli Jean Bofane</span><span class="text-sm text-ink-mute">Écrivain, romancier</span></span></span></td>
+                <td>RDC · Belgique</td><td>5 œuvres</td><td><span class="status status-ok">Complète</span></td>
+                <td><a href="auteur-formulaire.html" class="icon-btn" aria-label="Modifier la fiche de In Koli Jean Bofane" title="Modifier la fiche de In Koli Jean Bofane"><i data-lucide="pencil" aria-hidden="true"></i></a></td>
+              </tr>
+              <tr data-item data-etat="incomplete">
+                <td><span class="flex items-center gap-3"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-linen font-semibold text-ink-soft" aria-hidden="true">MM</span><span><span class="block font-semibold text-ink">Marie-Louise Mumbu</span><span class="text-sm text-ink-mute">Autrice, dramaturge</span></span></span></td>
+                <td>RDC</td><td>1 œuvre</td><td><span class="status status-wait">À compléter</span></td>
+                <td><a href="auteur-formulaire.html" class="icon-btn" aria-label="Modifier la fiche de Marie-Louise Mumbu" title="Modifier la fiche de Marie-Louise Mumbu"><i data-lucide="pencil" aria-hidden="true"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-6 rounded-[1.25rem] bg-paper px-6 py-8 text-center text-ink-soft" data-filter-none hidden>Aucun auteur ne correspond à ces filtres.</p>
+        </section>
+      </main>
     </div>
-    <script>
-        lucide.createIcons();
-    </script>
+  </div>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
-
 </html>

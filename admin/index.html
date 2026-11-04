@@ -1,314 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tableau de bord d’administration Mikanda.">
+  <meta name="description" content="Espace d’administration de Mikanda.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Vue d’ensemble | Administration Mikanda</title>
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link href="../dist/tailwind.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <title>Administration | Mikanda</title>
+  <script src="../assets/main.js" defer></script>
 </head>
-
-<body class="min-h-screen bg-ivory font-sans text-ink">
-  <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-    <aside class="bg-forest-deep px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen">
-      <a href="index.html" class="mb-8 flex items-center gap-3" aria-label="Mikanda, tableau de bord">
-        <img src="../assets/mikanda-logo.svg" alt="Mikanda" class="h-10 w-36 object-contain object-left">
-        <span
-          class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-brass">Admin</span>
-      </a>
-      <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">Espace de gestion</p>
-      <nav aria-label="Navigation admin" class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:flex-col">
-        <a href="index.html" aria-current="page"
-          class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold text-white"><i
-            data-lucide="layout-dashboard" class="h-4 w-4 text-brass"></i> Vue d’ensemble</a>
-        <a href="livres.html"
-          class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"><i
-            data-lucide="book-open" class="h-4 w-4"></i> Livres</a>
-        <a href="auteurs.html"
-          class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"><i
-            data-lucide="feather" class="h-4 w-4"></i> Auteurs</a>
-        <a href="comptes.html"
-          class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"><i
-            data-lucide="users" class="h-4 w-4"></i> Comptes</a>
-        <a href="messages.html"
-          class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"><i
-            data-lucide="mail" class="h-4 w-4"></i> Messages <span
-            class="ml-auto rounded-full bg-[#b85235] px-2 py-0.5 text-[10px] text-white">3</span></a>
-        <a href="statistiques.html"
-          class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"><i
-            data-lucide="chart-no-axes-column-increasing" class="h-4 w-4"></i> Statistiques</a>
-        <a href="parametres.html"
-          class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"><i
-            data-lucide="settings-2" class="h-4 w-4"></i> Paramètres</a>
-      </nav>
-      <div class="mt-8 hidden rounded-2xl border border-white/10 bg-white/5 p-4 lg:block">
-        <div class="flex items-center gap-2 text-xs font-semibold text-brass"><i data-lucide="sparkles"
-            class="h-4 w-4"></i> Mikanda Premium</div>
-        <p class="mt-2 text-xs leading-5 text-white/60">Votre espace admin est prêt. Pensez à vérifier les nouveaux
-          messages.</p>
-        <a href="messages.html"
-          class="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-white hover:text-brass">Voir la
-          boîte de réception <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></a>
+<body class="bg-ivory font-sans text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="min-h-dvh lg:grid lg:grid-cols-[17rem_1fr]">
+    <aside class="on-dark bg-forest-deep text-ivory lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:overflow-y-auto">
+      <div class="flex items-center justify-between gap-3 px-5 pb-4 pt-5 lg:pb-8 lg:pt-7">
+        <a href="index.html" class="flex items-center gap-3 rounded-md" aria-label="Mikanda, tableau de bord">
+          <img src="../assets/mikanda-logo.svg" alt="" width="150" height="42" class="h-10 w-auto">
+          <span class="rounded-full bg-forest px-2.5 py-1 text-xs font-semibold text-brass">Admin</span>
+        </a>
+        <a href="../index.html" class="icon-btn !text-mist hover:!bg-white/10 lg:hidden" aria-label="Retour au site"><i data-lucide="external-link" aria-hidden="true"></i></a>
       </div>
-      <a href="../index.html"
-        class="mt-8 hidden items-center gap-3 border-t border-white/10 pt-5 text-sm text-white/60 hover:text-white lg:flex"><i
-          data-lucide="arrow-left" class="h-4 w-4"></i> Retour au site</a>
+      <nav aria-label="Administration" class="px-3 pb-4 lg:pb-0">
+        <ul class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:grid-cols-1">
+          <li><a class="admin-link" href="index.html" aria-current="page"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Vue d’ensemble</a></li><li><a class="admin-link" href="livres.html"><i data-lucide="book-open" aria-hidden="true"></i>Livres</a></li><li><a class="admin-link" href="auteurs.html"><i data-lucide="feather" aria-hidden="true"></i>Auteurs</a></li><li><a class="admin-link" href="comptes.html"><i data-lucide="users" aria-hidden="true"></i>Comptes</a></li><li><a class="admin-link" href="messages.html"><i data-lucide="mail" aria-hidden="true"></i>Messages<span class="ml-auto rounded-full bg-brass px-2 py-0.5 text-xs font-bold text-ink">3</span></a></li><li><a class="admin-link" href="statistiques.html"><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i>Statistiques</a></li><li><a class="admin-link" href="parametres.html"><i data-lucide="settings-2" aria-hidden="true"></i>Paramètres</a></li>
+        </ul>
+      </nav>
+      <div class="mt-auto hidden px-3 pb-6 lg:block">
+        <a class="admin-link" href="../index.html"><i data-lucide="arrow-left" aria-hidden="true"></i>Retour au site</a>
+      </div>
     </aside>
 
-    <main class="min-w-0 px-4 py-6 sm:px-7 lg:px-10 lg:py-9">
-      <header class="mb-8 flex flex-wrap items-center justify-between gap-4">
+    <div class="min-w-0">
+      <header class="flex flex-wrap items-end justify-between gap-4 px-5 pb-6 pt-8 sm:px-8 lg:px-12 lg:pt-10">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[2px] text-[#8b9189]">Mardi 20 octobre 2026</p>
-          <h1 class="mt-1 font-serif text-3xl font-semibold sm:text-4xl">Bonjour,
-            administrateur</h1>
-          <p class="mt-2 text-sm text-ink-mute">Voici ce qui se passe dans votre bibliothèque.</p>
+          <p class="text-sm text-ink-mute">Mardi 20 octobre 2026</p>
+          <h1 class="display mt-1 text-[clamp(2rem,3.4vw,3rem)]">Bonjour, l’équipe Mikanda.</h1>
+          <p class="mt-2 max-w-2xl text-base text-ink-soft">Voici l’état de la bibliothèque aujourd’hui.</p>
         </div>
-        <div class="flex items-center gap-3"><a href="livre-formulaire.html"
-            class="inline-flex items-center gap-2 rounded-xl bg-forest px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1b4a34]"><i
-              data-lucide="plus" class="h-4 w-4"></i> Ajouter un livre</a>
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-brass text-sm font-bold text-ink"
-            aria-label="Compte administrateur">AD</div>
+        <div class="flex flex-wrap items-center gap-3"><a href="livre-formulaire.html" class="btn btn-primary btn-sm"><i data-lucide="plus" aria-hidden="true"></i>Ajouter un livre</a>
+          <span class="grid h-11 w-11 place-items-center rounded-full bg-forest font-semibold text-brass" title="Administrateur Mikanda" aria-hidden="true">AM</span>
         </div>
       </header>
-
-      <div class="mb-5 rounded-xl border border-[#eadfc4] bg-[#fffaf0] px-4 py-3 text-xs leading-5 text-[#735d32]"><i
-          data-lucide="info" class="mr-1 inline h-3.5 w-3.5"></i> Aperçu de l’interface avec données d’exemple. Les
-        formulaires, suppressions, comptes et messages nécessitent une connexion à la base de données pour enregistrer
-        des changements.</div>
-
-      <section aria-label="Indicateurs clés" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between"><span class="text-sm text-ink-mute">Œuvres au
-              catalogue</span><span
-              class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#edf4ef] text-forest"><i
-                data-lucide="library-big" class="h-5 w-5"></i></span></div>
-          <p class="mt-4 text-3xl font-bold">248</p>
-          <p class="mt-1 text-xs text-ink-mute"><span class="font-semibold text-[#26734b]">+12</span> ce mois-ci</p>
-        </article>
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between"><span class="text-sm text-ink-mute">Auteurs
-              référencés</span><span
-              class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#fbf2dc] text-[#9a6a12]"><i
-                data-lucide="feather" class="h-5 w-5"></i></span></div>
-          <p class="mt-4 text-3xl font-bold">86</p>
-          <p class="mt-1 text-xs text-ink-mute">4 fiches à compléter</p>
-        </article>
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between"><span class="text-sm text-ink-mute">Comptes
-              lecteurs</span><span
-              class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f5ece8] text-[#b85235]"><i
-                data-lucide="users" class="h-5 w-5"></i></span></div>
-          <p class="mt-4 text-3xl font-bold">1 284</p>
-          <p class="mt-1 text-xs text-ink-mute"><span class="font-semibold text-[#26734b]">+8,4 %</span> sur 30 jours
-          </p>
-        </article>
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between"><span class="text-sm text-ink-mute">Messages à
-              traiter</span><span
-              class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#fcebea] text-[#b85235]"><i
-                data-lucide="message-circle" class="h-5 w-5"></i></span></div>
-          <p class="mt-4 text-3xl font-bold">3</p><a href="messages.html"
-            class="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-[#b85235] hover:underline">Ouvrir les
-            messages <i data-lucide="arrow-up-right" class="h-3 w-3"></i></a>
-        </article>
-      </section>
-
-      <section class="mt-6 grid gap-5 xl:grid-cols-[1.4fr_1fr]">
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm sm:p-6">
-          <div class="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <h2 class="text-lg font-bold">Activité de la bibliothèque</h2>
-              <p class="mt-1 text-sm text-ink-mute">Lectures et nouvelles inscriptions</p>
-            </div><select aria-label="Période du graphique"
-              class="rounded-lg border border-line-soft bg-white px-3 py-2 text-sm text-ink-soft">
-              <option>7 derniers jours</option>
-              <option>30 derniers jours</option>
-              <option>Cette année</option>
-            </select>
-          </div>
-          <div
-            class="mt-8 flex h-48 items-end justify-between gap-2 border-b border-l border-linen px-2 pb-0 sm:gap-4"
-            aria-label="Graphique d’activité illustratif">
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[55%] items-end justify-center gap-1"><span
-                  class="h-[54%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[80%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Lun</span>
+      <main id="contenu" class="px-5 pb-16 sm:px-8 lg:px-12">
+        <p class="notice"><i data-lucide="info" aria-hidden="true"></i><span>Aperçu de l’interface avec des données d’exemple. Les enregistrements, suppressions, comptes et messages nécessiteront une connexion au serveur.</span></p>
+        <ul class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4"><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">Œuvres au catalogue</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="book-open" aria-hidden="true" class="h-4 w-4"></i></span>
             </div>
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[70%] items-end justify-center gap-1"><span
-                  class="h-[62%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[88%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Mar</span>
+            <p class="mt-3 font-serif text-4xl">248</p>
+            <p class="mt-1 text-sm text-ink-soft">+12 ce mois-ci</p>
+          </li><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">Auteurs référencés</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="feather" aria-hidden="true" class="h-4 w-4"></i></span>
             </div>
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[62%] items-end justify-center gap-1"><span
-                  class="h-[50%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[74%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Mer</span>
+            <p class="mt-3 font-serif text-4xl">86</p>
+            <p class="mt-1 text-sm text-ink-soft">4 fiches à compléter</p>
+          </li><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">Comptes lecteurs</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="users" aria-hidden="true" class="h-4 w-4"></i></span>
             </div>
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[88%] items-end justify-center gap-1"><span
-                  class="h-[68%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[96%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Jeu</span>
+            <p class="mt-3 font-serif text-4xl">1&nbsp;284</p>
+            <p class="mt-1 text-sm text-ink-soft">+8,4 % sur 30 jours</p>
+          </li><li class="panel">
+            <div class="flex items-start justify-between gap-3">
+              <p class="text-sm font-medium text-ink-mute">Messages à traiter</p>
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-linen text-forest"><i data-lucide="mail" aria-hidden="true" class="h-4 w-4"></i></span>
             </div>
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[73%] items-end justify-center gap-1"><span
-                  class="h-[60%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[82%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Ven</span>
+            <p class="mt-3 font-serif text-4xl">3</p>
+            <p class="mt-1 text-sm text-ink-soft">Dernier reçu il y a 2 h</p>
+          </li></ul>
+        <div class="reveal mt-6 grid gap-6 xl:grid-cols-[1.6fr_1fr]">
+          <section class="panel" aria-labelledby="activite">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div><h2 id="activite" class="font-serif text-2xl">Activité de la semaine</h2><p class="mt-1 text-sm text-ink-mute">Lectures et nouvelles inscriptions, données d’exemple</p></div>
+              <p class="flex gap-4 text-sm text-ink-soft"><span class="flex items-center gap-2"><span class="h-3 w-3 rounded-sm bg-leaf"></span>Lectures</span><span class="flex items-center gap-2"><span class="h-3 w-3 rounded-sm bg-brass"></span>Inscriptions</span></p>
             </div>
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[96%] items-end justify-center gap-1"><span
-                  class="h-[74%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[91%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Sam</span>
+            <ul class="mt-8 grid grid-cols-7 gap-2"><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:55%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:54%"></span></div>
+              <span class="text-sm text-ink-mute">Lun</span></li><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:80%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:70%"></span></div>
+              <span class="text-sm text-ink-mute">Mar</span></li><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:62%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:88%"></span></div>
+              <span class="text-sm text-ink-mute">Mer</span></li><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:62%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:50%"></span></div>
+              <span class="text-sm text-ink-mute">Jeu</span></li><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:74%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:88%"></span></div>
+              <span class="text-sm text-ink-mute">Ven</span></li><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:68%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:96%"></span></div>
+              <span class="text-sm text-ink-mute">Sam</span></li><li class="flex flex-col items-center gap-2">
+              <div class="flex h-48 w-full items-end justify-center gap-1.5" aria-hidden="true"><span class="bar w-3 bg-leaf sm:w-4" style="height:73%"></span><span class="bar w-3 bg-brass sm:w-4" style="height:60%"></span></div>
+              <span class="text-sm text-ink-mute">Dim</span></li></ul>
+          </section>
+          <section class="panel" aria-labelledby="repartition">
+            <h2 id="repartition" class="font-serif text-2xl">Répartition du catalogue</h2>
+            <p class="mt-1 text-sm text-ink-mute">Par mode d’accès</p>
+            <div class="mt-8 grid gap-5">
+              <div><p class="flex justify-between text-sm"><span class="font-semibold">Gratuit</span><span class="text-ink-mute">156 · 63 %</span></p><div class="mt-2 h-3 rounded-full bg-linen"><div class="h-3 rounded-full bg-leaf" style="width:63%"></div></div></div>
+              <div><p class="flex justify-between text-sm"><span class="font-semibold">Premium</span><span class="text-ink-mute">92 · 37 %</span></p><div class="mt-2 h-3 rounded-full bg-linen"><div class="h-3 rounded-full bg-brass" style="width:37%"></div></div></div>
             </div>
-            <div class="flex h-full flex-1 flex-col justify-end gap-2">
-              <div class="flex h-[64%] items-end justify-center gap-1"><span
-                  class="h-[46%] w-3 rounded-t bg-[#d7e4da]"></span><span
-                  class="h-[70%] w-3 rounded-t bg-leaf"></span></div><span
-                class="pb-2 text-center text-[10px] text-ink-mute">Dim</span>
-            </div>
-          </div>
-          <div class="mt-4 flex flex-wrap gap-5 text-xs text-ink-mute"><span class="inline-flex items-center gap-2"><i
-                class="h-2.5 w-2.5 rounded-sm bg-leaf"></i> Lectures</span><span
-              class="inline-flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-sm bg-[#d7e4da]"></i>
-              Inscriptions</span></div>
-        </article>
-
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm sm:p-6">
-          <div class="flex items-start justify-between">
-            <div>
-              <h2 class="text-lg font-bold">Répartition du catalogue</h2>
-              <p class="mt-1 text-sm text-ink-mute">Par accès de lecture</p>
-            </div><i data-lucide="chart-pie" class="h-5 w-5 text-[#8b9189]"></i>
-          </div>
-          <div class="mt-6 space-y-5">
-            <div>
-              <div class="mb-2 flex justify-between text-sm"><span>Gratuit</span><span class="font-semibold">156 <span
-                    class="text-ink-mute">(63 %)</span></span></div>
-              <div class="h-2 rounded-full bg-[#edf0eb]">
-                <div class="h-2 w-[63%] rounded-full bg-leaf"></div>
-              </div>
-            </div>
-            <div>
-              <div class="mb-2 flex justify-between text-sm"><span>Premium</span><span class="font-semibold">92 <span
-                    class="text-ink-mute">(37 %)</span></span></div>
-              <div class="h-2 rounded-full bg-[#edf0eb]">
-                <div class="h-2 w-[37%] rounded-full bg-brass"></div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-7 rounded-xl bg-paper p-4">
-            <p class="flex items-center gap-2 text-sm font-semibold"><i data-lucide="circle-check"
-                class="h-4 w-4 text-leaf"></i> Tout est à jour</p>
-            <p class="mt-1 text-xs leading-5 text-ink-mute">La dernière mise à jour du catalogue date d’aujourd’hui.
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="mt-6 grid gap-5 xl:grid-cols-[1.4fr_1fr]">
-        <article class="overflow-hidden rounded-2xl border border-line-soft bg-white shadow-sm">
-          <div class="flex items-center justify-between border-b border-linen px-5 py-4">
-            <div>
-              <h2 class="font-bold">Dernières œuvres ajoutées</h2>
-              <p class="mt-1 text-xs text-ink-mute">Suivi du catalogue</p>
-            </div><a href="livres.html" class="text-sm font-semibold text-leaf hover:underline">Voir tout</a>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="w-full min-w-[550px] text-left text-sm">
-              <thead class="bg-[#faf9f6] text-xs uppercase tracking-wide text-ink-mute">
-                <tr>
-                  <th class="px-5 py-3 font-semibold">Œuvre</th>
-                  <th class="px-4 py-3 font-semibold">Type</th>
-                  <th class="px-4 py-3 font-semibold">Accès</th>
-                  <th class="px-4 py-3 font-semibold">État</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-linen">
-                <tr>
-                  <td class="px-5 py-4">
-                    <p class="font-semibold">Dans le ventre du Congo</p>
-                    <p class="mt-1 text-xs text-ink-mute">Blaise Ndala</p>
-                  </td>
-                  <td class="px-4 py-4 text-ink-mute">Roman</td>
-                  <td class="px-4 py-4"><span
-                      class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Gratuit</span>
-                  </td>
-                  <td class="px-4 py-4 text-leaf">Publié</td>
-                </tr>
-                <tr>
-                  <td class="px-5 py-4">
-                    <p class="font-semibold">Tram 83</p>
-                    <p class="mt-1 text-xs text-ink-mute">Fiston Mwanza Mujila</p>
-                  </td>
-                  <td class="px-4 py-4 text-ink-mute">Roman</td>
-                  <td class="px-4 py-4"><span
-                      class="rounded-full bg-[#fbf2dc] px-2.5 py-1 text-xs font-semibold text-[#896315]">Premium</span>
-                  </td>
-                  <td class="px-4 py-4 text-leaf">Publié</td>
-                </tr>
-                <tr>
-                  <td class="px-5 py-4">
-                    <p class="font-semibold">À quand le Congo ?</p>
-                    <p class="mt-1 text-xs text-ink-mute">Jean-Pierre Mbelu</p>
-                  </td>
-                  <td class="px-4 py-4 text-ink-mute">Essai</td>
-                  <td class="px-4 py-4"><span
-                      class="rounded-full bg-[#edf4ef] px-2.5 py-1 text-xs font-semibold text-leaf">Gratuit</span>
-                  </td>
-                  <td class="px-4 py-4 text-leaf">Publié</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-        <article class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <div>
-              <h2 class="font-bold">À traiter</h2>
-              <p class="mt-1 text-xs text-ink-mute">Les prochaines actions de l’équipe</p>
-            </div><i data-lucide="list-checks" class="h-5 w-5 text-[#8b9189]"></i>
-          </div>
-          <div class="mt-4 space-y-3"><a href="messages.html"
-              class="flex items-center gap-3 rounded-xl bg-[#faf9f6] p-3 transition hover:bg-ivory"><span
-                class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#fcebea] text-[#b85235]"><i
-                  data-lucide="mail" class="h-4 w-4"></i></span><span class="min-w-0 flex-1"><span
-                  class="block text-sm font-semibold">3 nouveaux messages</span><span
-                  class="block text-xs text-ink-mute">Dernier reçu il y a 2 h</span></span><i
-                data-lucide="chevron-right" class="h-4 w-4 text-ink-mute"></i></a><a href="auteurs.html"
-              class="flex items-center gap-3 rounded-xl bg-[#faf9f6] p-3 transition hover:bg-ivory"><span
-                class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#fbf2dc] text-[#896315]"><i
-                  data-lucide="feather" class="h-4 w-4"></i></span><span class="min-w-0 flex-1"><span
-                  class="block text-sm font-semibold">4 profils à compléter</span><span
-                  class="block text-xs text-ink-mute">Biographie ou portrait manquant</span></span><i
-                data-lucide="chevron-right" class="h-4 w-4 text-ink-mute"></i></a><a href="livres.html"
-              class="flex items-center gap-3 rounded-xl bg-[#faf9f6] p-3 transition hover:bg-ivory"><span
-                class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#edf4ef] text-leaf"><i
-                  data-lucide="file-clock" class="h-4 w-4"></i></span><span class="min-w-0 flex-1"><span
-                  class="block text-sm font-semibold">2 brouillons à publier</span><span
-                  class="block text-xs text-ink-mute">Vérifier les informations</span></span><i
-                data-lucide="chevron-right" class="h-4 w-4 text-ink-mute"></i></a></div>
-        </article>
-      </section>
-      <footer class="mt-8 flex flex-wrap justify-between gap-2 border-t border-line-soft pt-4 text-xs text-ink-mute">
-        <span>© 2026 Mikanda · Administration</span><a href="../index.html" class="hover:text-leaf">Retour au site
-          public</a></footer>
-    </main>
+            <p class="mt-8 flex gap-3 rounded-2xl bg-linen p-4 text-sm text-ink-soft"><i data-lucide="circle-check" aria-hidden="true" class="h-5 w-5 shrink-0 text-leaf"></i>Le catalogue a été mis à jour aujourd’hui.</p>
+          </section>
+        </div>
+        <div class="reveal mt-6 grid gap-6 xl:grid-cols-[1.6fr_1fr]">
+          <section class="panel" aria-labelledby="dernieres">
+            <div class="flex items-center justify-between gap-4"><h2 id="dernieres" class="font-serif text-2xl">Dernières œuvres ajoutées</h2><a href="livres.html" class="link-arrow">Tout voir <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+            <div class="mt-4 overflow-x-auto"><table class="table-mk min-w-[32rem]"><thead><tr><th scope="col">Œuvre</th><th scope="col">Genre</th><th scope="col">Accès</th><th scope="col">État</th></tr></thead><tbody><tr><td><span class="block font-semibold text-ink">Dans le ventre du Congo</span><span class="text-sm text-ink-mute">Blaise Ndala</span></td><td>Roman</td><td><span class="tag tag-free">Gratuit</span></td><td><span class="status status-ok">Publié</span></td></tr>
+<tr><td><span class="block font-semibold text-ink">Tram 83</span><span class="text-sm text-ink-mute">Fiston Mwanza Mujila</span></td><td>Roman</td><td><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></td><td><span class="status status-ok">Publié</span></td></tr>
+<tr><td><span class="block font-semibold text-ink">À quand le Congo ?</span><span class="text-sm text-ink-mute">Jean-Pierre Mbelu</span></td><td>Essai</td><td><span class="tag tag-free">Gratuit</span></td><td><span class="status status-ok">Publié</span></td></tr></tbody></table></div>
+          </section>
+          <section class="panel" aria-labelledby="atraiter">
+            <h2 id="atraiter" class="font-serif text-2xl">À traiter</h2>
+            <ul class="mt-4 grid gap-1"><li><a href="messages.html" class="group flex items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-linen">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-linen text-forest group-hover:bg-paper"><i data-lucide="mail" aria-hidden="true" class="h-5 w-5"></i></span>
+              <span class="min-w-0"><span class="block font-semibold text-ink">3 nouveaux messages</span><span class="block text-sm text-ink-mute">Dernier reçu il y a 2 h</span></span>
+              <i data-lucide="chevron-right" aria-hidden="true" class="ml-auto h-5 w-5 text-ink-mute"></i></a></li><li><a href="auteurs.html" class="group flex items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-linen">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-linen text-forest group-hover:bg-paper"><i data-lucide="user-round-pen" aria-hidden="true" class="h-5 w-5"></i></span>
+              <span class="min-w-0"><span class="block font-semibold text-ink">4 profils à compléter</span><span class="block text-sm text-ink-mute">Biographie ou portrait manquant</span></span>
+              <i data-lucide="chevron-right" aria-hidden="true" class="ml-auto h-5 w-5 text-ink-mute"></i></a></li><li><a href="livres.html" class="group flex items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-linen">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-linen text-forest group-hover:bg-paper"><i data-lucide="file-pen-line" aria-hidden="true" class="h-5 w-5"></i></span>
+              <span class="min-w-0"><span class="block font-semibold text-ink">2 brouillons à publier</span><span class="block text-sm text-ink-mute">Vérifier les informations</span></span>
+              <i data-lucide="chevron-right" aria-hidden="true" class="ml-auto h-5 w-5 text-ink-mute"></i></a></li></ul>
+          </section>
+        </div>
+      </main>
+    </div>
   </div>
-  <script>lucide.createIcons()</script>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
-
 </html>

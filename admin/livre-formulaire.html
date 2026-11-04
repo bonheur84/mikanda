@@ -1,183 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espace d’administration de Mikanda.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Ajouter un livre | Administration Mikanda</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link href="../dist/tailwind.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <title>Ajouter un livre | Mikanda Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/main.js" defer></script>
 </head>
+<body class="bg-ivory font-sans text-ink">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="min-h-dvh lg:grid lg:grid-cols-[17rem_1fr]">
+    <aside class="on-dark bg-forest-deep text-ivory lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:overflow-y-auto">
+      <div class="flex items-center justify-between gap-3 px-5 pb-4 pt-5 lg:pb-8 lg:pt-7">
+        <a href="index.html" class="flex items-center gap-3 rounded-md" aria-label="Mikanda, tableau de bord">
+          <img src="../assets/mikanda-logo.svg" alt="" width="150" height="42" class="h-10 w-auto">
+          <span class="rounded-full bg-forest px-2.5 py-1 text-xs font-semibold text-brass">Admin</span>
+        </a>
+        <a href="../index.html" class="icon-btn !text-mist hover:!bg-white/10 lg:hidden" aria-label="Retour au site"><i data-lucide="external-link" aria-hidden="true"></i></a>
+      </div>
+      <nav aria-label="Administration" class="px-3 pb-4 lg:pb-0">
+        <ul class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:grid-cols-1">
+          <li><a class="admin-link" href="index.html"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Vue d’ensemble</a></li><li><a class="admin-link" href="livres.html" aria-current="page"><i data-lucide="book-open" aria-hidden="true"></i>Livres</a></li><li><a class="admin-link" href="auteurs.html"><i data-lucide="feather" aria-hidden="true"></i>Auteurs</a></li><li><a class="admin-link" href="comptes.html"><i data-lucide="users" aria-hidden="true"></i>Comptes</a></li><li><a class="admin-link" href="messages.html"><i data-lucide="mail" aria-hidden="true"></i>Messages<span class="ml-auto rounded-full bg-brass px-2 py-0.5 text-xs font-bold text-ink">3</span></a></li><li><a class="admin-link" href="statistiques.html"><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i>Statistiques</a></li><li><a class="admin-link" href="parametres.html"><i data-lucide="settings-2" aria-hidden="true"></i>Paramètres</a></li>
+        </ul>
+      </nav>
+      <div class="mt-auto hidden px-3 pb-6 lg:block">
+        <a class="admin-link" href="../index.html"><i data-lucide="arrow-left" aria-hidden="true"></i>Retour au site</a>
+      </div>
+    </aside>
 
-<body class="min-h-screen bg-ivory font-sans text-ink">
-    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-        <aside class="bg-forest-deep px-5 py-6 text-white lg:sticky lg:top-0 lg:h-screen"><a href="index.html"
-                class="mb-8 flex items-center gap-3"><img src="../assets/mikanda-logo.svg" alt="Mikanda"
-                    class="h-10 w-36 object-contain object-left"><span
-                    class="rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-brass">Admin</span></a>
-            <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[2px] text-white/40">Espace de gestion</p>
-            <nav aria-label="Navigation admin" class="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:flex lg:flex-col"><a
-                    href="index.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="layout-dashboard" class="h-4 w-4"></i> Vue d’ensemble</a><a href="livres.html"
-                    aria-current="page"
-                    class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 text-sm font-semibold"><i
-                        data-lucide="book-open" class="h-4 w-4 text-brass"></i> Livres</a><a href="auteurs.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="feather" class="h-4 w-4"></i> Auteurs</a><a href="comptes.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="users" class="h-4 w-4"></i> Comptes</a><a href="messages.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="mail" class="h-4 w-4"></i> Messages <span
-                        class="ml-auto rounded-full bg-[#b85235] px-2 py-0.5 text-[10px]">3</span></a><a
-                    href="statistiques.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="chart-no-axes-column-increasing" class="h-4 w-4"></i> Statistiques</a><a
-                    href="parametres.html"
-                    class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/70 hover:bg-white/10"><i
-                        data-lucide="settings-2" class="h-4 w-4"></i> Paramètres</a></nav><a href="../index.html"
-                class="mt-8 hidden items-center gap-3 border-t border-white/10 pt-5 text-sm text-white/60 hover:text-white lg:flex"><i
-                    data-lucide="arrow-left" class="h-4 w-4"></i> Retour au site</a>
-        </aside>
-        <main class="min-w-0 px-4 py-6 sm:px-7 lg:px-10 lg:py-9">
-            <div class="mx-auto max-w-4xl">
-                <header class="mb-6"><a href="livres.html"
-                        class="mb-3 inline-flex items-center gap-1 text-xs font-semibold text-ink-mute hover:text-leaf"><i
-                            data-lucide="arrow-left" class="h-3.5 w-3.5"></i> Retour aux livres</a>
-                    <h1 class="font-serif text-3xl font-semibold sm:text-4xl">Ajouter une
-                        œuvre</h1>
-                    <p class="mt-2 text-sm text-ink-mute">Renseignez les informations qui apparaîtront dans la
-                        bibliothèque.</p>
-                </header>
-                <div class="mb-5 rounded-xl border border-[#eadfc4] bg-[#fffaf0] px-4 py-3 text-xs text-[#735d32]"><i
-                        data-lucide="info" class="mr-1 inline h-3.5 w-3.5"></i> Les informations de ce formulaire sont à
-                    relier au stockage du catalogue pour être enregistrées.</div>
-                <form action="#" method="post" enctype="multipart/form-data" class="space-y-5">
-                    <section class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm sm:p-7">
-                        <div class="mb-5 flex items-center gap-3"><span
-                                class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#edf4ef] text-leaf"><i
-                                    data-lucide="book-open" class="h-4 w-4"></i></span>
-                            <div>
-                                <h2 class="font-bold">Informations du livre</h2>
-                                <p class="text-xs text-ink-mute">Titre, auteur et présentation</p>
-                            </div>
-                        </div>
-                        <div class="grid gap-4 sm:grid-cols-2"><label class="sm:col-span-2"><span
-                                    class="mb-1.5 block text-sm font-semibold">Titre de l’œuvre <span
-                                        class="text-[#b85235]">*</span></span><input required name="titre"
-                                    placeholder="Ex. Dans le ventre du Congo"
-                                    class="w-full rounded-xl border border-line-soft px-3.5 py-3 text-sm outline-none focus:border-leaf"></label><label><span
-                                    class="mb-1.5 block text-sm font-semibold">Auteur <span
-                                        class="text-[#b85235]">*</span></span><select required name="auteur"
-                                    class="w-full rounded-xl border border-line-soft bg-white px-3.5 py-3 text-sm">
-                                    <option value="">Sélectionner un auteur</option>
-                                    <option>Blaise Ndala</option>
-                                    <option>Fiston Mwanza Mujila</option>
-                                    <option>In Koli Jean Bofane</option>
-                                    <option>Jean-Pierre Mbelu</option>
-                                    <option>+ Ajouter un nouvel auteur</option>
-                                </select></label><label><span class="mb-1.5 block text-sm font-semibold">Année de
-                                    publication</span><input type="number" name="annee" min="1500" max="2100"
-                                    placeholder="2026"
-                                    class="w-full rounded-xl border border-line-soft px-3.5 py-3 text-sm outline-none focus:border-leaf"></label><label><span
-                                    class="mb-1.5 block text-sm font-semibold">Type de livre <span
-                                        class="text-[#b85235]">*</span></span><select required name="type"
-                                    class="w-full rounded-xl border border-line-soft bg-white px-3.5 py-3 text-sm">
-                                    <option value="">Choisir un type</option>
-                                    <option>Roman</option>
-                                    <option>Essai</option>
-                                    <option>Poésie</option>
-                                    <option>Théâtre</option>
-                                    <option>Conte</option>
-                                    <option>Mémoires</option>
-                                    <option>Biographie</option>
-                                    <option>Bande dessinée</option>
-                                    <option>Littérature jeunesse</option>
-                                </select></label><label><span class="mb-1.5 block text-sm font-semibold">Collection
-                                    <span class="text-[#b85235]">*</span></span><select required name="collection"
-                                    class="w-full rounded-xl border border-line-soft bg-white px-3.5 py-3 text-sm">
-                                    <option value="">Choisir une collection</option>
-                                    <option>Incontournables</option>
-                                    <option>Kinshasa en mouvement</option>
-                                    <option>Mémoires en partage</option>
-                                    <option>Archives</option>
-                                    <option>Histoire</option>
-                                    <option>Romans</option>
-                                    <option>Poésie</option>
-                                    <option>Théâtre</option>
-                                    <option>Contes</option>
-                                    <option>Essais</option>
-                                    <option>Jeunesse</option>
-                                    <option>Congo et le monde</option>
-                                </select></label><label class="sm:col-span-2"><span
-                                    class="mb-1.5 block text-sm font-semibold">Résumé / description <span
-                                        class="text-[#b85235]">*</span></span><textarea required name="description"
-                                    rows="5" placeholder="Présentez l’œuvre en quelques phrases…"
-                                    class="w-full resize-y rounded-xl border border-line-soft px-3.5 py-3 text-sm outline-none focus:border-leaf"></textarea><span
-                                    class="mt-1 block text-xs text-ink-mute">Ce texte sera affiché sur la fiche du
-                                    livre.</span></label></div>
-                    </section>
-                    <section class="rounded-2xl border border-line-soft bg-white p-5 shadow-sm sm:p-7">
-                        <div class="mb-5 flex items-center gap-3"><span
-                                class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#fbf2dc] text-[#896315]"><i
-                                    data-lucide="image" class="h-4 w-4"></i></span>
-                            <div>
-                                <h2 class="font-bold">Fichiers et accès</h2>
-                                <p class="text-xs text-ink-mute">Couverture, fichier de lecture et disponibilité</p>
-                            </div>
-                        </div>
-                        <div class="grid gap-5 sm:grid-cols-2"><label><span
-                                    class="mb-1.5 block text-sm font-semibold">Couverture du livre</span><input
-                                    type="file" name="couverture" accept="image/*"
-                                    class="block w-full rounded-xl border border-line-soft bg-white text-sm file:mr-3 file:border-0 file:bg-paper file:px-3 file:py-3 file:text-xs file:font-semibold"><span
-                                    class="mt-1 block text-xs text-ink-mute">JPG ou PNG · format portrait
-                                    recommandé</span></label><label><span
-                                    class="mb-1.5 block text-sm font-semibold">Fichier de lecture</span><input
-                                    type="file" name="fichier" accept=".pdf,.epub,application/pdf"
-                                    class="block w-full rounded-xl border border-line-soft bg-white text-sm file:mr-3 file:border-0 file:bg-paper file:px-3 file:py-3 file:text-xs file:font-semibold"><span
-                                    class="mt-1 block text-xs text-ink-mute">PDF ou EPUB</span></label></div>
-                        <fieldset class="mt-6">
-                            <legend class="mb-3 text-sm font-semibold">Mode d’accès au livre <span
-                                    class="text-[#b85235]">*</span></legend>
-                            <div class="grid gap-3 sm:grid-cols-2"><label
-                                    class="flex cursor-pointer items-start gap-3 rounded-xl border border-line-soft p-4 transition has-[:checked]:border-leaf has-[:checked]:bg-[#f3f8f4]"><input
-                                        required type="radio" name="acces" value="gratuit"
-                                        class="mt-1 accent-leaf"><span><span
-                                            class="flex items-center gap-2 text-sm font-semibold"><i
-                                                data-lucide="book-open-check" class="h-4 w-4 text-leaf"></i>
-                                            Gratuit</span><span
-                                            class="mt-1 block text-xs leading-5 text-ink-mute">Accessible à tous les
-                                            lecteurs.</span></span></label><label
-                                    class="flex cursor-pointer items-start gap-3 rounded-xl border border-line-soft p-4 transition has-[:checked]:border-[#896315] has-[:checked]:bg-[#fffaf0]"><input
-                                        type="radio" name="acces" value="premium"
-                                        class="mt-1 accent-[#896315]"><span><span
-                                            class="flex items-center gap-2 text-sm font-semibold"><i data-lucide="crown"
-                                                class="h-4 w-4 text-[#896315]"></i> Premium</span><span
-                                            class="mt-1 block text-xs leading-5 text-ink-mute">Réservé aux abonnés
-                                            Premium.</span></span></label></div>
-                        </fieldset>
-                        <div class="mt-6 border-t border-linen pt-5"><label class="flex items-start gap-3"><input
-                                    type="checkbox" name="publier" class="mt-1 accent-leaf"><span><span
-                                        class="block text-sm font-semibold">Publier immédiatement</span><span
-                                        class="mt-1 block text-xs text-ink-mute">Sinon, l’œuvre sera conservée comme
-                                        brouillon.</span></span></label></div>
-                    </section>
-                    <div class="flex flex-wrap justify-end gap-3"><a href="livres.html"
-                            class="rounded-xl border border-line-soft bg-white px-5 py-3 text-sm font-semibold hover:bg-paper">Annuler</a><button
-                            type="submit"
-                            class="inline-flex items-center gap-2 rounded-xl bg-forest px-5 py-3 text-sm font-semibold text-white hover:bg-[#1b4a34]"><i
-                                data-lucide="check" class="h-4 w-4"></i> Enregistrer l’œuvre</button></div>
-                </form>
+    <div class="min-w-0">
+      <header class="flex flex-wrap items-end justify-between gap-4 px-5 pb-6 pt-8 sm:px-8 lg:px-12 lg:pt-10">
+        <div>
+          <p class="text-sm text-ink-mute">Mardi 20 octobre 2026</p>
+          <h1 class="display mt-1 text-[clamp(2rem,3.4vw,3rem)]">Ajouter un livre</h1>
+          <p class="mt-2 max-w-2xl text-base text-ink-soft">Renseignez la fiche de l’œuvre, puis choisissez son mode d’accès.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3"><a href="livres.html" class="btn btn-secondary btn-sm"><i data-lucide="arrow-left" aria-hidden="true"></i>Retour aux livres</a>
+          <span class="grid h-11 w-11 place-items-center rounded-full bg-forest font-semibold text-brass" title="Administrateur Mikanda" aria-hidden="true">AM</span>
+        </div>
+      </header>
+      <main id="contenu" class="px-5 pb-16 sm:px-8 lg:px-12">
+        <p class="notice"><i data-lucide="info" aria-hidden="true"></i><span>Aperçu de l’interface avec des données d’exemple. Les enregistrements, suppressions, comptes et messages nécessiteront une connexion au serveur.</span></p>
+        <form class="reveal mt-6 grid gap-6 xl:grid-cols-[1.4fr_1fr]" data-demo-form="Œuvre prête : l’enregistrement sera possible une fois le site connecté au serveur.">
+          <section class="panel" aria-labelledby="infos">
+            <h2 id="infos" class="font-serif text-2xl">Informations du livre</h2>
+            <p class="mt-1 text-sm text-ink-mute">Les champs marqués d’un astérisque sont obligatoires.</p>
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
+              <div class="sm:col-span-2"><div><label for="titre" class="text-sm font-semibold">Titre de l’œuvre *</label><input id="titre" required class="field mt-2" placeholder="Ex. Dans le ventre du Congo"></div></div>
+              <div><label for="auteur" class="text-sm font-semibold">Auteur *</label><select id="auteur" required class="field mt-2 cursor-pointer"><option value="">Choisir un auteur</option><option>Blaise Ndala</option><option>Fiston Mwanza Mujila</option><option>In Koli Jean Bofane</option><option>Jean-Pierre Mbelu</option></select></div>
+              <div><label for="annee" class="text-sm font-semibold">Année de publication</label><input id="annee" type="number" min="1800" max="2100" class="field mt-2" placeholder="2026"></div>
+              <div><label for="type" class="text-sm font-semibold">Genre *</label><select id="type" required class="field mt-2 cursor-pointer"><option value="">Choisir un genre</option><option>Roman</option><option>Essai</option><option>Poésie</option><option>Théâtre</option><option>Conte</option><option>Mémoires</option><option>Biographie</option><option>Bande dessinée</option><option>Littérature jeunesse</option></select></div>
+              <div><label for="collection" class="text-sm font-semibold">Collection *</label><select id="collection" required class="field mt-2 cursor-pointer"><option value="">Choisir une collection</option><option>Incontournables</option><option>Kinshasa en mouvement</option><option>Mémoires en partage</option><option>Archives</option><option>Histoire</option><option>Romans</option><option>Poésie</option><option>Théâtre</option><option>Contes</option><option>Essais</option><option>Jeunesse</option><option>Congo et le monde</option></select></div>
+              <div class="sm:col-span-2"><div><label for="resume" class="text-sm font-semibold">Résumé *</label><textarea id="resume" rows="5" required aria-describedby="resume-aide" class="field mt-2" placeholder="Présentez l’œuvre en quelques phrases…"></textarea><p id="resume-aide" class="mt-2 text-sm text-ink-mute">Ce texte apparaîtra sur la fiche du livre.</p></div></div>
             </div>
-        </main>
+          </section>
+          <section class="panel" aria-labelledby="fichiers">
+            <h2 id="fichiers" class="font-serif text-2xl">Fichiers et accès</h2>
+            <div class="mt-6 grid gap-5">
+              <div><label for="couverture" class="text-sm font-semibold">Couverture</label><input id="couverture" type="file" accept=".jpg,.jpeg,.png" aria-describedby="couverture-aide" class="field mt-2"><p id="couverture-aide" class="mt-2 text-sm text-ink-mute">JPG ou PNG, format portrait de préférence.</p></div>
+              <div><label for="fichier" class="text-sm font-semibold">Fichier de lecture</label><input id="fichier" type="file" accept=".pdf,.epub" aria-describedby="fichier-aide" class="field mt-2"><p id="fichier-aide" class="mt-2 text-sm text-ink-mute">PDF ou EPUB.</p></div>
+              <fieldset><legend class="text-sm font-semibold">Mode d’accès *</legend><div class="mt-2 grid gap-2"><label class="flex cursor-pointer gap-3 rounded-2xl bg-linen p-4 has-[:checked]:bg-forest has-[:checked]:text-ivory"><input type="radio" name="acces" value="gratuit" required class="mt-1 accent-brass"><span><span class="block font-semibold">Gratuit</span><span class="text-sm opacity-80">Accessible à tous les lecteurs.</span></span></label><label class="flex cursor-pointer gap-3 rounded-2xl bg-linen p-4 has-[:checked]:bg-forest has-[:checked]:text-ivory"><input type="radio" name="acces" value="premium" required class="mt-1 accent-brass"><span><span class="block font-semibold">Premium</span><span class="text-sm opacity-80">Réservé aux abonnés Premium.</span></span></label></div></fieldset>
+              <label class="flex cursor-pointer items-start gap-3"><input type="checkbox" class="mt-1 h-4 w-4 accent-forest"><span><span class="block font-semibold">Publier immédiatement</span><span class="text-sm text-ink-mute">Sinon, l’œuvre reste en brouillon.</span></span></label>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3"><button type="submit" class="btn btn-primary"><i data-lucide="save" aria-hidden="true"></i>Enregistrer l’œuvre</button><a href="livres.html" class="btn btn-secondary">Annuler</a></div>
+            <p class="form-status notice mt-4" role="status" tabindex="-1" data-form-status></p>
+          </section>
+        </form>
+      </main>
     </div>
-    <script>lucide.createIcons()</script>
+  </div>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
-
 </html>

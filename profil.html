@@ -4,17 +4,19 @@
   <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Retrouvez vos informations et vos lectures dans votre espace personnel Mikanda.">
+  <meta name="description" content="Votre espace lecteur Mikanda : informations, favoris et badges.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Mon espace | Mikanda</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link href="./dist/tailwind.css" rel="stylesheet">
+  <link href="dist/tailwind.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="assets/main.js" defer></script>
-  <title>Mon profil | Mikanda</title>
 </head>
-<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+<body class="bg-ivory font-sans text-ink">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header" data-site-header>
     <div class="shell flex h-18 items-center gap-3 lg:h-22">
@@ -26,8 +28,8 @@
         <ul class="flex items-center gap-0.5 xl:gap-1">
           <li><a class="nav-link" href="index.html">Accueil</a></li>
           <li><a class="nav-link" href="bibliotheque.html">Bibliothèque</a></li>
-          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
           <li><a class="nav-link" href="collections.html">Collections</a></li>
+          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
           <li><a class="nav-link" href="a-propos.html">À propos</a></li>
           <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
         </ul>
@@ -37,28 +39,28 @@
         <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
           <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-        <a href="profil.html" class="profile-chip" aria-label="Voir le profil de Blaise Ndala">
+        <a href="profil.html" class="profile-chip" aria-label="Mon espace : Blaise Ndala">
           <img src="assets/auteurs/blaise-ndala.jpg" alt="" width="36" height="36">
           <span class="hidden pr-3 xl:inline">Blaise Ndala</span>
         </a>
         <details class="menu lg:hidden" data-menu>
           <summary class="icon-btn" aria-label="Menu">
-            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
-            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+            <i data-lucide="menu" aria-hidden="true" class="menu-open"></i>
+            <i data-lucide="x" aria-hidden="true" class="menu-close"></i>
           </summary>
           <div class="menu-panel">
             <nav aria-label="Navigation mobile" class="shell">
               <ul class="grid gap-0.5">
               <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="collections.html">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
                 <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               </ul>
             </nav>
             <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
-              <a href="profil.html" class="btn btn-primary">Mon profil</a>
+              <a href="profil.html" class="btn btn-primary">Mon espace</a>
               <a href="favoris.html" class="btn btn-secondary">Mes favoris</a>
             </div>
           </div>
@@ -68,96 +70,94 @@
   </header>
 
   <main id="contenu">
-    <section class="px-4 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-9">
-      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-forest px-7 py-12 text-ivory shadow-[0_28px_70px_rgba(25,35,31,0.17)] sm:px-12 sm:py-16 lg:px-16 lg:py-20">
-        <div aria-hidden="true" class="absolute inset-0 bg-cover bg-[url('../assets/bibliotheque-congolaise-fond-illustre.jpg')] bg-position-[66%_center]"></div>
-        <div aria-hidden="true" class="absolute inset-0 bg-linear-to-r from-forest-deep/95 via-forest-deep/80 to-forest-deep/35"></div>
-        <div aria-hidden="true" class="absolute -right-24 -top-28 h-96 w-96 rounded-full border border-brass/25"></div>
-        <div class="relative z-10 max-w-3xl">
-          <nav aria-label="Fil d’Ariane" class="mb-8 flex items-center gap-2 text-sm text-[#c3ccc5]"><a href="index.html" class="hover:text-white">Accueil</a><span aria-hidden="true">/</span><span aria-current="page" class="text-white">Mon profil</span></nav>
-          <p class="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[2px] text-brass"><span aria-hidden="true" class="h-px w-6 bg-brass"></span> Votre espace lecteur</p>
-          <h1 class="mt-5 font-serif text-4xl font-medium leading-tight tracking-[-1px] sm:text-6xl hero-enter" style="--d:1">Bienvenue,<br><em class="text-brass">Blaise.</em></h1>
-          <p class="mt-5 max-w-xl text-base leading-7 text-[#e2e5df] sm:text-lg hero-enter" style="--d:2">Retrouvez vos informations personnelles et reprenez le fil de vos découvertes littéraires.</p>
-          <a href="bibliotheque.html" class="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-brass px-6 text-sm font-semibold text-ink transition-colors hover:bg-brass-soft">Explorer la bibliothèque <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i></a>
+    <section aria-labelledby="page-title">
+      <div class="shell pb-16 pt-8 sm:pb-20 sm:pt-12 lg:pb-24 lg:pt-14">
+        <div class="mb-8"><nav aria-label="Fil d’Ariane"><ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-hidden="true">/</li><li aria-current="page">Mon espace</li></ol></nav></div>
+        <div class="grid gap-10 ">
+          <div>
+            <p class="kicker hero-enter" style="--d:0">Mon espace</p>
+            <h1 id="page-title" class="display hero-enter mt-6 text-[clamp(2.5rem,5.2vw,4.75rem)]" style="--d:1">Bonjour, Blaise.</h1>
+            <p class="hero-enter mt-6 max-w-xl text-lg leading-8 text-ink-soft" style="--d:2">Retrouvez vos informations, vos livres favoris et les badges gagnés au fil de vos lectures.</p>
+            
+            <div class="hero-enter mt-9 flex flex-wrap gap-3" style="--d:3"><a href="bibliotheque.html" class="btn btn-primary">Reprendre la lecture <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="favoris.html" class="btn btn-secondary">Mes favoris</a></div>
+          </div>
+          
         </div>
       </div>
     </section>
 
-    <section class="px-4 pb-16 sm:px-8 sm:pb-20">
-      <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.85fr_1.5fr]">
-        <aside class="space-y-6">
-          <article class="rounded-3xl border border-line-soft bg-paper p-7 shadow-[0_12px_36px_rgba(25,35,31,0.06)] sm:p-8">
-            <div class="flex items-center gap-5">
-              <div class="relative shrink-0"><img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" class="h-20 w-20 rounded-full object-cover ring-4 ring-brass"><span aria-hidden="true" class="absolute bottom-0 right-0 h-5 w-5 rounded-full border-4 border-paper bg-[#537c57]"></span></div>
-              <div class="min-w-0"><p class="text-[13px] font-bold tracking-[1.8px] text-brass-deep">Compte lecteur</p><h2 class="mt-1 font-serif text-2xl">Blaise Ndala</h2><p class="mt-1 text-sm text-ink-mute">Lecteur Mikanda</p></div>
-            </div>
-            <div class="mt-7 flex items-center justify-between border-t border-linen pt-5"><span class="text-sm text-ink-mute">Formule actuelle</span><span class="rounded-full bg-sand px-3 py-1 text-[13px] font-semibold text-ink">Gratuite</span></div>
-            <a href="premium.html" class="mt-5 flex items-center justify-between rounded-2xl bg-forest px-5 py-4 text-sm font-semibold text-ivory transition-colors hover:bg-forest-deep"><span>Découvrir Premium</span><i data-lucide="arrow-right" class="h-4 w-4 text-brass" aria-hidden="true"></i></a>
-          </article>
-
-          <nav aria-label="Navigation de l’espace lecteur" class="rounded-3xl border border-line-soft bg-paper p-3 shadow-[0_12px_36px_rgba(25,35,31,0.05)]">
-            <a href="profil.html" aria-current="page" class="flex items-center gap-3 rounded-2xl bg-forest px-5 py-4 text-sm font-semibold text-brass"><i data-lucide="user-round" class="h-4 w-4" aria-hidden="true"></i> Mon profil</a>
-            <a href="favoris.html" class="mt-1 flex items-center justify-between rounded-2xl px-5 py-4 text-sm font-medium text-ink-soft transition-colors hover:bg-[#f0ede5] hover:text-ink"><span class="flex items-center gap-3"><i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i> Mes favoris</span><span class="rounded-full bg-[#f0ede5] px-2.5 py-1 text-[13px] font-semibold">04</span></a>
-            <a href="bibliotheque.html" class="mt-1 flex items-center gap-3 rounded-2xl px-5 py-4 text-sm font-medium text-ink-soft transition-colors hover:bg-[#f0ede5] hover:text-ink"><i data-lucide="book-open" class="h-4 w-4" aria-hidden="true"></i> Parcourir les œuvres</a>
-          </nav>
+    <section aria-labelledby="compte-title" class="reveal pb-24 sm:pb-32">
+      <div class="shell grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+        <aside class="on-dark rounded-[1.75rem] bg-forest p-7 text-ivory sm:p-9" data-reveal>
+          <img src="assets/auteurs/blaise-ndala.jpg" alt="" class="h-24 w-24 rounded-full object-cover object-top ring-4 ring-brass">
+          <p class="mt-6 font-serif text-3xl">Blaise Ndala</p>
+          <p class="mt-1 text-base text-mist">Lecteur Mikanda · formule Gratuite</p>
+          <div class="mt-8 rounded-2xl bg-forest-deep p-5">
+            <p class="text-base text-mist">Envie de tout lire&nbsp;? Premium ouvre l’ensemble du catalogue.</p>
+            <a href="premium.html" class="btn btn-accent btn-sm mt-4">Découvrir Premium <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="mt-8">
+            <p class="text-sm font-semibold text-brass">Mes favoris · 4</p>
+            <div class="mt-3 flex gap-3"><a href="livre.html" class="book-card w-16 sm:w-20"><span class="book-cover block"><img src="assets/livre (1).jfif" alt="Dans le ventre du Congo" loading="lazy"></span></a><a href="https://editions-metailie.com/livre/tram-83/" target="_blank" rel="noopener noreferrer" class="book-card w-16 sm:w-20"><span class="book-cover block"><img src="assets/couvertures/tram-83.jpg" alt="Tram 83" loading="lazy"></span></a><a href="https://www.fnac.com/a16666994/Sony-Labou-Tansi-La-Vie-et-demie-Nouvelle-edition" target="_blank" rel="noopener noreferrer" class="book-card w-16 sm:w-20"><span class="book-cover block"><img src="assets/couvertures/la-vie-et-demie.jpg" alt="La Vie et demie" loading="lazy"></span></a><a href="https://www.presenceafricaine.com/romans-recits-autres-editeurs/1265-mathematiques-congolaises-9782742796830.html" target="_blank" rel="noopener noreferrer" class="book-card w-16 sm:w-20"><span class="book-cover block"><img src="assets/couvertures/mathematiques-congolaises.jpg" alt="Mathématiques congolaises" loading="lazy"></span></a></div>
+          </div>
         </aside>
-
-        <div class="space-y-6">
-          <article class="rounded-3xl border border-line-soft bg-paper p-7 shadow-[0_12px_36px_rgba(25,35,31,0.05)] sm:p-9">
-            <div class="flex flex-wrap items-start justify-between gap-4">
-              <div><p class="text-[13px] font-bold tracking-[1.8px] text-brass-deep">Informations personnelles</p><h2 class="mt-2 font-serif text-3xl">Votre profil</h2><p class="mt-2 text-sm leading-6 text-ink-mute">Les informations associées à votre espace Mikanda.</p></div>
-              <span class="inline-flex items-center gap-2 rounded-full border border-[#dce5db] bg-[#edf3eb] px-3.5 py-2 text-[13px] font-semibold text-[#31583b]"><i data-lucide="shield-check" class="h-4 w-4" aria-hidden="true"></i> Compte actif</span>
-            </div>
-            <dl class="mt-8 divide-y divide-linen border-y border-linen">
-              <div class="flex flex-wrap items-center justify-between gap-2 py-5"><dt class="text-sm text-ink-mute">Nom complet</dt><dd class="text-sm font-semibold">Blaise Ndala</dd></div>
-              <div class="flex flex-wrap items-center justify-between gap-2 py-5"><dt class="text-sm text-ink-mute">Adresse e-mail</dt><dd class="text-sm font-medium text-ink-mute">Non renseignée</dd></div>
-              <div class="flex flex-wrap items-center justify-between gap-2 py-5"><dt class="text-sm text-ink-mute">Type de compte</dt><dd class="text-sm font-semibold">Lecteur Mikanda</dd></div>
-            </dl>
-            <p class="mt-5 flex items-start gap-2 text-[13px] leading-5 text-ink-mute"><i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true"></i> La gestion des informations sera disponible depuis votre compte connecté.</p>
-          </article>
-
-          <article class="rounded-3xl border border-line-soft bg-paper p-7 shadow-[0_12px_36px_rgba(25,35,31,0.05)] sm:p-9">
-            <div class="flex flex-wrap items-start justify-between gap-4">
-              <div><p class="text-[13px] font-bold tracking-[1.8px] text-brass-deep">Collection de lecture</p><h2 class="mt-2 font-serif text-3xl">Badges Mikanda</h2><p class="mt-2 max-w-xl text-sm leading-6 text-ink-mute">Des distinctions illustrées pour célébrer vos lectures, vos découvertes et la transmission des récits.</p></div>
-              <span class="inline-flex items-center gap-2 rounded-full bg-[#f2e8d4] px-3.5 py-2 text-[13px] font-semibold text-[#8a5b21]"><i data-lucide="award" class="h-4 w-4" aria-hidden="true"></i> Collection de badges</span>
-            </div>
-            <div class="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
-              <article class="rounded-2xl border border-linen bg-ivory px-3 py-4 text-center">
-                <img src="assets/badges/lecteur-assidu.png" alt="Badge illustré d’un livre ouvert entouré de lauriers" loading="lazy" class="mx-auto h-28 w-28 object-contain drop-shadow-[0_8px_12px_rgba(25,35,31,0.12)]">
-                <h3 class="mt-2 font-serif text-base font-semibold">Lecteur assidu</h3><p class="mt-1 text-[13px] leading-5 text-ink-mute">La passion de lire</p>
-              </article>
-              <article class="rounded-2xl border border-linen bg-ivory px-3 py-4 text-center">
-                <img src="assets/badges/explorateur-de-recits.png" alt="Badge illustré d’une boussole au-dessus de livres ouverts" loading="lazy" class="mx-auto h-28 w-28 object-contain drop-shadow-[0_8px_12px_rgba(25,35,31,0.12)]">
-                <h3 class="mt-2 font-serif text-base font-semibold">Explorateur</h3><p class="mt-1 text-[13px] leading-5 text-ink-mute">La curiosité des récits</p>
-              </article>
-              <article class="rounded-2xl border border-linen bg-ivory px-3 py-4 text-center">
-                <img src="assets/badges/gardien-des-archives.png" alt="Badge illustré d’un manuscrit protégé par un bouclier" loading="lazy" class="mx-auto h-28 w-28 object-contain drop-shadow-[0_8px_12px_rgba(25,35,31,0.12)]">
-                <h3 class="mt-2 font-serif text-base font-semibold">Gardien des archives</h3><p class="mt-1 text-[13px] leading-5 text-ink-mute">La mémoire préservée</p>
-              </article>
-              <article class="rounded-2xl border border-linen bg-ivory px-3 py-4 text-center">
-                <img src="assets/badges/plume-congolaise.png" alt="Badge illustré d’une plume et d’un flacon d’encre" loading="lazy" class="mx-auto h-28 w-28 object-contain drop-shadow-[0_8px_12px_rgba(25,35,31,0.12)]">
-                <h3 class="mt-2 font-serif text-base font-semibold">Plume congolaise</h3><p class="mt-1 text-[13px] leading-5 text-ink-mute">Les mots qui prennent vie</p>
-              </article>
-              <article class="rounded-2xl border border-linen bg-ivory px-3 py-4 text-center">
-                <img src="assets/badges/marque-page-etoile.png" alt="Badge illustré d’un marque-page étoilé sur un livre ouvert" loading="lazy" class="mx-auto h-28 w-28 object-contain drop-shadow-[0_8px_12px_rgba(25,35,31,0.12)]">
-                <h3 class="mt-2 font-serif text-base font-semibold">Coup de cœur</h3><p class="mt-1 text-[13px] leading-5 text-ink-mute">Les œuvres à partager</p>
-              </article>
-              <article class="rounded-2xl border border-linen bg-ivory px-3 py-4 text-center">
-                <img src="assets/badges/ambassadeur-des-livres.png" alt="Badge illustré d’une couronne au-dessus d’une pile de livres" loading="lazy" class="mx-auto h-28 w-28 object-contain drop-shadow-[0_8px_12px_rgba(25,35,31,0.12)]">
-                <h3 class="mt-2 font-serif text-base font-semibold">Passeurs de récits</h3><p class="mt-1 text-[13px] leading-5 text-ink-mute">Le patrimoine en partage</p>
-              </article>
-            </div>
-          </article>
-
-          <article class="relative isolate overflow-hidden rounded-3xl bg-forest p-7 text-ivory shadow-[0_18px_44px_rgba(25,35,31,0.15)] sm:p-9">
-            <div aria-hidden="true" class="absolute inset-0 bg-cover bg-[url('../assets/bibliotheque-congolaise-fond-illustre.jpg')] bg-position-[68%_center]"></div>
-            <div aria-hidden="true" class="absolute inset-0 bg-linear-to-r from-forest-deep/95 via-forest-deep/85 to-forest-deep/35"></div>
-            <div class="relative z-10 flex flex-wrap items-center justify-between gap-5">
-              <div class="max-w-lg"><p class="text-[13px] font-bold tracking-[1.8px] text-brass">Votre bibliothèque personnelle</p><h2 class="mt-2 font-serif text-3xl">Gardez vos prochaines lectures à portée de main.</h2><p class="mt-3 text-sm leading-6 text-[#e2e5df]">Les œuvres que vous aimez se retrouvent dans vos favoris.</p></div>
-              <a href="favoris.html" class="inline-flex min-h-12 shrink-0 items-center gap-3 rounded-full bg-brass px-6 text-sm font-semibold text-ink transition-colors hover:bg-brass-soft">Voir mes favoris <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
-            </div>
-          </article>
+        <div class="rounded-[1.75rem] bg-paper p-7 sm:p-9" data-reveal>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h2 id="compte-title" class="font-serif text-3xl">Mes informations</h2>
+            <span class="status status-ok">Compte actif</span>
+          </div>
+          <dl class="facts mt-6">
+              <div><dt>Nom complet</dt><dd>Blaise Ndala</dd></div>
+              <div><dt>Adresse e-mail</dt><dd>Non renseignée</dd></div>
+              <div><dt>Type de compte</dt><dd>Lecteur Mikanda</dd></div>
+              <div><dt>Formule</dt><dd>Gratuite</dd></div>
+          </dl>
+          <div class="mt-8"><p class="notice"><i data-lucide="info" aria-hidden="true"></i><span>La modification de vos informations sera disponible avec les comptes connectés.</span></p></div>
         </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="badges-title" class="reveal bg-linen py-24 sm:py-32">
+      <div class="shell">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <h2 id="badges-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Mes badges</h2>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-ink-soft" data-reveal>Des distinctions illustrées pour célébrer vos lectures, vos découvertes et la transmission des récits.</p>
+          </div>
+          
+        </div>
+        <ul class="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
+          <li class="rounded-[1.5rem] bg-paper p-6 text-center" data-reveal>
+            <img src="assets/badges/lecteur-assidu.png" alt="Badge illustré d’un livre ouvert entouré de lauriers" loading="lazy" class="mx-auto aspect-square w-28 object-contain">
+            <h3 class="mt-4 font-serif text-xl">Lecteur assidu</h3>
+            <p class="mt-1 text-base text-ink-soft">La passion de lire</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6 text-center" data-reveal>
+            <img src="assets/badges/explorateur-de-recits.png" alt="Badge illustré d’une boussole au-dessus de livres ouverts" loading="lazy" class="mx-auto aspect-square w-28 object-contain">
+            <h3 class="mt-4 font-serif text-xl">Explorateur</h3>
+            <p class="mt-1 text-base text-ink-soft">La curiosité des récits</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6 text-center" data-reveal>
+            <img src="assets/badges/gardien-des-archives.png" alt="Badge illustré d’un manuscrit protégé par un bouclier" loading="lazy" class="mx-auto aspect-square w-28 object-contain">
+            <h3 class="mt-4 font-serif text-xl">Gardien des archives</h3>
+            <p class="mt-1 text-base text-ink-soft">La mémoire préservée</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6 text-center" data-reveal>
+            <img src="assets/badges/plume-congolaise.png" alt="Badge illustré d’une plume et d’un flacon d’encre" loading="lazy" class="mx-auto aspect-square w-28 object-contain">
+            <h3 class="mt-4 font-serif text-xl">Plume congolaise</h3>
+            <p class="mt-1 text-base text-ink-soft">Les mots qui prennent vie</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6 text-center" data-reveal>
+            <img src="assets/badges/marque-page-etoile.png" alt="Badge illustré d’un marque-page étoilé sur un livre ouvert" loading="lazy" class="mx-auto aspect-square w-28 object-contain">
+            <h3 class="mt-4 font-serif text-xl">Coup de cœur</h3>
+            <p class="mt-1 text-base text-ink-soft">Les œuvres à partager</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6 text-center" data-reveal>
+            <img src="assets/badges/ambassadeur-des-livres.png" alt="Badge illustré d’une couronne au-dessus d’une pile de livres" loading="lazy" class="mx-auto aspect-square w-28 object-contain">
+            <h3 class="mt-4 font-serif text-xl">Passeurs de récits</h3>
+            <p class="mt-1 text-base text-ink-soft">Le patrimoine en partage</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -169,17 +169,17 @@
           <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
             <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
-          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
-          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> veut dire « les livres ». Notre bibliothèque numérique réunit les œuvres, les auteurs et les archives de la littérature congolaise.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Ouvrir le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
 
-        <nav aria-labelledby="pied-explorer">
-          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+        <nav aria-labelledby="pied-lire">
+          <h2 id="pied-lire" class="font-serif text-xl text-ivory">Lire</h2>
           <ul class="mt-5 space-y-3 text-base">
-            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">Le catalogue</a></li>
             <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
             <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
-            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Offres et tarifs</a></li>
           </ul>
         </nav>
 
@@ -188,8 +188,8 @@
           <ul class="mt-5 space-y-3 text-base">
             <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
             <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
-            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
-            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+            <li><a href="a-propos.html#contribuer" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives et patrimoine</a></li>
           </ul>
         </nav>
 
@@ -207,7 +207,7 @@
       <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
 
       <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <p>© 2026 Mikanda · Prototype de démonstration</p>
         <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -218,6 +218,7 @@
       </div>
     </div>
   </footer>
-  <script>lucide.createIcons();</script>
+
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>

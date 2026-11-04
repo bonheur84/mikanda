@@ -3,19 +3,20 @@
 <head>
   <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
-    <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Blaise Ndala | Auteurs Mikanda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="assets/main.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portrait de Blaise Ndala, romancier congolais installé à Ottawa : parcours, distinctions et romans, sur Mikanda.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Blaise Ndala | Auteurs Mikanda</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+<body class="bg-ivory font-sans text-ink">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header" data-site-header>
     <div class="shell flex h-18 items-center gap-3 lg:h-22">
@@ -27,8 +28,8 @@
         <ul class="flex items-center gap-0.5 xl:gap-1">
           <li><a class="nav-link" href="index.html">Accueil</a></li>
           <li><a class="nav-link" href="bibliotheque.html">Bibliothèque</a></li>
-          <li><a class="nav-link" href="auteurs.html" aria-current="true">Auteurs</a></li>
           <li><a class="nav-link" href="collections.html">Collections</a></li>
+          <li><a class="nav-link" href="auteurs.html" aria-current="true">Auteurs</a></li>
           <li><a class="nav-link" href="a-propos.html">À propos</a></li>
           <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
         </ul>
@@ -38,28 +39,28 @@
         <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
           <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-        <a href="profil.html" class="profile-chip" aria-label="Voir le profil de Blaise Ndala">
+        <a href="profil.html" class="profile-chip" aria-label="Mon espace : Blaise Ndala">
           <img src="assets/auteurs/blaise-ndala.jpg" alt="" width="36" height="36">
           <span class="hidden pr-3 xl:inline">Blaise Ndala</span>
         </a>
         <details class="menu lg:hidden" data-menu>
           <summary class="icon-btn" aria-label="Menu">
-            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
-            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+            <i data-lucide="menu" aria-hidden="true" class="menu-open"></i>
+            <i data-lucide="x" aria-hidden="true" class="menu-close"></i>
           </summary>
           <div class="menu-panel">
             <nav aria-label="Navigation mobile" class="shell">
               <ul class="grid gap-0.5">
               <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-              <li><a class="menu-link" href="auteurs.html" aria-current="true">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="collections.html">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html" aria-current="true">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
                 <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               </ul>
             </nav>
             <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
-              <a href="profil.html" class="btn btn-primary">Mon profil</a>
+              <a href="profil.html" class="btn btn-primary">Mon espace</a>
               <a href="favoris.html" class="btn btn-secondary">Mes favoris</a>
             </div>
           </div>
@@ -68,201 +69,164 @@
     </div>
   </header>
 
-  <main id="contenu" id="blaise-ndala">
-    <section class="reveal px-5 pb-12 pt-6 sm:px-8 sm:pb-16 sm:pt-9">
-      <div class="mx-auto max-w-7xl">
-        <nav aria-label="Fil d’Ariane" class="mb-7 flex flex-wrap items-center gap-2 text-sm text-ink-soft">
-          <a href="index.html" class="transition-colors hover:text-brass-deep">Accueil</a><span aria-hidden="true">/</span>
-          <a href="auteurs.html#portraits" class="transition-colors hover:text-brass-deep">Auteurs</a><span aria-hidden="true">/</span>
-          <span aria-current="page" class="font-medium text-ink">Blaise Ndala</span>
-        </nav>
-
-        <div class="grid overflow-hidden rounded-[1.75rem] bg-forest text-ivory shadow-[0_28px_70px_rgba(25,35,31,0.18)] lg:grid-cols-[0.82fr_1.18fr]">
-          <figure class="relative isolate flex min-h-105 items-end overflow-hidden bg-[#26332c] sm:min-h-125 lg:min-h-155">
-            <img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" class="absolute inset-0 -z-20 h-full w-full object-cover object-top">
-            <div aria-hidden="true" class="absolute inset-0 -z-10 bg-linear-to-t from-forest-deep/95 via-forest-deep/20 to-forest-deep/5"></div>
-            <figcaption class="w-full p-6 sm:p-9">
-              <span class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-forest/65 px-3.5 py-2 text-[13px] font-medium text-white backdrop-blur-sm">
-                <span aria-hidden="true" class="h-2 w-2 rounded-full bg-brass"></span> Romancier · Congo–Canada
-              </span>
-              <p class="mt-4 font-serif text-2xl text-white sm:text-3xl">Une œuvre tournée vers la mémoire.</p>
-              <p class="mt-2 text-[13px] text-mist">Installé à Ottawa depuis 2007</p>
-            </figcaption>
-          </figure>
-
-          <div class="flex flex-col justify-center px-6 py-9 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
-            <p class="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[2px] text-brass"><span aria-hidden="true" class="h-px w-5 bg-brass"></span> Rencontre avec un auteur</p>
-            <h1 class="mt-5 font-serif text-4xl font-medium leading-[1.02] tracking-[-1.5px] sm:text-6xl lg:text-7xl hero-enter" style="--d:1">Blaise<br class="hidden sm:block"> Ndala</h1>
-            <p class="mt-5 text-lg text-mist hero-enter" style="--d:2">Romancier congolais d’expression française, installé à Ottawa.</p>
-            <p class="mt-6 max-w-2xl text-[15px] leading-7 text-[#e3e6e1] sm:text-base sm:leading-8">Né en République démocratique du Congo, Blaise Ndala étudie le droit en Belgique avant de s’établir à Ottawa en 2007. Ses romans font dialoguer les trajectoires individuelles avec les grands récits historiques et interrogent la mémoire, l’héritage colonial et les liens entre les continents.</p>
-
-            <dl class="mt-8 grid gap-3 border-t border-white/15 pt-6 sm:grid-cols-3">
-              <div><dt class="text-[13px] font-semibold tracking-[1.5px] text-mist-mute">Origines</dt><dd class="mt-1.5 text-sm font-medium text-white">RDC</dd></div>
-              <div><dt class="text-[13px] font-semibold tracking-[1.5px] text-mist-mute">Vit à</dt><dd class="mt-1.5 text-sm font-medium text-white">Ottawa, Canada</dd></div>
-              <div><dt class="text-[13px] font-semibold tracking-[1.5px] text-mist-mute">Écrit en</dt><dd class="mt-1.5 text-sm font-medium text-white">Français</dd></div>
-            </dl>
-            <a href="#parcours" class="mt-8 inline-flex w-fit items-center gap-3 rounded-full bg-brass px-5 py-3 text-sm font-semibold text-ink transition-colors hover:bg-brass-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Découvrir son parcours <span aria-hidden="true"><i data-lucide="arrow-down" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></a>
+  <main id="contenu">
+    <section aria-labelledby="page-title">
+      <div class="shell pb-16 pt-8 sm:pb-20 sm:pt-12 lg:pb-24 lg:pt-14">
+        <div class="mb-8"><nav aria-label="Fil d’Ariane"><ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-hidden="true">/</li><li><a href="auteurs.html">Auteurs</a></li><li aria-hidden="true">/</li><li aria-current="page">Blaise Ndala</li></ol></nav></div>
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
+          <div>
+            <p class="kicker hero-enter" style="--d:0">Portrait d’auteur</p>
+            <h1 id="page-title" class="display hero-enter mt-6 text-[clamp(3rem,7vw,6rem)]" style="--d:1">Blaise Ndala</h1>
+            <p class="hero-enter mt-6 max-w-xl text-lg leading-8 text-ink-soft" style="--d:2">Romancier congolais d’expression française, installé à Ottawa depuis 2007. Ses livres font dialoguer les destins individuels et la grande histoire.</p>
+            <p class="hero-enter mt-6 flex flex-wrap gap-2" style="--d:2"><span class="tag bg-linen text-ink-soft">Né en RDC</span><span class="tag bg-linen text-ink-soft">Vit à Ottawa</span><span class="tag bg-linen text-ink-soft">Écrit en français</span></p>
+            <div class="hero-enter mt-9 flex flex-wrap gap-3" style="--d:3"><a href="#oeuvres" class="btn btn-primary">Ses romans <i data-lucide="arrow-down" aria-hidden="true"></i></a><a href="#parcours" class="btn btn-secondary">Son parcours</a></div>
           </div>
+          <div class="hero-enter" style="--d:2"><figure class="relative">
+            <div class="overflow-hidden rounded-[1.75rem] bg-sand"><img src="assets/auteurs/blaise-ndala.jpg" alt="Portrait de Blaise Ndala" class="aspect-[4/5] w-full object-cover object-top"></div>
+            <figcaption class="absolute -bottom-6 left-6 rounded-2xl bg-forest px-5 py-4 text-ivory shadow-[0_18px_40px_-20px_rgb(17_34_25/0.8)]">
+              <span class="block text-sm text-brass">Romancier</span>
+              <span class="mt-1 block font-serif text-lg">Congo · Canada</span>
+            </figcaption>
+          </figure></div>
         </div>
       </div>
     </section>
 
-    <section id="biographie" class="reveal scroll-mt-8 px-5 py-12 sm:px-8 sm:py-16">
-      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-        <article class="max-w-3xl">
-          <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Parcours &amp; écriture</p>
-          <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Raconter l’histoire depuis ses marges</h2>
-          <p class="mt-6 text-base leading-8 text-ink-soft">Après des études de droit en République démocratique du Congo et en Belgique, Blaise Ndala s’installe au Canada en 2007. Il commence à publier avec <em>J’irai danser sur la tombe de Senghor</em>, roman paru en 2014 chez L’Interligne. Le livre reçoit le Prix du livre d’Ottawa, catégorie français.</p>
-          <p class="mt-5 text-base leading-8 text-ink-soft">Son travail littéraire explore les traces laissées par l’histoire dans les vies contemporaines. Il fait se croiser le Congo, l’Europe et l’Amérique du Nord, en accordant une place centrale aux voix longtemps mises à l’écart et aux récits qui se transmettent d’une génération à l’autre.</p>
-          <p class="mt-5 text-base leading-8 text-ink-soft">Avec <em>Dans le ventre du Congo</em>, il revient sur l’Exposition universelle de Bruxelles de 1958 et imagine une enquête familiale autour de la mémoire coloniale. Le roman reçoit deux distinctions littéraires africaines en 2021, puis le Prix international de littérature Cheikh Hamidou Kane en 2022.</p>
-          <div class="mt-8 border-l-2 border-brass pl-5 sm:pl-7">
-            <p class="text-[13px] font-semibold tracking-[1.5px] text-brass-deep">Thèmes récurrents</p>
-            <p class="mt-2 font-serif text-xl leading-relaxed text-ink sm:text-2xl">Mémoire historique, transmission et trajectoires congolaises contemporaines.</p>
+    <section aria-labelledby="ecriture-title" class="reveal bg-paper py-24 sm:py-32">
+      <div class="shell grid gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
+        <div>
+          <h2 id="ecriture-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Raconter l’histoire depuis ses marges</h2>
+          <div class="prose-mk mt-8" data-reveal>
+            <p>Né en République démocratique du Congo, Blaise Ndala étudie le droit à Kinshasa puis en Belgique avant de s’établir au Canada en 2007. Il publie son premier roman, <cite>J’irai danser sur la tombe de Senghor</cite>, en 2014 chez L’Interligne&nbsp;; le livre reçoit le Prix du livre d’Ottawa.</p>
+            <p>Son œuvre explore les traces que l’histoire laisse dans les vies d’aujourd’hui. Elle fait se croiser le Congo, l’Europe et l’Amérique du Nord, et donne une place centrale aux voix longtemps tenues à l’écart, comme aux récits qui passent d’une génération à l’autre.</p>
+            <p>Avec <cite>Dans le ventre du Congo</cite>, il revient sur l’Exposition universelle de Bruxelles de 1958 et imagine une enquête familiale autour de la mémoire coloniale. Le roman est salué par deux prix littéraires africains en 2021, puis par le Prix international de littérature Cheikh Hamidou Kane en 2022.</p>
           </div>
-        </article>
-
-        <aside class="h-fit rounded-2xl border border-line-soft bg-paper p-6 shadow-[0_12px_36px_rgba(25,35,31,0.05)] sm:p-8">
-          <p class="text-sm font-semibold tracking-[1.7px] text-brass-deep">Repères</p>
-          <h2 class="mt-2 font-serif text-2xl">La fiche auteur</h2>
-          <dl class="mt-5 divide-y divide-line-soft">
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Nom complet</dt><dd class="text-right text-sm font-semibold">Blaise Ndala</dd></div>
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Nationalité / origines</dt><dd class="max-w-[60%] text-right text-sm font-semibold">Congolaise, canadienne</dd></div>
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Lieu de résidence</dt><dd class="text-right text-sm font-semibold">Ottawa, Canada</dd></div>
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Langue d’écriture</dt><dd class="text-right text-sm font-semibold">Français</dd></div>
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Genres</dt><dd class="text-right text-sm font-semibold">Roman, récit</dd></div>
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Premier roman</dt><dd class="max-w-[60%] text-right text-sm font-semibold"><em>J’irai danser sur la tombe de Senghor</em>, 2014</dd></div>
-            <div class="flex items-start justify-between gap-4 py-3"><dt class="text-sm text-ink-mute">Éditeurs</dt><dd class="max-w-[60%] text-right text-sm font-semibold">L’Interligne, Mémoire d’encrier, JC Lattès</dd></div>
+          <p class="mt-8 text-base text-ink-mute" data-reveal><span class="font-semibold text-ink">Thèmes récurrents&nbsp;:</span> mémoire historique, transmission, trajectoires congolaises contemporaines.</p>
+        </div>
+        <aside aria-labelledby="reperes-title" class="h-fit rounded-[1.5rem] bg-ivory p-6 sm:p-8" data-reveal>
+          <h2 id="reperes-title" class="font-serif text-2xl">Repères</h2>
+          <dl class="facts mt-5">
+            <div><dt>Nom complet</dt><dd>Blaise Ndala</dd></div>
+            <div><dt>Nationalités</dt><dd>Congolaise, canadienne</dd></div>
+            <div><dt>Vit à</dt><dd>Ottawa, Canada</dd></div>
+            <div><dt>Langue d’écriture</dt><dd>Français</dd></div>
+            <div><dt>Genres</dt><dd>Roman, récit</dd></div>
+            <div><dt>Premier roman</dt><dd><cite>J’irai danser sur la tombe de Senghor</cite>, 2014</dd></div>
+            <div><dt>Éditeurs</dt><dd>L’Interligne, Mémoire d’encrier, JC Lattès</dd></div>
           </dl>
         </aside>
       </div>
     </section>
 
-    <section id="parcours" class="reveal scroll-mt-8 bg-paper px-5 py-12 sm:px-8 sm:py-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-9 max-w-2xl">
-          <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Parcours</p>
-          <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Du droit à l’écriture</h2>
-          <p class="mt-3 text-sm leading-6 text-ink-soft sm:text-base">Les étapes d’un chemin entre Kinshasa, Bruxelles et Ottawa, où une carrière juridique croise peu à peu le travail de romancier.</p>
+    <section id="parcours" aria-labelledby="parcours-title" class="reveal py-24 sm:py-32">
+      <div class="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div>
+          <h2 id="parcours-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Du droit à l’écriture</h2>
+          <p class="mt-4 max-w-md text-lg leading-8 text-ink-soft" data-reveal>De Kinshasa à Ottawa en passant par la Belgique, un parcours où la carrière juridique rejoint peu à peu le métier de romancier.</p>
         </div>
-        <ol class="relative grid gap-4 before:absolute before:bottom-5 before:left-[1.1rem] before:top-5 before:w-px before:bg-line md:grid-cols-2 md:before:hidden">
-          <li class="relative rounded-2xl border border-line-soft bg-ivory p-5 pl-14 sm:p-6 sm:pl-16">
-            <span class="absolute left-4 top-5 grid h-7 w-7 place-items-center rounded-full border border-brass bg-paper text-[13px] font-bold text-brass-deep sm:left-5 sm:top-6">01</span>
-            <p class="text-[13px] font-semibold tracking-[1.5px] text-brass-deep">Kinshasa · Belgique</p>
-            <h3 class="mt-2 font-serif text-xl">Études et droits humains</h3>
-            <p class="mt-2 text-sm leading-6 text-ink-soft">Après des études de droit à l’Université de Kinshasa et un travail auprès d’organisations de défense des droits de la personne, il poursuit sa formation en Belgique et se spécialise en droit international des droits humains.</p>
+        <ol class="grid gap-12 border-l-2 border-line-soft pl-0 [&>li]:-ml-[9px]">
+          <li class="relative pl-10" data-reveal>
+            <span aria-hidden="true" class="absolute left-0 top-2 h-4 w-4 rounded-full border-[3px] border-brass bg-ivory"></span>
+            <p class="text-sm font-semibold text-brass-deep">Kinshasa, Belgique</p>
+            <h3 class="mt-1 font-serif text-2xl">Le droit et les droits humains</h3>
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-ink-soft">Après des études de droit à l’Université de Kinshasa et un engagement auprès d’organisations de défense des droits de la personne, il poursuit sa formation en Belgique et se spécialise en droit international des droits humains.</p>
           </li>
-          <li class="relative rounded-2xl border border-line-soft bg-ivory p-5 pl-14 sm:p-6 sm:pl-16">
-            <span class="absolute left-4 top-5 grid h-7 w-7 place-items-center rounded-full border border-brass bg-paper text-[13px] font-bold text-brass-deep sm:left-5 sm:top-6">02</span>
-            <p class="text-[13px] font-semibold tracking-[1.5px] text-brass-deep">2007 · Canada</p>
-            <h3 class="mt-2 font-serif text-xl">Installation à Ottawa</h3>
-            <p class="mt-2 text-sm leading-6 text-ink-soft">Il émigre au Canada, passe par Montréal, puis s’établit dans la région Ottawa–Gatineau. Il y poursuit une carrière dans la fonction publique fédérale.</p>
+          <li class="relative pl-10" data-reveal>
+            <span aria-hidden="true" class="absolute left-0 top-2 h-4 w-4 rounded-full border-[3px] border-brass bg-ivory"></span>
+            <p class="text-sm font-semibold text-brass-deep">2007, Canada</p>
+            <h3 class="mt-1 font-serif text-2xl">L’installation à Ottawa</h3>
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-ink-soft">Il émigre au Canada, passe par Montréal puis s’établit dans la région d’Ottawa–Gatineau, où il mène une carrière dans la fonction publique fédérale.</p>
           </li>
-          <li class="relative rounded-2xl border border-line-soft bg-ivory p-5 pl-14 sm:p-6 sm:pl-16">
-            <span class="absolute left-4 top-5 grid h-7 w-7 place-items-center rounded-full border border-brass bg-paper text-[13px] font-bold text-brass-deep sm:left-5 sm:top-6">03</span>
-            <p class="text-[13px] font-semibold tracking-[1.5px] text-brass-deep">2011–2015 · Premiers écrits</p>
-            <h3 class="mt-2 font-serif text-xl">Une voix entre en scène</h3>
-            <p class="mt-2 text-sm leading-6 text-ink-soft">Il contribue à un blogue sur les droits humains et les relations Nord–Sud, puis publie son premier roman, <em>J’irai danser sur la tombe de Senghor</em> (2014), récompensé par le Prix du livre d’Ottawa en 2015.</p>
+          <li class="relative pl-10" data-reveal>
+            <span aria-hidden="true" class="absolute left-0 top-2 h-4 w-4 rounded-full border-[3px] border-brass bg-ivory"></span>
+            <p class="text-sm font-semibold text-brass-deep">2011–2015</p>
+            <h3 class="mt-1 font-serif text-2xl">Les premiers écrits</h3>
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-ink-soft">Il écrit pour un blogue consacré aux droits humains et aux relations Nord–Sud, puis publie son premier roman, <cite>J’irai danser sur la tombe de Senghor</cite> (2014), lauréat du Prix du livre d’Ottawa en 2015.</p>
           </li>
-          <li class="relative rounded-2xl border border-line-soft bg-ivory p-5 pl-14 sm:p-6 sm:pl-16">
-            <span class="absolute left-4 top-5 grid h-7 w-7 place-items-center rounded-full border border-brass bg-paper text-[13px] font-bold text-brass-deep sm:left-5 sm:top-6">04</span>
-            <p class="text-[13px] font-semibold tracking-[1.5px] text-brass-deep">2017–2025 · Romans &amp; distinctions</p>
-            <h3 class="mt-2 font-serif text-xl">Une œuvre qui prend de l’ampleur</h3>
-            <p class="mt-2 text-sm leading-6 text-ink-soft">Avec <em>Sans capote ni kalachnikov</em>, <em>Dans le ventre du Congo</em> et <em>L’équation avant la nuit</em>, il poursuit une œuvre romanesque où les histoires congolaises rencontrent les enjeux du monde.</p>
+          <li class="relative pl-10" data-reveal>
+            <span aria-hidden="true" class="absolute left-0 top-2 h-4 w-4 rounded-full border-[3px] border-brass bg-ivory"></span>
+            <p class="text-sm font-semibold text-brass-deep">2017–2025</p>
+            <h3 class="mt-1 font-serif text-2xl">Une œuvre qui s’affirme</h3>
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-ink-soft">Avec <cite>Sans capote ni kalachnikov</cite>, <cite>Dans le ventre du Congo</cite> et <cite>L’équation avant la nuit</cite>, il construit une œuvre où les histoires congolaises rejoignent les enjeux du monde.</p>
           </li>
         </ol>
-        <p class="mt-5 text-[13px] leading-5 text-ink-mute">Les repères biographiques s’appuient notamment sur les notices de l’éditeur L’Interligne et de Lire en Ontario.</p>
       </div>
+      <p class="shell mt-14 text-sm text-ink-mute">Repères biographiques établis notamment d’après les notices de l’éditeur L’Interligne et de Lire en Ontario.</p>
     </section>
 
-    <section class="reveal bg-forest px-5 py-12 text-ivory sm:px-8 sm:py-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-8 max-w-2xl">
-          <p class="text-sm font-semibold tracking-[2px] text-brass">Distinctions</p>
-          <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Des romans remarqués</h2>
-          <p class="mt-3 text-sm leading-6 text-mist sm:text-base">Plusieurs prix et sélections saluent les livres de Blaise Ndala.</p>
+    <section aria-labelledby="prix-title" class="reveal on-dark bg-forest py-24 text-ivory sm:py-32">
+      <div class="shell">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <h2 id="prix-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Des romans remarqués</h2>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-mist" data-reveal>Plusieurs prix et sélections saluent les livres de Blaise Ndala.</p>
+          </div>
+          
         </div>
-        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <li class="rounded-2xl border border-white/15 bg-white/5 p-5"><p class="text-[13px] font-semibold tracking-[1.6px] text-brass">2022</p><h3 class="mt-3 font-serif text-xl">Prix Cheikh Hamidou Kane</h3><p class="mt-2 text-sm leading-6 text-mist">Pour <em>Dans le ventre du Congo</em>.</p></li>
-          <li class="rounded-2xl border border-white/15 bg-white/5 p-5"><p class="text-[13px] font-semibold tracking-[1.6px] text-brass">2021</p><h3 class="mt-3 font-serif text-xl">Prix Ivoire</h3><p class="mt-2 text-sm leading-6 text-mist">Littérature africaine d’expression française.</p></li>
-          <li class="rounded-2xl border border-white/15 bg-white/5 p-5"><p class="text-[13px] font-semibold tracking-[1.6px] text-brass">2021</p><h3 class="mt-3 font-serif text-xl">Prix Ahmadou-Kourouma</h3><p class="mt-2 text-sm leading-6 text-mist">Pour <em>Dans le ventre du Congo</em>.</p></li>
-          <li class="rounded-2xl border border-white/15 bg-white/5 p-5"><p class="text-[13px] font-semibold tracking-[1.6px] text-brass">2019</p><h3 class="mt-3 font-serif text-xl">Combat national des livres</h3><p class="mt-2 text-sm leading-6 text-mist">Radio-Canada, pour <em>Sans capote ni kalachnikov</em>.</p></li>
+        <ul class="mt-12 grid gap-4 text-ink sm:grid-cols-2 lg:grid-cols-4">
+          <li class="rounded-[1.5rem] bg-paper p-6" data-reveal>
+            <p class="font-serif text-4xl text-brass-deep">2022</p>
+            <h3 class="mt-4 font-serif text-xl">Prix Cheikh Hamidou Kane</h3>
+            <p class="mt-2 text-base leading-7 text-ink-soft">Pour <cite>Dans le ventre du Congo</cite>.</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6" data-reveal>
+            <p class="font-serif text-4xl text-brass-deep">2021</p>
+            <h3 class="mt-4 font-serif text-xl">Prix Ahmadou-Kourouma</h3>
+            <p class="mt-2 text-base leading-7 text-ink-soft">Pour <cite>Dans le ventre du Congo</cite>.</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6" data-reveal>
+            <p class="font-serif text-4xl text-brass-deep">2021</p>
+            <h3 class="mt-4 font-serif text-xl">Prix Ivoire</h3>
+            <p class="mt-2 text-base leading-7 text-ink-soft">Littérature africaine d’expression française.</p>
+          </li>
+          <li class="rounded-[1.5rem] bg-paper p-6" data-reveal>
+            <p class="font-serif text-4xl text-brass-deep">2019</p>
+            <h3 class="mt-4 font-serif text-xl">Combat national des livres</h3>
+            <p class="mt-2 text-base leading-7 text-ink-soft">Radio-Canada, pour <cite>Sans capote ni kalachnikov</cite>.</p>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section id="bibliographie" class="reveal scroll-mt-8 px-5 py-12 sm:px-8 sm:py-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-8 flex flex-col justify-between gap-4 border-b border-line pb-6 sm:flex-row sm:items-end">
-          <div>
-            <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Quelques titres</p>
-            <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Les livres de Blaise Ndala</h2>
+    <section id="oeuvres" aria-labelledby="livres-title" class="reveal py-24 sm:py-32">
+      <div class="shell">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <h2 id="livres-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Ses romans</h2>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-ink-soft" data-reveal>Du premier livre, paru en 2014, au plus récent, en 2025.</p>
           </div>
-          <p class="max-w-md text-sm leading-6 text-ink-soft">Du premier roman à ses publications les plus récentes.</p>
+          <div class="shrink-0" data-reveal><a href="oeuvres-blaise-ndala.html" class="link-arrow">Toute la bibliographie <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
         </div>
-
-        <div class="grid gap-4 lg:grid-cols-2">
-          <article class="group overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition-colors hover:border-brass-deep/40">
-            <a href="http://127.0.0.1:5501/livre.html" class="grid h-full sm:grid-cols-[10rem_1fr]" aria-label="Découvrir Dans le ventre du Congo">
-              <div class="relative min-h-60 overflow-hidden bg-[#26332c] sm:min-h-full">
-                <img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo" loading="lazy" class="absolute inset-0 h-full w-full object-contain">
-              </div>
-              <div class="flex flex-col p-5 sm:p-6">
-                <span class="w-fit rounded-full bg-brass/35 px-3 py-1 text-[13px] font-semibold tracking-[1.3px] text-[#71562d]">2021 · Roman</span>
-                <h3 class="mt-3 font-serif text-2xl group-hover:text-brass-deep">Dans le ventre du Congo</h3>
-                <p class="mt-2 text-sm text-ink-mute">Mémoire d’encrier · 369 pages</p>
-                <p class="mt-4 flex-1 text-sm leading-6 text-ink-soft">Un roman de mémoire et de transmission qui relie une histoire familiale à l’Exposition universelle de Bruxelles en 1958.</p>
-                <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest">Voir la fiche du livre <span aria-hidden="true"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></span>
-              </div>
+        <ul class="mt-12 grid grid-cols-2 gap-x-5 gap-y-12 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-10">
+          <li data-reveal>
+            <a href="oeuvres-blaise-ndala.html#j-irai-danser" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/blaise-jirai-danser-senghor.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">J’irai danser sur la tombe de Senghor</h3>
+              <p class="mt-1 text-sm text-ink-mute">2014 · L’Interligne</p>
             </a>
-          </article>
-
-          <article class="group overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition-colors hover:border-brass-deep/40">
-            <a href="oeuvres-blaise-ndala.html#j-irai-danser" class="grid h-full sm:grid-cols-[10rem_1fr]" aria-label="Voir la fiche de J’irai danser sur la tombe de Senghor">
-              <div class="relative min-h-60 overflow-hidden bg-[#26332c] sm:min-h-full">
-                <img src="assets/couvertures/blaise-jirai-danser-senghor.jpg" alt="Couverture de J’irai danser sur la tombe de Senghor" loading="lazy" class="absolute inset-0 h-full w-full object-contain">
-              </div>
-              <div class="flex flex-col p-5 sm:p-6">
-                <span class="w-fit rounded-full bg-brass/35 px-3 py-1 text-[13px] font-semibold tracking-[1.3px] text-[#71562d]">2014 · Premier roman</span>
-                <h3 class="mt-3 font-serif text-2xl group-hover:text-brass-deep">J’irai danser sur la tombe de Senghor</h3>
-                <p class="mt-2 text-sm text-ink-mute">L’Interligne</p>
-                <p class="mt-4 flex-1 text-sm leading-6 text-ink-soft">Un premier roman remarqué, récompensé par le Prix du livre d’Ottawa en langue française.</p>
-                <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest">Voir la fiche du livre <span aria-hidden="true"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></span>
-              </div>
+          </li>
+          <li data-reveal>
+            <a href="oeuvres-blaise-ndala.html#sans-capote" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/blaise-sans-capote-ni-kalachnikov.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Sans capote ni kalachnikov</h3>
+              <p class="mt-1 text-sm text-ink-mute">2017 · Mémoire d’encrier</p>
             </a>
-          </article>
-          <article class="group overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition-colors hover:border-brass-deep/40">
-            <a href="oeuvres-blaise-ndala.html#sans-capote" class="grid h-full sm:grid-cols-[10rem_1fr]" aria-label="Voir la fiche de Sans capote ni kalachnikov">
-              <div class="relative min-h-60 overflow-hidden bg-[#26332c] sm:min-h-full">
-                <img src="assets/couvertures/blaise-sans-capote-ni-kalachnikov.jpg" alt="Couverture de Sans capote ni kalachnikov" loading="lazy" class="absolute inset-0 h-full w-full object-contain">
-              </div>
-              <div class="flex flex-col p-5 sm:p-6">
-                <span class="w-fit rounded-full bg-brass/35 px-3 py-1 text-[13px] font-semibold tracking-[1.3px] text-[#71562d]">2017 · Roman</span>
-                <h3 class="mt-3 font-serif text-2xl group-hover:text-brass-deep">Sans capote ni kalachnikov</h3>
-                <p class="mt-2 text-sm text-ink-mute">Mémoire d’encrier</p>
-                <p class="mt-4 flex-1 text-sm leading-6 text-ink-soft">Lauréat du Combat national des livres de Radio-Canada en 2019 et du Prix littéraire Émergence de l’AAOF.</p>
-                <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest">Voir la fiche du livre <span aria-hidden="true"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></span>
-              </div>
+          </li>
+          <li data-reveal>
+            <a href="livre.html" class="book-card">
+              <div class="book-cover"><img src="assets/livre (1).jfif" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Dans le ventre du Congo</h3>
+              <p class="mt-1 text-sm text-ink-mute">2021 · Mémoire d’encrier</p>
             </a>
-          </article>
-          <article class="group overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition-colors hover:border-brass-deep/40">
-            <a href="oeuvres-blaise-ndala.html#equation-avant-la-nuit" class="grid h-full sm:grid-cols-[10rem_1fr]" aria-label="Voir la fiche de L’équation avant la nuit">
-              <div class="relative min-h-60 overflow-hidden bg-[#26332c] sm:min-h-full">
-                <img src="assets/couvertures/blaise-equation-avant-la-nuit.jpg" alt="Couverture de L’équation avant la nuit" loading="lazy" class="absolute inset-0 h-full w-full object-contain">
-              </div>
-              <div class="flex flex-col p-5 sm:p-6">
-                <span class="w-fit rounded-full bg-brass/35 px-3 py-1 text-[13px] font-semibold tracking-[1.3px] text-[#71562d]">2025 · Roman</span>
-                <h3 class="mt-3 font-serif text-2xl group-hover:text-brass-deep">L’équation avant la nuit</h3>
-                <p class="mt-2 text-sm text-ink-mute">JC Lattès</p>
-                <p class="mt-4 flex-1 text-sm leading-6 text-ink-soft">Une enquête qui croise littérature, histoire et course à l’uranium congolais pendant la Seconde Guerre mondiale.</p>
-                <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest">Voir la fiche du livre <span aria-hidden="true"><i data-lucide="arrow-up-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></span>
-              </div>
+          </li>
+          <li data-reveal>
+            <a href="oeuvres-blaise-ndala.html#equation-avant-la-nuit" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/blaise-equation-avant-la-nuit.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">L’équation avant la nuit</h3>
+              <p class="mt-1 text-sm text-ink-mute">2025 · JC Lattès</p>
             </a>
-          </article>
-        </div>
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p class="text-[13px] leading-5 text-ink-mute">Retrouvez les quatre romans dans leur ordre de parution.</p>
-          <a href="oeuvres-blaise-ndala.html" class="inline-flex min-h-12 w-fit shrink-0 items-center justify-center gap-2 rounded-full bg-forest px-5 text-sm font-semibold text-brass transition-colors hover:bg-[#26332c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-deep">Voir toutes ses œuvres <span aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true" class="inline h-[1em] w-[1em]"></i></span></a>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -274,17 +238,17 @@
           <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
             <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
-          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
-          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> veut dire « les livres ». Notre bibliothèque numérique réunit les œuvres, les auteurs et les archives de la littérature congolaise.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Ouvrir le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
 
-        <nav aria-labelledby="pied-explorer">
-          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+        <nav aria-labelledby="pied-lire">
+          <h2 id="pied-lire" class="font-serif text-xl text-ivory">Lire</h2>
           <ul class="mt-5 space-y-3 text-base">
-            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">Le catalogue</a></li>
             <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
             <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
-            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Offres et tarifs</a></li>
           </ul>
         </nav>
 
@@ -293,8 +257,8 @@
           <ul class="mt-5 space-y-3 text-base">
             <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
             <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
-            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
-            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+            <li><a href="a-propos.html#contribuer" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives et patrimoine</a></li>
           </ul>
         </nav>
 
@@ -312,7 +276,7 @@
       <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
 
       <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <p>© 2026 Mikanda · Prototype de démonstration</p>
         <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -324,8 +288,6 @@
     </div>
   </footer>
 
-    <script>
-      lucide.createIcons()
-    </script>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>

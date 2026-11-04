@@ -3,19 +3,20 @@
 <head>
   <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
-    <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Les collections | Mikanda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="assets/main.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Les collections Mikanda : romans, contes, poésie, théâtre, essais, jeunesse, archives et sélections thématiques de littérature congolaise.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Les collections | Mikanda</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+<body class="bg-ivory font-sans text-ink">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header" data-site-header>
     <div class="shell flex h-18 items-center gap-3 lg:h-22">
@@ -27,8 +28,8 @@
         <ul class="flex items-center gap-0.5 xl:gap-1">
           <li><a class="nav-link" href="index.html">Accueil</a></li>
           <li><a class="nav-link" href="bibliotheque.html">Bibliothèque</a></li>
-          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
           <li><a class="nav-link" href="collections.html" aria-current="page">Collections</a></li>
+          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
           <li><a class="nav-link" href="a-propos.html">À propos</a></li>
           <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
         </ul>
@@ -38,29 +39,26 @@
         <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
           <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-        <a href="profil.html" class="profile-chip" aria-label="Voir le profil de Blaise Ndala">
-          <img src="assets/auteurs/blaise-ndala.jpg" alt="" width="36" height="36">
-          <span class="hidden pr-3 xl:inline">Blaise Ndala</span>
-        </a>
+        <a href="connexion.html" class="btn btn-primary btn-sm hidden sm:inline-flex"><i data-lucide="user-round" aria-hidden="true"></i>Se connecter</a>
         <details class="menu lg:hidden" data-menu>
           <summary class="icon-btn" aria-label="Menu">
-            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
-            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+            <i data-lucide="menu" aria-hidden="true" class="menu-open"></i>
+            <i data-lucide="x" aria-hidden="true" class="menu-close"></i>
           </summary>
           <div class="menu-panel">
             <nav aria-label="Navigation mobile" class="shell">
               <ul class="grid gap-0.5">
               <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="bibliotheque.html">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="collections.html" aria-current="page">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
                 <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               </ul>
             </nav>
             <div class="shell mt-4 grid gap-2 sm:grid-cols-2">
-              <a href="profil.html" class="btn btn-primary">Mon profil</a>
-              <a href="favoris.html" class="btn btn-secondary">Mes favoris</a>
+              <a href="connexion.html" class="btn btn-primary">Se connecter</a>
+              <a href="inscription.html" class="btn btn-secondary">Créer un compte</a>
             </div>
           </div>
         </details>
@@ -69,251 +67,235 @@
   </header>
 
   <main id="contenu">
-    <section class="px-4 pb-12 pt-5 sm:px-8 sm:pb-16 sm:pt-8">
-      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-forest px-6 py-12 text-ivory shadow-[0_28px_70px_rgba(25,35,31,0.16)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
-        <div aria-hidden="true" class="absolute inset-0 bg-cover bg-[url('../assets/bibliotheque-congolaise-fond-illustre.jpg')] bg-position-[68%_center]"></div>
-        <div aria-hidden="true" class="absolute inset-0 bg-linear-to-r from-forest-deep/95 via-forest-deep/75 to-forest-deep/20"></div>
-        <div aria-hidden="true" class="absolute -right-28 -top-36 z-0 h-112 w-md rounded-full border border-white/10 sm:right-6 sm:top-1/2 sm:-translate-y-1/2"></div>
-        <div aria-hidden="true" class="absolute -right-8 -top-16 z-0 h-80 w-80 rounded-full border border-brass/20 sm:right-16 sm:top-1/2 sm:-translate-y-1/2"></div>
-        <div class="relative z-10 max-w-3xl">
-          <nav aria-label="Fil d’Ariane" class="mb-8 flex items-center gap-2 text-sm text-mist-mute">
-            <a href="index.html" class="transition-colors hover:text-white">Accueil</a><span aria-hidden="true">/</span><span aria-current="page" class="text-ivory">Collections</span>
-          </nav>
-          <p class="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[2px] text-brass"><span aria-hidden="true" class="h-px w-5 bg-brass"></span> Sélections Mikanda</p>
-          <h1 class="mt-5 font-serif text-4xl font-medium leading-[1.02] tracking-[-1.5px] sm:text-6xl lg:text-7xl hero-enter" style="--d:1">Des lectures<br><em class="text-brass">à votre image.</em></h1>
-          <p class="mt-6 max-w-2xl text-base leading-7 text-mist sm:text-lg sm:leading-8 hero-enter" style="--d:2">Des genres littéraires aux grandes thématiques, parcourez les voix, les idées et les imaginaires qui racontent le Congo.</p>
-          <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#genres" class="inline-flex min-h-12 items-center gap-3 rounded-full bg-brass px-5 text-sm font-semibold text-ink transition-colors hover:bg-brass-soft">Explorer les collections <span aria-hidden="true"><i data-lucide="arrow-down" class="inline h-4 w-4" aria-hidden="true"></i></span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="genres" class="reveal scroll-mt-28 px-5 py-10 sm:px-8 sm:py-14">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-8 flex flex-col justify-between gap-4 border-b border-line pb-6 sm:flex-row sm:items-end">
+    <section aria-labelledby="page-title">
+      <div class="shell pb-16 pt-8 sm:pb-20 sm:pt-12 lg:pb-24 lg:pt-14">
+        <div class="mb-8"><nav aria-label="Fil d’Ariane"><ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-hidden="true">/</li><li aria-current="page">Collections</li></ol></nav></div>
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
           <div>
-            <p class="text-sm font-semibold tracking-[2px] text-brass-deep">Les collections</p>
-            <h2 class="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">Explorer par genre</h2>
-            <p class="mt-3 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">Retrouvez les genres déjà présentés sur Mikanda et de nouveaux chemins pour découvrir le fonds.</p>
+            <p class="kicker hero-enter" style="--d:0">Les collections</p>
+            <h1 id="page-title" class="display hero-enter mt-6 text-[clamp(2.25rem,4.2vw,4rem)]" style="--d:1">Une porte d’entrée pour chaque lecteur.</h1>
+            <p class="hero-enter mt-6 max-w-xl text-lg leading-8 text-ink-soft" style="--d:2">Des genres littéraires aux sélections thématiques, les collections vous guident dans le fonds Mikanda.</p>
+            
+            <div class="hero-enter mt-9 flex flex-wrap gap-3" style="--d:3"><a href="#genres" class="btn btn-primary">Explorer par genre <i data-lucide="arrow-down" aria-hidden="true"></i></a><a href="#selections" class="btn btn-secondary">Sélections thématiques</a></div>
           </div>
-          <a href="bibliotheque.html" class="inline-flex w-fit shrink-0 items-center gap-2 text-sm font-semibold text-forest transition-colors hover:text-brass-deep">Tout le catalogue <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span></a>
-        </div>
-
-        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          <a id="romans" href="collections/romans.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/roman.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>À dévorer</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Romans &amp; récits</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des destins singuliers, des fresques historiques et des mondes imaginaires.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="contes" href="collections/contes.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/conte.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Petites merveilles</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Contes &amp; traditions</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Récits transmis, imaginaires populaires et paroles qui traversent les générations.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="poesie" href="collections/poesie.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/poesie.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Mots choisis</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Poésie</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des voix et des rythmes pour dire l’intime, le pays et le monde.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="theatre" href="collections/theatre.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/theatre.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>La scène vous attend</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Théâtre</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des textes à faire entendre, des personnages à rencontrer et des scènes à imaginer.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="essais" href="collections/essais.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/essai.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Pour réfléchir</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Essais &amp; pensée</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des idées, des prises de parole et des regards sur les sociétés congolaises.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="jeunesse" href="collections/jeunesse.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/jeunesse.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Pour les jeunes lecteurs</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Jeunesse</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des histoires à partager et de nouvelles portes d’entrée dans la lecture.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="bande-dessinee" href="collections/bande-dessinee.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-forest p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/image2.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/25 to-forest-deep/10"></span>
-              <span class="relative text-4xl font-bold tracking-[0.08em] text-white/85">BD</span>
-              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>L’image raconte aussi</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Bande dessinée</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Dessinateurs, scénaristes et récits graphiques congolais.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-4 w-4" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="biographies" href="collections/biographies.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative aspect-video overflow-hidden bg-forest">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/auteurs/blaise-ndala.jpg')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/10 to-transparent"></span>
-              <span class="absolute bottom-4 left-5 text-[13px] font-semibold tracking-[1.7px] text-white/80"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Vies &amp; trajectoires</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Biographies</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Parcours de vie et expériences qui éclairent une époque ou une œuvre.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="memoires" href="collections/memoires.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-[#10281e] p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/image3.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/25 to-forest-deep/10"></span>
-              <span class="relative text-4xl font-serif italic text-ivory">Mémoires</span>
-              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/75"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Récits vécus</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Mémoires &amp; témoignages</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des récits personnels pour transmettre une expérience et en garder la trace.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="histoire" href="collections/histoire.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-forest p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/image4.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/90 via-forest-deep/55 to-forest-deep/10"></span>
-              <span class="relative text-4xl font-serif text-white">Histoire</span>
-              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/75"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Comprendre les sociétés</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Histoire &amp; sociétés</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Des ouvrages pour comprendre les périodes, les idées et les transformations sociales.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
-
-          <a id="archives" href="collections/archives.html" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-soft bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brass-deep/40 hover:shadow-xl">
-            <div class="relative flex aspect-video items-end overflow-hidden bg-forest p-5">
-              <span aria-hidden="true" class="absolute inset-0 bg-cover bg-center bg-[url('../assets/Library.jfif')] transition-transform duration-500 group-hover:scale-105"></span>
-              <span aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-forest-deep/85 via-forest-deep/25 to-forest-deep/5"></span>
-              <span class="relative text-3xl font-serif text-white">Archives</span>
-              <span class="absolute bottom-4 right-5 text-[13px] font-semibold tracking-[1.7px] text-white/90"><i data-lucide="lock" class="inline h-4 w-4 mr-2" aria-hidden="true"></i>Patrimoine écrit</span>
-            </div>
-
-            <div class="flex flex-1 flex-col p-5">
-              <h3 class="font-serif text-2xl">Archives &amp; patrimoine</h3>
-              <p class="mt-2 flex-1 text-sm leading-6 text-ink-soft">Manuscrits, documents et traces littéraires à préserver et à redécouvrir.</p>
-              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-forest">Parcourir le catalogue 
-                <span aria-hidden="true"><i data-lucide="arrow-up-right" class="inline h-[1em] w-[1em]" aria-hidden="true"></i></span>
-              </span>
-            </div>
-          </a>
+          <div class="hero-enter" style="--d:2"><figure class="overflow-hidden rounded-[1.75rem] bg-forest">
+            <img src="assets/bibliotheque-congolaise-fond-illustre.jpg" alt="Une salle de lecture illustrée, ouverte sur le fleuve Congo" width="1672" height="941" class="aspect-[16/11] w-full object-cover">
+          </figure></div>
         </div>
       </div>
     </section>
 
-    <section class="reveal px-5 py-12 sm:px-8 sm:py-16">
-      <div class="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-line-soft bg-paper p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-8">
-        <div>
-          <p class="text-sm font-semibold tracking-[1.7px] text-brass-deep">Continuer l’exploration</p>
-          <h2 class="mt-2 font-serif text-3xl">Une collection vous a inspiré ?</h2>
-          <p class="mt-2 max-w-xl text-sm leading-6 text-ink-soft">Parcourez la bibliothèque pour retrouver les titres disponibles et choisir votre prochaine lecture.</p>
+    <section id="genres" aria-labelledby="genres-title" class="reveal pb-24 sm:pb-32">
+      <div class="shell">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <h2 id="genres-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Par genre</h2>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-ink-soft" data-reveal>Onze collections pour parcourir la littérature congolaise selon vos envies de lecture.</p>
+          </div>
+          <div class="shrink-0" data-reveal><a href="bibliotheque.html" class="link-arrow">Tout le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
         </div>
-        <a href="bibliotheque.html#catalogue" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-brass-deep px-5 text-sm font-semibold text-white transition-colors hover:bg-brass-ink">Ouvrir la bibliothèque <span aria-hidden="true"><i data-lucide="external-link" class="inline h-[1em] w-[1em]" aria-hidden="true">↗</i></span></a>
+        <ul class="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <li data-reveal>
+            <a href="collections/romans.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/roman.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">À dévorer</span><span class="text-ink-mute">11 titres</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Romans &amp; récits</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des destins singuliers, des fresques historiques et des mondes imaginaires.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/contes.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/conte.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Petites merveilles</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Contes &amp; traditions</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des récits transmis de bouche à oreille, des imaginaires populaires et des paroles qui traversent les générations.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/poesie.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/poesie.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Mots choisis</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Poésie</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des voix et des rythmes pour dire l’intime, le pays et le monde.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/theatre.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/theatre.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">La scène vous attend</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Théâtre</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des textes à faire entendre, des personnages à rencontrer et des scènes à imaginer.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/essais.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/essai.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Pour réfléchir</span><span class="text-ink-mute">1 titre</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Essais &amp; pensée</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des idées, des prises de parole et des regards sur les sociétés congolaises.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/jeunesse.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/jeunesse.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Pour les jeunes lecteurs</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Jeunesse</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des histoires à partager et de nouvelles portes d’entrée dans la lecture.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/bande-dessinee.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/image2.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">L’image raconte aussi</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Bande dessinée</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des dessinateurs, des scénaristes et des récits graphiques congolais.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/biographies.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/auteurs/blaise-ndala.jpg" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Vies & trajectoires</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Biographies</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des parcours de vie qui éclairent une époque ou une œuvre.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/memoires.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/image3.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Récits vécus</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Mémoires &amp; témoignages</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des récits personnels pour transmettre une expérience et en garder la trace.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/histoire.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/image4.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Comprendre</span><span class="text-ink-mute">2 titres</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Histoire &amp; sociétés</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des ouvrages pour comprendre les périodes, les idées et les transformations sociales.</p>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/archives.html" class="group block">
+              <span class="media-card block aspect-[4/3]">
+                <img src="assets/Library.jfif" alt="" loading="lazy">
+                <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              </span>
+              <span class="mt-5 flex items-center justify-between gap-3 text-sm"><span class="font-semibold text-brass-deep">Patrimoine écrit</span><span class="text-ink-mute">En préparation</span></span>
+              <h3 class="mt-1 font-serif text-2xl transition-colors group-hover:text-brass-deep">Archives &amp; patrimoine</h3>
+              <p class="mt-2 text-base leading-7 text-ink-soft">Des manuscrits, des documents et des traces littéraires à préserver et à redécouvrir.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="selections" aria-labelledby="selections-title" class="reveal on-dark bg-forest py-24 text-ivory sm:py-32">
+      <div class="shell">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <h2 id="selections-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Sélections thématiques</h2>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-mist" data-reveal>Des parcours transversaux, composés par l’équipe Mikanda, pour lire autrement.</p>
+          </div>
+          
+        </div>
+        <ul class="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4 lg:mt-16">
+          <li data-reveal>
+            <a href="collections/incontournables.html" class="media-card group block aspect-[3/4]">
+              <img src="assets/bibliotheque-congolaise-realiste.jpg" alt="" loading="lazy">
+              <span class="media-scrim"></span>
+              <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              <div class="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
+                <h3 class="font-serif text-2xl text-ivory sm:text-[1.75rem]">Incontournables</h3>
+                <span class="mt-0.5 block text-sm text-mist">Pour commencer</span>
+              </div>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/kinshasa-en-mouvement.html" class="media-card group block aspect-[3/4]">
+              <img src="assets/échangeur.jfif" alt="" loading="lazy">
+              <span class="media-scrim"></span>
+              <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              <div class="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
+                <h3 class="font-serif text-2xl text-ivory sm:text-[1.75rem]">Kinshasa en mouvement</h3>
+                <span class="mt-0.5 block text-sm text-mist">La ville en récits</span>
+              </div>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/memoires-en-partage.html" class="media-card group block aspect-[3/4]">
+              <img src="assets/Image ChatGPT 30 sept. 2026, 09_56_49.png" alt="" loading="lazy">
+              <span class="media-scrim"></span>
+              <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              <div class="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
+                <h3 class="font-serif text-2xl text-ivory sm:text-[1.75rem]">Mémoires en partage</h3>
+                <span class="mt-0.5 block text-sm text-mist">Transmettre</span>
+              </div>
+            </a>
+          </li><li data-reveal>
+            <a href="collections/congo-et-le-monde.html" class="media-card group block aspect-[3/4]">
+              <img src="assets/1064819905670464116.jfif" alt="" loading="lazy">
+              <span class="media-scrim"></span>
+              <span class="media-arrow absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-ivory/90 text-ink"><i data-lucide="arrow-up-right" aria-hidden="true" class="h-4 w-4"></i></span>
+              <div class="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
+                <h3 class="font-serif text-2xl text-ivory sm:text-[1.75rem]">Congo et le monde</h3>
+                <span class="mt-0.5 block text-sm text-mist">Regards croisés</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="inspire-title" class="reveal py-24 sm:py-32">
+      <div class="shell">
+        <div class="grid gap-8 rounded-[1.75rem] bg-linen px-6 py-12 sm:px-12 lg:grid-cols-[1fr_auto] lg:items-center lg:px-16">
+          <div>
+            <h2 id="inspire-title" class="display text-[clamp(1.875rem,3.4vw,3rem)]" data-reveal>Vous savez déjà ce que vous cherchez&nbsp;?</h2>
+            <p class="mt-4 max-w-xl text-lg leading-8 text-ink-soft" data-reveal>Le catalogue permet de rechercher directement un titre ou un auteur.</p>
+          </div>
+          <div data-reveal><a href="bibliotheque.html" class="btn btn-primary">Ouvrir le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+        </div>
       </div>
     </section>
   </main>
 
-    <footer class="on-dark overflow-hidden bg-forest text-ivory">
+  <footer class="on-dark overflow-hidden bg-forest text-ivory">
     <div class="shell pb-10 pt-20 sm:pt-24">
       <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
         <div class="max-w-sm">
           <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
             <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
-          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
-          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> veut dire « les livres ». Notre bibliothèque numérique réunit les œuvres, les auteurs et les archives de la littérature congolaise.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Ouvrir le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
 
-        <nav aria-labelledby="pied-explorer">
-          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+        <nav aria-labelledby="pied-lire">
+          <h2 id="pied-lire" class="font-serif text-xl text-ivory">Lire</h2>
           <ul class="mt-5 space-y-3 text-base">
-            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">Le catalogue</a></li>
             <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
             <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
-            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Offres et tarifs</a></li>
           </ul>
         </nav>
 
@@ -322,8 +304,8 @@
           <ul class="mt-5 space-y-3 text-base">
             <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
             <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
-            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
-            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+            <li><a href="a-propos.html#contribuer" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives et patrimoine</a></li>
           </ul>
         </nav>
 
@@ -341,7 +323,7 @@
       <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
 
       <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <p>© 2026 Mikanda · Prototype de démonstration</p>
         <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -353,8 +335,6 @@
     </div>
   </footer>
 
-    <script>
-      lucide.createIcons()
-    </script>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>

@@ -3,19 +3,20 @@
 <head>
   <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
-    <meta name="description" content="MIKANDA est la bibliothèque numérique de la littérature congolaise — œuvres, auteurs et archives accessibles à toutes les générations.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>La bibliothèque | Mikanda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="assets/main.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Le catalogue Mikanda : romans, essais et récits de la littérature congolaise, à filtrer par genre et par accès.">
+  <meta name="theme-color" content="#f6f2e9">
+  <title>Le catalogue | Mikanda</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="dist/tailwind.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-ivory font-sans text-ink selection:bg-brass selection:text-ink">
+<body class="bg-ivory font-sans text-ink">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header" data-site-header>
     <div class="shell flex h-18 items-center gap-3 lg:h-22">
@@ -27,8 +28,8 @@
         <ul class="flex items-center gap-0.5 xl:gap-1">
           <li><a class="nav-link" href="index.html">Accueil</a></li>
           <li><a class="nav-link" href="bibliotheque.html" aria-current="page">Bibliothèque</a></li>
-          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
           <li><a class="nav-link" href="collections.html">Collections</a></li>
+          <li><a class="nav-link" href="auteurs.html">Auteurs</a></li>
           <li><a class="nav-link" href="a-propos.html">À propos</a></li>
           <li><a class="nav-link nav-link--premium" href="premium.html">Premium</a></li>
         </ul>
@@ -38,21 +39,19 @@
         <a href="favoris.html" class="icon-btn" aria-label="Mes favoris" title="Mes favoris">
           <i data-lucide="heart" aria-hidden="true"></i>
         </a>
-        <a href="connexion.html" class="btn btn-primary btn-sm hidden sm:inline-flex">
-          <i data-lucide="user-round" aria-hidden="true"></i>Se connecter
-        </a>
+        <a href="connexion.html" class="btn btn-primary btn-sm hidden sm:inline-flex"><i data-lucide="user-round" aria-hidden="true"></i>Se connecter</a>
         <details class="menu lg:hidden" data-menu>
           <summary class="icon-btn" aria-label="Menu">
-            <i data-lucide="menu" class="menu-open" aria-hidden="true"></i>
-            <i data-lucide="x" class="menu-close" aria-hidden="true"></i>
+            <i data-lucide="menu" aria-hidden="true" class="menu-open"></i>
+            <i data-lucide="x" aria-hidden="true" class="menu-close"></i>
           </summary>
           <div class="menu-panel">
             <nav aria-label="Navigation mobile" class="shell">
               <ul class="grid gap-0.5">
               <li><a class="menu-link" href="index.html">Accueil<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="bibliotheque.html" aria-current="page">Bibliothèque<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="collections.html">Collections<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+              <li><a class="menu-link" href="auteurs.html">Auteurs<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               <li><a class="menu-link" href="a-propos.html">À propos<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
                 <li><a class="menu-link text-brass-deep" href="premium.html">Premium<i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
               </ul>
@@ -69,35 +68,37 @@
 
   <main id="contenu">
     <section aria-labelledby="biblio-title">
-      <div class="shell grid gap-10 pb-16 pt-8 sm:pt-12 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14 lg:pb-24 lg:pt-14">
-        <div>
-          <p class="kicker hero-enter" style="--d:0">La bibliothèque Mikanda</p>
-          <h1 id="biblio-title" class="display hero-enter mt-6 text-[clamp(2.5rem,5vw,4.75rem)]" style="--d:1">Des histoires qui nous rapprochent.</h1>
-          <p class="hero-enter mt-6 max-w-xl text-lg leading-8 text-ink-soft" style="--d:2">Romans, essais et récits&nbsp;: prenez le temps de découvrir les voix qui racontent le Congo, ses mémoires et ses imaginaires.</p>
-          <div class="hero-enter mt-9 flex flex-wrap gap-3" style="--d:3">
-            <a href="#catalogue" class="btn btn-primary">Parcourir le catalogue <i data-lucide="arrow-down" aria-hidden="true"></i></a>
-            <a href="premium.html" class="btn btn-secondary">Voir les offres</a>
+      <div class="shell pb-16 pt-8 sm:pb-20 sm:pt-12 lg:pb-24 lg:pt-14">
+        
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
+          <div>
+            <p class="kicker hero-enter" style="--d:0">Le catalogue</p>
+            <h1 id="biblio-title" class="display hero-enter mt-6 text-[clamp(2.5rem,5.2vw,4.75rem)]" style="--d:1">Toutes les œuvres, au&nbsp;même&nbsp;endroit.</h1>
+            <p class="hero-enter mt-6 max-w-xl text-lg leading-8 text-ink-soft" style="--d:2">Cherchez un titre ou un auteur, filtrez par genre et par accès, puis ouvrez votre prochaine lecture.</p>
+            
+            <div class="hero-enter mt-9 flex flex-wrap gap-3" style="--d:3"><a href="#catalogue" class="btn btn-primary">Parcourir le catalogue <i data-lucide="arrow-down" aria-hidden="true"></i></a><a href="premium.html" class="btn btn-secondary">Voir les offres</a></div>
           </div>
+          <div class="hero-enter" style="--d:2"><figure class="relative">
+            <div class="overflow-hidden rounded-[1.75rem] bg-forest">
+              <img src="assets/bibliotheque-congolaise-fond-drapeau.jpg" alt="Une grande salle de lecture boisée, ouverte sur le fleuve" width="1672" height="941" class="aspect-[16/11] w-full object-cover">
+            </div>
+            <figcaption class="absolute -bottom-6 left-6 max-w-64 rounded-2xl bg-forest px-5 py-4 text-ivory shadow-[0_18px_40px_-20px_rgb(17_34_25/0.8)] sm:left-auto sm:right-8">
+              <span class="block text-sm text-brass">3 titres en accès libre</span>
+              <span class="mt-1 block font-serif text-lg leading-snug">10 autres à lire avec Premium.</span>
+            </figcaption>
+          </figure></div>
         </div>
-        <figure class="hero-enter relative" style="--d:2">
-          <div class="overflow-hidden rounded-[1.75rem] bg-forest">
-            <img src="assets/bibliotheque-congolaise-fond-drapeau.jpg" alt="Une grande salle de lecture boisée, ouverte sur le fleuve" width="1672" height="941" class="aspect-[16/11] w-full object-cover">
-          </div>
-          <figcaption class="absolute -bottom-6 left-6 max-w-60 rounded-2xl bg-forest px-5 py-4 text-ivory shadow-[0_18px_40px_-20px_rgb(17_34_25/0.8)] sm:left-auto sm:right-8">
-            <span class="block text-sm text-brass">À lire, à transmettre</span>
-            <span class="mt-1 block font-serif text-lg leading-snug">Chaque livre ouvre un nouveau chemin.</span>
-          </figcaption>
-        </figure>
       </div>
     </section>
 
     <section id="catalogue" aria-labelledby="catalogue-title" class="reveal pb-24 pt-10 sm:pb-32">
       <div class="shell">
-        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
             <h2 id="catalogue-title" class="display text-[clamp(2.25rem,4vw,3.5rem)]" data-reveal>Explorer les livres</h2>
-            <p class="mt-4 max-w-xl text-lg leading-8 text-ink-soft" data-reveal>Cherchez un titre ou un auteur, puis affinez par accès et par genre.</p>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-ink-soft" data-reveal>13 œuvres d’auteurs congolais et d’ailleurs, du roman à l’essai historique.</p>
           </div>
+          
         </div>
 
         <div class="mt-10 grid gap-6 rounded-[1.5rem] bg-linen p-5 sm:p-7 lg:grid-cols-[1.3fr_auto_0.8fr] lg:items-end lg:gap-8" data-reveal>
@@ -117,150 +118,145 @@
             </div>
           </fieldset>
           <div>
-            <label for="catalogue-genre" class="text-sm font-semibold text-ink">Type de livre</label>
+            <label for="catalogue-genre" class="text-sm font-semibold text-ink">Genre</label>
             <div class="relative mt-2">
               <select id="catalogue-genre" name="genre" class="field cursor-pointer appearance-none pr-11" data-filter-genre>
-                <option value="all" selected>Tous les types</option>
-                <option value="roman">Romans</option>
-                <option value="essai">Essais</option>
-                <option value="histoire">Histoire</option>
-                <option value="biographie">Biographies</option>
-                <option value="poesie">Poésie</option>
-                <option value="jeunesse">Jeunesse</option>
+                <option value="all" selected>Tous les genres</option>
+                <option value="roman">Romans</option><option value="essai">Essais</option><option value="histoire">Histoire</option><option value="biographie">Biographies</option><option value="poesie">Poésie</option><option value="jeunesse">Jeunesse</option>
               </select>
               <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-mute"></i>
             </div>
           </div>
         </div>
 
-        <div class="mb-8 mt-8 flex flex-wrap items-center justify-between gap-4">
+        <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
           <p class="text-base font-medium text-ink-soft" data-filter-count aria-live="polite">13 livres</p>
           <button type="button" class="link-arrow" data-filter-reset>Réinitialiser les filtres <i data-lucide="rotate-ccw" aria-hidden="true"></i></button>
         </div>
 
-        <ul class="grid grid-cols-2 gap-x-5 gap-y-12 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-10" data-catalogue data-page-size="8">
-          <li data-book data-reveal data-title="Dans le ventre du Congo" data-author="Blaise Ndala" data-genre="roman" data-access="free">
-            <a href="livre.html#dans-le-ventre-du-congo" class="book-card">
-              <div class="book-cover"><img src="assets/livre (1).jfif" alt="Couverture de Dans le ventre du Congo de Blaise Ndala" loading="lazy"></div>
+        <ul class="mt-12 grid grid-cols-2 gap-x-5 gap-y-12 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-10" data-catalogue data-page-size="8">
+          <li data-book data-title="Dans le ventre du Congo" data-author="Blaise Ndala" data-genre="roman" data-access="free" data-reveal>
+            <a href="livre.html" class="book-card">
+              <div class="book-cover"><img src="assets/livre (1).jfif" alt="" loading="lazy"></div>
               <h3 class="book-title mt-5 font-serif text-xl leading-snug">Dans le ventre du Congo</h3>
               <p class="mt-1 text-base text-ink-soft">Blaise Ndala</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2021</span><span class="tag tag-free">Gratuit</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,5 <span class="text-ink-mute">· 12 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,5 <span class="text-ink-mute">· 12 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="À quand le Congo ?" data-author="Jean-Pierre Mbelu" data-genre="essai" data-access="free">
-            <a href="https://congolobilelo.com/projet/a-quand-le-congo/" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/livre (2).jfif" alt="Couverture de À quand le Congo ? de Jean-Pierre Mbelu" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">À quand le Congo ?<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="À quand le Congo ?" data-author="Jean-Pierre Mbelu" data-genre="essai" data-access="free" data-reveal>
+            <a href="https://congolobilelo.com/projet/a-quand-le-congo/" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/livre (2).jfif" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">À quand le Congo ?<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Jean-Pierre Mbelu</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Essai · 2016</span><span class="tag tag-free">Gratuit</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,1 <span class="text-ink-mute">· 121 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,1 <span class="text-ink-mute">· 121 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Congo Inc. : Le testament de Bismarck" data-author="In Koli Jean Bofane" data-genre="roman" data-access="free">
-            <a href="https://books.google.com/books/about/Congo_Inc.html?id=_2UjAwAAQBAJ" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/livre (3).jfif" alt="Couverture de Congo Inc. : Le testament de Bismarck d’In Koli Jean Bofane" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Congo Inc. : Le testament de Bismarck<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Congo Inc. Le testament de Bismarck" data-author="In Koli Jean Bofane" data-genre="roman" data-access="free" data-reveal>
+            <a href="https://books.google.com/books/about/Congo_Inc.html?id=_2UjAwAAQBAJ" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/livre (3).jfif" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Congo Inc. Le testament de Bismarck<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">In Koli Jean Bofane</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2014</span><span class="tag tag-free">Gratuit</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,3 <span class="text-ink-mute">· 21 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,3 <span class="text-ink-mute">· 21 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Tram 83" data-author="Fiston Mwanza Mujila" data-genre="roman" data-access="premium">
-            <a href="https://editions-metailie.com/livre/tram-83/" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/tram-83.jpg" alt="Couverture de Tram 83 de Fiston Mwanza Mujila" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Tram 83<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Tram 83" data-author="Fiston Mwanza Mujila" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://editions-metailie.com/livre/tram-83/" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/tram-83.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Tram 83<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Fiston Mwanza Mujila</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2014</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,6 <span class="text-ink-mute">· 84 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,6 <span class="text-ink-mute">· 84 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="La Belle de Casa" data-author="In Koli Jean Bofane" data-genre="roman" data-access="premium">
-            <a href="https://catalogue.bnf.fr/ark:/12148/cb46638900c" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/la-belle-de-casa.jpg" alt="Couverture de La Belle de Casa d’In Koli Jean Bofane" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">La Belle de Casa<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="La Belle de Casa" data-author="In Koli Jean Bofane" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://catalogue.bnf.fr/ark:/12148/cb46638900c" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/la-belle-de-casa.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">La Belle de Casa<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">In Koli Jean Bofane</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2018</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,4 <span class="text-ink-mute">· 52 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,4 <span class="text-ink-mute">· 52 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="La Vie et demie" data-author="Sony Labou Tansi" data-genre="roman" data-access="premium">
-            <a href="https://www.fnac.com/a16666994/Sony-Labou-Tansi-La-Vie-et-demie-Nouvelle-edition" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/la-vie-et-demie.jpg" alt="Couverture de La Vie et demie de Sony Labou Tansi" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">La Vie et demie<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="La Vie et demie" data-author="Sony Labou Tansi" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://www.fnac.com/a16666994/Sony-Labou-Tansi-La-Vie-et-demie-Nouvelle-edition" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/la-vie-et-demie.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">La Vie et demie<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Sony Labou Tansi</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 1979</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,7 <span class="text-ink-mute">· 97 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,7 <span class="text-ink-mute">· 97 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Mathématiques congolaises" data-author="In Koli Jean Bofane" data-genre="roman" data-access="premium">
-            <a href="https://www.presenceafricaine.com/romans-recits-autres-editeurs/1265-mathematiques-congolaises-9782742796830.html" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/mathematiques-congolaises.jpg" alt="Couverture de Mathématiques congolaises d’In Koli Jean Bofane" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Mathématiques congolaises<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Mathématiques congolaises" data-author="In Koli Jean Bofane" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://www.presenceafricaine.com/romans-recits-autres-editeurs/1265-mathematiques-congolaises-9782742796830.html" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/mathematiques-congolaises.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Mathématiques congolaises<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">In Koli Jean Bofane</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2008</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,5 <span class="text-ink-mute">· 68 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,5 <span class="text-ink-mute">· 68 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="La Danse du Vilain" data-author="Fiston Mwanza Mujila" data-genre="roman" data-access="premium">
-            <a href="https://editions-metailie.com/livre/la-danse-du-vilain/" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover book-cover--contain"><img src="assets/couvertures/la-danse-du-vilain.jpg" alt="Couverture de La Danse du Vilain de Fiston Mwanza Mujila" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">La Danse du Vilain<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="La Danse du Vilain" data-author="Fiston Mwanza Mujila" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://editions-metailie.com/livre/la-danse-du-vilain/" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover book-cover--contain"><img src="assets/couvertures/la-danse-du-vilain.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">La Danse du Vilain<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Fiston Mwanza Mujila</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2020</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,8 <span class="text-ink-mute">· 73 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,8 <span class="text-ink-mute">· 73 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Le Feu des origines" data-author="Emmanuel Dongala" data-genre="roman" data-access="premium">
-            <a href="https://www.presenceafricaine.com/autres-editeurs/2577-le-feu-des-origines-9782330103217.html" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/le-feu-des-origines.jpg" alt="Couverture de Le Feu des origines d’Emmanuel Dongala" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Le Feu des origines<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Le Feu des origines" data-author="Emmanuel Dongala" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://www.presenceafricaine.com/autres-editeurs/2577-le-feu-des-origines-9782330103217.html" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/le-feu-des-origines.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Le Feu des origines<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Emmanuel Dongala</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 1987</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,6 <span class="text-ink-mute">· 41 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,6 <span class="text-ink-mute">· 41 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Mémoires de porc-épic" data-author="Alain Mabanckou" data-genre="roman" data-access="premium">
-            <a href="https://www.antoineonline.com/intr/en/p/M%C3%A9moires%20de%20porc-%C3%A9pic-Alain%20Mabanckou/9782757865057" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/memoires-de-porc-epic.jpg" alt="Couverture de Mémoires de porc-épic d’Alain Mabanckou" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Mémoires de porc-épic<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Mémoires de porc-épic" data-author="Alain Mabanckou" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://www.antoineonline.com/intr/en/p/M%C3%A9moires%20de%20porc-%C3%A9pic-Alain%20Mabanckou/9782757865057" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/memoires-de-porc-epic.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Mémoires de porc-épic<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Alain Mabanckou</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2006</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,7 <span class="text-ink-mute">· 56 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,7 <span class="text-ink-mute">· 56 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Photo de groupe au bord du fleuve" data-author="Emmanuel Dongala" data-genre="roman" data-access="premium">
-            <a href="https://www.librairie-jakin.com/fr/accueil/419-photo-de-groupe-au-bord-du-fleuve-e-dongala-9782742789306.html" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/photo-de-groupe-au-bord-du-fleuve.jpg" alt="Couverture de Photo de groupe au bord du fleuve d’Emmanuel Dongala" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Photo de groupe au bord du fleuve<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Photo de groupe au bord du fleuve" data-author="Emmanuel Dongala" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://www.librairie-jakin.com/fr/accueil/419-photo-de-groupe-au-bord-du-fleuve-e-dongala-9782742789306.html" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/photo-de-groupe-au-bord-du-fleuve.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Photo de groupe au bord du fleuve<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Emmanuel Dongala</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2010</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,5 <span class="text-ink-mute">· 38 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,5 <span class="text-ink-mute">· 38 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Johnny Chien Méchant" data-author="Emmanuel Dongala" data-genre="roman" data-access="premium">
-            <a href="https://www.presenceafricaine.com/romans-recits-autres-editeurs/1313-johnny-chien-mechant-9782330079192.html" target="_blank" rel="noreferrer" class="book-card">
-              <div class="book-cover"><img src="assets/couvertures/johnny-chien-mechant.jpg" alt="Couverture de Johnny Chien Méchant d’Emmanuel Dongala" loading="lazy"></div>
-              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Johnny Chien Méchant<span class="sr-only"> (nouvel onglet)</span></h3>
+          <li data-book data-title="Johnny Chien Méchant" data-author="Emmanuel Dongala" data-genre="roman" data-access="premium" data-reveal>
+            <a href="https://www.presenceafricaine.com/romans-recits-autres-editeurs/1313-johnny-chien-mechant-9782330079192.html" target="_blank" rel="noopener noreferrer" class="book-card">
+              <div class="book-cover"><img src="assets/couvertures/johnny-chien-mechant.jpg" alt="" loading="lazy"></div>
+              <h3 class="book-title mt-5 font-serif text-xl leading-snug">Johnny Chien Méchant<span class="sr-only"> (site de l’éditeur, nouvel onglet)</span></h3>
               <p class="mt-1 text-base text-ink-soft">Emmanuel Dongala</p>
               <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Roman · 2002</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,4 <span class="text-ink-mute">· 46 avis</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,4 <span class="text-ink-mute">· 46 avis</span></p>
             </a>
           </li>
-          <li data-book data-reveal data-title="Congo, une histoire épique d’un peuple" data-author="David Van Reybrouck" data-genre="histoire" data-access="premium">
+          <li data-book data-title="Congo, une histoire épique d’un peuple" data-author="David Van Reybrouck" data-genre="histoire" data-access="premium" data-reveal>
             <a href="premium.html" class="book-card">
-              <div class="book-cover"><img src="assets/livre (4).jfif" alt="Couverture de Congo, une histoire épique d’un peuple de David Van Reybrouck" loading="lazy"></div>
+              <div class="book-cover"><img src="assets/livre (4).jfif" alt="" loading="lazy"></div>
               <h3 class="book-title mt-5 font-serif text-xl leading-snug">Congo, une histoire épique d’un peuple</h3>
               <p class="mt-1 text-base text-ink-soft">David Van Reybrouck</p>
-              <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Histoire · Récit</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
-              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note&nbsp;:</span> 4,5 <span class="text-ink-mute">· 45 avis</span></p>
+              <p class="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm text-ink-mute"><span>Histoire</span><span class="tag tag-premium"><i data-lucide="lock" aria-hidden="true"></i>Premium</span></p>
+              <p class="mt-2 flex items-center gap-1.5 text-sm text-ink-soft"><i data-lucide="star" aria-hidden="true" class="h-4 w-4 fill-brass text-brass"></i><span class="sr-only">Note des lecteurs :</span> 4,5 <span class="text-ink-mute">· 45 avis</span></p>
             </a>
           </li>
         </ul>
 
         <div class="rounded-[1.5rem] bg-paper px-6 py-12 text-center" data-filter-empty hidden>
           <p class="font-serif text-2xl">Aucun livre ne correspond à votre recherche.</p>
-          <p class="mx-auto mt-3 max-w-md text-base leading-7 text-ink-soft">Essayez un autre titre, un nom d’auteur ou retirez un filtre. Le catalogue s’enrichit au fil des numérisations.</p>
+          <p class="mx-auto mt-3 max-w-md text-base leading-7 text-ink-soft">Essayez un autre titre ou un nom d’auteur, ou retirez un filtre. Le catalogue s’enrichit au fil des numérisations.</p>
         </div>
 
         <nav aria-label="Pagination des livres" class="mt-14 flex flex-wrap items-center justify-center gap-2" data-pager hidden></nav>
@@ -269,14 +265,12 @@
 
     <section aria-labelledby="voix-title" class="reveal pb-24 sm:pb-32">
       <div class="shell">
-        <div class="grid gap-8 rounded-[1.75rem] bg-forest px-6 py-12 text-ivory on-dark sm:px-12 lg:grid-cols-[1fr_auto] lg:items-center lg:px-16">
+        <div class="on-dark grid gap-8 rounded-[1.75rem] bg-forest px-6 py-12 text-ivory sm:px-12 lg:grid-cols-[1fr_auto] lg:items-center lg:px-16">
           <div>
-            <h2 id="voix-title" class="display text-[clamp(1.875rem,3.4vw,3rem)]" data-reveal>Derrière chaque page, une voix.</h2>
-            <p class="mt-4 max-w-xl text-lg leading-8 text-mist" data-reveal>Rencontrez les auteurs, leurs parcours et les univers qui nourrissent leurs œuvres.</p>
+            <h2 id="voix-title" class="display text-[clamp(1.875rem,3.4vw,3rem)]" data-reveal>Derrière chaque livre, une voix.</h2>
+            <p class="mt-4 max-w-xl text-lg leading-8 text-mist" data-reveal>Parcours, influences, distinctions&nbsp;: faites connaissance avec les auteurs du catalogue.</p>
           </div>
-          <div data-reveal>
-            <a href="auteurs.html" class="btn btn-accent">Rencontrer les auteurs <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-          </div>
+          <div data-reveal><a href="auteurs.html" class="btn btn-accent">Rencontrer les auteurs <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
         </div>
       </div>
     </section>
@@ -289,17 +283,17 @@
           <a href="index.html" class="inline-block rounded-md" aria-label="Mikanda, retour à l’accueil">
             <img src="assets/mikanda-logo.svg" alt="" width="200" height="56" class="h-14 w-auto">
           </a>
-          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> désigne les livres et les lettres. Une bibliothèque pour faire circuler les voix, les idées et les imaginaires de la RDC.</p>
-          <a href="bibliotheque.html" class="btn btn-accent mt-8">Explorer la bibliothèque <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <p class="mt-6 text-base leading-7 text-mist">En lingala, <em class="font-serif not-italic text-brass">mikanda</em> veut dire « les livres ». Notre bibliothèque numérique réunit les œuvres, les auteurs et les archives de la littérature congolaise.</p>
+          <a href="bibliotheque.html" class="btn btn-accent mt-8">Ouvrir le catalogue <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         </div>
 
-        <nav aria-labelledby="pied-explorer">
-          <h2 id="pied-explorer" class="font-serif text-xl text-ivory">Explorer</h2>
+        <nav aria-labelledby="pied-lire">
+          <h2 id="pied-lire" class="font-serif text-xl text-ivory">Lire</h2>
           <ul class="mt-5 space-y-3 text-base">
-            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">La bibliothèque</a></li>
+            <li><a href="bibliotheque.html" class="link-arrow !font-normal text-mist hover:text-ivory">Le catalogue</a></li>
             <li><a href="collections.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les collections</a></li>
             <li><a href="auteurs.html" class="link-arrow !font-normal text-mist hover:text-ivory">Les auteurs</a></li>
-            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Mikanda Premium</a></li>
+            <li><a href="premium.html" class="link-arrow !font-normal text-mist hover:text-ivory">Offres et tarifs</a></li>
           </ul>
         </nav>
 
@@ -308,8 +302,8 @@
           <ul class="mt-5 space-y-3 text-base">
             <li><a href="a-propos.html#mission" class="link-arrow !font-normal text-mist hover:text-ivory">Notre mission</a></li>
             <li><a href="a-propos.html#partenaires" class="link-arrow !font-normal text-mist hover:text-ivory">Nos partenaires</a></li>
-            <li><a href="a-propos.html#contact" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
-            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives &amp; patrimoine</a></li>
+            <li><a href="a-propos.html#contribuer" class="link-arrow !font-normal text-mist hover:text-ivory">Proposer un texte</a></li>
+            <li><a href="collections/archives.html" class="link-arrow !font-normal text-mist hover:text-ivory">Archives et patrimoine</a></li>
           </ul>
         </nav>
 
@@ -327,7 +321,7 @@
       <p aria-hidden="true" class="mt-16 select-none font-serif text-[clamp(4.5rem,19vw,17rem)] font-light leading-[0.78] tracking-[-0.06em] text-forest-deep">mikanda<span class="text-brass">.</span></p>
 
       <div class="mt-8 flex flex-col gap-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Mikanda · Maquette de démonstration</p>
+        <p>© 2026 Mikanda · Prototype de démonstration</p>
         <ul class="flex items-center gap-1" aria-label="Réseaux sociaux">
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (nouvel onglet)" class="grid h-11 w-11 place-items-center rounded-full text-lg transition-colors hover:bg-white/10 hover:text-brass"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -339,10 +333,6 @@
     </div>
   </footer>
 
-    <script>
-      lucide.createIcons()
-    </script>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>
-
-
